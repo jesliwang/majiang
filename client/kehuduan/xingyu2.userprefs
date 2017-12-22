@@ -1,0 +1,28 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/netManager/Events/APIS.cs">
+    <Files>
+      <File FileName="Assets/MY.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/netManager/Events/APIS.cs" Line="17" Column="29" />
+      <File FileName="Assets/Script/netManager/CustomSocket.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Login_Panle_Event/LoginSystemScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Exit_App/ExitAppScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/netManager/Events/SocketEventHandle.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/InitializationConfigScritp.cs" Line="27" Column="32" />
+      <File FileName="Assets/Script/netManager/ChatSocket.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Home_Panel_Event/SettingScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/utilTool/WechatOperateScript.cs" Line="242" Column="18" />
+      <File FileName="Assets/Script/utilTool/UpdateScript.cs" Line="64" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="D:\zLaJI\xingyu\xingyu2\Assets\Script\utilTool\WechatOperateScript.cs" line="214" column="1" />
+      <Breakpoint file="D:\zLaJI\xingyu\xingyu2\Assets\Script\InitializationConfigScritp.cs" line="222" column="1" />
+      <Breakpoint file="D:\zLaJI\xingyu\xingyu2\Assets\Script\netManager\Events\SocketEventHandle.cs" line="98" column="1" />
+      <Breakpoint file="D:\zLaJI\xingyu\xingyu2\Assets\Script\netManager\Events\SocketEventHandle.cs" line="90" column="1" />
+      <Breakpoint file="D:\zLaJI\xingyu\xingyu2\Assets\Script\Login_Panle_Event\LoginSystemScript.cs" line="145" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

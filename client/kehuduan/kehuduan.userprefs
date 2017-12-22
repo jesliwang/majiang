@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{01278091-48EA-3A10-0751-D230C4907E84}|">
+  <MonoDevelop.Ide.ItemProperties.kehuduan PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/Android/ShareSDK/AndroidManifest.xml">
+    <Files>
+      <File FileName="Assets/Script/utilTool/WechatOperateScript.cs" Line="52" Column="11" />
+      <File FileName="Assets/Plugins/ShareSDK/ShareSDK.cs" Line="27" Column="15" />
+      <File FileName="Assets/Script/netManager/request/LoginRequest.cs" Line="10" Column="10" />
+      <File FileName="Assets/Plugins/ShareSDK/ShareSDKDevInfo.cs" Line="51" Column="5" />
+      <File FileName="Assets/Plugins/Android/ShareSDK/AndroidManifest.xml" Line="12" Column="26" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

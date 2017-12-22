@@ -1,0 +1,33 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\netManager\Events\APIS.cs">
+    <Files>
+      <File FileName="Assets\Script\utilTool\NormalHuScript.cs" Line="249" Column="6" />
+      <File FileName="Assets\Script\mahjongCard\TopAndBottomCardScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\test\DebugPanelScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Login_Panle_Event\LoginSystemScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Exit_App\ExitAppScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\soundsCtrl\MicroPhoneInput.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\netManager\CustomSocket.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\netManager\vo\StartGameVO.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Game_Scenes\StartPanelCtrlScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\soundsCtrl\soundCtrl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\netManager\request\LoginRequest.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\netManager\Events\SocketEventHandle.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Home_Panel_Event\EnterRoomScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Game_Scenes\MyMahjongScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\test\SocketForDebugPanel.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\utilTool\GlobalDataScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\InitializationConfigScritp.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\netManager\request\GaveUpRequest.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\netManager\Events\APIS.cs" Line="11" Column="49" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="D:\U3DworkSpace\weipai\Assets\Script\Login_Panle_Event\LoginSystemScript.cs" line="69" column="13" />
+      <Breakpoint file="D:\U3DworkSpace\weipai\Assets\Script\netManager\CustomSocket.cs" line="78" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "weipai2.CSharp.Plugins", "weipai2.CSharp.Plugins.csproj", "{0A4E14DE-8572-BE1E-45A8-A0A1114CF55E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "weipai2.CSharp", "weipai2.CSharp.csproj", "{F62C5BFE-2A71-E3B0-E737-347B681BC686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "weipai2.CSharp.Editor", "weipai2.CSharp.Editor.csproj", "{AC8786BA-26F5-0A44-AFE2-DB11610CFA2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A4E14DE-8572-BE1E-45A8-A0A1114CF55E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A4E14DE-8572-BE1E-45A8-A0A1114CF55E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A4E14DE-8572-BE1E-45A8-A0A1114CF55E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A4E14DE-8572-BE1E-45A8-A0A1114CF55E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F62C5BFE-2A71-E3B0-E737-347B681BC686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F62C5BFE-2A71-E3B0-E737-347B681BC686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F62C5BFE-2A71-E3B0-E737-347B681BC686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F62C5BFE-2A71-E3B0-E737-347B681BC686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC8786BA-26F5-0A44-AFE2-DB11610CFA2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8786BA-26F5-0A44-AFE2-DB11610CFA2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8786BA-26F5-0A44-AFE2-DB11610CFA2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC8786BA-26F5-0A44-AFE2-DB11610CFA2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
