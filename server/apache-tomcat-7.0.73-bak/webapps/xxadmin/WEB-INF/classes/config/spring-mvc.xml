@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+	">
+
+	<!-- 注解扫描包 一开只是扫描controller,这里不能扫描service先关类。不然事务不起作用 -->
+	<context:component-scan base-package="com.weipai.controller" />
+	<!-- 开启注解 -->
+	<mvc:annotation-driven>
+		<!-- 这里处理传入和传入数据的乱码问题 -->
+		<mvc:message-converters register-defaults="true">
+			<bean class="com.weipai.characterencode.CharacterEncode" />
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+
+	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/> -->
+	<!-- 注解方法适配器,实现对指定方法的访问 -->
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+	<!-- 上传文件拦截，设置最大上传文件大小 10M=10*1024*1024(B)=10485760 bytes -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="UTF-8" />
+		<property name="maxInMemorySize" value="40960" />
+		<property name="maxUploadSize" value="10485760000" />
+	</bean>
+	<!-- 静态资源访问（不拦截此目录下的东西的访问） -->
+	<mvc:resources location="/images/" mapping="/images/**" />
+	<mvc:resources location="/common/" mapping="/common/**" />
+	<mvc:resources location="/css/" mapping="/css/**" />
+	<mvc:resources location="/fonts/" mapping="/fonts/**" />
+	<mvc:resources location="/js/" mapping="/js/**" />
+
+	<!-- 注解模式的aop 暂时注释 -->
+	<!-- <context:component-scan base-package="com.weipai.aspect"/> <aop:aspectj-autoproxy/> -->
+
+	<!-- JSP视图文件解析配置 -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/view/" />
+		<property name="suffix" value=".jsp" />
+		<!-- <property name="viewNames" value="jsp/*"/> -->
+		<property name="order" value="1" />
+	</bean>
+
+	<!--<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver"> 
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/> 
+		<property name="prefix" value="/WEB-INF/view/"/> <property name="suffix" 
+		value=".jsp"/> <property name="order" value="2"/> </bean> -->
+	<!-- 注册拦截器 ,只需要对后台系统进行拦截，不对接口进行拦截，所以暂时注释掉 -->
+	<mvc:interceptors>
+		<!-- 使用bean定义一个Interceptor，直接定义在mvc:interceptors根下面的Interceptor将拦截所有的请求 -->
+		<!-- <bean class="com.weipai.interceptor.AllInterceptor"/> -->
+		<!-- 如果拥有多个拦截器,根据配置顺序依次执行 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/controller/*" />
+			<!-- 定义在mvc:interceptor下面的表示是对特定的请求才进行拦截的 -->
+			<bean class="com.weipai.interceptor.MyInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+</beans>

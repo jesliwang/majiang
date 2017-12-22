@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.weipai.mapper.AccountMapper">
+	<resultMap id="BaseResultMap" type="Account">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="Uuid" property="uuid" jdbcType="INTEGER" />
+		<result column="openid" property="openid" jdbcType="VARCHAR" />
+		<result column="nickName" property="nickname" jdbcType="VARCHAR" />
+		<result column="headIcon" property="headicon" jdbcType="VARCHAR" />
+		<result column="roomCard" property="roomcard" jdbcType="INTEGER" />
+		<result column="unionid" property="unionid" jdbcType="VARCHAR" />
+		<result column="province" property="province" jdbcType="VARCHAR" />
+		<result column="city" property="city" jdbcType="VARCHAR" />
+		<result column="sex" property="sex" jdbcType="INTEGER" />
+		<result column="manager_up_id" property="managerUpId" jdbcType="INTEGER" />
+		<result column="prizecount" property="prizecount" jdbcType="INTEGER" />
+		<result column="actualCard" property="actualcard" jdbcType="INTEGER" />
+		<result column="totalCard" property="totalcard" jdbcType="INTEGER" />
+		<result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
+		<result column="lastLoginTime" property="lastlogintime"
+			jdbcType="TIMESTAMP" />
+		<result column="status" property="status" jdbcType="CHAR" />
+		<result column="isGame" property="isGame" jdbcType="CHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, Uuid, openid, nickName, headIcon, roomCard, unionid,
+		province, city,
+		sex, manager_up_id,
+		prizecount, actualCard, totalCard,
+		createTime, lastLoginTime, status, isGame
+	</sql>
+	<!-- 后面新加sql语句 -->
+	<!-- 得到零售商/代理商下面的普通用户 -->
+	<select id="selectObjectsByMap" resultMap="BaseResultMap"
+		parameterType="Map">
+		select
+		<include refid="Base_Column_List"></include>
+		from account
+		where status="0"
+		<if test="manager_up_id != null">
+			and manager_up_id =#{managerUpId,jdbcType=INTEGER}
+		</if>
+		order by id ASC limit
+		#{startNum,jdbcType=INTEGER},#{pageNumber,jdbcType=INTEGER}
+	</select>
+	<!-- 对得到条件代理商/零售商下面所有的用户个数 -->
+	<select id="selectObjectcountByMap" resultType="INTEGER"
+		parameterType="Map">
+		select
+		count(id)
+		from account
+		where status="0"
+		<if test="manager_up_id != null">
+			and manager_up_id =#{managerUpId,jdbcType=INTEGER}
+		</if>
+	</select>
+	<!-- 得到所有的玩家 -->
+	<select id="selectAllAccount" resultMap="BaseResultMap"
+		parameterType="Map">
+		select
+		<include refid="Base_Column_List"></include>
+		from account
+		where status="0"
+		order by id DESC limit
+		#{startNum,jdbcType=INTEGER},#{pageNumber,jdbcType=INTEGER}
+	</select>
+	<!-- 修改房卡 -->
+	<update id="updateRoomCard" parameterType="Map">
+		update account
+		set
+		roomCard =#{roomcard,jdbcType=INTEGER},totalCard
+		=#{totalcard,jdbcType=INTEGER}
+		where id =#{id,jdbcType=INTEGER} and
+		status = "0"
+	</update>
+	<!-- 修改玩家状态(删除玩家) -->
+	<update id="updateAccountStatus" parameterType="Map">
+		update account
+		set status =#{status,jdbcType=CHAR}
+		where id =#{id,jdbcType=INTEGER}
+	</update>
+	<!-- 根据uuid得到用户 -->
+	<select id="selectByUuid" resultMap="BaseResultMap"
+		parameterType="INTEGER">
+		select
+		<include refid="Base_Column_List" />
+		from account
+		where Uuid = #{uuid,jdbcType=INTEGER} and status = "0";
+	</select>
+	<!-- 得到玩家总数 -->
+	<select id="selectAllCount" resultType="INTEGER">
+		select
+		count(id)
+		from
+		account
+	</select>
+	<!--获取所有玩家的房卡总和 -->
+	<select id="selectTotalAccountRoomCards" resultType="INTEGER">
+		select
+		COALESCE(SUM(roomCard),0)
+		from account
+	</select>
+	<!-- 获取当天新增的玩家 -->
+	<select id="selectNewAccountCountToday" resultType="INTEGER"
+		parameterType="DATE">
+		select
+		count(id)
+		from account
+		where createTime &gt;
+		#{createtime,jdbcType=TIMESTAMP}
+	</select>
+
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from account
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from
+		account
+		where id = #{id,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert" parameterType="Account">
+		insert into account (id, Uuid,
+		openid,
+		nickName, headIcon, roomCard,
+		unionid, province, city,
+		sex,
+		manager_up_id, prizecount,
+		actualCard, totalCard, createTime,
+		lastLoginTime, status, isGame)
+		values (#{id,jdbcType=INTEGER},
+		#{uuid,jdbcType=INTEGER},
+		#{openid,jdbcType=VARCHAR},
+		#{nickname,jdbcType=VARCHAR}, #{headicon,jdbcType=VARCHAR},
+		#{roomcard,jdbcType=INTEGER},
+		#{unionid,jdbcType=VARCHAR},
+		#{province,jdbcType=VARCHAR},
+		#{city,jdbcType=VARCHAR},
+		#{sex,jdbcType=INTEGER}, #{managerUpId,jdbcType=INTEGER},
+		#{prizecount,jdbcType=INTEGER},
+		#{actualcard,jdbcType=INTEGER},
+		#{totalcard,jdbcType=INTEGER},
+		#{createtime,jdbcType=TIMESTAMP},
+		#{lastlogintime,jdbcType=TIMESTAMP}, #{status,jdbcType=CHAR},
+		#{isGame,jdbcType=CHAR})
+	</insert>
+	<insert id="insertSelective" parameterType="Account">
+		insert into account
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="uuid != null">
+				Uuid,
+			</if>
+			<if test="openid != null">
+				openid,
+			</if>
+			<if test="nickname != null">
+				nickName,
+			</if>
+			<if test="headicon != null">
+				headIcon,
+			</if>
+			<if test="roomcard != null">
+				roomCard,
+			</if>
+			<if test="unionid != null">
+				unionid,
+			</if>
+			<if test="province != null">
+				province,
+			</if>
+			<if test="city != null">
+				city,
+			</if>
+			<if test="sex != null">
+				sex,
+			</if>
+			<if test="managerUpId != null">
+				manager_up_id,
+			</if>
+			<if test="prizecount != null">
+				prizecount,
+			</if>
+			<if test="actualcard != null">
+				actualCard,
+			</if>
+			<if test="totalcard != null">
+				totalCard,
+			</if>
+			<if test="createtime != null">
+				createTime,
+			</if>
+			<if test="lastlogintime != null">
+				lastLoginTime,
+			</if>
+			<if test="status != null">
+				status,
+			</if>
+			<if test="isGame != null">
+				isGame,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="uuid != null">
+				#{uuid,jdbcType=INTEGER},
+			</if>
+			<if test="openid != null">
+				#{openid,jdbcType=VARCHAR},
+			</if>
+			<if test="nickname != null">
+				#{nickname,jdbcType=VARCHAR},
+			</if>
+			<if test="headicon != null">
+				#{headicon,jdbcType=VARCHAR},
+			</if>
+			<if test="roomcard != null">
+				#{roomcard,jdbcType=INTEGER},
+			</if>
+			<if test="unionid != null">
+				#{unionid,jdbcType=VARCHAR},
+			</if>
+			<if test="province != null">
+				#{province,jdbcType=VARCHAR},
+			</if>
+			<if test="city != null">
+				#{city,jdbcType=VARCHAR},
+			</if>
+			<if test="sex != null">
+				#{sex,jdbcType=INTEGER},
+			</if>
+			<if test="managerUpId != null">
+				#{managerUpId,jdbcType=INTEGER},
+			</if>
+			<if test="prizecount != null">
+				#{prizecount,jdbcType=INTEGER},
+			</if>
+			<if test="actualcard != null">
+				#{actualcard,jdbcType=INTEGER},
+			</if>
+			<if test="totalcard != null">
+				#{totalcard,jdbcType=INTEGER},
+			</if>
+			<if test="createtime != null">
+				#{createtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="lastlogintime != null">
+				#{lastlogintime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="status != null">
+				#{status,jdbcType=CHAR},
+			</if>
+			<if test="isGame != null">
+				#{isGame,jdbcType=CHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="Account">
+		update account
+		<set>
+			<if test="uuid != null">
+				Uuid = #{uuid,jdbcType=INTEGER},
+			</if>
+			<if test="openid != null">
+				openid = #{openid,jdbcType=VARCHAR},
+			</if>
+			<if test="nickname != null">
+				nickName = #{nickname,jdbcType=VARCHAR},
+			</if>
+			<if test="headicon != null">
+				headIcon = #{headicon,jdbcType=VARCHAR},
+			</if>
+			<if test="roomcard != null">
+				roomCard = #{roomcard,jdbcType=INTEGER},
+			</if>
+			<if test="unionid != null">
+				unionid = #{unionid,jdbcType=VARCHAR},
+			</if>
+			<if test="province != null">
+				province = #{province,jdbcType=VARCHAR},
+			</if>
+			<if test="city != null">
+				city = #{city,jdbcType=VARCHAR},
+			</if>
+			<if test="sex != null">
+				sex = #{sex,jdbcType=INTEGER},
+			</if>
+			<if test="managerUpId != null">
+				manager_up_id = #{managerUpId,jdbcType=INTEGER},
+			</if>
+			<if test="prizecount != null">
+				prizecount = #{prizecount,jdbcType=INTEGER},
+			</if>
+			<if test="actualcard != null">
+				actualCard = #{actualcard,jdbcType=INTEGER},
+			</if>
+			<if test="totalcard != null">
+				totalCard = #{totalcard,jdbcType=INTEGER},
+			</if>
+			<if test="createtime != null">
+				createTime = #{createtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="lastlogintime != null">
+				lastLoginTime = #{lastlogintime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="status != null">
+				status = #{status,jdbcType=CHAR},
+			</if>
+			<if test="isGame != null">
+				isGame = #{isGame,jdbcType=CHAR},
+			</if>
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="Account">
+		update account
+		set
+		Uuid = #{uuid,jdbcType=INTEGER},
+		openid = #{openid,jdbcType=VARCHAR},
+		nickName = #{nickname,jdbcType=VARCHAR},
+		headIcon =
+		#{headicon,jdbcType=VARCHAR},
+		roomCard = #{roomcard,jdbcType=INTEGER},
+		unionid = #{unionid,jdbcType=VARCHAR},
+		province =
+		#{province,jdbcType=VARCHAR},
+		city = #{city,jdbcType=VARCHAR},
+		sex =
+		#{sex,jdbcType=INTEGER},
+		manager_up_id =
+		#{managerUpId,jdbcType=INTEGER},
+		prizecount =
+		#{prizecount,jdbcType=INTEGER},
+		actualCard =
+		#{actualcard,jdbcType=INTEGER},
+		totalCard =
+		#{totalcard,jdbcType=INTEGER},
+		createTime =
+		#{createtime,jdbcType=TIMESTAMP},
+		lastLoginTime =
+		#{lastlogintime,jdbcType=TIMESTAMP},
+		status = #{status,jdbcType=CHAR},
+		isGame = #{isGame,jdbcType=CHAR}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+</mapper>

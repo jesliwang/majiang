@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.weipai.mapper.TechargerecordMapper">
+	<resultMap id="BaseResultMap" type="Techargerecord">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="account_id" property="accountId" jdbcType="INTEGER" />
+		<result column="manager_id" property="managerId" jdbcType="INTEGER" />
+		<result column="manager_up_id" property="managerUpId" jdbcType="INTEGER" />
+		<result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
+		<result column="techargeMoney" property="techargemoney"
+			jdbcType="INTEGER" />
+		<result column="mark" property="mark" jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="CHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, account_id, manager_id, manager_up_id, createtime,
+		techargeMoney,
+		mark, status
+	</sql>
+	<!-- 超管卖给代理商的历史房卡总数 -->
+	<select id="selectTotalRoomCards" resultType="INTEGER">
+		select
+		COALESCE(SUM(techargeMoney),0)
+		from techargerecord
+		where manager_up_id =
+		1 and manager_id &gt; 1
+	</select>
+	<!-- 超管当天卖给代理商的房卡总数 -->
+	<select id="selectSaleRoomCardsToday" resultType="INTEGER"
+		parameterType="DATE">
+		select
+		COALESCE(SUM(techargeMoney),0)
+		from techargerecord
+		where manager_up_id = 1 and manager_id &gt; 1 and createtime &gt;
+		#{createtime,jdbcType=TIMESTAMP}
+	</select>
+	<!-- 超管本周卖给代理商房卡总数 -->
+	<select id="saleRoomCardsThisWeek" resultType="INTEGER"
+		parameterType="DATE">
+		select
+		COALESCE(SUM(techargeMoney),0)
+		from techargerecord
+		where manager_up_id = 1 and manager_id &gt; 1 and createtime &gt;
+		#{createtime,jdbcType=TIMESTAMP}
+	</select>
+	<!-- 获取房卡流水相关对象 -->
+	<select id="selectByRelateId" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from techargerecord
+		where manager_up_id = #{managerId,jdbcType=INTEGER}
+		or manager_id
+		=#{managerId,jdbcType=INTEGER}
+		order by id DESC limit
+		0,100
+	</select>
+
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from techargerecord
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from
+		techargerecord
+		where id = #{id,jdbcType=INTEGER}
+	</delete>
+	<insert id="save" parameterType="Techargerecord">
+		insert into techargerecord (id,
+		account_id, manager_id,
+		manager_up_id, createtime, techargeMoney,
+		mark,
+		status)
+		values (#{id,jdbcType=INTEGER}, #{accountId,jdbcType=INTEGER},
+		#{managerId,jdbcType=INTEGER},
+		#{managerUpId,jdbcType=INTEGER},
+		#{createtime,jdbcType=TIMESTAMP}, #{techargemoney,jdbcType=INTEGER},
+		#{mark,jdbcType=VARCHAR}, #{status,jdbcType=CHAR})
+	</insert>
+	<insert id="saveSelective" parameterType="Techargerecord">
+		insert into techargerecord
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="accountId != null">
+				account_id,
+			</if>
+			<if test="managerId != null">
+				manager_id,
+			</if>
+			<if test="managerUpId != null">
+				manager_up_id,
+			</if>
+			<if test="createtime != null">
+				createtime,
+			</if>
+			<if test="techargemoney != null">
+				techargeMoney,
+			</if>
+			<if test="mark != null">
+				mark,
+			</if>
+			<if test="status != null">
+				status,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="accountId != null">
+				#{accountId,jdbcType=INTEGER},
+			</if>
+			<if test="managerId != null">
+				#{managerId,jdbcType=INTEGER},
+			</if>
+			<if test="managerUpId != null">
+				#{managerUpId,jdbcType=INTEGER},
+			</if>
+			<if test="createtime != null">
+				#{createtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="techargemoney != null">
+				#{techargemoney,jdbcType=INTEGER},
+			</if>
+			<if test="mark != null">
+				#{mark,jdbcType=VARCHAR},
+			</if>
+			<if test="status != null">
+				#{status,jdbcType=CHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="Techargerecord">
+		update techargerecord
+		<set>
+			<if test="accountId != null">
+				account_id = #{accountId,jdbcType=INTEGER},
+			</if>
+			<if test="managerId != null">
+				manager_id = #{managerId,jdbcType=INTEGER},
+			</if>
+			<if test="managerUpId != null">
+				manager_up_id = #{managerUpId,jdbcType=INTEGER},
+			</if>
+			<if test="createtime != null">
+				createtime = #{createtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="techargemoney != null">
+				techargeMoney = #{techargemoney,jdbcType=INTEGER},
+			</if>
+			<if test="mark != null">
+				mark = #{mark,jdbcType=VARCHAR},
+			</if>
+			<if test="status != null">
+				status = #{status,jdbcType=CHAR},
+			</if>
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="Techargerecord">
+		update
+		techargerecord
+		set account_id = #{accountId,jdbcType=INTEGER},
+		manager_id = #{managerId,jdbcType=INTEGER},
+		manager_up_id =
+		#{managerUpId,jdbcType=INTEGER},
+		createtime =
+		#{createtime,jdbcType=TIMESTAMP},
+		techargeMoney =
+		#{techargemoney,jdbcType=INTEGER},
+		mark = #{mark,jdbcType=VARCHAR},
+		status = #{status,jdbcType=CHAR}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+</mapper>

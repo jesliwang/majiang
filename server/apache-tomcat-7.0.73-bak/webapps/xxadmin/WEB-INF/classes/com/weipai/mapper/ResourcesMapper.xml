@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.weipai.mapper.ResourcesMapper">
+	<resultMap id="BaseResultMap" type="Resources">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="power_id" property="powerId" jdbcType="INTEGER" />
+		<result column="resourceUrl" property="resourceurl" jdbcType="VARCHAR" />
+		<result column="resourceName" property="resourcename" jdbcType="VARCHAR" />
+		<result column="level" property="level" jdbcType="INTEGER" />
+		<result column="resource_id" property="resourceId" jdbcType="INTEGER" />
+		<result column="status" property="status" jdbcType="CHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, power_id, resourceUrl, resourceName, level,
+		resource_id, status
+	</sql>
+	<!-- 后面添加sql -->
+	<!-- 通过powerId和level和resourceId(resourceId不为空时)得到菜单相关信息 -->
+	<select id="selectMenus" resultMap="BaseResultMap"
+		parameterType="Map">
+		select
+		<include refid="Base_Column_List" />
+		from resources
+		where power_id = #{powerId,jdbcType=INTEGER} and level =
+		#{level,jdbcType=INTEGER}
+		and status ="0"
+		<if test="resourceId != null">
+			and resource_id = #{resourceId,jdbcType=INTEGER}
+		</if>
+
+	</select>
+
+
+
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from resources
+		where id = #{id,jdbcType=INTEGER} and status=0
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from
+		resources
+		where id = #{id,jdbcType=INTEGER}
+	</delete>
+	<insert id="save" parameterType="Resources">
+		insert into resources (id,
+		power_id, resourceUrl,
+		resourceName, level, resource_id,status)
+		values
+		(#{id,jdbcType=INTEGER}, #{powerId,jdbcType=INTEGER},
+		#{resourceurl,jdbcType=VARCHAR},
+		#{resourcename,jdbcType=VARCHAR},
+		#{level,jdbcType=INTEGER} , #{resourceId ,jdbcType=INTEGER}
+		,#{status,jdbcType=CHAR})
+	</insert>
+	<insert id="saveSelective" parameterType="Resources">
+		insert into resources
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="powerId != null">
+				power_id,
+			</if>
+			<if test="resourceurl != null">
+				resourceUrl,
+			</if>
+			<if test="resourcename != null">
+				resourceName,
+			</if>
+			<if test="level != null">
+				level,
+			</if>
+			<if test="resourceId != null">
+				resource_id,
+			</if>
+			<if test="status != null">
+				status,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="powerId != null">
+				#{powerId,jdbcType=INTEGER},
+			</if>
+			<if test="resourceurl != null">
+				#{resourceurl,jdbcType=VARCHAR},
+			</if>
+			<if test="resourcename != null">
+				#{resourcename,jdbcType=VARCHAR},
+			</if>
+			<if test="level != null">
+				#{level,jdbcType=INTEGER},
+			</if>
+			<if test="resourceId  != null">
+				#{resourceId,jdbcType=INTEGER},
+			</if>
+			<if test="status != null">
+				#{status,jdbcType=CHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="Resources">
+		update resources
+		<set>
+			<if test="powerId != null">
+				power_id = #{powerId,jdbcType=INTEGER},
+			</if>
+			<if test="resourceurl != null">
+				resourceUrl = #{resourceurl,jdbcType=VARCHAR},
+			</if>
+			<if test="resourcename != null">
+				resourceName = #{resourcename,jdbcType=VARCHAR},
+			</if>
+			<if test="level != null">
+				level = #{level,jdbcType=INTEGER},
+			</if>
+			<if test="resourceId  != null">
+				resource_id = #{resourceId,jdbcType=INTEGER},
+			</if>
+			<if test="status != null">
+				status = #{status,jdbcType=CHAR},
+			</if>
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="Resources">
+		update resources
+		set power_id = #{powerId,jdbcType=INTEGER},
+		resourceUrl =
+		#{resourceurl,jdbcType=VARCHAR},
+		resourceName =
+		#{resourcename,jdbcType=VARCHAR},
+		level = #{level,jdbcType=INTEGER},
+		resource_id = #{resourceId ,jdbcType=INTEGER},
+		status =
+		#{status,jdbcType=CHAR}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+</mapper>

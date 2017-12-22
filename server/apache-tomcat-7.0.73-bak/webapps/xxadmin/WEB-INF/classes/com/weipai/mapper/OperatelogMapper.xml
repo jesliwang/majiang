@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.weipai.mapper.OperatelogMapper">
+	<resultMap id="BaseResultMap" type="Operatelog">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="manager_id" property="managerId" jdbcType="INTEGER" />
+		<result column="manager_down_id" property="managerDownId"
+			jdbcType="INTEGER" />
+		<result column="account_id" property="accountId" jdbcType="INTEGER" />
+		<result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
+		<result column="mark" property="mark" jdbcType="VARCHAR" />
+		<result column="type" property="type" jdbcType="CHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, manager_id, manager_down_id, account_id, createTime,
+		mark, type
+	</sql>
+	<!-- 获取相关对象的操作流水 -->
+	<select id="selectByRelateId" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from operatelog
+		where manager_id = #{managerId,jdbcType=INTEGER} order
+		by id DESC limit
+		0,100
+	</select>
+
+	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from operatelog
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from
+		operatelog
+		where id = #{id,jdbcType=INTEGER}
+	</delete>
+	<insert id="save" parameterType="Operatelog">
+		insert into operatelog (id,
+		manager_id, manager_down_id,
+		account_id, createTime, mark,
+		type)
+		values
+		(#{id,jdbcType=INTEGER}, #{managerId,jdbcType=INTEGER},
+		#{managerDownId,jdbcType=INTEGER},
+		#{accountId,jdbcType=INTEGER},
+		#{createtime,jdbcType=TIMESTAMP}, #{mark,jdbcType=VARCHAR},
+		#{type,jdbcType=CHAR})
+	</insert>
+	<insert id="saveSelective" parameterType="Operatelog">
+		insert into operatelog
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="managerId != null">
+				manager_id,
+			</if>
+			<if test="managerDownId != null">
+				manager_down_id,
+			</if>
+			<if test="accountId != null">
+				account_id,
+			</if>
+			<if test="createtime != null">
+				createTime,
+			</if>
+			<if test="mark != null">
+				mark,
+			</if>
+			<if test="type != null">
+				type,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="managerId != null">
+				#{managerId,jdbcType=INTEGER},
+			</if>
+			<if test="managerDownId != null">
+				#{managerDownId,jdbcType=INTEGER},
+			</if>
+			<if test="accountId != null">
+				#{accountId,jdbcType=INTEGER},
+			</if>
+			<if test="createtime != null">
+				#{createtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="mark != null">
+				#{mark,jdbcType=VARCHAR},
+			</if>
+			<if test="type != null">
+				#{type,jdbcType=CHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="Operatelog">
+		update operatelog
+		<set>
+			<if test="managerId != null">
+				manager_id = #{managerId,jdbcType=INTEGER},
+			</if>
+			<if test="managerDownId != null">
+				manager_down_id = #{managerDownId,jdbcType=INTEGER},
+			</if>
+			<if test="accountId != null">
+				account_id = #{accountId,jdbcType=INTEGER},
+			</if>
+			<if test="createtime != null">
+				createTime = #{createtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="mark != null">
+				mark = #{mark,jdbcType=VARCHAR},
+			</if>
+			<if test="type != null">
+				type = #{type,jdbcType=CHAR},
+			</if>
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="Operatelog">
+		update operatelog
+		set manager_id = #{managerId,jdbcType=INTEGER},
+		manager_down_id =
+		#{managerDownId,jdbcType=INTEGER},
+		account_id =
+		#{accountId,jdbcType=INTEGER},
+		createTime =
+		#{createtime,jdbcType=TIMESTAMP},
+		mark = #{mark,jdbcType=VARCHAR},
+		type
+		= #{type,jdbcType=CHAR}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+</mapper>

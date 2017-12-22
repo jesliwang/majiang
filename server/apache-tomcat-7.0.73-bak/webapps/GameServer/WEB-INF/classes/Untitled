@@ -1,0 +1,22 @@
+
+CREATE TABLE `account` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uuid` int(11) NOT NULL,
+  `openid` varchar(255) DEFAULT NULL,
+  `nickName` varchar(255) DEFAULT NULL,
+  `headIcon` varchar(255) DEFAULT NULL,
+  `roomCard` int(11) NOT NULL,
+  `unionid` varchar(255) DEFAULT NULL,
+  `province` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `sex` int(1) NOT NULL,
+  `prizecount` int(11) NOT NULL,
+  `manager_up_id` int(11) NOT NULL  DEFAULT 0,
+  `actualCard` int(11) NOT NULL,
+  `totalCard` int(11) NOT NULL,
+  `createTime` datetime NOT NULL,
+  `lastLoginTime` datetime DEFAULT NULL,
+  `status` char(1) NOT NULL DEFAULT '0',
+  `isGame` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

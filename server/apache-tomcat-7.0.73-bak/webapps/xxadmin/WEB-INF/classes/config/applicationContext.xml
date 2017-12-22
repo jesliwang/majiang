@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context-4.0.xsd
+					   	http://www.springframework.org/schema/mvc
+						http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+						http://www.springframework.org/schema/tx
+						http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+						http://www.springframework.org/schema/task 
+						http://www.springframework.org/schema/task/spring-task-4.0.xsd
+						http://www.springframework.org/schema/aop 
+						http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+						">
+
+
+
+	<task:annotation-driven /> <!-- 定时器开关 -->
+	<!-- 自动扫描的包名 -->
+	<context:component-scan base-package="com.weipai.timetask" />
+	<!-- 注解扫描包 这里再扫描service，不用扫描controller 不然事务不起作用 -->
+	<context:component-scan base-package="com.weipai">
+		<context:include-filter type="regex"
+			expression="org.springframework.stereotype.Service" />
+		<context:exclude-filter type="regex"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
+	<!-- 0. 数据源 : -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+
+		<property name="jdbcUrl"
+			value="jdbc:mysql://localhost:3306/roledata?zeroDateTimeBehavior=convertToNull" />
+		<property name="user" value="root" />
+		<property name="password" value="root" />
+
+		<!-- 设置数据库连接池的最大连接数 -->
+		<property name="maxPoolSize" value="20">
+		</property>
+		<!-- 设置数据库连接池的最小连接数 -->
+		<property name="minPoolSize" value="2">
+		</property>
+		<!-- 设置数据库连接池的初始化连接数 -->
+		<property name="initialPoolSize" value="2">
+		</property>
+		<!-- 设置数据库连接池的连接的最大空闲时间,单位为秒 -->
+		<property name="maxIdleTime" value="20">
+		</property>
+
+	</bean>
+
+	<!-- 2. mybatis的SqlSession的工厂: SqlSessionFactoryBean dataSource:引用数据源 MyBatis定义数据源,同意加载配置 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- <property name="transactionFactory"> <bean class="org.apache.ibatis.transaction.managed.ManagedTransactionFactory" 
+			/> </property> -->
+		<property name="configLocation" value="classpath:config/mybatis-config.xml" />
+	</bean>
+
+	<!-- 1. 事务管理 : DataSourceTransactionManager dataSource:引用上面定义的数据源 -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<!-- 2. 使用声明式事务 transaction-manager：引用上面定义的事务管理器 -->
+	<!-- 启用对事务注解的支持 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- 事务传播特性的配置 transaction-manager将事务管理器与事务机制进行关联 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="delete*" propagation="REQUIRED"
+				rollback-for="java.lang.Exception" />
+			<tx:method name="save*" propagation="REQUIRED"
+				rollback-for="java.lang.Exception" />
+			<tx:method name="update*" propagation="REQUIRED"
+				rollback-for="java.lang.Exception" />
+			<tx:method name="insert*" propagation="REQUIRED"
+				rollback-for="java.lang.Exception" />
+			<tx:method name="find*" read-only="true" />
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="select*" read-only="true" />
+			<tx:method name="*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- 3. mybatis自动扫描加载Sql映射文件/接口 : MapperScannerConfigurer sqlSessionFactory 
+		basePackage:指定sql映射文件/接口所在的包（自动扫描） -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.weipai.mapper"></property>
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+
+
+</beans>
