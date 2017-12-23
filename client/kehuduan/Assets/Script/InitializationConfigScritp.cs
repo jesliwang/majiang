@@ -15,13 +15,14 @@ public class InitializationConfigScritp : MonoBehaviour {
 		
 		MicroPhoneInput.getInstance ();
 		GlobalDataScript.getInstance ();
-		//CustomSocket.getInstance().Connect();
+
+		CustomSocket.getInstance().Connect();
 		//ChatSocket.getInstance ();
 		TipsManagerScript.getInstance ().parent = gameObject.transform;
 		SoundCtrl.getInstance ();
 
 		UpdateScript update = new UpdateScript ();
-		StartCoroutine (update.updateCheck ());
+		//StartCoroutine (update.updateCheck ());
 		ServiceErrorListener seriveError = new ServiceErrorListener();
 		Screen.sleepTimeout = SleepTimeout.NeverSleep;
 		//heartbeatTimer ();

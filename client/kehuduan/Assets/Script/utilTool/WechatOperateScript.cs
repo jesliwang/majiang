@@ -49,11 +49,11 @@ public class WechatOperateScript : MonoBehaviour {
 	 * 
 	 */ 
 	public void login(){
-        //TipsManagerScript.getInstance().setTips("获取个人信息成功");
-        shareSdk.Authorize(PlatformType.WeChat);
+        TipsManagerScript.getInstance().setTips("获取个人信息成功");
+        //shareSdk.Authorize(PlatformType.WeChat);
 	   //shareSdk.GetUserInfo(PlatformType.WeChat);
-	
-        //testLogin();
+	    
+        testLogin();
 
 	}
 
