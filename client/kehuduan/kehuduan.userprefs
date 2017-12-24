@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{01278091-48EA-3A10-0751-D230C4907E84}|">
   <MonoDevelop.Ide.ItemProperties.kehuduan PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/netManager/Events/APIS.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/netManager/request/LoginRequest.cs">
     <Files>
       <File FileName="Assets/Plugins/Android/ShareSDK/AndroidManifest.xml" Line="12" Column="26" />
-      <File FileName="Assets/Script/netManager/request/LoginRequest.cs" Line="10" Column="17" />
+      <File FileName="Assets/Script/netManager/request/LoginRequest.cs" Line="45" Column="27" />
       <File FileName="Assets/Script/InitializationConfigScritp.cs" Line="19" Column="34" />
       <File FileName="Assets/Script/netManager/CustomSocket.cs" Line="68" Column="36" />
-      <File FileName="Assets/Script/netManager/Events/APIS.cs" Line="17" Column="29" />
+      <File FileName="Assets/Script/netManager/Events/APIS.cs" Line="17" Column="11" />
+      <File FileName="Assets/Script/utilTool/MyDebug.cs" Line="16" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

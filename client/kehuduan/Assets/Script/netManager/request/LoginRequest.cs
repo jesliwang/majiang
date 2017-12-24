@@ -1,6 +1,7 @@
 ﻿using System;
 using LitJson;
 using System.Collections;
+using UnityEngine;
 
 namespace AssemblyCSharp
 {
@@ -39,12 +40,13 @@ namespace AssemblyCSharp
 
 			if (data == null) {
 				//LoginVo loginvo = new LoginVo ();
-				Random ran = new Random();
+                System.Random ran = new System.Random();
 				string str = ran.Next (100, 1000) + "for" + ran.Next (2000, 5000);
-				loginvo.openId = "1272" ;
+                loginvo.openId = SystemInfo.deviceUniqueIdentifier ;
 
 
-				loginvo.nickName = "127";
+
+                loginvo.nickName = SystemInfo.deviceUniqueIdentifier;
 				loginvo.headIcon = "imgicon";
 				loginvo.unionid = "127";
 				loginvo.province = "21sfsd";
