@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using DG.Tweening;
+using LitJson;
 
 public class HomePanelScript : MonoBehaviour {
     public Image headIconImg;//头像路径
@@ -27,7 +28,7 @@ public class HomePanelScript : MonoBehaviour {
 	Texture2D texture2D;         //下载的图片
 	private string headIcon;
 	private GameObject panelCreateDialog;//界面上打开的dialog
-	private GameObject panelExitDialog;
+	private GameObject panelSettingDialog;
 	/// <summary>
 	/// 这个字段是作为消息显示的列表 ，如果要想通过管理后台随时修改通知信息，
 	/// 请接收服务器的数据，并重新赋值给这个字段就行了。
@@ -38,6 +39,13 @@ public class HomePanelScript : MonoBehaviour {
 	private int showNum = 0;
     private int i;
     private int a=0;
+
+    // room info
+    public Button myRoomShare;
+    public Text myRoomVo;
+    public Text myRoomNumber;
+    public Text myRoomPlayers;
+
 	// Use this for initialization
 	void Start () {
 		initUI();
@@ -78,13 +86,13 @@ public class HomePanelScript : MonoBehaviour {
 			if(panelCreateDialog!=null){
 				Destroy (panelCreateDialog);
 				return;
-			}else if (panelExitDialog == null) {
-				panelExitDialog = Instantiate (Resources.Load("Prefab/Panel_Exit")) as GameObject;
-				panelExitDialog.transform.parent = gameObject.transform;
-				panelExitDialog.transform.localScale = Vector3.one;
+			}else if (panelSettingDialog == null) {
+                panelSettingDialog = Instantiate (Resources.Load("Prefab/Panel_Setting")) as GameObject;
+				panelSettingDialog.transform.parent = gameObject.transform;
+				panelSettingDialog.transform.localScale = Vector3.one;
 				//panelCreateDialog.transform.localPosition = new Vector3 (200f,150f);
-				panelExitDialog.GetComponent<RectTransform>().offsetMax = new Vector2(0f, 0f);
-				panelExitDialog.GetComponent<RectTransform>().offsetMin = new Vector2(0f, 0f);
+				panelSettingDialog.GetComponent<RectTransform>().offsetMax = new Vector2(0f, 0f);
+				panelSettingDialog.GetComponent<RectTransform>().offsetMin = new Vector2(0f, 0f);
 			}
 		}
 
@@ -103,6 +111,9 @@ public class HomePanelScript : MonoBehaviour {
 			
 	//	SocketEventHandle.getInstance ().gameBroadcastNotice += gameBroadcastNotice;
 		CommonEvent.getInstance ().DisplayBroadcast += gameBroadcastNotice;
+        //SocketEventHandle.getInstance().otherUserJointRoomCallBack += otherUserJointRoom;
+
+        SocketEventHandle.getInstance().StartPrepareGameCallBack += StartPrepareGame;
 	}
 
 	public void removeListener(){
@@ -110,8 +121,17 @@ public class HomePanelScript : MonoBehaviour {
 		CommonEvent.getInstance ().DisplayBroadcast -= gameBroadcastNotice;
 		SocketEventHandle.getInstance ().contactInfoResponse -= contactInfoResponse;
 	//	SocketEventHandle.getInstance ().gameBroadcastNotice -= gameBroadcastNotice;
+        //SocketEventHandle.getInstance().otherUserJointRoomCallBack -= otherUserJointRoom;
+        SocketEventHandle.getInstance().StartPrepareGameCallBack -= StartPrepareGame;
 	}
 
+    private void StartPrepareGame(ClientResponse response)
+    {
+        GlobalDataScript.roomJoinResponseData = JsonMapper.ToObject<RoomJoinResponseVo>(response.message);
+        GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
+        GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript> ().joinToRoom (GlobalDataScript.roomJoinResponseData.playerList);
+           
+    }
 
 
 	//房卡变化处理
@@ -174,11 +194,28 @@ public class HomePanelScript : MonoBehaviour {
 	/****
 	 * 判断进入房间
 	 */ 
-	private void checkEnterInRoom(){
+	public void checkEnterInRoom(){
+        myRoomShare.gameObject.SetActive(false);
+        /*
 		if (GlobalDataScript.roomVo!= null && GlobalDataScript.roomVo.roomId != 0) {
 			//loadPerfab ("Prefab/Panel_GamePlay");
-			GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
-		}
+
+			//GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
+            myRoomShare.gameObject.SetActive(true);
+            myRoomVo.text = GlobalDataScript.roomVo.roomId.ToString();
+            myRoomNumber.text = GlobalDataScript.roomVo.roundNumber.ToString();
+        }
+        */
+
+        if (GlobalDataScript.loginResponseData.roomId  != 0)
+        {
+            //loadPerfab ("Prefab/Panel_GamePlay");
+
+            //GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
+            myRoomShare.gameObject.SetActive(true);
+            myRoomVo.text = GlobalDataScript.loginResponseData.roomId.ToString();
+            //myRoomNumber.text = GlobalDataScript.roomVo.roundNumber.ToString();
+        }
 
 	}
 
@@ -207,7 +244,7 @@ public class HomePanelScript : MonoBehaviour {
 	 */ 
 	public void openEnterRoomDialog(){
 		
-		if (GlobalDataScript.roomVo == null || GlobalDataScript.roomVo.roomId == 0) {
+        if (GlobalDataScript.loginResponseData == null || GlobalDataScript.loginResponseData.roomId == 0) {
 			loadPerfab ("Prefab/Panel_Enter_Room");
 
 		} else {
@@ -278,13 +315,13 @@ public class HomePanelScript : MonoBehaviour {
 
 
 	public void exitApp(){
-		if (panelExitDialog == null) {
-			panelExitDialog = Instantiate (Resources.Load("Prefab/Panel_Exit")) as GameObject;
-			panelExitDialog.transform.parent = gameObject.transform;
-			panelExitDialog.transform.localScale = Vector3.one;
+        if (panelSettingDialog == null) {
+            panelSettingDialog = Instantiate (Resources.Load("Prefab/Panel_Setting")) as GameObject;
+			panelSettingDialog.transform.parent = gameObject.transform;
+			panelSettingDialog.transform.localScale = Vector3.one;
 			//panelCreateDialog.transform.localPosition = new Vector3 (200f,150f);
-			panelExitDialog.GetComponent<RectTransform>().offsetMax = new Vector2(0f, 0f);
-			panelExitDialog.GetComponent<RectTransform>().offsetMin = new Vector2(0f, 0f);
+			panelSettingDialog.GetComponent<RectTransform>().offsetMax = new Vector2(0f, 0f);
+			panelSettingDialog.GetComponent<RectTransform>().offsetMin = new Vector2(0f, 0f);
 		}
 	}
 

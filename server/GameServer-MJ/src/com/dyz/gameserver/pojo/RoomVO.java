@@ -8,6 +8,10 @@ import java.util.Map;
  * Created by kevin on 2016/6/22.
  */
 public class RoomVO {
+	/**
+	 * 总玩家数目
+	 */
+	private int totalPlayers;
     /**
      * 房间ID
      */
@@ -109,7 +113,13 @@ public class RoomVO {
 		return endStatistics;
 	}
     
+    public int getTotalPlayers(){
+    	return totalPlayers;
+    }
     
+    public void setTotalPlayers(int players){
+    	this.totalPlayers = players;
+    }
     
     
 	public int getRoomId() {
@@ -215,6 +225,7 @@ public class RoomVO {
     
     public RoomVO clone(){
     	RoomVO result = new RoomVO();
+    	result.totalPlayers = totalPlayers;
     	result.roomId = roomId;
         result.roundNumber = roundNumber;
         result.currentRound = currentRound;

@@ -8,7 +8,7 @@ import com.dyz.gameserver.commons.session.GameSession;
 
 public abstract class MsgProcessor {
 	
-	private static final Logger logger = LoggerFactory.getLogger(MsgProcessor.class);
+	protected static final Logger logger = LoggerFactory.getLogger(MsgProcessor.class);
 	
 	public void handle(GameSession gameSession,ClientRequest request){
 		try {

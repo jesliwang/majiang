@@ -106,17 +106,20 @@ public class CrateRoomSettingScript : MonoBehaviour {
 			Toggle item = zhuanzhuanRoomCards [i];
 			if (item.isOn) {
 				if (i == 0) {
-					roundNumber = 8;
+					roundNumber = 4;
 				} else if (i == 1) {
-					roundNumber = 16;
-				} 
+					roundNumber = 8;
+                } else if (i == 2) {
+                    roundNumber = 16;
+                }
 				break;
 			}
 		}
 
-		if (zhuanzhuanGameRule [0].isOn) {
-			isZimo = true;
-		}
+        isZimo = true;
+		//if (zhuanzhuanGameRule [0].isOn) {
+		//	isZimo = true;
+		//}
 
 		//if (zhuanzhuanGameRule [1].isOn) {
 		//	isGang = true;
@@ -138,6 +141,7 @@ public class CrateRoomSettingScript : MonoBehaviour {
 			}
 		}
 		sendVo = new RoomCreateVo ();
+        sendVo.totalPlayers = 2; // 玩家数目
 		sendVo.ma = maCount;
 		sendVo.roundNumber = roundNumber;
 		sendVo.ziMo = isZimo?1:0;
@@ -285,11 +289,12 @@ public class CrateRoomSettingScript : MonoBehaviour {
 				gameSence.GetComponent<RectTransform> ().offsetMin = new Vector2 (0f, 0f);
 				gameSence.GetComponent<MyMahjongScript> ().createRoomAddAvatarVO (GlobalDataScript.loginResponseData);
 			}*/
-			GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
+			//GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
 
-			GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript> ().createRoomAddAvatarVO (GlobalDataScript.loginResponseData);
-		
+			//GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript> ().createRoomAddAvatarVO (GlobalDataScript.loginResponseData);
+            GlobalDataScript.homePanel.GetComponent<HomePanelScript>().checkEnterInRoom();
 			closeDialog ();
+
 
 		} else {
 			TipsManagerScript.getInstance ().setTips (response.message);

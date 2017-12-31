@@ -13,8 +13,8 @@ namespace AssemblyCSharp
 		public const string chatSocketUrl = "118.178.20.36";
 		//public const string chatSocketUrl = "192.168.0.112";
 		//public const string socketUrl = "118.178.20.36";
-        public const string socketUrl = "39.108.136.192";
-        //public const string socketUrl = "192.168.1.104";
+        //public const string socketUrl = "39.108.136.192";
+        public const string socketUrl = "192.168.1.100";
 
 		public const string PIC_PATH = "http://www.weipaigame.com:8080/";
 	//	public const string apkDownLoadurl="192.168.0.111/aaa/weipai.apk";
@@ -31,7 +31,7 @@ namespace AssemblyCSharp
         public const int JOIN_ROOM_RESPONSE = 0x000004;//加入房间返回码
 		public const int JOIN_ROOM_NOICE = 0x10a004;//其它 人加入房间通知
 
-
+        public const int START_PREPARE_GAME_RESPONSE = 0X00008; // 房间人满，准备开始游戏
         public const int CREATEROOM_REQUEST = 0x00009;//创建房间请求码
         public const int CREATEROOM_RESPONSE = 0x00010;//创建房间返回吗
 

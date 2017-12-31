@@ -19,6 +19,7 @@ import com.dyz.gameserver.msg.response.outroom.DissolveRoomResponse;
 import com.dyz.gameserver.msg.response.outroom.OutRoomResponse;
 import com.dyz.gameserver.msg.response.startgame.PrepareGameResponse;
 import com.dyz.gameserver.msg.response.startgame.StartGameResponse;
+import com.dyz.gameserver.msg.response.startgame.StartPrepareGameResponse;
 import com.dyz.gameserver.pojo.AvatarVO;
 import com.dyz.gameserver.pojo.CardVO;
 import com.dyz.gameserver.pojo.HuReturnObjectVO;
@@ -33,6 +34,9 @@ import com.dyz.myBatis.services.AccountService;
 public class RoomLogic {
     private List<Avatar> playerList;
     private boolean isBegin = false;
+    public boolean GameRunning(){
+    	return isBegin;
+    }
     private  Avatar createAvator;
     private RoomVO roomVO;
     private PlayCardsLogic playCardsLogic;
@@ -89,12 +93,37 @@ public class RoomLogic {
     }
 
     /**
+     * 检查房间是否可以开始
+     * @return
+     */
+    public boolean isRoomFull()
+    {
+    	synchronized(roomVO){
+    		if(playerList.size() == roomVO.getTotalPlayers()){
+    			return true;
+    		}
+    		return false;
+    	}
+    }
+    
+    /**
+     * 通知房间的玩家，进入牌桌
+     */
+    public void StartGame()
+    {
+    	for (int i = 0; i < playerList.size(); i++) {
+            playerList.get(i).getSession().sendMsg(new StartPrepareGameResponse(1,this.roomVO));
+		}
+    }
+    
+    
+    /**
      * 进入房间,
      * @param avatar
      */
     public  boolean intoRoom(Avatar avatar){
     	synchronized(roomVO){
-    		if(playerList.size() == 4){
+    		if(playerList.size() == roomVO.getTotalPlayers()){
     			try {
     				avatar.getSession().sendMsg(new ErrorResponse(ErrorCode.Error_000011));
     			} catch (IOException e) {
@@ -161,7 +190,7 @@ public class RoomLogic {
      */
     public void checkCanBeStartGame() throws IOException{
     	//system.out.println("检测是否可以开始游戏");
-    	if(playerList.size() == 4){
+    	if(playerList.size() == roomVO.getTotalPlayers()){
     		//房间里面4个人且都准备好了则开始游戏
     		boolean flag = true;
     		for (Avatar avatar : playerList) {

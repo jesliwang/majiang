@@ -49,7 +49,7 @@ public class RoomManager {
         RoomInfoService.getInstance().createRoomInfo(roomVO);
         roomList.put(roomId,roomLogic);
         roomCount++;
-        System.out.println("(创建新房间成功)当前在线房间数量："+roomCount+":"+roomList.size());
+        System.out.println("(创建新房间成功)当前在线房间数量："+roomCount+":"+roomList.size() +",players=" + roomVO.getTotalPlayers());
         addUuidAndRoomId(avatar.avatarVO.getAccount().getUuid(), roomVO.getRoomId());
     }
     /**

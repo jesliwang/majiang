@@ -5,6 +5,7 @@ namespace AssemblyCSharp
 	[Serializable]
 	public class RoomCreateVo
 	{
+        public int totalPlayers;
 		public  bool hong;
 		public int ma;
 		public int roomId;

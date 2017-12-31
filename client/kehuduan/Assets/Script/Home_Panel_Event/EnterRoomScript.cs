@@ -39,7 +39,8 @@ public class EnterRoomScript : MonoBehaviour{
 	public void OnClickHandle (GameObject gobj){
 		//if(eventData.button)
 		MyDebug.Log(gobj);
-		clickNumber (gobj.GetComponentInChildren<Text>().text);
+        clickNumber(gobj.name.Substring(7));
+		//clickNumber (gobj.GetComponentInChildren<Text>().text);
 	}
 
 
@@ -110,8 +111,8 @@ public class EnterRoomScript : MonoBehaviour{
 			GlobalDataScript.surplusTimes = GlobalDataScript.roomJoinResponseData.roundNumber;
 			GlobalDataScript.loginResponseData.roomId = GlobalDataScript.roomJoinResponseData.roomId;
 			//loadPerfab("Prefab/Panel_GamePlay");
-			GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
-			GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript> ().joinToRoom (GlobalDataScript.roomJoinResponseData.playerList);
+			//GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
+			//GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript> ().joinToRoom (GlobalDataScript.roomJoinResponseData.playerList);
 			closeDialog ();
 		} else {
 			TipsManagerScript.getInstance ().setTips (response.message);

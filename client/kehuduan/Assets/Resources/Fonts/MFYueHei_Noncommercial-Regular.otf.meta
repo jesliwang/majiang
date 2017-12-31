@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bbbf7914734994cdab96ef7d6e2d1b6f
+timeCreated: 1514297408
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: MF YueHei (Noncommercial)
+  fontNames:
+  - MF YueHei (Noncommercial)
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

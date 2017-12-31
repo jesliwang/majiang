@@ -27,7 +27,15 @@ public class RoomInfo {
 
     private int cardNumb;//创建房间 消耗房卡数量
     
+    private Integer totalPlayers;
     
+    public int getTotalPlayers(){
+    	return totalPlayers;
+    }
+    
+    public void setTotalPlayers(int pNumber){
+    	this.totalPlayers = pNumber;
+    }
     
     public int getCardNumb() {
 		return cardNumb;

@@ -61,8 +61,6 @@ public class LoginSystemScript : MonoBehaviour {
 			return;
 		}
 
-
-
 		GlobalDataScript.reinitData ();//初始化界面数据
 		if (agreeProtocol.isOn) {
 			doLogin ();
@@ -85,7 +83,7 @@ public class LoginSystemScript : MonoBehaviour {
 		if (watingPanel != null) {
 			watingPanel.SetActive(false);
 		}
-	
+
 		SoundCtrl.getInstance ().playBGM ();
 		if (response.status == 1) {
 			if (GlobalDataScript.homePanel != null) {
@@ -109,6 +107,7 @@ public class LoginSystemScript : MonoBehaviour {
 			removeListener ();
 			Destroy (this);
 			Destroy (gameObject);
+
 		}
 	}
 

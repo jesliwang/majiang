@@ -186,7 +186,7 @@ public class MyMahjongScript : MonoBehaviour
 		SocketEventHandle.getInstance().pickCardCallBack += pickCard;
 		SocketEventHandle.getInstance().otherPickCardCallBack += otherPickCard;
 		SocketEventHandle.getInstance().putOutCardCallBack += otherPutOutCard;
-		SocketEventHandle.getInstance().otherUserJointRoomCallBack += otherUserJointRoom;
+        //SocketEventHandle.getInstance().otherUserJointRoomCallBack += otherUserJointRoom;
 		SocketEventHandle.getInstance().PengCardCallBack += otherPeng;
 		SocketEventHandle.getInstance().GangCardCallBack += gangResponse;
 		SocketEventHandle.getInstance().gangCardNotice += otherGang;
@@ -212,7 +212,7 @@ public class MyMahjongScript : MonoBehaviour
 		SocketEventHandle.getInstance().pickCardCallBack -= pickCard;
 		SocketEventHandle.getInstance().otherPickCardCallBack -= otherPickCard;
 		SocketEventHandle.getInstance().putOutCardCallBack -= otherPutOutCard;
-		SocketEventHandle.getInstance().otherUserJointRoomCallBack -= otherUserJointRoom;
+		//SocketEventHandle.getInstance().otherUserJointRoomCallBack -= otherUserJointRoom;
 		SocketEventHandle.getInstance().PengCardCallBack -= otherPeng;
 		SocketEventHandle.getInstance().GangCardCallBack -= gangResponse;
 		SocketEventHandle.getInstance().gangCardNotice -= otherGang;
@@ -297,7 +297,8 @@ public class MyMahjongScript : MonoBehaviour
 		MyDebug.Log("startGame");
 		GlobalDataScript.surplusTimes --;
 		curDirString = getDirection (bankerId);
-		LeavedRoundNumText.text = GlobalDataScript.surplusTimes+"";//刷新剩余圈数
+        LeavedRoundNumText.text = string.Format("{0,2}/{1,2} 局", GlobalDataScript.surplusTimes, GlobalDataScript.roomVo.roundNumber);
+          //  GlobalDataScript.surplusTimes+"";//刷新剩余圈数
 		if (!isFirstOpen) {
 			btnActionScript = gameObject.GetComponent<ButtonActionScript> ();
 			initPanel ();
@@ -370,7 +371,7 @@ public class MyMahjongScript : MonoBehaviour
 			LeavedCardsNum = 108;
 		}
 		LeavedCardsNum = LeavedCardsNum - 53;
-		LeavedCastNumText.text = (LeavedCardsNum)+"";
+        LeavedCastNumText.text = string.Format("剩{0,2}张", LeavedCardsNum);
 
 
 		/**
@@ -387,7 +388,7 @@ public class MyMahjongScript : MonoBehaviour
 		{
 			LeavedCardsNum = 0;
 		}
-		LeavedCastNumText.text = LeavedCardsNum+ "";
+        LeavedCastNumText.text = string.Format("剩{0,2}张", LeavedCardsNum);
 	}
 
 	/// <summary>
@@ -1790,7 +1791,8 @@ public class MyMahjongScript : MonoBehaviour
 		GlobalDataScript.totalTimes = roomvo.roundNumber;
 		GlobalDataScript.surplusTimes = roomvo.roundNumber;
 	//	LeavedRoundNumText.text = GlobalDataScript.surplusTimes + "";
-		string str = "房间号：\n"+roomvo.roomId+"\n";
+        string str = "房间号：\n" + roomvo.roomId + "\n";
+		/*string str = "房间号：\n"+roomvo.roomId+"\n";
 		str += "圈数："+roomvo.roundNumber+"\n";
 
 		if (roomvo.roomType == 3) {
@@ -1830,6 +1832,7 @@ public class MyMahjongScript : MonoBehaviour
 		if (roomvo.magnification > 0) {
 			str += "倍率：" + roomvo.magnification+"";
 		}
+		*/
 		roomRemark.text = str;
 	}
 
@@ -2741,11 +2744,15 @@ public class MyMahjongScript : MonoBehaviour
 		//1.显示剩余牌的张数和圈数
 		JsonData returnJsonData = JsonMapper.ToObject(response.message);
 		string surplusCards = returnJsonData["surplusCards"].ToString();
-		LeavedCastNumText.text = surplusCards;
+        LeavedCastNumText.text = string.Format("剩{0,2}张", surplusCards);
+         
 		LeavedCardsNum = int.Parse(surplusCards);
 		int gameRound =int.Parse( returnJsonData ["gameRound"].ToString ());
-		LeavedRoundNumText.text =gameRound+ "";
-		GlobalDataScript.surplusTimes = gameRound;
+		//LeavedRoundNumText.text =gameRound+ "";
+        GlobalDataScript.surplusTimes = gameRound;
+        LeavedRoundNumText.text = string.Format("{0,2}/{1,2} 局", GlobalDataScript.surplusTimes, GlobalDataScript.roomVo.roundNumber);
+
+		
 
 
 		int curAvatarIndexTemp = -1;//当前出牌人的索引

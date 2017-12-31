@@ -31,6 +31,7 @@ public class RoomInfoService {
 	    public int createRoomInfo(RoomVO roomVO){
 	    	//创建信息的同事创建其关联表
 	        RoomInfo room = new RoomInfo();
+	        room.setTotalPlayers(roomVO.getTotalPlayers());
 	        room.setIshong(roomVO.getHong()?"1":"0");
 	        room.setGametype(roomVO.getRoomType()+"");
 	        room.setMa(roomVO.getMa());
@@ -41,7 +42,7 @@ public class RoomInfoService {
 	        room.setName(roomVO.getName());
 	        room.setAddwordcard(roomVO.isAddWordCard()?"1":"0");
 	        room.setCreateTime(new Date());
-	        room.setCardNumb(roomVO.getRoundNumber()/8);
+	        room.setCardNumb(roomVO.getRoundNumber()/4);
 	    	//创建RoomInfo表
 	        int index = roomInfoMap.insertSelective(room);
 	        roomVO.setId(room.getId());

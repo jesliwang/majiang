@@ -14,9 +14,10 @@
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result  column="createTime" property="createTime" jdbcType="TIMESTAMP"/>
     <result column="cardNumb" property="cardNumb" jdbcType="INTEGER" />
+    <result column="totalPlayers" property="totalPlayers" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, gameType, isHong, roomid, sevenDouble, ma, zimo, xiayu, addWordCard, name, createTime, cardNumb
+    id, gameType, isHong, roomid, sevenDouble, ma, zimo, xiayu, addWordCard, name, createTime, cardNumb, totalPlayers
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -49,11 +50,11 @@
     insert into roominfo (id, gameType, isHong, 
       roomid, sevenDouble, ma, 
       zimo, xiayu, addWordCard, 
-      name, createTime, cardNumb)
+      name, createTime, cardNumb, totalPlayers)
     values (#{id,jdbcType=INTEGER}, #{gametype,jdbcType=CHAR}, #{ishong,jdbcType=CHAR}, 
       #{roomid,jdbcType=INTEGER}, #{sevendouble,jdbcType=CHAR}, #{ma,jdbcType=INTEGER}, 
       #{zimo,jdbcType=CHAR}, #{xiayu,jdbcType=INTEGER}, #{addwordcard,jdbcType=CHAR}, 
-      #{name,jdbcType=VARCHAR},  #{createTime,jdbcType=TIMESTAMP},  #{cardNumb,jdbcType=INTEGER})
+      #{name,jdbcType=VARCHAR},  #{createTime,jdbcType=TIMESTAMP},  #{cardNumb,jdbcType=INTEGER}, #{totalPlayers,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.dyz.myBatis.model.RoomInfo"  keyProperty="id" useGeneratedKeys="true">
     insert into roominfo
@@ -94,6 +95,9 @@
       <if test="cardNumb != null" >
         cardNumb,
       </if>
+      <if test="totalPlayers != null" >
+        totalPlayers,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -132,6 +136,10 @@
        <if test="cardNumb != null" >
         #{cardNumb,jdbcType=INTEGER},
       </if>
+      <if test="totalPlayers != null" >
+        #{totalPlayers,jdbcType=INTEGER},
+      </if>
+      
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.dyz.myBatis.model.RoomInfo" >
@@ -170,6 +178,10 @@
        <if test="cardNumb != null" >
         cardNumb = #{cardNumb,jdbcType=INTEGER},
       </if>
+      <if test="totalPlayers != null" >
+        totalPlayers = #{totalPlayers,jdbcType=INTEGER},
+      </if>
+      
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -185,7 +197,8 @@
       addWordCard = #{addwordcard,jdbcType=CHAR},
       name = #{name,jdbcType=VARCHAR},
       createTime = #{createTime,jdbcType=TIMESTAMP},
-      cardNumb = #{cardNumb,jdbcType=INTEGER}
+      cardNumb = #{cardNumb,jdbcType=INTEGER},
+      totalPlayers = #{totalPlayers,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

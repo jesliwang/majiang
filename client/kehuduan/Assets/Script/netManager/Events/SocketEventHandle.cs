@@ -13,6 +13,9 @@ namespace AssemblyCSharp
 
 		public  delegate void ServerCallBackEvent (ClientResponse response);
 		public  delegate void ServerDisconnectCallBackEvent ();
+
+        public ServerCallBackEvent StartPrepareGameCallBack;
+
 		public ServerCallBackEvent LoginCallBack;//登录回调
 		public ServerCallBackEvent CreateRoomCallBack;//创建房间回调
 		public ServerCallBackEvent JoinRoomCallBack;//加入房间回调
@@ -112,6 +115,15 @@ namespace AssemblyCSharp
 					LoginCallBack(response);
 				}
 				break;
+            case APIS.START_PREPARE_GAME_RESPONSE:
+                {
+                        Debug.LogError("let players enter game!! " + response.message);
+                    if(StartPrepareGameCallBack!=null){
+                        StartPrepareGameCallBack(response);
+                    }
+
+                }
+                break;
 			case APIS.CREATEROOM_RESPONSE:
 				if (CreateRoomCallBack != null) {
 					CreateRoomCallBack(response);

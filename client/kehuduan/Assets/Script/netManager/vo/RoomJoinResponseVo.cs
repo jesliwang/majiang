@@ -6,6 +6,7 @@ namespace AssemblyCSharp
 	[Serializable]
 	public class RoomJoinResponseVo
 	{
+        public int totalPlayers;
 		public bool addWordCard;
 		public bool hong;
 		public int ma;

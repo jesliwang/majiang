@@ -1,5 +1,8 @@
 package com.dyz.gameserver.msg.processor.joinroom;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.context.ErrorCode;
 import com.dyz.gameserver.Avatar;
 import com.dyz.gameserver.commons.message.ClientRequest;
@@ -10,7 +13,9 @@ import com.dyz.gameserver.manager.RoomManager;
 import com.dyz.gameserver.msg.processor.common.INotAuthProcessor;
 import com.dyz.gameserver.msg.processor.common.MsgProcessor;
 import com.dyz.gameserver.msg.response.ErrorResponse;
+import com.dyz.gameserver.msg.response.joinroom.JoinRoomResponse;
 import com.dyz.persist.util.GlobalUtil;
+
 import net.sf.json.JSONObject;
 
 /**
@@ -20,7 +25,7 @@ import net.sf.json.JSONObject;
  */
 public class JoinRoomMsgProcessor extends MsgProcessor implements
 		INotAuthProcessor {
-
+	
 	public JoinRoomMsgProcessor() {
 	}
 
@@ -42,13 +47,19 @@ public class JoinRoomMsgProcessor extends MsgProcessor implements
 						roomLogic.returnBackAction(avatar);
 						return;
 					}
-					roomLogic.intoRoom(avatar);
-					//boolean joinResult = roomLogic.intoRoom(avatar);
-					/*if(joinResult) {
-						//system.out.println("加入房间成功");
+					//roomLogic.intoRoom(avatar);
+					boolean joinResult = roomLogic.intoRoom(avatar);
+					if(joinResult) {
+						logger.error("加入房间成功");
+						// 如果此时房间人数满了，通知玩家进入游戏
+						if(roomLogic.isRoomFull())
+						{
+							roomLogic.StartGame();
+							logger.error("房间人满了，进入战场");
+						}
 					}else{
-						//system.out.println("加入房间失败");
-					}*/
+						logger.error("加入房间失败");
+					}
 				} else {
 					gameSession.sendMsg(new ErrorResponse(ErrorCode.Error_000018));
 				}

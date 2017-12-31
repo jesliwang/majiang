@@ -24,13 +24,16 @@ public class ConnectAPI {
 	public static int JOIN_ROOM_RESPONSE  = 0x000004;
 	public static int JOIN_ROOM_NOICE = 0x10a004;
 	
-
+	public static int ROOM_STATUS_RESPONSE = 0x110001;
+	
 	public static int SIGNUP_REQUEST = 0x000005;
 	public static int SIGNUP_RESPONSE = 0x000006;
 
 	public static int OPENAPP_REQUEST = 0x000007;
 	public static int OPENAPP_RESPONSE =0x000008;
 
+	public static int START_PREPARE_GAME_RESPONSE = 0x00008;
+	
 	public static int CREATEROOM_REQUEST = 0x00009;
 	public static int CREATEROOM_RESPONSE = 0x00010;
 	//开始游戏

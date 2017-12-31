@@ -89,7 +89,7 @@ public class LoginMsgProcessor extends MsgProcessor implements INotAuthProcessor
 					avatar =  gamesession.getRole(Avatar.class);
 				}
 			}
-			if(avatar == null) {
+			if(avatar == null){
 					//判断微信昵称是否修改过，若修改过昵称，则更新数据库信息
 					if(!loginVO.getNickName().equals(account.getNickname())){
 						account.setNickname(loginVO.getNickName());
@@ -112,8 +112,12 @@ public class LoginMsgProcessor extends MsgProcessor implements INotAuthProcessor
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
-					String content = notice.getContent();
-					gameSession.sendMsg(new HostNoitceResponse(1, content));
+					if(null != notice)
+					{
+						String content = notice.getContent();
+						gameSession.sendMsg(new HostNoitceResponse(1, content));
+					}
+					
 			}else{
 				//断线重连
 				GameServerContext.add_onLine_Character(avatar);
@@ -128,6 +132,7 @@ public class LoginMsgProcessor extends MsgProcessor implements INotAuthProcessor
 				gameSession.setLogin(true);
 				gameSession.setRole(avatar);
 				returnBackAction(gameSession ,avatar);
+				//loginAction(gameSession,avatar);
 				//把session放入到GameSessionManager,并且移除以前的session
 				GameSessionManager.getInstance().putGameSessionInHashMap(gameSession,avatar.getUuId());
 				//公告发送给玩家
@@ -167,20 +172,26 @@ public class LoginMsgProcessor extends MsgProcessor implements INotAuthProcessor
      */
 	public void returnBackAction(GameSession gameSession ,Avatar avatar){
 		
-		
 		if(avatar.avatarVO.getRoomId() != 0){
 			RoomLogic roomLogic = RoomManager.getInstance().getRoom(avatar.avatarVO.getRoomId());
 			if(roomLogic !=null){
-				//如果用户是在玩游戏/在房间的时候断线，且返回时房间还未被解散，则需要返回游戏房间其他用户信息，牌组信息
-				roomLogic.returnBackAction(avatar);
-				try {
-					Thread.sleep(1000);
-					if(avatar.overOff){
-						//在某一句结算时断线，重连时返回结算信息
-						avatar.getSession().sendMsg(new HuPaiResponse(1,avatar.oneSettlementInfo));
+				if(roomLogic.GameRunning())
+				{
+					//如果用户是在玩游戏/在房间的时候断线，且返回时房间还未被解散，则需要返回游戏房间其他用户信息，牌组信息
+					roomLogic.returnBackAction(avatar);
+					try {
+						Thread.sleep(1000);
+						if(avatar.overOff){
+							//在某一句结算时断线，重连时返回结算信息
+							avatar.getSession().sendMsg(new HuPaiResponse(1,avatar.oneSettlementInfo));
+						}
+					} catch (InterruptedException e) {
+						e.printStackTrace();
 					}
-				} catch (InterruptedException e) {
-					e.printStackTrace();
+				}
+				else{
+					//如果不是在游戏时断线，则直接返回个人用户信息avatar
+					avatar.getSession().sendMsg(new LoginResponse(1, avatar.avatarVO));
 				}
 			}
 			else{

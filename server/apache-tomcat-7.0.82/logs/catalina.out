@@ -867,3 +867,85 @@ Dec 23, 2017 11:35:46 PM org.apache.coyote.ajp.AjpMessage processHeader
 SEVERE: Invalid message received with signature 18245
 Dec 23, 2017 11:35:46 PM org.apache.coyote.ajp.AjpMessage processHeader
 SEVERE: Invalid message received with signature 18245
+Dec 26, 2017 10:26:35 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+bbbb
+2017-12-26 22:26:35,257 (GameServer.java:71) INFO  com.dyz.gameserver.bootstrap.GameServer - 准备关闭服务器...
+2017-12-26 22:26:35,274 (GameServer.java:73) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器停止网络监听
+2017-12-26 22:26:35,274 (GameServer.java:75) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器线程池关闭完成
+2017-12-26 22:26:35,274 (GameServer.java:76) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器关闭完成
+Dec 26, 2017 10:26:35 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Dec 26, 2017 10:26:35 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [org.apache.ibatis.datasource.unpooled.UnpooledDataSource.DriverProxy] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Dec 26, 2017 10:26:35 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [Timer-1] but has failed to stop it. This is very likely to create a memory leak.
+Dec 26, 2017 10:26:35 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [NioSocketAcceptor-1] but has failed to stop it. This is very likely to create a memory leak.
+Dec 26, 2017 10:26:35 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak.
+Dec 26, 2017 10:26:35 PM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFO: validateJarFile(/Users/Jesli/Development/self_project/majiang/server/GameServer-MJ/WebRoot/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Dec 26, 2017 10:26:35 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+aaaaaa
+log4j: reset attribute= "false".
+log4j: Threshold ="null".
+log4j: Level value for root is  [info].
+log4j: root level set to INFO
+log4j: Class name: [org.apache.log4j.ConsoleAppender]
+log4j: Parsing layout of class: "org.apache.log4j.PatternLayout"
+log4j: Setting property [conversionPattern] to [%d (%F:%L) %-5p %c - %m%n].
+log4j: Adding appender named [stdout] to category [root].
+2017-12-26 22:26:35,827 (MsgDispatcher.java:28) INFO  com.dyz.gameserver.commons.message.MsgDispatcher - 初始化 消息处理器成功。。。
+2017-12-26 22:26:35,829 (GameServer.java:46) INFO  com.dyz.gameserver.bootstrap.GameServer - 开始启动服务器 ...
+2017-12-26 22:26:35,830 (GameServer.java:48) INFO  com.dyz.gameserver.bootstrap.GameServer - 初始化服务器线程池完成
+Tue Dec 26 01:00:00 HKT 2017
+时间=Tue Dec 26 22:26:36 HKT 2017 执行了1次
+Tue Dec 26 00:00:01 HKT 2017
+2017-12-26 22:26:36,111 (GameServer.java:51) INFO  com.dyz.gameserver.bootstrap.GameServer - 数据库连接初始化完成
+2017-12-26 22:26:36,245 (GameServer.java:59) ERROR com.dyz.gameserver.bootstrap.GameServer - 服务器启动失败
+java.io.IOException: Error while binding on 0.0.0.0/0.0.0.0:10122
+original message : Address already in use
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:238)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.registerHandles(AbstractPollingIoAcceptor.java:583)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.access$400(AbstractPollingIoAcceptor.java:71)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor$Acceptor.run(AbstractPollingIoAcceptor.java:457)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Dec 26, 2017 10:26:36 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+Exception in thread "Timer-2" java.lang.NullPointerException
+	at com.dyz.persist.util.TaskTimer$1.run(TaskTimer.java:34)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Dec 26, 2017 11:02:27 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Dec 26, 2017 11:02:28 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Dec 26, 2017 11:02:28 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+bbbb
+2017-12-26 23:02:28,086 (GameServer.java:71) INFO  com.dyz.gameserver.bootstrap.GameServer - 准备关闭服务器...
+2017-12-26 23:02:28,110 (GameServer.java:73) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器停止网络监听
+2017-12-26 23:02:28,110 (GameServer.java:75) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器线程池关闭完成
+2017-12-26 23:02:28,110 (GameServer.java:76) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器关闭完成
+Dec 26, 2017 11:02:28 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Dec 26, 2017 11:02:28 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [org.apache.ibatis.datasource.unpooled.UnpooledDataSource.DriverProxy] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Dec 26, 2017 11:02:28 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [Timer-3] but has failed to stop it. This is very likely to create a memory leak.
+Dec 26, 2017 11:02:28 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak.
+Dec 26, 2017 11:02:28 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Dec 26, 2017 11:02:28 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Dec 26, 2017 11:02:28 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+Dec 26, 2017 11:02:28 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
