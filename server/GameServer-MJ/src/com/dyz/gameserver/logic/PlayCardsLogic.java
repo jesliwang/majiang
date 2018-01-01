@@ -441,7 +441,7 @@ public class PlayCardsLogic {
      */
     public int getNextAvatarIndex(){
         int nextIndex = curAvatarIndex + 1;
-        if(nextIndex >= 4){
+        if(nextIndex >= playerList.size()){
             nextIndex = 0;
         }
         return nextIndex;
