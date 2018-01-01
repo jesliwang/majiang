@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{01278091-48EA-3A10-0751-D230C4907E84}|">
   <MonoDevelop.Ide.ItemProperties.kehuduan PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Home_Panel_Event/RulePanelScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Home_Panel_Event/CrateRoomSettingScript.cs">
     <Files>
       <File FileName="Assets/Script/Home_Panel_Event/HomePanelScript.cs" Line="90" Column="87" />
       <File FileName="Assets/Script/Home_Panel_Event/EnterRoomScript.cs" Line="99" Column="103" />
@@ -12,6 +12,7 @@
       <File FileName="Assets/Script/Exit_App/ExitAppScript.cs" Line="3" Column="1" />
       <File FileName="Assets/Script/Setting_App/SettingAppScript.cs" Line="18" Column="25" />
       <File FileName="Assets/Script/Home_Panel_Event/RulePanelScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Home_Panel_Event/CrateRoomSettingScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

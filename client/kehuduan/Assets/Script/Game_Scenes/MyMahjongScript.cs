@@ -356,10 +356,10 @@ public class MyMahjongScript : MonoBehaviour
 			LeavedCardsNum = 108;
             if (hong)
 			{
-				LeavedCardsNum = 112;
+				LeavedCardsNum = 132;
 			}
 		}
-		else if (RoomType == 2)//划水麻将
+		/*else if (RoomType == 2)//划水麻将
 		{
 			LeavedCardsNum = 108;
 			if (roomCreateVo.addWordCard) {
@@ -369,8 +369,8 @@ public class MyMahjongScript : MonoBehaviour
 		else if (RoomType == 3)
 		{
 			LeavedCardsNum = 108;
-		}
-		LeavedCardsNum = LeavedCardsNum - 53;
+		}*/
+        LeavedCardsNum = LeavedCardsNum - 13*roomCreateVo.totalPlayers - 1;
         LeavedCastNumText.text = string.Format("剩{0,2}张", LeavedCardsNum);
 
 

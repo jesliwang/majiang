@@ -225,7 +225,7 @@ public class PlayCardsLogic {
 			//转转麻将
 			paiCount = 27;
 			if(roomVO.getHong()){
-				paiCount = 34;
+				paiCount = 33;
 			}
 		}else if(roomVO.getRoomType() == 2){
 			//划水麻将
@@ -241,6 +241,7 @@ public class PlayCardsLogic {
 		listCard = new ArrayList<Integer>();
 		for (int i = 0; i < paiCount; i++) {
 			for (int k = 0; k < 4; k++) {
+				/*
 				if(roomVO.getHong() && i == 27) {
 					listCard.add(31);
 				}else if(roomVO.getHong() && i >= 28){
@@ -248,9 +249,11 @@ public class PlayCardsLogic {
 				}else{
 					listCard.add(i);
 				}
+				*/
+				listCard.add(i);
 			}
 		}
-
+		//System.out.println("listcard=" + listCard.size());
 		for(int i=0;i<playerList.size();i++){
 			playerList.get(i).avatarVO.setPaiArray(new int[2][paiCount]);
 		}
@@ -1600,6 +1603,7 @@ public class PlayCardsLogic {
      */
     public int getNextCardPoint(){
     	nextCardindex++;
+    	//System.out.println("listcard=" + listCard.size()+"," + nextCardindex);
         if(nextCardindex<listCard.size()){
             return listCard.get(nextCardindex);
         }

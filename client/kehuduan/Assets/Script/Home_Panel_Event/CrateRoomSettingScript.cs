@@ -28,6 +28,9 @@ public class CrateRoomSettingScript : MonoBehaviour {
 	public List<Toggle> huashuixiayu;//划水麻将下鱼条数
 
 
+    public List<Toggle> GamePlayerNumbers;// player number
+    public List<Toggle> GameRules;
+
 	private int roomCardCount;//房卡数
 	private GameObject gameSence;
 	private RoomCreateVo sendVo;//创建房间的信息
@@ -100,6 +103,7 @@ public class CrateRoomSettingScript : MonoBehaviour {
 		bool isZimo=false;//自摸
 		bool hasHong=false;//红中赖子
 		bool isSevenDoube =false;//七小对
+        int playerNumber = 4; 
 		//bool isGang = false;
 		int maCount = 0;
 		for (int i = 0; i < zhuanzhuanRoomCards.Count; i++) {
@@ -116,6 +120,13 @@ public class CrateRoomSettingScript : MonoBehaviour {
 			}
 		}
 
+        for (int i = 0; i < GamePlayerNumbers.Count; i++){
+            Toggle item = GamePlayerNumbers[i];
+            if(item.isOn){
+                playerNumber = i + 2;
+            }
+        }
+
         isZimo = true;
 		//if (zhuanzhuanGameRule [0].isOn) {
 		//	isZimo = true;
@@ -125,13 +136,13 @@ public class CrateRoomSettingScript : MonoBehaviour {
 		//	isGang = true;
 		//}
 
-		if (zhuanzhuanGameRule [2].isOn) {
-			hasHong = true;
-		}
+		//if (zhuanzhuanGameRule [2].isOn) {
+		//	hasHong = true;
+		//}
 
-		if (zhuanzhuanGameRule [3].isOn) {
-			isSevenDoube = true;
-		}
+		//if (zhuanzhuanGameRule [3].isOn) {
+		//	isSevenDoube = true;
+		//}
 
 
 		for (int i = 0; i < zhuanzhuanZhuama.Count; i++) {
@@ -141,11 +152,11 @@ public class CrateRoomSettingScript : MonoBehaviour {
 			}
 		}
 		sendVo = new RoomCreateVo ();
-        sendVo.totalPlayers = 2; // 玩家数目
+        sendVo.totalPlayers = playerNumber; // 玩家数目
 		sendVo.ma = maCount;
 		sendVo.roundNumber = roundNumber;
 		sendVo.ziMo = isZimo?1:0;
-		sendVo.hong = hasHong;
+        sendVo.hong = true;
 		sendVo.sevenDouble = isSevenDoube;
 		sendVo.roomType = GameConfig.GAME_TYPE_ZHUANZHUAN;
 		string sendmsgstr = JsonMapper.ToJson (sendVo);
@@ -155,7 +166,7 @@ public class CrateRoomSettingScript : MonoBehaviour {
 			TipsManagerScript.getInstance ().setTips ("你的房卡数量不足，不能创建房间");
 		}
 
-
+        Debug.LogError("create.players=" + sendVo.totalPlayers);
 	}
 
 	/**
