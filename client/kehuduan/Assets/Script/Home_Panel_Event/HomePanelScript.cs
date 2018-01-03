@@ -31,6 +31,8 @@ public class HomePanelScript : MonoBehaviour {
 	private GameObject panelSettingDialog;
     private GameObject panelShopDialog;
     private GameObject panelYaoqingDialog;
+    private GameObject panelShareDialog;
+    private GameObject panelMessageDialog;
 	/// <summary>
 	/// 这个字段是作为消息显示的列表 ，如果要想通过管理后台随时修改通知信息，
 	/// 请接收服务器的数据，并重新赋值给这个字段就行了。
@@ -295,6 +297,24 @@ public class HomePanelScript : MonoBehaviour {
         panelYaoqingDialog.transform.localScale = Vector3.one;
         panelYaoqingDialog.GetComponent<RectTransform>().offsetMax = new Vector2(0f, 0f);
         panelYaoqingDialog.GetComponent<RectTransform>().offsetMin = new Vector2(0f, 0f);
+    }
+
+    public void ShareGameClick()
+    {
+        panelShareDialog = Instantiate(Resources.Load("Prefab/Panel_Share")) as GameObject;
+        panelShareDialog.transform.parent = gameObject.transform;
+        panelShareDialog.transform.localScale = Vector3.one;
+        panelShareDialog.GetComponent<RectTransform>().offsetMax = new Vector2(0f, 0f);
+        panelShareDialog.GetComponent<RectTransform>().offsetMin = new Vector2(0f, 0f);
+    }
+
+    public void MessageClick()
+    {
+        panelMessageDialog = Instantiate(Resources.Load("Prefab/Panel_message")) as GameObject;
+        panelMessageDialog.transform.parent = gameObject.transform;
+        panelMessageDialog.transform.localScale = Vector3.one;
+        panelMessageDialog.GetComponent<RectTransform>().offsetMax = new Vector2(0f, 0f);
+        panelMessageDialog.GetComponent<RectTransform>().offsetMin = new Vector2(0f, 0f);
     }
 
 	private void  loadPerfab(string perfabName){

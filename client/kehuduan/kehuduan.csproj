@@ -290,9 +290,11 @@
     <Compile Include="Assets\Script\Home_Panel_Event\HomePanelScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\LotteryItemScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\LotteryPanelScript.cs" />
+    <Compile Include="Assets\Script\Home_Panel_Event\MessagePanelScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\PanelRankDialogScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\RankListItemScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\RulePanelScript.cs" />
+    <Compile Include="Assets\Script\Home_Panel_Event\SharePanelScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\ShopPanelScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\ShowUserInfoScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\YaoqingPanelScript.cs" />

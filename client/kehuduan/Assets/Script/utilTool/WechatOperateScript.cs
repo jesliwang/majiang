@@ -201,7 +201,16 @@ public class WechatOperateScript : MonoBehaviour {
 		shareAchievement(platformType);
 	}
 
-
+    public void ShareGames(PlatformType platformType)
+    {
+        ShareContent customizeShareParams = new ShareContent();
+        customizeShareParams.SetText("lock at me");
+        //customizeShareParams.SetUrl("");
+        customizeShareParams.SetShareType(ContentType.Text);
+        //customizeShareParams.SetObjectID("");
+        customizeShareParams.SetShareContentCustomize(platformType, customizeShareParams);
+        shareSdk.ShareContent(platformType, customizeShareParams);
+    }
 
 
 	public void inviteFriend(){
