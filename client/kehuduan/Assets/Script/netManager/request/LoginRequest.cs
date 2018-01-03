@@ -16,7 +16,8 @@ namespace AssemblyCSharp
 			if (data != null) {
                 MyDebug.Log (data);
 				try {
-                    LitJson.JsonData dataJson = JsonMapper.ToObject<JsonData>(data);
+                    loginvo = JsonMapper.ToObject<LoginVo>(data);
+                    /*LitJson.JsonData dataJson = JsonMapper.ToObject<JsonData>(data);
 
                     loginvo.openId = (string)dataJson ["openid"];
                     loginvo.nickName = (string)dataJson ["nickname"];
@@ -27,6 +28,7 @@ namespace AssemblyCSharp
                     string sex = dataJson ["sex"].ToString();
 					loginvo.sex = int.Parse(sex);
 					loginvo.IP = GlobalDataScript.getInstance().getIpAddress();
+					*/
 				} catch (Exception e) {
 					MyDebug.Log ("微信接口有变动！" + e.Message);
 					TipsManagerScript.getInstance ().setTips ("请先打开你的微信客户端");

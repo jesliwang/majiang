@@ -16,8 +16,8 @@ public class WechatOperateScript : MonoBehaviour {
 	//
 	void Start () {
 		if (shareSdk != null) {
-            shareSdk.authHandler = getUserInforCallback;
-			//shareSdk.showUserHandler = getUserInforCallback;
+            shareSdk.authHandler = AuthResultHandle;
+			shareSdk.showUserHandler = getUserInforCallback;
 			shareSdk.shareHandler = onShareCallBack;
 		}
 
@@ -50,19 +50,35 @@ public class WechatOperateScript : MonoBehaviour {
 	 */ 
 	public void login(){
         //TipsManagerScript.getInstance().setTips("获取个人信息成功");
-        //shareSdk.Authorize(PlatformType.WeChat);
-	    //shareSdk.GetUserInfo(PlatformType.WeChat);
-	    
-        testLogin();
 
+        if(Application.platform == RuntimePlatform.Android)
+        {
+            shareSdk.Authorize(PlatformType.WeChat);
+        }
+        else{
+            testLogin();
+        }
+	   
 	}
+
+    public void AuthResultHandle(int reqID, ResponseState state, PlatformType type, Hashtable data)
+    {
+        if(state == ResponseState.Success)
+        {
+            shareSdk.GetUserInfo(PlatformType.WeChat);
+        }
+        else if(state == ResponseState.Fail)
+        {
+            TipsManagerScript.getInstance().setTips("微信登录失败");
+        }
+    }
 
 	/**
 	 * 获取微信个人信息成功回调,登录
 	 *
 	 */ 
 	public void getUserInforCallback(int reqID, ResponseState state, PlatformType type, Hashtable data){
-		TipsManagerScript.getInstance ().setTips ("获取个人信息成功");
+		//TipsManagerScript.getInstance ().setTips ("获取个人信息成功");
 
 		if (data != null) {
 			MyDebug.Log (data.toJson ());
@@ -96,7 +112,8 @@ public class WechatOperateScript : MonoBehaviour {
 
 			} catch (Exception e) {
 				MyDebug.Log ("微信接口有变动！" + e.Message);
-				TipsManagerScript.getInstance ().setTips ("请先打开你的微信客户端");
+				//TipsManagerScript.getInstance ().setTips ("请先打开你的微信客户端");
+                TipsManagerScript.getInstance().setTips(data.toJson());
 				return;
 			}
 		} else {

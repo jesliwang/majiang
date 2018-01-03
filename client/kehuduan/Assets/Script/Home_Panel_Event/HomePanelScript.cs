@@ -29,6 +29,8 @@ public class HomePanelScript : MonoBehaviour {
 	private string headIcon;
 	private GameObject panelCreateDialog;//界面上打开的dialog
 	private GameObject panelSettingDialog;
+    private GameObject panelShopDialog;
+    private GameObject panelYaoqingDialog;
 	/// <summary>
 	/// 这个字段是作为消息显示的列表 ，如果要想通过管理后台随时修改通知信息，
 	/// 请接收服务器的数据，并重新赋值给这个字段就行了。
@@ -183,8 +185,12 @@ public class HomePanelScript : MonoBehaviour {
 	}
 */
 	public void showRoomCardPanel(){
-		CustomSocket.getInstance ().sendMsg (new GetContactInfoRequest ());
-
+		//CustomSocket.getInstance ().sendMsg (new GetContactInfoRequest ());
+        panelShopDialog = Instantiate(Resources.Load("Prefab/Panel_Buy_Cards")) as GameObject;
+        panelShopDialog.transform.parent = gameObject.transform;
+        panelShopDialog.transform.localScale = Vector3.one;
+        panelShopDialog.GetComponent<RectTransform>().offsetMax = new Vector2(0f, 0f);
+        panelShopDialog.GetComponent<RectTransform>().offsetMin = new Vector2(0f, 0f);
 	}
 
 	public void closeRoomCardPanel (){
@@ -280,6 +286,15 @@ public class HomePanelScript : MonoBehaviour {
     public void ZhanjiBtnClick()
     {
         loadPerfab("Prefab/Panel_Report");
+    }
+
+    public void YaoQingClick()
+    {
+        panelYaoqingDialog = Instantiate(Resources.Load("Prefab/Panel_yaoqing")) as GameObject;
+        panelYaoqingDialog.transform.parent = gameObject.transform;
+        panelYaoqingDialog.transform.localScale = Vector3.one;
+        panelYaoqingDialog.GetComponent<RectTransform>().offsetMax = new Vector2(0f, 0f);
+        panelYaoqingDialog.GetComponent<RectTransform>().offsetMin = new Vector2(0f, 0f);
     }
 
 	private void  loadPerfab(string perfabName){

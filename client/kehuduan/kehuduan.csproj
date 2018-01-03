@@ -293,7 +293,9 @@
     <Compile Include="Assets\Script\Home_Panel_Event\PanelRankDialogScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\RankListItemScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\RulePanelScript.cs" />
+    <Compile Include="Assets\Script\Home_Panel_Event\ShopPanelScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\ShowUserInfoScript.cs" />
+    <Compile Include="Assets\Script\Home_Panel_Event\YaoqingPanelScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\ZhanjiItemScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\ZhanjiPanelScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\ZhanjiRoomItemScript.cs" />
@@ -377,6 +379,7 @@
     <Compile Include="Assets\Script\netManager\vo\ZhanjiRoomDataItemVo.cs" />
     <Compile Include="Assets\Script\netManager\vo\ZhanjiRoomList.cs" />
     <Compile Include="Assets\Script\netManager\vo\ZhanjiSearchRequest.cs" />
+    <Compile Include="Assets\Script\Setting_App\SettingAppScript.cs" />
     <Compile Include="Assets\Script\soundsCtrl\AudioCtrlPanelScript.cs" />
     <Compile Include="Assets\Script\soundsCtrl\MicroPhoneInput.cs" />
     <Compile Include="Assets\Script\soundsCtrl\soundCtrl.cs" />
@@ -401,7 +404,6 @@
     <Compile Include="Assets\Script\utilTool\UpdateScript.cs" />
     <Compile Include="Assets\Script\utilTool\WechatOperateScript.cs" />
     <Compile Include="Assets\UpdateFrame.cs" />
-    <Compile Include="Assets\Script\Setting_App\SettingAppScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DOTween113\DOTween.XML" />
