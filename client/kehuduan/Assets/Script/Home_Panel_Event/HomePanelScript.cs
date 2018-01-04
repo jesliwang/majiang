@@ -45,10 +45,15 @@ public class HomePanelScript : MonoBehaviour {
     private int a=0;
 
     // room info
-    public Button myRoomShare;
+    public Button enterMyRoom;
+    private Button myRoomShare;
     public Text myRoomVo;
     public Text myRoomNumber;
     public Text myRoomPlayers;
+
+    public void EnterMyRoom(){
+        
+    }
 
 	// Use this for initialization
 	void Start () {
@@ -129,6 +134,14 @@ public class HomePanelScript : MonoBehaviour {
         SocketEventHandle.getInstance().StartPrepareGameCallBack -= StartPrepareGame;
 	}
 
+    public void RequestPrepareGame()
+    {
+        RoomJoinVo roomJoinVo = new RoomJoinVo();
+        roomJoinVo.roomId = GlobalDataScript.loginResponseData.roomId;
+        string sendMsg = JsonMapper.ToJson(roomJoinVo);
+        CustomSocket.getInstance().sendMsg(new StartPrepareGameRequest(sendMsg));
+    }
+
     private void StartPrepareGame(ClientResponse response)
     {
         GlobalDataScript.roomJoinResponseData = JsonMapper.ToObject<RoomJoinResponseVo>(response.message);
@@ -203,7 +216,7 @@ public class HomePanelScript : MonoBehaviour {
 	 * 判断进入房间
 	 */ 
 	public void checkEnterInRoom(){
-        myRoomShare.gameObject.SetActive(false);
+        enterMyRoom.gameObject.SetActive(false);
         /*
 		if (GlobalDataScript.roomVo!= null && GlobalDataScript.roomVo.roomId != 0) {
 			//loadPerfab ("Prefab/Panel_GamePlay");
@@ -220,7 +233,7 @@ public class HomePanelScript : MonoBehaviour {
             //loadPerfab ("Prefab/Panel_GamePlay");
 
             //GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
-            myRoomShare.gameObject.SetActive(true);
+            enterMyRoom.gameObject.SetActive(true);
             myRoomVo.text = GlobalDataScript.loginResponseData.roomId.ToString();
             //myRoomNumber.text = GlobalDataScript.roomVo.roundNumber.ToString();
         }

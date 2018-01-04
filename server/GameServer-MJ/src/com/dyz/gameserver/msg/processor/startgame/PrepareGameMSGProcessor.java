@@ -32,6 +32,7 @@ public class PrepareGameMSGProcessor extends MsgProcessor implements
 				Avatar avatar = gameSession.getRole(Avatar.class);
 				//if(avatar != null){
 					//检查其他玩家是否都已经是准备好了,准备好了顺带开始游戏，
+				
 					roomLogic.readyGame(avatar);
 //				}
 //				else{

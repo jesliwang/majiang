@@ -2288,6 +2288,7 @@ public class MyMahjongScript : MonoBehaviour
 		GlobalDataScript.loginResponseData.resetData ();//复位房间数据
 		GlobalDataScript.loginResponseData.roomId = 0;//复位房间数据
 		GlobalDataScript.roomVo.roomId = 0;
+        GlobalDataScript.loginResponseData.roomId = 0;
 		GlobalDataScript.soundToggle = true;
 		clean ();
 		removeListener ();
@@ -2296,6 +2297,7 @@ public class MyMahjongScript : MonoBehaviour
 		if (GlobalDataScript.homePanel != null) {
 			GlobalDataScript.homePanel.SetActive (true);
 			GlobalDataScript.homePanel.transform.SetSiblingIndex (1);
+            GlobalDataScript.homePanel.GetComponent<HomePanelScript>().checkEnterInRoom();
 		} else {
 			GlobalDataScript.homePanel=PrefabManage.loadPerfab ("Prefab/Panel_Home");
 			GlobalDataScript.homePanel.transform.SetSiblingIndex (1);

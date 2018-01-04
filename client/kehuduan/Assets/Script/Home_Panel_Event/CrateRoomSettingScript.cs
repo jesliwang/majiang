@@ -281,17 +281,17 @@ public class CrateRoomSettingScript : MonoBehaviour {
 		MyDebug.Log (response.message);
 		if (response.status == 1) {
 			
-			//RoomCreateResponseVo responseVO = JsonMapper.ToObject<RoomCreateResponseVo> (response.message);
+			RoomCreateResponseVo responseVO = JsonMapper.ToObject<RoomCreateResponseVo> (response.message);
 			int roomid = Int32.Parse(response.message);
 			sendVo.roomId = roomid;
 			GlobalDataScript.roomVo = sendVo;
 			GlobalDataScript.loginResponseData.roomId = roomid;
-			//GlobalDataScript.loginResponseData.isReady = true;
+			GlobalDataScript.loginResponseData.isReady = true;
 			GlobalDataScript.loginResponseData.main = true;
 			GlobalDataScript.loginResponseData.isOnLine = true;
 
 			//SceneManager.LoadSceneAsync(1);
-			/**
+			/*
 			if (gameSence == null) {
 				gameSence = Instantiate (Resources.Load ("Prefab/Panel_GamePlay")) as GameObject;
 				gameSence.transform.parent = GlobalDataScript.getInstance ().canvsTransfrom;
@@ -300,12 +300,11 @@ public class CrateRoomSettingScript : MonoBehaviour {
 				gameSence.GetComponent<RectTransform> ().offsetMin = new Vector2 (0f, 0f);
 				gameSence.GetComponent<MyMahjongScript> ().createRoomAddAvatarVO (GlobalDataScript.loginResponseData);
 			}*/
-			//GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
+			GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
 
-			//GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript> ().createRoomAddAvatarVO (GlobalDataScript.loginResponseData);
+			GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript> ().createRoomAddAvatarVO (GlobalDataScript.loginResponseData);
             GlobalDataScript.homePanel.GetComponent<HomePanelScript>().checkEnterInRoom();
 			closeDialog ();
-
 
 		} else {
 			TipsManagerScript.getInstance ().setTips (response.message);

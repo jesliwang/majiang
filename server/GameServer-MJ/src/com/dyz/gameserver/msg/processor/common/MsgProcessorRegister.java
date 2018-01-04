@@ -28,6 +28,7 @@ import com.dyz.gameserver.msg.processor.remotecontrol.RemoteControlProcessor;
 import com.dyz.gameserver.msg.processor.standings.StandingsMsgProcessor;
 import com.dyz.gameserver.msg.processor.standings.StandingsMsgProcessorSearch;
 import com.dyz.gameserver.msg.processor.startgame.PrepareGameMSGProcessor;
+import com.dyz.gameserver.msg.processor.startpreparegame.StartPrepareGameMsgProcessor;
 
 
 /**
@@ -48,6 +49,8 @@ public enum MsgProcessorRegister {
 	createRoom(ConnectAPI.CREATEROOM_REQUEST,new CreateRoomMsgProcssor()),
 	/**进入游戏房间*/
 	joinRoom(ConnectAPI.JOIN_ROOM_REQUEST,new JoinRoomMsgProcessor()),
+	/**进入游戏**/
+	startPrepareGame(ConnectAPI.START_PREPARE_GAME_REQUEST, new StartPrepareGameMsgProcessor()),
 	/**摸牌*/
 	pickPai(ConnectAPI.PICKCARD_REQUEST,new PickCardMsgProcessor()),
 	/**出牌*/

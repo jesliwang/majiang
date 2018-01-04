@@ -5,6 +5,7 @@ using AssemblyCSharp;
 using LitJson;
 using System.Collections.Generic;
 using cn.sharesdk.unity3d;
+using DG.Tweening;
 
 
 public class LoginSystemScript : MonoBehaviour {
@@ -20,8 +21,12 @@ public class LoginSystemScript : MonoBehaviour {
 	private int tapCount = 0;//点击次数
 	public GameObject watingPanel;
 
+    public GameObject PanelSafeGame;
 
 	void Start () {
+        
+        DOTween.Init(false, true, LogBehaviour.Default);
+        PanelSafeGame.GetComponent<CanvasGroup>().DOFade(0, 1.0f).SetDelay(2.0f).OnComplete(FadeOutSafeGame);
 
 		//shareSdk.showUserHandler = getUserInforCallback;//注册获取用户信息回调
 		CustomSocket.hasStartTimer = false;
@@ -35,6 +40,12 @@ public class LoginSystemScript : MonoBehaviour {
 		test.callTest ("dddddddddddddddddddddddddddd");
 		
 	}
+
+    void FadeOutSafeGame()
+    {
+        PanelSafeGame.SetActive(false);
+    }
+
 	
 	// Update is called once per frame
 	void Update () {

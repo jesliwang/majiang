@@ -32,6 +32,7 @@ public class ConnectAPI {
 	public static int OPENAPP_REQUEST = 0x000007;
 	public static int OPENAPP_RESPONSE =0x000008;
 
+	public static int START_PREPARE_GAME_REQUEST = 0X00007; // 请求进入游戏
 	public static int START_PREPARE_GAME_RESPONSE = 0x00008;
 	
 	public static int CREATEROOM_REQUEST = 0x00009;

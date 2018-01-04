@@ -31,6 +31,7 @@ namespace AssemblyCSharp
         public const int JOIN_ROOM_RESPONSE = 0x000004;//加入房间返回码
 		public const int JOIN_ROOM_NOICE = 0x10a004;//其它 人加入房间通知
 
+        public const int START_PREPARE_GAME_REQUEST = 0X00007; // 请求进入游戏
         public const int START_PREPARE_GAME_RESPONSE = 0X00008; // 房间人满，准备开始游戏
         public const int CREATEROOM_REQUEST = 0x00009;//创建房间请求码
         public const int CREATEROOM_RESPONSE = 0x00010;//创建房间返回吗

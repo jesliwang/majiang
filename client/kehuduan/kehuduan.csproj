@@ -406,6 +406,7 @@
     <Compile Include="Assets\Script\utilTool\UpdateScript.cs" />
     <Compile Include="Assets\Script\utilTool\WechatOperateScript.cs" />
     <Compile Include="Assets\UpdateFrame.cs" />
+    <Compile Include="Assets\Script\netManager\request\StartPrepareGameRequest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DOTween113\DOTween.XML" />
