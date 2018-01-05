@@ -34,6 +34,7 @@ public class InitServers {
         StandingsAccountRelationService.getInstance().initSetSession(sessionFactory);
         PlayRecordService.getInstance().initSetSession(sessionFactory);
 
+        InviteService.getInstance().initSetSession(sessionFactory);
         
         TaskTimer.showTimer();
         TaskTimer.headBag();

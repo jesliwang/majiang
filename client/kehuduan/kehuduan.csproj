@@ -407,6 +407,8 @@
     <Compile Include="Assets\Script\utilTool\WechatOperateScript.cs" />
     <Compile Include="Assets\UpdateFrame.cs" />
     <Compile Include="Assets\Script\netManager\request\StartPrepareGameRequest.cs" />
+    <Compile Include="Assets\Script\netManager\request\InviteRequest.cs" />
+    <Compile Include="Assets\Script\netManager\vo\InviteUUID.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DOTween113\DOTween.XML" />

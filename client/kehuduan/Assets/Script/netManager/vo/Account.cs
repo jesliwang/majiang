@@ -34,8 +34,11 @@ namespace AssemblyCSharp
 		public int managerUpId;
 		public int totalcard;
 		public string status;
-		public string isGame;
+        public string isgame;
 
+        public int invite;
+        public int invitereward;
+        public int invitegettedreward;
 
         public Account ()
 		{

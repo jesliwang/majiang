@@ -549,10 +549,10 @@ public class RoomLogic {
 	            avatar.getSession().sendMsg(new StartGameResponse(1,avatar.avatarVO.getPaiArray(),playerList.indexOf(playCardsLogic.bankerAvatar)));
 	            //修改玩家是否玩一局游戏的状态
 	            account = AccountService.getInstance().selectByPrimaryKey(avatar.avatarVO.getAccount().getId());
-	            if(account.getIsGame().equals("0")){
-	            	account.setIsGame("1");
+	            if(account.getIsgame().equals("0")){
+	            	account.setIsgame("1");
 	            	AccountService.getInstance().updateByPrimaryKeySelective(account);
-	            	avatar.avatarVO.getAccount().setIsGame("1");
+	            	avatar.avatarVO.getAccount().setIsgame("1");
 	            }
 	        }
         }

@@ -40,7 +40,7 @@ public class TaskTimer {
                 	for (Entry<String, GameSession> set :gamessions.entrySet()) {
                 		set.getValue().sendMsg(new UpdateDrawInfoResponse(1, prizecount+""));
                 		set.getValue().getRole(Avatar.class).avatarVO.getAccount().setPrizecount(prizecount);
-                		set.getValue().getRole(Avatar.class).avatarVO.getAccount().setIsGame("0");
+                		set.getValue().getRole(Avatar.class).avatarVO.getAccount().setIsgame("0");
 					}
                   /*  for (int i = 0; i < accounts.size(); i++) {
                         Avatar tempAva = GameServerContext.getAvatarFromOn(accounts.get(i).getUuid());

@@ -48,7 +48,7 @@ INotAuthProcessor  {
 				else if(type.equals("1") && account.getPrizecount() >=1){
 					//随机获取奖品id
 					if(account.getPrizecount() > 0 ) {
-						if(account.getIsGame().equals("1")){
+						if(account.getIsgame().equals("1")){
 							getPrizeInfo(gameSession, account);
 						}else{
 							avatar.getSession().sendMsg(new ErrorResponse(ErrorCode.Error_000021));

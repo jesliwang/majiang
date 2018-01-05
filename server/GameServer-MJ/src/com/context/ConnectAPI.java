@@ -134,6 +134,9 @@ public class ConnectAPI {
 	public static int PLAYRECORD_REQUEST = 0x003001;
 	public static int PLAYRECORD_RESPONSE = 0x003002;
 	
+	//绑定邀请
+	public static int INVITE_REQUEST = 0x004001;
+	public static int INVITE_RESPONSE = 0X004002;
 		
 	//远程请求
 	public static int HOST_ROMOTECONTROL_REQUEST = 0x999999;

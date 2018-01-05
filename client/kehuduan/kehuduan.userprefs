@@ -1,19 +1,26 @@
 ﻿<Properties StartupConfiguration="{01278091-48EA-3A10-0751-D230C4907E84}|">
   <MonoDevelop.Ide.ItemProperties.kehuduan PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Game_Scenes/MyMahjongScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/netManager/vo/Account.cs">
     <Files>
-      <File FileName="Assets/Script/Home_Panel_Event/SharePanelScript.cs" Line="22" Column="27" />
-      <File FileName="Assets/Script/Login_Panle_Event/LoginSystemScript.cs" Line="41" Column="3" />
-      <File FileName="Assets/Script/utilTool/WechatOperateScript.cs" Line="210" Column="11" />
-      <File FileName="Assets/Script/Home_Panel_Event/HomePanelScript.cs" Line="48" Column="23" />
-      <File FileName="Assets/Script/Home_Panel_Event/MessagePanelScript.cs" Line="20" Column="27" />
       <File FileName="Assets/Script/netManager/Events/APIS.cs" Line="17" Column="9" />
-      <File FileName="Assets/Script/Home_Panel_Event/CrateRoomSettingScript.cs" Line="308" Column="13" />
-      <File FileName="Assets/Script/netManager/Events/SocketEventHandle.cs" Line="118" Column="23" />
-      <File FileName="Assets/Script/netManager/request/JoinRoomRequest.cs" Line="5" Column="19" />
-      <File FileName="Assets/Script/netManager/request/StartPrepareGameRequest.cs" Line="7" Column="16" />
-      <File FileName="Assets/Script/Home_Panel_Event/EnterRoomScript.cs" Line="90" Column="51" />
-      <File FileName="Assets/Script/Game_Scenes/MyMahjongScript.cs" Line="2303" Column="9" />
+      <File FileName="Assets/Script/netManager/request/GameBackPlayRequest.cs" Line="8" Column="29" />
+      <File FileName="Assets/Script/netManager/request/InviteRequest.cs" Line="6" Column="18" />
+      <File FileName="Assets/Script/Home_Panel_Event/YaoqingPanelScript.cs" Line="42" Column="24" />
+      <File FileName="Assets/Script/netManager/request/CreateRoomRequest.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/netManager/request/CurrentStatusRequest.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/netManager/request/DissoliveRoomRequest.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/netManager/request/GameReadyRequest.cs" Line="9" Column="43" />
+      <File FileName="Assets/Script/netManager/request/GaveUpRequest.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/netManager/request/GetContactInfoRequest.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/netManager/request/GetGiftRequest.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/utilTool/WechatOperateScript.cs" Line="271" Column="45" />
+      <File FileName="Assets/Script/netManager/request/LoginRequest.cs" Line="49" Column="69" />
+      <File FileName="Assets/Script/netManager/request/JoinRoomRequest.cs" Line="7" Column="18" />
+      <File FileName="Assets/Script/test/DebugPanelScript.cs" Line="45" Column="38" />
+      <File FileName="Assets/Script/netManager/vo/RoomJoinVo.cs" Line="16" Column="1" />
+      <File FileName="Assets/Script/netManager/vo/InviteUUID.cs" Line="8" Column="24" />
+      <File FileName="Assets/Script/Home_Panel_Event/SharePanelScript.cs" Line="58" Column="154" />
+      <File FileName="Assets/Script/netManager/vo/Account.cs" Line="41" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -44,9 +44,7 @@ namespace AssemblyCSharp
 				//LoginVo loginvo = new LoginVo ();
                 System.Random ran = new System.Random();
 				string str = ran.Next (100, 1000) + "for" + ran.Next (2000, 5000);
-                loginvo.openId = SystemInfo.deviceUniqueIdentifier ;
-
-
+                loginvo.openId = SystemInfo.deviceUniqueIdentifier;
 
                 loginvo.nickName = SystemInfo.deviceUniqueIdentifier;
 				loginvo.headIcon = "imgicon";

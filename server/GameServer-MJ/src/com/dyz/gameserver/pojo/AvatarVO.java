@@ -10,6 +10,7 @@ import com.dyz.persist.util.StringUtil;
  * Created by kevin on 2016/6/23.
  */
 public class AvatarVO {
+	
     /**
      * 用户基本信息
      */

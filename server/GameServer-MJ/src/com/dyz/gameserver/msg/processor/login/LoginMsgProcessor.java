@@ -49,7 +49,10 @@ public class LoginMsgProcessor extends MsgProcessor implements INotAuthProcessor
 			account.setActualcard(Params.initialRoomCard);
 			account.setTotalcard(Params.initialRoomCard);
 			account.setStatus("0");
-			account.setIsGame("0");
+			account.setIsgame("0");
+			account.setInvite(0);
+			account.setInvitereward(0);
+			account.setInvitegettedreward(0);
 
 			if(AccountService.getInstance().createAccount(account) == 0){
 				gameSession.sendMsg(new LoginResponse(0,null));
@@ -95,6 +98,7 @@ public class LoginMsgProcessor extends MsgProcessor implements INotAuthProcessor
 						account.setNickname(loginVO.getNickName());
 						AccountService.getInstance().updateByPrimaryKeySelective(account);
 					}
+					
 					//断线超过时间后，自动退出
 					avatar = new Avatar();
 					AvatarVO avatarVO = new AvatarVO();
@@ -148,7 +152,7 @@ public class LoginMsgProcessor extends MsgProcessor implements INotAuthProcessor
 				
 			}
 		}
-		System.out.println(account.getUuid()+"  :登录游戏");
+		System.out.println(account.getUuid()+"  :登录游戏" + "," + account.getInvitereward());
 	}
 
 	/**

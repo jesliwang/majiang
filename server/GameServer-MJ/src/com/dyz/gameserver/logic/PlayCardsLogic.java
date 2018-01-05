@@ -2252,7 +2252,7 @@ public class PlayCardsLogic {
     		currentCard = -1;
     	}
     	else{
-    		currentCard = 0 - roomVO.getRoundNumber()/8;
+    		currentCard = 0 - roomVO.getRoundNumber()/4;
     	}
     	Avatar zhuangAvatar = playerList.get(0);
     	zhuangAvatar.updateRoomCard(currentCard);//开始游戏，减去房主的房卡,同时更新缓存里面对象的房卡(已经在此方法中修改)

@@ -21,26 +21,26 @@
         </javaTypeResolver>
 
         <!-- !!!! Model Configurations !!!! -->
-        <javaModelGenerator targetPackage="com.dyz.myBatis.model" targetProject="com/dyz">
+        <javaModelGenerator targetPackage="com.dyz.myBatis.model" targetProject="GameServer/src">
             <property name="enableSubPackages" value="false"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <!-- !!!! Mapper XML Configurations !!!! -->
-        <sqlMapGenerator targetPackage="com.dyz.myBatis.sqlMapper" targetProject="com/dyz">
+        <sqlMapGenerator targetPackage="com.dyz.myBatis.sqlMapper" targetProject="GameServer/src">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
         <!-- !!!! Mapper Interface Configurations !!!! -->
-        <javaClientGenerator targetPackage="com.dyz.myBatis.dao" targetProject="com/dyz" type="XMLMAPPER">
+        <javaClientGenerator targetPackage="com.dyz.myBatis.dao" targetProject="GameServer/src" type="XMLMAPPER">
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
         <!-- !!!! Table Configurations !!!! -->
-        <table tableName="user" enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true"
-               enableUpdateByExample="true"/>
 
         <table tableName="account" enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true"
                enableUpdateByExample="true"/>
+         
+        <table tableName="invite" />
     </context>
 </generatorConfiguration>

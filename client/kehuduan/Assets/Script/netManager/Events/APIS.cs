@@ -105,6 +105,10 @@ namespace AssemblyCSharp
 		public const int GAME_BACK_PLAY_RESPONSE = 0x003002;//回放返回数据
 		public const int TIP_MESSAGE = 0x160016;
 
+        //绑定邀请
+        public const int INVITE_REQUEST = 0x004001;
+        public const int INVITE_RESPONSE = 0X004002;
+
 		public const int OTHER_TELE_LOGIN = 0x211211;//其他设备登录
 	}
 
