@@ -59,7 +59,9 @@ namespace AssemblyCSharp
 		public ServerCallBackEvent gameBackPlayResponse;//回放返回数据
 		public ServerCallBackEvent otherTeleLogin;//其他设备登陆账户
 
-        public ServerCallBackEvent inviteResponse;
+        public ServerCallBackEvent inviteResponse; // 邀请回调
+        public ServerCallBackEvent inviteGetRewardResponse; //领取邀请奖励
+        public ServerCallBackEvent inviteHistoryResponse; //邀请历史
 
         //private List<ClientResponse> callBackResponseList;
 
@@ -311,6 +313,18 @@ namespace AssemblyCSharp
                     if(null != inviteResponse)
                     {
                         inviteResponse(response);
+                    }
+                    break;
+                case APIS.INVITE_GET_REWARD_RESPONSE:
+                    if(null!=inviteGetRewardResponse)
+                    {
+                        inviteGetRewardResponse(response);
+                    }
+                    break;
+                case APIS.INVITE_HISTORY_RESPONSE:
+                    if(null!=inviteHistoryResponse)
+                    {
+                        inviteHistoryResponse(response);
                     }
                     break;
 			}

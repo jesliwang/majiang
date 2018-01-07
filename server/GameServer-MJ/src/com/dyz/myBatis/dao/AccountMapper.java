@@ -2,7 +2,9 @@ package com.dyz.myBatis.dao;
 
 import com.dyz.myBatis.model.Account;
 import com.dyz.myBatis.model.AccountExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface AccountMapper {
@@ -92,4 +94,6 @@ public interface AccountMapper {
     List<Account> selectAllAccounts();
     //修改抽奖次数
     int updatePrizeCount(Integer prizecount);
+    
+    List<Account> selectByuuids(List<Integer> ids);
 }

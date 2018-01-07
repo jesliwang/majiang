@@ -268,4 +268,11 @@
       reward = #{reward,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="SelectInviteByInviteid" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  	 select 
+    <include refid="Base_Column_List" />
+    from invite
+    where inviteId = #{inviteId,jdbcType=INTEGER} 
+    order by month(inviteTime), dayofmonth(inviteTime)
+  </select>
 </mapper>

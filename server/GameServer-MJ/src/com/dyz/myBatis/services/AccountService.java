@@ -92,6 +92,16 @@ public class AccountService {
         return accounts;
     }
 
+    public List<Account> selectByIds(List<Integer> ids){
+    	List<Account> accounts = null;
+        try {
+            accounts = accMap.selectByuuids(ids);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return accounts;
+    }
+    
     /**
      * 创建新用户
      * @param

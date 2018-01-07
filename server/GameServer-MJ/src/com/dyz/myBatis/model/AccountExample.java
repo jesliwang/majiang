@@ -1515,6 +1515,66 @@ public class AccountExample {
 					"invitegettedreward");
 			return (Criteria) this;
 		}
+
+		public Criteria andPlaytimesIsNull() {
+			addCriterion("playTimes is null");
+			return (Criteria) this;
+		}
+
+		public Criteria andPlaytimesIsNotNull() {
+			addCriterion("playTimes is not null");
+			return (Criteria) this;
+		}
+
+		public Criteria andPlaytimesEqualTo(Integer value) {
+			addCriterion("playTimes =", value, "playtimes");
+			return (Criteria) this;
+		}
+
+		public Criteria andPlaytimesNotEqualTo(Integer value) {
+			addCriterion("playTimes <>", value, "playtimes");
+			return (Criteria) this;
+		}
+
+		public Criteria andPlaytimesGreaterThan(Integer value) {
+			addCriterion("playTimes >", value, "playtimes");
+			return (Criteria) this;
+		}
+
+		public Criteria andPlaytimesGreaterThanOrEqualTo(Integer value) {
+			addCriterion("playTimes >=", value, "playtimes");
+			return (Criteria) this;
+		}
+
+		public Criteria andPlaytimesLessThan(Integer value) {
+			addCriterion("playTimes <", value, "playtimes");
+			return (Criteria) this;
+		}
+
+		public Criteria andPlaytimesLessThanOrEqualTo(Integer value) {
+			addCriterion("playTimes <=", value, "playtimes");
+			return (Criteria) this;
+		}
+
+		public Criteria andPlaytimesIn(List<Integer> values) {
+			addCriterion("playTimes in", values, "playtimes");
+			return (Criteria) this;
+		}
+
+		public Criteria andPlaytimesNotIn(List<Integer> values) {
+			addCriterion("playTimes not in", values, "playtimes");
+			return (Criteria) this;
+		}
+
+		public Criteria andPlaytimesBetween(Integer value1, Integer value2) {
+			addCriterion("playTimes between", value1, value2, "playtimes");
+			return (Criteria) this;
+		}
+
+		public Criteria andPlaytimesNotBetween(Integer value1, Integer value2) {
+			addCriterion("playTimes not between", value1, value2, "playtimes");
+			return (Criteria) this;
+		}
 	}
 
 	/**

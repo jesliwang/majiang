@@ -1,9 +1,38 @@
 using UnityEngine;
 using System.Collections;
 using AssemblyCSharp;
+using UnityEngine.UI;
 
 public class SettingAppScript : MonoBehaviour
 {
+    public Slider yingyue;
+    public GameObject yingyueOn;
+    public GameObject yingyueOff;
+
+    void Start()
+    {
+        yingyueOn.SetActive(true);
+        yingyueOff.SetActive(false);
+        yingyue.value = PlayerPrefs.GetFloat("audioEffect", 1);
+
+    }
+
+    public void yingyuechanged(float val)
+    {
+        if(val < 0.01f)
+        {
+            yingyueOn.SetActive(false);
+            yingyueOff.SetActive(true);
+        }
+        else
+        {
+            yingyueOn.SetActive(true);
+            yingyueOff.SetActive(false);
+        }
+        PlayerPrefs.SetFloat("audioEffect", val);
+        SoundCtrl.getInstance().ChangeVolume(val);
+    }
+
     public void exit()
     {
         CustomSocket.getInstance().sendMsg(new LoginRequest());

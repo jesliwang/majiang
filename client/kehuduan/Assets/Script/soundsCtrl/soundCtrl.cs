@@ -18,10 +18,16 @@ public class SoundCtrl  {
 		if (_instance == null) {
 			_instance = new SoundCtrl ();
 			audioS = GameObject.Find ("MyAudio").GetComponent<AudioSource> ();
+            audioS.volume = PlayerPrefs.GetFloat("audioEffect", 1);
 		}
 
 		return _instance;
 	}
+
+    public void ChangeVolume(float vol)
+    {
+        audioS.volume = vol;
+    }
 
 	public void playSound(int cardPoint,int sex){
 		if (GlobalDataScript.soundToggle) {

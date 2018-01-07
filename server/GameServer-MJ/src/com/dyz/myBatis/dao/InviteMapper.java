@@ -74,4 +74,6 @@ public interface InviteMapper {
 	 * @mbggenerated
 	 */
 	int updateByPrimaryKey(Invite record);
+
+	List<Invite> SelectInviteByInviteid(int id);
 }

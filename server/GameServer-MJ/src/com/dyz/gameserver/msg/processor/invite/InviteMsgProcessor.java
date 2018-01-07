@@ -60,7 +60,7 @@ public class InviteMsgProcessor extends MsgProcessor implements
 					invAccount.setInvitereward(invAccount.getInvitereward() + 5);
 					AccountService.getInstance().updateByPrimaryKeySelective(invAccount);
 					
-					gameSession.sendMsg(new InviteResponse(1, "绑定陈宫，获得5张房卡"));
+					gameSession.sendMsg(new InviteResponse(1, "绑定成功，获得5张房卡"));
 				
 				}
 			}

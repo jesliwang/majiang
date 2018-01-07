@@ -409,6 +409,11 @@
     <Compile Include="Assets\Script\netManager\request\StartPrepareGameRequest.cs" />
     <Compile Include="Assets\Script\netManager\request\InviteRequest.cs" />
     <Compile Include="Assets\Script\netManager\vo\InviteUUID.cs" />
+    <Compile Include="Assets\Script\netManager\request\InviteGetRewardRequest.cs" />
+    <Compile Include="Assets\Script\netManager\request\InviteHistoryRequest.cs" />
+    <Compile Include="Assets\Script\netManager\vo\InviteItemVO.cs" />
+    <Compile Include="Assets\Script\Home_Panel_Event\InviteHistoryItem.cs" />
+    <Compile Include="Assets\Script\netManager\vo\InviteItemList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DOTween113\DOTween.XML" />

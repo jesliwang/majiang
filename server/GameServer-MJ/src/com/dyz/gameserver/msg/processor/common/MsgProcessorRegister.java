@@ -11,6 +11,8 @@ import com.dyz.gameserver.msg.processor.heartbeat.HeadMsgProcessor;
 import com.dyz.gameserver.msg.processor.host.HostNoitceProcessor;
 import com.dyz.gameserver.msg.processor.host.IndexInfosProcessor;
 import com.dyz.gameserver.msg.processor.hu.HuPaiMsgProcessor;
+import com.dyz.gameserver.msg.processor.invite.InviteGetRewardMsgProcessor;
+import com.dyz.gameserver.msg.processor.invite.InviteHistoryMsgProcessor;
 import com.dyz.gameserver.msg.processor.invite.InviteMsgProcessor;
 import com.dyz.gameserver.msg.processor.joinroom.JoinRoomMsgProcessor;
 import com.dyz.gameserver.msg.processor.login.LoginMsgProcessor;
@@ -97,7 +99,11 @@ public enum MsgProcessorRegister {
 	/**游戏回放*/
 	PlayRecordMessage(ConnectAPI.PLAYRECORD_REQUEST,new PlayRecordMsgProcessor()),
 	/**邀请*/
-	invite(ConnectAPI.INVITE_REQUEST, new InviteMsgProcessor());
+	invite(ConnectAPI.INVITE_REQUEST, new InviteMsgProcessor()),
+	/**领取邀请奖励*/
+	inviteGetReward(ConnectAPI.INVITE_GET_REWARD_REQUEST, new InviteGetRewardMsgProcessor()),
+	/**邀请历史*/
+	inviteHistory(ConnectAPI.INVITE_HISTORY_REQUEST, new InviteHistoryMsgProcessor());
 	
 	
 	

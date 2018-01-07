@@ -51,6 +51,15 @@ public class InviteDaoImp implements InviteMapper {
         }
         return flag;
 	}
+	
+	@Override
+	public List<Invite> SelectInviteByInviteid(int id)
+	{
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+    	InviteMapper mapper = sqlSession.getMapper(InviteMapper.class);
+        return mapper.SelectInviteByInviteid(id);
+         
+	}
 
 	@Override
 	public int insertSelective(Invite record) {

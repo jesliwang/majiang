@@ -1,6 +1,7 @@
 package com.dyz.myBatis.services;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -27,5 +28,9 @@ public class InviteService {
     {
     	int index = inviteMap.insert(inv);
     	return index;
+    }
+    
+    public List<Invite> SelectInviteByInviteid(int id){
+    	return inviteMap.SelectInviteByInviteid(id);
     }
 }

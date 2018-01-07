@@ -276,14 +276,14 @@ public class AccountDaoImp implements AccountMapper {
 	public List<Account> selectIsGames() {
 		 SqlSession sqlSession = sqlSessionFactory.openSession();
 		 AccountMapper mapper = sqlSession.getMapper(AccountMapper.class);
-		return mapper.selectIsGames();
+		 return mapper.selectIsGames();
 	}
 
 	@Override
 	public List<Account> selectAllAccounts() {
 		 SqlSession sqlSession = sqlSessionFactory.openSession();
 		 AccountMapper mapper = sqlSession.getMapper(AccountMapper.class);
-		return mapper.selectAllAccounts();
+		 return mapper.selectAllAccounts();
 	}
 
 	@Override
@@ -327,5 +327,13 @@ public class AccountDaoImp implements AccountMapper {
 		String reg = "[^\u4e00-\u9fa5]";
 		nickname = nickname.replaceAll(reg, "?");
 		return nickname;
+	}
+	
+	@Override
+	public List<Account> selectByuuids(List<Integer> ids){
+         SqlSession sqlSession = sqlSessionFactory.openSession();
+         AccountMapper mapper = sqlSession.getMapper(AccountMapper.class);
+         return mapper.selectByuuids(ids);
+         
 	}
 }

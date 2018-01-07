@@ -27,6 +27,7 @@
     <result column="invite" jdbcType="INTEGER" property="invite" />
     <result column="inviteReward" jdbcType="INTEGER" property="invitereward" />
     <result column="inviteGettedReward" jdbcType="INTEGER" property="invitegettedreward" />
+    <result column="playTimes" jdbcType="INTEGER" property="playtimes" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <!--
@@ -101,7 +102,7 @@
     -->
     id, uuid, openid, nickName, headIcon, roomCard, unionid, province, city, sex, prizecount, 
     manager_up_id, actualCard, totalCard, createTime, lastLoginTime, status, isGame, 
-    invite, inviteReward, inviteGettedReward
+    invite, inviteReward, inviteGettedReward, playTimes
   </sql>
   <select id="selectByExample" parameterType="com.dyz.myBatis.model.AccountExample" resultMap="BaseResultMap">
     <!--
@@ -160,16 +161,16 @@
       sex, prizecount, manager_up_id, 
       actualCard, totalCard, createTime, 
       lastLoginTime, status, isGame, 
-      invite, inviteReward, inviteGettedReward
-      )
+      invite, inviteReward, inviteGettedReward, 
+      playTimes)
     values (#{id,jdbcType=INTEGER}, #{uuid,jdbcType=INTEGER}, #{openid,jdbcType=VARCHAR}, 
       #{nickname,jdbcType=VARCHAR}, #{headicon,jdbcType=VARCHAR}, #{roomcard,jdbcType=INTEGER}, 
       #{unionid,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
       #{sex,jdbcType=INTEGER}, #{prizecount,jdbcType=INTEGER}, #{managerUpId,jdbcType=INTEGER}, 
       #{actualcard,jdbcType=INTEGER}, #{totalcard,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP}, 
       #{lastlogintime,jdbcType=TIMESTAMP}, #{status,jdbcType=CHAR}, #{isgame,jdbcType=VARCHAR}, 
-      #{invite,jdbcType=INTEGER}, #{invitereward,jdbcType=INTEGER}, #{invitegettedreward,jdbcType=INTEGER}
-      )
+      #{invite,jdbcType=INTEGER}, #{invitereward,jdbcType=INTEGER}, #{invitegettedreward,jdbcType=INTEGER}, 
+      #{playtimes,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.dyz.myBatis.model.Account">
     <!--
@@ -241,6 +242,9 @@
       <if test="invitegettedreward != null">
         inviteGettedReward,
       </if>
+      <if test="playtimes != null">
+        playTimes,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -305,6 +309,9 @@
       </if>
       <if test="invitegettedreward != null">
         #{invitegettedreward,jdbcType=INTEGER},
+      </if>
+      <if test="playtimes != null">
+        #{playtimes,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -388,6 +395,9 @@
       <if test="record.invitegettedreward != null">
         inviteGettedReward = #{record.invitegettedreward,jdbcType=INTEGER},
       </if>
+      <if test="record.playtimes != null">
+        playTimes = #{record.playtimes,jdbcType=INTEGER},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -419,7 +429,8 @@
       isGame = #{record.isgame,jdbcType=VARCHAR},
       invite = #{record.invite,jdbcType=INTEGER},
       inviteReward = #{record.invitereward,jdbcType=INTEGER},
-      inviteGettedReward = #{record.invitegettedreward,jdbcType=INTEGER}
+      inviteGettedReward = #{record.invitegettedreward,jdbcType=INTEGER},
+      playTimes = #{record.playtimes,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -491,6 +502,9 @@
       <if test="invitegettedreward != null">
         inviteGettedReward = #{invitegettedreward,jdbcType=INTEGER},
       </if>
+      <if test="playtimes != null">
+        playTimes = #{playtimes,jdbcType=INTEGER},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -519,7 +533,8 @@
       isGame = #{isgame,jdbcType=VARCHAR},
       invite = #{invite,jdbcType=INTEGER},
       inviteReward = #{invitereward,jdbcType=INTEGER},
-      inviteGettedReward = #{invitegettedreward,jdbcType=INTEGER}
+      inviteGettedReward = #{invitegettedreward,jdbcType=INTEGER},
+      playTimes = #{playtimes,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <select id="selectByUuid" resultMap="BaseResultMap">
@@ -541,6 +556,15 @@
     <include refid="Base_Column_List" />
     from account
     where status ="0"
+  </select>
+  <select id="selectByuuids" parameterType="java.util.List" resultMap="BaseResultMap">
+  	select 
+  	<include refid="Base_Column_List" />
+  	from account 
+  	where uuid in 
+  		<foreach close=")" collection="list" item="item" open="(" separator=",">
+            #{item}
+        </foreach>
   </select>
   <!-- 修改所有玩家抽奖次数 ,以及是否玩游戏状态-->
   <update id="updatePrizeCount" parameterType="java.lang.Integer">

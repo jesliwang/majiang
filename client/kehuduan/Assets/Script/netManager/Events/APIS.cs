@@ -108,6 +108,10 @@ namespace AssemblyCSharp
         //绑定邀请
         public const int INVITE_REQUEST = 0x004001;
         public const int INVITE_RESPONSE = 0X004002;
+        public const int INVITE_GET_REWARD_REQUEST = 0x004003;
+        public const int INVITE_GET_REWARD_RESPONSE = 0x004004;
+        public const int INVITE_HISTORY_REQUEST = 0x004005;
+        public const int INVITE_HISTORY_RESPONSE = 0x004006;
 
 		public const int OTHER_TELE_LOGIN = 0x211211;//其他设备登录
 	}

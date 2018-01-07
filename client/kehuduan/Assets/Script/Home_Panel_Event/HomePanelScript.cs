@@ -72,7 +72,7 @@ public class HomePanelScript : MonoBehaviour {
 			float time = noticeText.text.Length*0.5f+422f/56f;
 
 			Tweener tweener=noticeText.transform.DOLocalMove(
-				new Vector3(-noticeText.text.Length*28, noticeText.transform.localPosition.y), time)
+				new Vector3(-noticeText.text.Length*28-150, noticeText.transform.localPosition.y), time)
 				.OnComplete(moveCompleted);
 			tweener.SetEase (Ease.Linear);
 			//tweener.SetLoops(-1);

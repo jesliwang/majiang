@@ -137,7 +137,11 @@ public class ConnectAPI {
 	//绑定邀请
 	public static int INVITE_REQUEST = 0x004001;
 	public static int INVITE_RESPONSE = 0X004002;
-		
+	public static int INVITE_GET_REWARD_REQUEST = 0x004003;
+	public static int INVITE_GET_REWARD_RESPONSE = 0x004004;
+	public static int INVITE_HISTORY_REQUEST = 0x004005;
+	public static int INVITE_HISTORY_RESPONSE = 0x004006;
+	
 	//远程请求
 	public static int HOST_ROMOTECONTROL_REQUEST = 0x999999;
 	
