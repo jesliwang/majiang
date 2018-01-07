@@ -41,8 +41,12 @@ CREATE TABLE `account` (
   `lastLoginTime` datetime DEFAULT NULL,
   `status` char(1) NOT NULL DEFAULT '0',
   `isGame` varchar(255) DEFAULT NULL,
+  `invite` int(11) NOT NULL DEFAULT '0',
+  `inviteReward` int(11) NOT NULL DEFAULT '0',
+  `inviteGettedReward` int(11) NOT NULL DEFAULT '0',
+  `playTimes` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,6 +94,23 @@ CREATE TABLE `gamerecord` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `invite`
+--
+
+DROP TABLE IF EXISTS `invite`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `invite` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `inviteId` int(11) NOT NULL,
+  `invitedid` int(11) NOT NULL,
+  `inviteTime` datetime NOT NULL,
+  `reward` int(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `manager`
 --
 
@@ -124,7 +145,7 @@ CREATE TABLE `noticetable` (
   `content` varchar(255) DEFAULT NULL,
   `type` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,7 +202,7 @@ CREATE TABLE `playrecord` (
   `standingsDetail_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `PK_STANDINGSDETAIL_PLAYRECORDID` (`standingsDetail_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -257,7 +278,7 @@ CREATE TABLE `roominfo` (
   `cardNumb` int(11) DEFAULT NULL,
   `totalPlayers` int(4) NOT NULL DEFAULT '4',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -274,7 +295,7 @@ CREATE TABLE `standings` (
   `createTime` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `PK_ROOM_STANDINGS_ID` (`roomid`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -291,7 +312,7 @@ CREATE TABLE `standingsaccountrelation` (
   PRIMARY KEY (`id`),
   KEY `PK_STANDINGS_ACCOUNT_ID` (`standings_id`),
   KEY `PK_ACCOUNT_STANDINGS_ID` (`account_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -306,7 +327,7 @@ CREATE TABLE `standingsdetail` (
   `content` varchar(255) NOT NULL,
   `createTime` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -323,7 +344,7 @@ CREATE TABLE `standingsrelation` (
   PRIMARY KEY (`id`),
   KEY `PK_STANDINGS_⁯ID` (`standings_id`),
   KEY `PK_STANDINGSDETAIL_ID` (`standingsDetail_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -379,4 +400,4 @@ CREATE TABLE `winnersinfo` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-03 22:40:47
+-- Dump completed on 2018-01-07 23:42:44

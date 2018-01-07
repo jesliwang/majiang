@@ -25,8 +25,9 @@ public class SettingAppScript : MonoBehaviour
 
     }
 
-    public void yinXiaoChanged(float val)
+    public void yinXiaoChanged()
     {
+        float val = yinXiao.value; 
         if(val < 0.01f)
         {
             yinXiaoOn.SetActive(false);
