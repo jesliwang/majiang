@@ -5,16 +5,39 @@ using UnityEngine.UI;
 
 public class SettingAppScript : MonoBehaviour
 {
+    public Slider yinXiao;
+    public GameObject yinXiaoOn;
+    public GameObject yinXiaoOff;
+
     public Slider yingyue;
     public GameObject yingyueOn;
     public GameObject yingyueOff;
 
     void Start()
     {
+        yinXiaoOn.SetActive(true);
+        yinXiaoOff.SetActive(false);
+        yinXiao.value = PlayerPrefs.GetFloat("audioYinXiao", 1);
+
         yingyueOn.SetActive(true);
         yingyueOff.SetActive(false);
         yingyue.value = PlayerPrefs.GetFloat("audioEffect", 1);
 
+    }
+
+    public void yinXiaoChanged(float val)
+    {
+        if(val < 0.01f)
+        {
+            yinXiaoOn.SetActive(false);
+            yinXiaoOff.SetActive(true);
+        }
+        else
+        {
+            yinXiaoOn.SetActive(true);
+            yinXiaoOff.SetActive(false);   
+        }
+        PlayerPrefs.SetFloat("audioYinXiao", val);
     }
 
     public void yingyuechanged(float val)

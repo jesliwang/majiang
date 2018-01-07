@@ -205,13 +205,13 @@ public class GameOverScript : MonoBehaviour {
 	private void initRoomBaseInfo(){
 		timeText.text=DateTime.Now.ToString("yyyy-MM-dd");
 		roomNoText.text = "房间号：" + GlobalDataScript.roomVo.roomId;
-		if (GlobalDataScript.roomVo.roomType == GameConfig.GAME_TYPE_ZHUANZHUAN) {//转转麻将
+		/*if (GlobalDataScript.roomVo.roomType == GameConfig.GAME_TYPE_ZHUANZHUAN) {//转转麻将
 			title.text = "转转麻将";
 		} else if (GlobalDataScript.roomVo.roomType == GameConfig.GAME_TYPE_HUASHUI) {//划水麻将
 			title.text = "划水麻将";
 		} else if (GlobalDataScript.roomVo.roomType == GameConfig.GAME_TYPE_CHANGSHA) {
 			title.text = "长沙麻将";
-		}
+		}*/
 
 		/**
 		if (mDispalyFlag == 1) {

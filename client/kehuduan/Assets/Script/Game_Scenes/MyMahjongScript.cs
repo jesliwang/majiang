@@ -271,13 +271,13 @@ public class MyMahjongScript : MonoBehaviour
 				handerCardList[0].RemoveAt (i);
 				i--;
 			} else {
-				handerCardList[0] [i].transform.localPosition = new Vector3 (handerCardList[0] [i].transform.localPosition.x, -292f); //从右到左依次对齐
+				handerCardList[0] [i].transform.localPosition = new Vector3 (handerCardList[0] [i].transform.localPosition.x, -258f); //从右到左依次对齐
 				handerCardList[0] [i].transform.GetComponent<bottomScript> ().selected = false;
 			}
 		}
 		if (obj != null)
 		{
-			obj.transform.localPosition = new Vector3(obj.transform.localPosition.x, -272f);
+			obj.transform.localPosition = new Vector3(obj.transform.localPosition.x, -238f);
 			obj.transform.GetComponent<bottomScript>().selected = true;
 		}
 	}
@@ -526,7 +526,7 @@ public class MyMahjongScript : MonoBehaviour
 					if (gob != null)//
 					{
 						gob.transform.SetParent(parentList[0]);//设置父节点
-						gob.transform.localScale =  new Vector3(1.1f,1.1f,1);
+						gob.transform.localScale =  new Vector3(1,1,1);
 						gob.GetComponent<bottomScript>().onSendMessage += cardChange;//发送消息fd
 						gob.GetComponent<bottomScript>().reSetPoisiton += cardSelect;
 						gob.GetComponent<bottomScript>().setPoint(a);//设置指针          
@@ -668,12 +668,12 @@ public class MyMahjongScript : MonoBehaviour
 				temp.transform.localScale = Vector3.one; //原大小
                         break;
 				case DirectionEnum.Left: //左
-					temp.transform.localPosition = new Vector3(0, -105 + i*30); //位置   
+					temp.transform.localPosition = new Vector3(0, -105 + i*28); //位置   
 				        temp.transform.SetSiblingIndex(0);
                         handerCardList[3].Add(temp);
 					break;
 				case DirectionEnum.Right: //右
-					temp.transform.localPosition = new Vector3(0, 119 - i*30); //位置     
+					temp.transform.localPosition = new Vector3(0, 119 - i*28); //位置     
                         handerCardList[1].Add(temp);
 					break;
 				}
@@ -693,8 +693,8 @@ public class MyMahjongScript : MonoBehaviour
 		{
 			pickCardItem.name = "pickCardItem";
 			pickCardItem.transform.SetParent(parentList[0]); //父节点
-			pickCardItem.transform.localScale = new Vector3(1.1f,1.1f,1);//原大小
-			pickCardItem.transform.localPosition = new Vector3(580f, -292f); //位置
+			pickCardItem.transform.localScale = new Vector3(1,1,1);//原大小
+			pickCardItem.transform.localPosition = new Vector3(522f, -258f); //位置
 			pickCardItem.GetComponent<bottomScript>().onSendMessage += cardChange; //发送消息
 			pickCardItem.GetComponent<bottomScript>().reSetPoisiton += cardSelect;
 			pickCardItem.GetComponent<bottomScript>().setPoint(MoPaiCardPoint); //得到索引
@@ -862,13 +862,13 @@ public class MyMahjongScript : MonoBehaviour
 		if (outDir == DirectionEnum.Bottom)
 		{
 			path = "Prefab/ThrowCard/TopAndBottomCard";
-			poisVector3 = new Vector3(-261 + tableCardList[0].Count%14*37, (int)(tableCardList[0].Count/14)*67f);
+			poisVector3 = new Vector3(-261 + tableCardList[0].Count%13*34, -(int)(tableCardList[0].Count/13)*54f);
 			GlobalDataScript.isDrag = false;
 		}
 		else if (outDir == DirectionEnum.Right)
 		{
 			path = "Prefab/ThrowCard/ThrowCard_R";
-			poisVector3 = new Vector3((int)(-tableCardList[1].Count/13*54f), -180f + tableCardList[1].Count%13*28);
+			poisVector3 = new Vector3((int)(tableCardList[1].Count/9*54f), -180f + tableCardList[1].Count%9*28);
 		}
 		else if (outDir == DirectionEnum.Top)
 		{
@@ -878,7 +878,7 @@ public class MyMahjongScript : MonoBehaviour
 		else if (outDir == DirectionEnum.Left)
 		{
 			path = "Prefab/ThrowCard/ThrowCard_L";
-			poisVector3 = new Vector3(tableCardList[3].Count/13*54f, 152f - tableCardList[3].Count%13*28);
+			poisVector3 = new Vector3(-tableCardList[3].Count/8*54f, 152f - tableCardList[3].Count%8*28);
 			//     parenTransform = leftOutParent;
 		}
 
@@ -1428,18 +1428,20 @@ public class MyMahjongScript : MonoBehaviour
 
 	public void SetPosition(bool flag)//设置位置
 	{
+        int paiGap = 76;
+        int posY = -258;
 		int count = handerCardList[0].Count;
 		//int startX = 594 - count*79;
-		int startX = 594 - count*80;
+        int startX = 574 - count*paiGap;
 		if (flag) {
 			for (int i = 0; i < count-1; i++) {
-				handerCardList[0] [i].transform.localPosition = new Vector3 (startX + i * 80f, -292f); //从左到右依次对齐
+                handerCardList[0] [i].transform.localPosition = new Vector3 (startX + i * paiGap, posY); //从左到右依次对齐
 			}
-			handerCardList[0] [count-1].transform.localPosition = new Vector3 (580f, -292f); //从左到右依次对齐
+            handerCardList[0] [count-1].transform.localPosition = new Vector3 (522f, posY); //从左到右依次对齐
 
 		} else {
 			for (int i = 0; i < count; i++) {
-				handerCardList[0] [i].transform.localPosition = new Vector3 (startX + i * 80f -80f, -292f); //从左到右依次对齐
+                handerCardList[0] [i].transform.localPosition = new Vector3 (startX + i * paiGap -paiGap, posY); //从左到右依次对齐
 			}
 		}
 	}
@@ -1791,7 +1793,7 @@ public class MyMahjongScript : MonoBehaviour
 		GlobalDataScript.totalTimes = roomvo.roundNumber;
 		GlobalDataScript.surplusTimes = roomvo.roundNumber;
 	//	LeavedRoundNumText.text = GlobalDataScript.surplusTimes + "";
-        string str = "房间号：\n" + roomvo.roomId + "\n";
+        string str = "房间号：" + roomvo.roomId ;
 		/*string str = "房间号：\n"+roomvo.roomId+"\n";
 		str += "圈数："+roomvo.roundNumber+"\n";
 
@@ -2410,7 +2412,7 @@ public class MyMahjongScript : MonoBehaviour
 					if (gob != null)//
 					{
 						gob.transform.SetParent(parentList[0]);//设置父节点
-						gob.transform.localScale =new Vector3(1.1f,1.1f,1);
+						gob.transform.localScale =new Vector3(1,1,1);
 						gob.GetComponent<bottomScript>().onSendMessage += cardChange;//发送消息fd
 						gob.GetComponent<bottomScript>().reSetPoisiton += cardSelect;
 						gob.GetComponent<bottomScript>().setPoint(i);//设置指针                                                                                         
