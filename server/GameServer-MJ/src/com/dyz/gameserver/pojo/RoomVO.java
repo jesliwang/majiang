@@ -59,6 +59,21 @@ public class RoomVO {
     private boolean addWordCard;
 
     /**
+     * 剩余20张流局
+     */
+    private boolean shengyu20;
+    
+    /**
+     * 流3局赔庄
+     */
+    private boolean threefornext;
+    
+    /**
+     * 听牌显示
+     */
+    private boolean showTingPai;
+    
+    /**
      * 房间名
      */
     public String name;
@@ -253,5 +268,27 @@ public class RoomVO {
 		this.id = id;
 	}
 
+	public boolean getShengyu20() {
+        return shengyu20;
+    }
+
+    public void setShengyu20(boolean shengyu20) {
+        this.shengyu20 = shengyu20;
+    }
+   
+    public boolean getThreefornext() {
+        return threefornext;
+    }
+
+    public void setThreefornext(boolean threefornext) {
+        this.threefornext = threefornext;
+    }
     
+    public boolean getShowTingPai() {
+        return showTingPai;
+    }
+
+    public void setShowTingPai(boolean showTingPai) {
+        this.showTingPai = showTingPai;
+    }
 }

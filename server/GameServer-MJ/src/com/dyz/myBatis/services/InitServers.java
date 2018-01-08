@@ -36,7 +36,8 @@ public class InitServers {
 
         InviteService.getInstance().initSetSession(sessionFactory);
         
-        TaskTimer.showTimer();
+        // 抽奖定时器去掉
+        //TaskTimer.showTimer();
         TaskTimer.headBag();
     }
 

@@ -18,6 +18,9 @@ namespace AssemblyCSharp
 		public string name;
 		public bool addWordCard;
 		public int magnification;
+        public bool shengyu20;
+        public bool threefornext;
+        public bool showTingPai;
 		public RoomCreateVo()
 		{
 

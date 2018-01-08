@@ -1,15 +1,17 @@
 package com.dyz.myBatis.daoImp;
 
 import java.util.Date;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.dyz.myBatis.dao.RoomInfoMapper;
+import com.dyz.myBatis.dao.RoominfoMapper;
 import com.dyz.myBatis.dao.StandingsMapper;
-import com.dyz.myBatis.model.RoomInfo;
+import com.dyz.myBatis.model.Roominfo;
+import com.dyz.myBatis.model.RoominfoExample;
 
-public class RoomInfoDaoImp implements RoomInfoMapper {
+public class RoomInfoDaoImp implements RoominfoMapper {
 	 private SqlSessionFactory sqlSessionFactory;
 	    public RoomInfoDaoImp(SqlSessionFactory sqlSessionFactory){
 	        this.sqlSessionFactory = sqlSessionFactory;
@@ -20,11 +22,11 @@ public class RoomInfoDaoImp implements RoomInfoMapper {
 			return 0;
 		}
 		@Override
-		public int insert(RoomInfo record) {
+		public int insert(Roominfo record) {
 			int flag = 0;
 	        SqlSession sqlSession = sqlSessionFactory.openSession();
 	        try {
-	            RoomInfoMapper mapper = sqlSession.getMapper(RoomInfoMapper.class);
+	            RoominfoMapper mapper = sqlSession.getMapper(RoominfoMapper.class);
 	            flag = mapper.insert(record);
 	            sqlSession.commit();
 	        } catch (Exception e) {
@@ -35,11 +37,11 @@ public class RoomInfoDaoImp implements RoomInfoMapper {
 	        return flag;
 		}
 		@Override
-		public int insertSelective(RoomInfo record) {
+		public int insertSelective(Roominfo record) {
 			int flag = 0;
 	        SqlSession sqlSession = sqlSessionFactory.openSession();
 	        try {
-	            RoomInfoMapper mapper = sqlSession.getMapper(RoomInfoMapper.class);
+	            RoominfoMapper mapper = sqlSession.getMapper(RoominfoMapper.class);
 	            flag = mapper.insertSelective(record);
 	            sqlSession.commit();
 	        } catch (Exception e) {
@@ -50,11 +52,11 @@ public class RoomInfoDaoImp implements RoomInfoMapper {
 	        return flag;
 		}
 		@Override
-		public RoomInfo selectByPrimaryKey(Integer id) {
-			RoomInfo flag = null ;
+		public Roominfo selectByPrimaryKey(Integer id) {
+			Roominfo flag = null ;
 	        SqlSession sqlSession = sqlSessionFactory.openSession();
 	        try {
-	            RoomInfoMapper mapper = sqlSession.getMapper(RoomInfoMapper.class);
+	            RoominfoMapper mapper = sqlSession.getMapper(RoominfoMapper.class);
 	            flag = mapper.selectByPrimaryKey(id);
 	            sqlSession.commit();
 	        } catch (Exception e) {
@@ -65,12 +67,12 @@ public class RoomInfoDaoImp implements RoomInfoMapper {
 	        return flag;
 		}
 		@Override
-		public int updateByPrimaryKeySelective(RoomInfo record) {
+		public int updateByPrimaryKeySelective(Roominfo record) {
 			// TODO Auto-generated method stub
 			return 0;
 		}
 		@Override
-		public int updateByPrimaryKey(RoomInfo record) {
+		public int updateByPrimaryKey(Roominfo record) {
 			// TODO Auto-generated method stub
 			return 0;
 		}
@@ -79,7 +81,7 @@ public class RoomInfoDaoImp implements RoomInfoMapper {
 			int roomCount = 0 ;
 	        SqlSession sqlSession = sqlSessionFactory.openSession();
 	        try {
-	            RoomInfoMapper mapper = sqlSession.getMapper(RoomInfoMapper.class);
+	            RoominfoMapper mapper = sqlSession.getMapper(RoominfoMapper.class);
 	            roomCount = mapper.selectCount();
 	            sqlSession.commit();
 	        } catch (Exception e) {
@@ -94,7 +96,7 @@ public class RoomInfoDaoImp implements RoomInfoMapper {
 			int roomCount = 0 ;
 	        SqlSession sqlSession = sqlSessionFactory.openSession();
 	        try {
-	            RoomInfoMapper mapper = sqlSession.getMapper(RoomInfoMapper.class);
+	            RoominfoMapper mapper = sqlSession.getMapper(RoominfoMapper.class);
 	            roomCount = mapper.selectTodayCount(date);
 	            sqlSession.commit();
 	        } catch (Exception e) {
@@ -105,11 +107,11 @@ public class RoomInfoDaoImp implements RoomInfoMapper {
 	        return roomCount;
 		}
 		@Override
-		public RoomInfo selectRoomId(Integer roomid) {
-			RoomInfo roomCount = null;
+		public Roominfo selectRoomId(Integer roomid) {
+			Roominfo roomCount = null;
 	        SqlSession sqlSession = sqlSessionFactory.openSession();
 	        try {
-	            RoomInfoMapper mapper = sqlSession.getMapper(RoomInfoMapper.class);
+	            RoominfoMapper mapper = sqlSession.getMapper(RoominfoMapper.class);
 	            roomCount = mapper.selectRoomId(roomid);
 	            sqlSession.commit();
 	        } catch (Exception e) {
@@ -119,8 +121,31 @@ public class RoomInfoDaoImp implements RoomInfoMapper {
 	        }
 	        return roomCount;
 		}
-		
-
-	
+		@Override
+		public int countByExample(RoominfoExample example) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		@Override
+		public int deleteByExample(RoominfoExample example) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		@Override
+		public List<Roominfo> selectByExample(RoominfoExample example) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		@Override
+		public int updateByExampleSelective(Roominfo record,
+				RoominfoExample example) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		@Override
+		public int updateByExample(Roominfo record, RoominfoExample example) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
 
 }

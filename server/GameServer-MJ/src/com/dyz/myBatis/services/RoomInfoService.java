@@ -5,13 +5,13 @@ import java.util.Date;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.dyz.gameserver.pojo.RoomVO;
-import com.dyz.myBatis.dao.RoomInfoMapper;
+import com.dyz.myBatis.dao.RoominfoMapper;
 import com.dyz.myBatis.daoImp.RoomInfoDaoImp;
-import com.dyz.myBatis.model.RoomInfo;
+import com.dyz.myBatis.model.Roominfo;
 
 public class RoomInfoService {
 
-	 private RoomInfoMapper roomInfoMap;
+	 private RoominfoMapper roomInfoMap;
 
 	 
 	 private static RoomInfoService gameService = new RoomInfoService();
@@ -30,8 +30,8 @@ public class RoomInfoService {
 	     */
 	    public int createRoomInfo(RoomVO roomVO){
 	    	//创建信息的同事创建其关联表
-	        RoomInfo room = new RoomInfo();
-	        room.setTotalPlayers(roomVO.getTotalPlayers());
+	    	Roominfo room = new Roominfo();
+	        room.setTotalplayers(roomVO.getTotalPlayers());
 	        room.setIshong(roomVO.getHong()?"1":"0");
 	        room.setGametype(roomVO.getRoomType()+"");
 	        room.setMa(roomVO.getMa());
@@ -41,8 +41,11 @@ public class RoomInfoService {
 	        room.setZimo(roomVO.getZiMo()==0?"0":"1");
 	        room.setName(roomVO.getName());
 	        room.setAddwordcard(roomVO.isAddWordCard()?"1":"0");
-	        room.setCreateTime(new Date());
-	        room.setCardNumb(roomVO.getRoundNumber()/4);
+	        room.setCreatetime(new Date());
+	        room.setCardnumb(roomVO.getRoundNumber()/4);
+	        room.setShengyu20(roomVO.getShengyu20()?"1":"0");
+	        room.setThreefornext(roomVO.getThreefornext()?"1":"0");
+	        room.setShowtingpai(roomVO.getShowTingPai()?"1":"0");
 	    	//创建RoomInfo表
 	        int index = roomInfoMap.insertSelective(room);
 	        roomVO.setId(room.getId());
@@ -64,10 +67,10 @@ public class RoomInfoService {
 	        return index;
 	    }
 	    
-	    public RoomInfo selectByPrimaryKey(Integer id){
+	    public Roominfo selectByPrimaryKey(Integer id){
 			return roomInfoMap.selectByPrimaryKey(id);
 	    }
-	    public RoomInfo selectRoomId(Integer roomId){
+	    public Roominfo selectRoomId(Integer roomId){
 	    	return roomInfoMap.selectRoomId(roomId);
 	    }
 	    public int selectCount(){

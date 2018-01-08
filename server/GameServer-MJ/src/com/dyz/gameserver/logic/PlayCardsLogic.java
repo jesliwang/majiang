@@ -1604,8 +1604,15 @@ public class PlayCardsLogic {
     public int getNextCardPoint(){
     	nextCardindex++;
     	//System.out.println("listcard=" + listCard.size()+"," + nextCardindex);
-        if(nextCardindex<listCard.size()){
-            return listCard.get(nextCardindex);
+        // 添加剩余20张流局
+    	if(roomVO.getShengyu20()){
+	    	if(nextCardindex+20<listCard.size()){
+	            return listCard.get(nextCardindex);
+	        }
+        }else{
+        	if(nextCardindex<listCard.size()){
+	            return listCard.get(nextCardindex);
+	        }
         }
         return -1;
     }

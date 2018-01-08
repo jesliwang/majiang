@@ -4,7 +4,6 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.dyz.myBatis.dao.StandingsMapper;
 import com.dyz.myBatis.daoImp.StandingsDaoImp;
-import com.dyz.myBatis.model.RoomInfo;
 import com.dyz.myBatis.model.Standings;
 
 /**

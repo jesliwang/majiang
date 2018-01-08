@@ -42,5 +42,6 @@
                enableUpdateByExample="true"/>
          
         <table tableName="invite" />
+        <table tableName="roominfo"/>
     </context>
 </generatorConfiguration>

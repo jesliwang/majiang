@@ -1,6 +1,5 @@
 package com.dyz.myBatis.dao;
 
-import com.dyz.myBatis.model.RoomInfo;
 import com.dyz.myBatis.model.Standings;
 
 public interface StandingsMapper {

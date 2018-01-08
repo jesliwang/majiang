@@ -30,6 +30,7 @@ public class MyMahjongScript : MonoBehaviour
 	public List<PlayerItemScript> playerItems;
 	public Text LeavedCastNumText;//剩余牌的张数
 	public Text LeavedRoundNumText;//剩余局数
+    public Text MoshiText;//游戏模式
 	//public int StartRoundNum;
 	public Transform pengGangParenTransformB;
 	public Transform pengGangParenTransformL;
@@ -298,7 +299,29 @@ public class MyMahjongScript : MonoBehaviour
 		GlobalDataScript.surplusTimes --;
 		curDirString = getDirection (bankerId);
         LeavedRoundNumText.text = string.Format("{0,2}/{1,2} 局", GlobalDataScript.surplusTimes, GlobalDataScript.roomVo.roundNumber);
-          //  GlobalDataScript.surplusTimes+"";//刷新剩余圈数
+
+        // 游戏模式显示
+        //MoshiText
+        string moshiText = "";
+        if(GlobalDataScript.roomVo.shengyu20){
+            moshiText += "剩余20张流局";
+        }
+        if(GlobalDataScript.roomVo.threefornext){
+            if(moshiText.Length > 0){
+                moshiText += "\t";
+            }
+            moshiText += "流2局赔庄";
+        }
+        if(GlobalDataScript.roomVo.showTingPai){
+            if (moshiText.Length > 0)
+            {
+                moshiText += "\t";
+            }
+            moshiText += "听牌显示";
+        }
+        MoshiText.text = moshiText;
+
+        //  GlobalDataScript.surplusTimes+"";//刷新剩余圈数
 		if (!isFirstOpen) {
 			btnActionScript = gameObject.GetComponent<ButtonActionScript> ();
 			initPanel ();

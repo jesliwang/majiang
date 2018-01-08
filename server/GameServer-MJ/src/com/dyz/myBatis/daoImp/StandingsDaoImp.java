@@ -4,9 +4,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.dyz.myBatis.dao.AccountMapper;
-import com.dyz.myBatis.dao.RoomInfoMapper;
+import com.dyz.myBatis.dao.RoominfoMapper;
 import com.dyz.myBatis.dao.StandingsMapper;
-import com.dyz.myBatis.model.RoomInfo;
 import com.dyz.myBatis.model.Standings;
 
 public class StandingsDaoImp implements StandingsMapper {

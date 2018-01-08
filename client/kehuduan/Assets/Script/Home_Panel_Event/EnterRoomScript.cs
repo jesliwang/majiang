@@ -55,6 +55,14 @@ public class EnterRoomScript : MonoBehaviour{
 		int index = inputChars.Count;
 		inputTexts [index-1].text = number.ToString();
 
+        if(inputChars.Count == 6){
+            String roomNumber = inputChars[0] + inputChars[1] + inputChars[2] + inputChars[3] + inputChars[4] + inputChars[5];
+            MyDebug.Log(roomNumber);
+            RoomJoinVo roomJoinVo = new RoomJoinVo();
+            roomJoinVo.roomId = int.Parse(roomNumber);
+            string sendMsg = JsonMapper.ToJson(roomJoinVo);
+            CustomSocket.getInstance().sendMsg(new JoinRoomRequest(sendMsg));
+        }
 	}
 
 	public void deleteNumber(){
@@ -76,20 +84,13 @@ public class EnterRoomScript : MonoBehaviour{
 		SocketEventHandle.getInstance().JoinRoomCallBack -= onJoinRoomCallBack;
 	}
 
-	public void sureRoomNumber(){
-		if (inputChars.Count != 6) {
-			MyDebug.Log ("请先完整输入房间号码！");
-			TipsManagerScript.getInstance ().setTips ("请先完整输入房间号码！");
-			return;
-		}
-
-		String roomNumber = inputChars[0]+inputChars[1]+inputChars[2]+inputChars[3]+inputChars[4]+inputChars[5];
-		MyDebug.Log (roomNumber);
-		RoomJoinVo roomJoinVo = new  RoomJoinVo ();
-		roomJoinVo.roomId =int.Parse(roomNumber);
-		string sendMsg = JsonMapper.ToJson (roomJoinVo);
-		CustomSocket.getInstance().sendMsg(new JoinRoomRequest(sendMsg));
-
+	public void ResetInputNumber(){
+		
+        inputChars.Clear();
+        for (int i = 0; i < 6; i++)
+        {
+            inputTexts[i].text = "";
+        }
 	}
 
 	public void onJoinRoomCallBack(ClientResponse response){

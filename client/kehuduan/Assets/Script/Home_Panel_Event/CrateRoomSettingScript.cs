@@ -102,8 +102,12 @@ public class CrateRoomSettingScript : MonoBehaviour {
 		int roundNumber = 4;//房卡数量
 		bool isZimo=false;//自摸
 		bool hasHong=false;//红中赖子
-		bool isSevenDoube =false;//七小对
-        int playerNumber = 4; 
+        bool isSevenDoube =true;//七小对
+        int playerNumber = 4;
+
+        bool save20 = false;
+        bool threeForNext = false;
+        bool showTingPai = false;
 		//bool isGang = false;
 		int maCount = 0;
 		for (int i = 0; i < zhuanzhuanRoomCards.Count; i++) {
@@ -151,6 +155,19 @@ public class CrateRoomSettingScript : MonoBehaviour {
 				break;
 			}
 		}
+
+        for (int i = 0; i < GameRules.Count; i++){
+            if(GameRules[i].isOn){
+                if(0 == i){
+                    save20 = true;
+                }else if(1 == i){
+                    threeForNext = true;
+                }else if(2 == i){
+                    showTingPai = true;
+                }
+            }
+        }
+
 		sendVo = new RoomCreateVo ();
         sendVo.totalPlayers = playerNumber; // 玩家数目
 		sendVo.ma = maCount;
@@ -159,6 +176,9 @@ public class CrateRoomSettingScript : MonoBehaviour {
         sendVo.hong = true;
 		sendVo.sevenDouble = isSevenDoube;
 		sendVo.roomType = GameConfig.GAME_TYPE_ZHUANZHUAN;
+        sendVo.shengyu20 = save20;
+        sendVo.threefornext = threeForNext;
+        sendVo.showTingPai = showTingPai;
 		string sendmsgstr = JsonMapper.ToJson (sendVo);
 		if (GlobalDataScript.loginResponseData.account.roomcard > 0) {
 			CustomSocket.getInstance ().sendMsg (new CreateRoomRequest (sendmsgstr));

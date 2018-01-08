@@ -13,7 +13,6 @@ import com.dyz.gameserver.msg.processor.common.MsgProcessor;
 import com.dyz.gameserver.msg.response.standings.StandingsDetailResponse;
 import com.dyz.gameserver.msg.response.standings.StandingsDetailResponseSearch;
 import com.dyz.gameserver.msg.response.standings.StandingsResponse;
-import com.dyz.myBatis.model.RoomInfo;
 import com.dyz.myBatis.model.Standings;
 import com.dyz.myBatis.model.StandingsAccountRelation;
 import com.dyz.myBatis.model.StandingsDetail;
