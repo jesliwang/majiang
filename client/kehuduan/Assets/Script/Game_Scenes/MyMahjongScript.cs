@@ -187,7 +187,7 @@ public class MyMahjongScript : MonoBehaviour
 		SocketEventHandle.getInstance().pickCardCallBack += pickCard;
 		SocketEventHandle.getInstance().otherPickCardCallBack += otherPickCard;
 		SocketEventHandle.getInstance().putOutCardCallBack += otherPutOutCard;
-        //SocketEventHandle.getInstance().otherUserJointRoomCallBack += otherUserJointRoom;
+        SocketEventHandle.getInstance().otherUserJointRoomCallBack += otherUserJointRoom;
 		SocketEventHandle.getInstance().PengCardCallBack += otherPeng;
 		SocketEventHandle.getInstance().GangCardCallBack += gangResponse;
 		SocketEventHandle.getInstance().gangCardNotice += otherGang;
@@ -213,7 +213,7 @@ public class MyMahjongScript : MonoBehaviour
 		SocketEventHandle.getInstance().pickCardCallBack -= pickCard;
 		SocketEventHandle.getInstance().otherPickCardCallBack -= otherPickCard;
 		SocketEventHandle.getInstance().putOutCardCallBack -= otherPutOutCard;
-		//SocketEventHandle.getInstance().otherUserJointRoomCallBack -= otherUserJointRoom;
+		SocketEventHandle.getInstance().otherUserJointRoomCallBack -= otherUserJointRoom;
 		SocketEventHandle.getInstance().PengCardCallBack -= otherPeng;
 		SocketEventHandle.getInstance().GangCardCallBack -= gangResponse;
 		SocketEventHandle.getInstance().gangCardNotice -= otherGang;
@@ -779,7 +779,7 @@ public class MyMahjongScript : MonoBehaviour
 	/// <param name="curAvatarIndex">Current avatar index.</param>
 	private void createPutOutCardAndPlayAction(int cardPoint, int curAvatarIndex)
 	{
-		MyDebug.Log ("put out cardPoint"+cardPoint);
+        MyDebug.Log ("put out cardPoint"+cardPoint + ",avatarIndex=" + curAvatarIndex);
 		SoundCtrl.getInstance ().playSound (cardPoint,avatarList [curAvatarIndex].account.sex);
 		Vector3 tempVector3 = new Vector3(0, 0);
 
@@ -1859,6 +1859,28 @@ public class MyMahjongScript : MonoBehaviour
 		}
 		*/
 		roomRemark.text = str;
+        string moshiText = "";
+        if (GlobalDataScript.roomVo.shengyu20)
+        {
+            moshiText += "剩余20张流局";
+        }
+        if (GlobalDataScript.roomVo.threefornext)
+        {
+            if (moshiText.Length > 0)
+            {
+                moshiText += "\t";
+            }
+            moshiText += "流2局赔庄";
+        }
+        if (GlobalDataScript.roomVo.showTingPai)
+        {
+            if (moshiText.Length > 0)
+            {
+                moshiText += "\t";
+            }
+            moshiText += "听牌显示";
+        }
+        MoshiText.text = moshiText;
 	}
 
 	private void addAvatarVOToList(AvatarVO avatar){

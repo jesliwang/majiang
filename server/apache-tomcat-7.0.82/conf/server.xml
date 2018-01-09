@@ -137,7 +137,8 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
                prefix="localhost_access_log." suffix=".txt"
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
-<Context path="" reloadable="true" docBase="/Users/Jesli/Development/self_project/majiang/server/GameServer-MJ/WebRoot" workDir="/Users/Jesli/Development/self_project/majiang/server/GameServer-MJ/work" />
+        <Context path="GameServer" reloadable="true" docBase="/Users/Jesli/Development/self_project/majiang/server/GameServer-MJ/WebRoot" workDir="/Users/Jesli/Development/self_project/majiang/server/GameServer-MJ/work"/>
+        <Context path="ChatServer" reloadable="true" docBase="/Users/Jesli/Development/self_project/majiang/server/SoundChatServer/WebRoot" workDir="/Users/Jesli/Development/self_project/majiang/server/SoundChatServer/work"/>
 
       </Host>
     </Engine>

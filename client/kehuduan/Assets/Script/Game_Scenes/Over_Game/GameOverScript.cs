@@ -8,6 +8,9 @@ using System.IO;
 using System.Collections.Generic;
 
 public class GameOverScript : MonoBehaviour {
+    /**游戏模式**/
+    public Text modeText;
+
 	/**时间显示条**/
 	public Text timeText;
 
@@ -38,9 +41,6 @@ public class GameOverScript : MonoBehaviour {
 	public Button closeButton;
 
 	public Text title;
-
-
-
 
 	private List<AvatarVO> mAvatarvoList;
 	private List<int> mas_0;
@@ -203,8 +203,9 @@ public class GameOverScript : MonoBehaviour {
 		}
 
 	private void initRoomBaseInfo(){
-		timeText.text=DateTime.Now.ToString("yyyy-MM-dd");
-		roomNoText.text = "房间号：" + GlobalDataScript.roomVo.roomId;
+        timeText.text=DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+        roomNoText.text = "房间号:" + GlobalDataScript.roomVo.roomId;
 		/*if (GlobalDataScript.roomVo.roomType == GameConfig.GAME_TYPE_ZHUANZHUAN) {//转转麻将
 			title.text = "转转麻将";
 		} else if (GlobalDataScript.roomVo.roomType == GameConfig.GAME_TYPE_HUASHUI) {//划水麻将
@@ -218,6 +219,28 @@ public class GameOverScript : MonoBehaviour {
 			TitleText.text = "棋牌结束";
 		}
 		*/
+        string moshiText = "";
+        if (GlobalDataScript.roomVo.shengyu20)
+        {
+            moshiText += "剩余20张流局";
+        }
+        if (GlobalDataScript.roomVo.threefornext)
+        {
+            if (moshiText.Length > 0)
+            {
+                moshiText += "\t";
+            }
+            moshiText += "流2局赔庄";
+        }
+        if (GlobalDataScript.roomVo.showTingPai)
+        {
+            if (moshiText.Length > 0)
+            {
+                moshiText += "\t";
+            }
+            moshiText += "听牌显示";
+        }
+        modeText.text = moshiText;
 
 	}
 

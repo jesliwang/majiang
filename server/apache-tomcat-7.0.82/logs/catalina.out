@@ -949,3 +949,776 @@ Dec 26, 2017 11:02:28 PM org.apache.coyote.AbstractProtocol destroy
 INFO: Destroying ProtocolHandler ["http-bio-8080"]
 Dec 26, 2017 11:02:28 PM org.apache.coyote.AbstractProtocol destroy
 INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
+Jan 09, 2018 10:58:00 PM org.apache.tomcat.util.digester.Digester endElement
+SEVERE: End event threw exception
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.IntrospectionUtils.callMethod1(IntrospectionUtils.java:856)
+	at org.apache.tomcat.util.digester.SetNextRule.end(SetNextRule.java:201)
+	at org.apache.tomcat.util.digester.Digester.endElement(Digester.java:1081)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:609)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:183)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1338)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2781)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:504)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:617)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:668)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:253)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:427)
+Caused by: java.lang.IllegalArgumentException: addChild:  Child name '' is not unique
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1001)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:991)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	... 27 more
+
+Jan 09, 2018 10:58:00 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: Error at (141, 217) : addChild:  Child name '' is not unique
+Jan 09, 2018 10:58:00 PM org.apache.tomcat.util.digester.Digester endElement
+SEVERE: End event threw exception
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.IntrospectionUtils.callMethod1(IntrospectionUtils.java:856)
+	at org.apache.tomcat.util.digester.SetNextRule.end(SetNextRule.java:201)
+	at org.apache.tomcat.util.digester.Digester.endElement(Digester.java:1081)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:609)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:183)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1338)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2781)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:504)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:617)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:682)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:294)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:428)
+Caused by: java.lang.IllegalArgumentException: addChild:  Child name '' is not unique
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1001)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:991)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	... 27 more
+
+Jan 09, 2018 10:58:00 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: Error at (141, 217) : addChild:  Child name '' is not unique
+Jan 09, 2018 10:58:00 PM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+Jan 09, 2018 11:03:05 PM org.apache.tomcat.util.digester.Digester endElement
+SEVERE: End event threw exception
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.IntrospectionUtils.callMethod1(IntrospectionUtils.java:856)
+	at org.apache.tomcat.util.digester.SetNextRule.end(SetNextRule.java:201)
+	at org.apache.tomcat.util.digester.Digester.endElement(Digester.java:1081)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:609)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:183)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1338)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2781)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:504)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:617)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:668)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:253)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:427)
+Caused by: java.lang.IllegalArgumentException: addChild:  Child name '' is not unique
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1001)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:991)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	... 27 more
+
+Jan 09, 2018 11:03:05 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: Error at (141, 217) : addChild:  Child name '' is not unique
+Jan 09, 2018 11:03:05 PM org.apache.tomcat.util.digester.Digester endElement
+SEVERE: End event threw exception
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.IntrospectionUtils.callMethod1(IntrospectionUtils.java:856)
+	at org.apache.tomcat.util.digester.SetNextRule.end(SetNextRule.java:201)
+	at org.apache.tomcat.util.digester.Digester.endElement(Digester.java:1081)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:609)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:183)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1338)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2781)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:504)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:617)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:682)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:294)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:428)
+Caused by: java.lang.IllegalArgumentException: addChild:  Child name '' is not unique
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1001)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:991)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	... 27 more
+
+Jan 09, 2018 11:03:05 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: Error at (141, 217) : addChild:  Child name '' is not unique
+Jan 09, 2018 11:03:05 PM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+Jan 09, 2018 11:04:44 PM org.apache.tomcat.util.digester.Digester endElement
+SEVERE: End event threw exception
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.IntrospectionUtils.callMethod1(IntrospectionUtils.java:856)
+	at org.apache.tomcat.util.digester.SetNextRule.end(SetNextRule.java:201)
+	at org.apache.tomcat.util.digester.Digester.endElement(Digester.java:1081)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:609)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:183)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1338)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2781)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:504)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:617)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:668)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:253)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:427)
+Caused by: java.lang.IllegalArgumentException: addChild:  Child name '' is not unique
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1001)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:991)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	... 27 more
+
+Jan 09, 2018 11:04:44 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: Error at (141, 216) : addChild:  Child name '' is not unique
+Jan 09, 2018 11:04:44 PM org.apache.tomcat.util.digester.Digester endElement
+SEVERE: End event threw exception
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.IntrospectionUtils.callMethod1(IntrospectionUtils.java:856)
+	at org.apache.tomcat.util.digester.SetNextRule.end(SetNextRule.java:201)
+	at org.apache.tomcat.util.digester.Digester.endElement(Digester.java:1081)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:609)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:183)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1338)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2781)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:504)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:617)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:682)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:294)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:428)
+Caused by: java.lang.IllegalArgumentException: addChild:  Child name '' is not unique
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1001)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:991)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	... 27 more
+
+Jan 09, 2018 11:04:44 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: Error at (141, 216) : addChild:  Child name '' is not unique
+Jan 09, 2018 11:04:44 PM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+Jan 09, 2018 11:06:44 PM org.apache.tomcat.util.digester.Digester endElement
+SEVERE: End event threw exception
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.IntrospectionUtils.callMethod1(IntrospectionUtils.java:856)
+	at org.apache.tomcat.util.digester.SetNextRule.end(SetNextRule.java:201)
+	at org.apache.tomcat.util.digester.Digester.endElement(Digester.java:1081)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:609)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:183)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1338)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2781)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:504)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:617)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:668)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:253)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:427)
+Caused by: java.lang.IllegalArgumentException: addChild:  Child name '' is not unique
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1001)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:991)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	... 27 more
+
+Jan 09, 2018 11:06:44 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: Error at (141, 133) : addChild:  Child name '' is not unique
+Jan 09, 2018 11:06:44 PM org.apache.tomcat.util.digester.Digester endElement
+SEVERE: End event threw exception
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.IntrospectionUtils.callMethod1(IntrospectionUtils.java:856)
+	at org.apache.tomcat.util.digester.SetNextRule.end(SetNextRule.java:201)
+	at org.apache.tomcat.util.digester.Digester.endElement(Digester.java:1081)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:609)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:183)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1338)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2781)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:504)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:617)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:682)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:294)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:428)
+Caused by: java.lang.IllegalArgumentException: addChild:  Child name '' is not unique
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:1001)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:991)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	... 27 more
+
+Jan 09, 2018 11:06:44 PM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: Error at (141, 133) : addChild:  Child name '' is not unique
+Jan 09, 2018 11:06:44 PM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.82
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 29 2017 12:23:15 UTC
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.82.0
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Mac OS X
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            10.11.6
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          x86_64
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_101-b13
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/conf/logging.properties
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/endorsed
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/temp
+Jan 09, 2018 11:07:15 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/Jesli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+Jan 09, 2018 11:07:15 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Jan 09, 2018 11:07:15 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Jan 09, 2018 11:07:15 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 615 ms
+Jan 09, 2018 11:07:15 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jan 09, 2018 11:07:15 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.82
+Jan 09, 2018 11:07:15 PM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFO: validateJarFile(/Users/Jesli/Development/self_project/majiang/server/GameServer-MJ/WebRoot/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Jan 09, 2018 11:07:16 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+aaaaaa
+log4j: reset attribute= "false".
+log4j: Threshold ="null".
+log4j: Level value for root is  [info].
+log4j: root level set to INFO
+log4j: Class name: [org.apache.log4j.ConsoleAppender]
+log4j: Parsing layout of class: "org.apache.log4j.PatternLayout"
+log4j: Setting property [conversionPattern] to [%d (%F:%L) %-5p %c - %m%n].
+log4j: Adding appender named [stdout] to category [root].
+2018-01-09 23:07:16,657 (MsgDispatcher.java:28) INFO  com.dyz.gameserver.commons.message.MsgDispatcher - 初始化 消息处理器成功。。。
+2018-01-09 23:07:16,658 (GameServer.java:46) INFO  com.dyz.gameserver.bootstrap.GameServer - 开始启动服务器 ...
+2018-01-09 23:07:16,661 (GameServer.java:48) INFO  com.dyz.gameserver.bootstrap.GameServer - 初始化服务器线程池完成
+Tue Jan 09 00:00:01 HKT 2018
+2018-01-09 23:07:17,065 (GameServer.java:51) INFO  com.dyz.gameserver.bootstrap.GameServer - 数据库连接初始化完成
+2018-01-09 23:07:17,149 (GameServer.java:54) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器监听端口:10122完成
+2018-01-09 23:07:17,149 (GameServer.java:55) INFO  com.dyz.gameserver.bootstrap.GameServer - game server started...
+2018-01-09 23:07:17,428 (GameServer.java:57) INFO  com.dyz.gameserver.bootstrap.GameServer - 初始化奖品概率
+Jan 09, 2018 11:07:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/docs
+Jan 09, 2018 11:07:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/docs has finished in 40 ms
+Jan 09, 2018 11:07:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/examples
+Jan 09, 2018 11:07:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/examples has finished in 208 ms
+Jan 09, 2018 11:07:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/host-manager
+Jan 09, 2018 11:07:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/host-manager has finished in 105 ms
+Jan 09, 2018 11:07:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/manager
+Jan 09, 2018 11:07:17 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/manager has finished in 36 ms
+Jan 09, 2018 11:07:17 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Jan 09, 2018 11:07:17 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Jan 09, 2018 11:07:17 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2227 ms
+Jan 09, 2018 11:07:33 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Jan 09, 2018 11:07:33 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Jan 09, 2018 11:07:33 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Jan 09, 2018 11:07:33 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+bbbb
+2018-01-09 23:07:33,237 (GameServer.java:71) INFO  com.dyz.gameserver.bootstrap.GameServer - 准备关闭服务器...
+2018-01-09 23:07:33,257 (GameServer.java:73) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器停止网络监听
+2018-01-09 23:07:33,257 (GameServer.java:75) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器线程池关闭完成
+2018-01-09 23:07:33,257 (GameServer.java:76) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器关闭完成
+Jan 09, 2018 11:07:33 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Jan 09, 2018 11:07:33 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+SEVERE: The web application [] registered the JDBC driver [org.apache.ibatis.datasource.unpooled.UnpooledDataSource.DriverProxy] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Jan 09, 2018 11:07:33 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [Timer-0] but has failed to stop it. This is very likely to create a memory leak.
+Jan 09, 2018 11:07:33 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [NioSocketAcceptor-1] but has failed to stop it. This is very likely to create a memory leak.
+Jan 09, 2018 11:07:33 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak.
+Jan 09, 2018 11:07:33 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Jan 09, 2018 11:07:33 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Jan 09, 2018 11:07:33 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+Jan 09, 2018 11:07:33 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
+Jan 09, 2018 11:09:24 PM org.apache.catalina.core.StandardContext setPath
+WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [GameServer] does not meet these criteria and has been changed to [/GameServer]
+Jan 09, 2018 11:09:24 PM org.apache.catalina.core.StandardContext setPath
+WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [ChatServer] does not meet these criteria and has been changed to [/ChatServer]
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.82
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 29 2017 12:23:15 UTC
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.82.0
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Mac OS X
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            10.11.6
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          x86_64
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_101-b13
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/conf/logging.properties
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/endorsed
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/temp
+Jan 09, 2018 11:09:24 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/Jesli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+Jan 09, 2018 11:09:24 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Jan 09, 2018 11:09:24 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Jan 09, 2018 11:09:24 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 587 ms
+Jan 09, 2018 11:09:24 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jan 09, 2018 11:09:24 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.82
+Jan 09, 2018 11:09:24 PM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFO: validateJarFile(/Users/Jesli/Development/self_project/majiang/server/GameServer-MJ/WebRoot/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Jan 09, 2018 11:09:25 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+aaaaaa
+log4j: reset attribute= "false".
+log4j: Threshold ="null".
+log4j: Level value for root is  [info].
+log4j: root level set to INFO
+log4j: Class name: [org.apache.log4j.ConsoleAppender]
+log4j: Parsing layout of class: "org.apache.log4j.PatternLayout"
+log4j: Setting property [conversionPattern] to [%d (%F:%L) %-5p %c - %m%n].
+log4j: Adding appender named [stdout] to category [root].
+2018-01-09 23:09:25,740 (MsgDispatcher.java:28) INFO  com.dyz.gameserver.commons.message.MsgDispatcher - 初始化 消息处理器成功。。。
+2018-01-09 23:09:25,743 (GameServer.java:46) INFO  com.dyz.gameserver.bootstrap.GameServer - 开始启动服务器 ...
+2018-01-09 23:09:25,745 (GameServer.java:48) INFO  com.dyz.gameserver.bootstrap.GameServer - 初始化服务器线程池完成
+Tue Jan 09 00:00:01 HKT 2018
+2018-01-09 23:09:26,178 (GameServer.java:51) INFO  com.dyz.gameserver.bootstrap.GameServer - 数据库连接初始化完成
+2018-01-09 23:09:26,264 (GameServer.java:54) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器监听端口:10122完成
+2018-01-09 23:09:26,264 (GameServer.java:55) INFO  com.dyz.gameserver.bootstrap.GameServer - game server started...
+2018-01-09 23:09:26,563 (GameServer.java:57) INFO  com.dyz.gameserver.bootstrap.GameServer - 初始化奖品概率
+Jan 09, 2018 11:09:26 PM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFO: validateJarFile(/Users/Jesli/Development/self_project/majiang/server/SoundChatServer/WebRoot/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Jan 09, 2018 11:09:27 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+log4j:WARN No appenders could be found for logger (com.dyz.gameserver.commons.message.MsgDispatcher).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Jan 09, 2018 11:09:27 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/docs
+Jan 09, 2018 11:09:27 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/docs has finished in 36 ms
+Jan 09, 2018 11:09:27 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/examples
+Jan 09, 2018 11:09:27 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/examples has finished in 240 ms
+Jan 09, 2018 11:09:27 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/host-manager
+Jan 09, 2018 11:09:27 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/host-manager has finished in 99 ms
+Jan 09, 2018 11:09:27 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/manager
+Jan 09, 2018 11:09:27 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/manager has finished in 40 ms
+Jan 09, 2018 11:09:27 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/ROOT
+Jan 09, 2018 11:09:27 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/ROOT has finished in 28 ms
+Jan 09, 2018 11:09:27 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Jan 09, 2018 11:09:27 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Jan 09, 2018 11:09:27 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2785 ms
+Tue Jan 09 00:00:01 HKT 2018
+2
+Jan 09, 2018 11:14:45 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Jan 09, 2018 11:14:45 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Jan 09, 2018 11:14:45 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Jan 09, 2018 11:14:45 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+bbbb
+2018-01-09 23:14:45,941 (GameServer.java:71) INFO  com.dyz.gameserver.bootstrap.GameServer - 准备关闭服务器...
+2018-01-09 23:14:45,944 (GameServer.java:73) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器停止网络监听
+2018-01-09 23:14:45,944 (GameServer.java:75) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器线程池关闭完成
+2018-01-09 23:14:45,944 (GameServer.java:76) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器关闭完成
+Jan 09, 2018 11:14:45 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+SEVERE: The web application [/GameServer] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Jan 09, 2018 11:14:45 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+SEVERE: The web application [/GameServer] registered the JDBC driver [org.apache.ibatis.datasource.unpooled.UnpooledDataSource.DriverProxy] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Jan 09, 2018 11:14:45 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [Timer-0] but has failed to stop it. This is very likely to create a memory leak.
+Jan 09, 2018 11:14:45 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [NioSocketAcceptor-1] but has failed to stop it. This is very likely to create a memory leak.
+Jan 09, 2018 11:14:45 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak.
+Jan 09, 2018 11:14:45 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [NioProcessor-1] but has failed to stop it. This is very likely to create a memory leak.
+Jan 09, 2018 11:14:45 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [NioProcessor-2] but has failed to stop it. This is very likely to create a memory leak.
+Jan 09, 2018 11:14:45 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [NioProcessor-4] but has failed to stop it. This is very likely to create a memory leak.
+Jan 09, 2018 11:14:45 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [NioProcessor-5] but has failed to stop it. This is very likely to create a memory leak.
+Jan 09, 2018 11:14:45 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [pool-3-thread-3] but has failed to stop it. This is very likely to create a memory leak.
+Jan 09, 2018 11:14:45 PM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/ChatServer] appears to have started a thread named [Timer-1] but has failed to stop it. This is very likely to create a memory leak.
+Jan 09, 2018 11:14:45 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Jan 09, 2018 11:14:45 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Jan 09, 2018 11:14:45 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+Jan 09, 2018 11:14:45 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
+Jan 09, 2018 11:15:52 PM org.apache.catalina.core.StandardContext setPath
+WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [GameServer] does not meet these criteria and has been changed to [/GameServer]
+Jan 09, 2018 11:15:52 PM org.apache.catalina.core.StandardContext setPath
+WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [ChatServer] does not meet these criteria and has been changed to [/ChatServer]
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.82
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 29 2017 12:23:15 UTC
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.82.0
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Mac OS X
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            10.11.6
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          x86_64
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_101-b13
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/conf/logging.properties
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/endorsed
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 09, 2018 11:15:52 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/temp
+Jan 09, 2018 11:15:52 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/Jesli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+Jan 09, 2018 11:15:53 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Jan 09, 2018 11:15:53 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Jan 09, 2018 11:15:53 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 595 ms
+Jan 09, 2018 11:15:53 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jan 09, 2018 11:15:53 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.82
+Jan 09, 2018 11:15:53 PM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFO: validateJarFile(/Users/Jesli/Development/self_project/majiang/server/GameServer-MJ/WebRoot/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Jan 09, 2018 11:15:53 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+aaaaaa
+log4j: reset attribute= "false".
+log4j: Threshold ="null".
+log4j: Level value for root is  [info].
+log4j: root level set to INFO
+log4j: Class name: [org.apache.log4j.ConsoleAppender]
+log4j: Parsing layout of class: "org.apache.log4j.PatternLayout"
+log4j: Setting property [conversionPattern] to [%d (%F:%L) %-5p %c - %m%n].
+log4j: Adding appender named [stdout] to category [root].
+2018-01-09 23:15:53,873 (MsgDispatcher.java:28) INFO  com.dyz.gameserver.commons.message.MsgDispatcher - 初始化 消息处理器成功。。。
+2018-01-09 23:15:53,876 (GameServer.java:46) INFO  com.dyz.gameserver.bootstrap.GameServer - 开始启动服务器 ...
+2018-01-09 23:15:53,878 (GameServer.java:48) INFO  com.dyz.gameserver.bootstrap.GameServer - 初始化服务器线程池完成
+Tue Jan 09 00:00:01 HKT 2018
+2018-01-09 23:15:54,271 (GameServer.java:51) INFO  com.dyz.gameserver.bootstrap.GameServer - 数据库连接初始化完成
+2018-01-09 23:15:54,358 (GameServer.java:54) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器监听端口:10122完成
+2018-01-09 23:15:54,358 (GameServer.java:55) INFO  com.dyz.gameserver.bootstrap.GameServer - game server started...
+2018-01-09 23:15:54,667 (GameServer.java:57) INFO  com.dyz.gameserver.bootstrap.GameServer - 初始化奖品概率
+Jan 09, 2018 11:15:54 PM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFO: validateJarFile(/Users/Jesli/Development/self_project/majiang/server/SoundChatServer/WebRoot/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Jan 09, 2018 11:15:55 PM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+log4j:WARN No appenders could be found for logger (com.dyz.gameserver.commons.message.MsgDispatcher).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Jan 09, 2018 11:15:55 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/docs
+Jan 09, 2018 11:15:55 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/docs has finished in 28 ms
+Jan 09, 2018 11:15:55 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/examples
+Jan 09, 2018 11:15:55 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/examples has finished in 235 ms
+Jan 09, 2018 11:15:55 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/host-manager
+Jan 09, 2018 11:15:55 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/host-manager has finished in 101 ms
+Jan 09, 2018 11:15:55 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/manager
+Jan 09, 2018 11:15:55 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/manager has finished in 36 ms
+Jan 09, 2018 11:15:55 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/ROOT
+Jan 09, 2018 11:15:55 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/ROOT has finished in 25 ms
+Jan 09, 2018 11:15:55 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Jan 09, 2018 11:15:55 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Jan 09, 2018 11:15:55 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2642 ms
+Tue Jan 09 00:00:01 HKT 2018
+2
+100002  :登录游戏,25
+关闭聊天SESSION -- > null
+remove chat session by  ==> 100002
+Tue Jan 09 00:00:01 HKT 2018
+3
+100002  :登录游戏,25
+2018-01-09 23:39:28,287 (JSONObject.java:431) WARN  net.sf.json.JSONObject - Tried to assign property magnification:java.lang.Integer to bean of class com.dyz.gameserver.pojo.RoomVO
+(创建新房间成功)当前在线房间数量：1:1,players=2
+roomId:303073
+Tue Jan 09 00:00:01 HKT 2018
+4
+100006  :登录游戏,0
+2018-01-09 23:40:05,070 (JoinRoomMsgProcessor.java:53) ERROR com.dyz.gameserver.msg.processor.common.MsgProcessor - 加入房间成功
+2018-01-09 23:40:05,076 (JoinRoomMsgProcessor.java:58) ERROR com.dyz.gameserver.msg.processor.common.MsgProcessor - 房间人满了，进入战场
+游戏还没有结束不能调用准备接口!
+==> 100002
+==> 100002
+关闭聊天SESSION -- > null
+remove chat session by  ==> 100002
+Tue Jan 09 00:00:01 HKT 2018
+5
+100002  :登录游戏,25
+有效码：[]
+-account insert index->>1
+-account insert index->>1
+关闭聊天SESSION -- > null
+remove chat session by  ==> 100002
+Tue Jan 09 00:00:01 HKT 2018
+6
+关闭聊天SESSION -- > null
+remove chat session by  ==> 0
+Tue Jan 09 00:00:01 HKT 2018
+7
+100002  :登录游戏,25
+关闭聊天SESSION -- > null
+remove chat session by  ==> 100006
+Tue Jan 09 00:00:01 HKT 2018
+8
+关闭聊天SESSION -- > null
+remove chat session by  ==> 0
+100006  :登录游戏,0
+有效码：[]
+-account insert index->>1
+-account insert index->>1
+关闭聊天SESSION -- > null
+remove chat session by  ==> 100002
+用户掉线超时，删除用户数据 UserId 100006
+Jan 10, 2018 12:38:07 AM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Jan 10, 2018 12:38:07 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Jan 10, 2018 12:38:07 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Jan 10, 2018 12:38:07 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+bbbb
+2018-01-10 00:38:07,961 (GameServer.java:71) INFO  com.dyz.gameserver.bootstrap.GameServer - 准备关闭服务器...
+2018-01-10 00:38:07,986 (GameServer.java:73) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器停止网络监听
+2018-01-10 00:38:07,986 (GameServer.java:75) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器线程池关闭完成
+2018-01-10 00:38:07,986 (GameServer.java:76) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器关闭完成
+Jan 10, 2018 12:38:07 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+SEVERE: The web application [/GameServer] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Jan 10, 2018 12:38:07 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+SEVERE: The web application [/GameServer] registered the JDBC driver [org.apache.ibatis.datasource.unpooled.UnpooledDataSource.DriverProxy] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Jan 10, 2018 12:38:07 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [Timer-0] but has failed to stop it. This is very likely to create a memory leak.
+Jan 10, 2018 12:38:07 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [NioSocketAcceptor-1] but has failed to stop it. This is very likely to create a memory leak.
+Jan 10, 2018 12:38:07 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak.
+Jan 10, 2018 12:38:07 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [Timer-13] but has failed to stop it. This is very likely to create a memory leak.
+Jan 10, 2018 12:38:08 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Jan 10, 2018 12:38:08 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Jan 10, 2018 12:38:08 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+Jan 10, 2018 12:38:08 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
