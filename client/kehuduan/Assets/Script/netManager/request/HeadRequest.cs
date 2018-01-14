@@ -7,7 +7,9 @@ namespace AssemblyCSharp
 		public HeadRequest ()
 		{
 			headCode = APIS.head;
-			messageContent = "";
+            DateTime d2 = new DateTime(2018, 1, 1); 
+            long d=  (int)DateTime.Now.Subtract(d2).TotalMilliseconds;
+            messageContent = d.ToString();
 
 		}
 			

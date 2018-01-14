@@ -65,6 +65,7 @@ namespace AssemblyCSharp
 
         //private List<ClientResponse> callBackResponseList;
 
+        public ServerCallBackEvent hearBeateResponse; //邀请历史
 
 		private List<ClientResponse> callBackResponseList;
 
@@ -202,6 +203,11 @@ namespace AssemblyCSharp
 				}
 				break;
 			case APIS.headRESPONSE:
+                    if(hearBeateResponse != null)
+                    {
+                        hearBeateResponse(response);
+                    }
+
 				break;
 			case APIS.DISSOLIVE_ROOM_RESPONSE:
 				if (dissoliveRoomResponse != null) {

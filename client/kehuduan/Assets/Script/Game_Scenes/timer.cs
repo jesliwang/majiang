@@ -14,5 +14,6 @@ public class timer : MonoBehaviour {
 	void Update () {
         time = System.DateTime.Now.ToString("HH : mm");
         GetComponent<Text>().text = time;
+
 	}
 }

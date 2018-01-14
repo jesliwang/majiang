@@ -13,7 +13,8 @@ public class EnterRoomScript : MonoBehaviour{
 	public Button button_sure,button_delete;//确认删除按钮
 
 	private List<String> inputChars;//输入的字符
-	public List<Text> inputTexts;
+    public List<Image> inputTexts;
+    public List<Sprite> numberList;
 
 	public List<GameObject> btnList;
 
@@ -52,8 +53,13 @@ public class EnterRoomScript : MonoBehaviour{
 			return;
 		}
 		inputChars.Add(number);
+
 		int index = inputChars.Count;
-		inputTexts [index-1].text = number.ToString();
+        //inputTexts [index-1].text = number.ToString();
+        inputTexts[index - 1].enabled = true;
+        inputTexts[index - 1].sprite = numberList[int.Parse(number)];
+        inputTexts[index - 1].SetNativeSize();
+
 
         if(inputChars.Count == 6){
             String roomNumber = inputChars[0] + inputChars[1] + inputChars[2] + inputChars[3] + inputChars[4] + inputChars[5];
@@ -68,7 +74,10 @@ public class EnterRoomScript : MonoBehaviour{
 	public void deleteNumber(){
 		if (inputChars != null && inputChars.Count > 0) {
 			inputChars.RemoveAt (inputChars.Count -1);
-			inputTexts [inputChars.Count].text = "";
+            //inputTexts [inputChars.Count].text = "";
+            inputTexts[inputChars.Count].sprite = null;
+            inputTexts[inputChars.Count].enabled = false;
+
 		}
 	}
 
@@ -89,7 +98,9 @@ public class EnterRoomScript : MonoBehaviour{
         inputChars.Clear();
         for (int i = 0; i < 6; i++)
         {
-            inputTexts[i].text = "";
+            //inputTexts[i].text = "";
+            inputTexts[i].sprite = null;
+            inputTexts[i].enabled = false;
         }
 	}
 
@@ -111,9 +122,9 @@ public class EnterRoomScript : MonoBehaviour{
 			GlobalDataScript.roomVo.magnification = GlobalDataScript.roomJoinResponseData.magnification;
 			GlobalDataScript.surplusTimes = GlobalDataScript.roomJoinResponseData.roundNumber;
 			GlobalDataScript.loginResponseData.roomId = GlobalDataScript.roomJoinResponseData.roomId;
-			//loadPerfab("Prefab/Panel_GamePlay");
-			//GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
-			//GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript> ().joinToRoom (GlobalDataScript.roomJoinResponseData.playerList);
+			loadPerfab("Prefab/Panel_GamePlay");
+			GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
+			GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript> ().joinToRoom (GlobalDataScript.roomJoinResponseData.playerList);
 			closeDialog ();
 		} else {
 			TipsManagerScript.getInstance ().setTips (response.message);

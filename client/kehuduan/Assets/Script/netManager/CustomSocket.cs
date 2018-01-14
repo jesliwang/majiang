@@ -42,14 +42,8 @@ public class CustomSocket{
 	}
 
 	public CustomSocket(){
-		HeadRequest head = new HeadRequest ();
-		headBytes = head.ToBytes();
+		
 	}
-
-
-
-
-
 
     /// <summary>
     /// 连接到服务器
@@ -143,6 +137,8 @@ public class CustomSocket{
 		MyDebug.Log("send head data");
 		try{
 			if(stream != null && tcpclient.Connected){
+                HeadRequest head = new HeadRequest();
+                headBytes = head.ToBytes();
 				stream.Write(headBytes,0,headBytes.Length);
 			
 				return true;

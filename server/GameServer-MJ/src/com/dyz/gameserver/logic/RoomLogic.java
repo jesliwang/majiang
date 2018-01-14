@@ -190,6 +190,7 @@ public class RoomLogic {
      */
     public void checkCanBeStartGame() throws IOException{
     	//system.out.println("检测是否可以开始游戏");
+    	System.out.println("p=" + playerList.size() + "," + roomVO.getTotalPlayers());
     	if(playerList.size() == roomVO.getTotalPlayers()){
     		//房间里面4个人且都准备好了则开始游戏
     		boolean flag = true;

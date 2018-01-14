@@ -13,6 +13,7 @@ using LitJson;
 
 public class MyMahjongScript : MonoBehaviour
 {
+    public List<GameObject> wifiGroup;
 	public double lastTime;
 	public Text Number;
 	public Text roomRemark;
@@ -205,6 +206,7 @@ public class MyMahjongScript : MonoBehaviour
 		CommonEvent.getInstance ().closeGamePanel += exitOrDissoliveRoom;
 		SocketEventHandle.getInstance ().micInputNotice += micInputNotice;
 		SocketEventHandle.getInstance ().gameFollowBanderNotice += gameFollowBanderNotice;
+        SocketEventHandle.getInstance().hearBeateResponse += HeadDataResponse;
 
 	}
 
@@ -231,6 +233,8 @@ public class MyMahjongScript : MonoBehaviour
 		CommonEvent.getInstance ().closeGamePanel -= exitOrDissoliveRoom;
 		SocketEventHandle.getInstance ().micInputNotice -= micInputNotice;
 		SocketEventHandle.getInstance ().gameFollowBanderNotice -= gameFollowBanderNotice;
+
+        SocketEventHandle.getInstance().hearBeateResponse -= HeadDataResponse;
 	}
 
 
@@ -896,7 +900,7 @@ public class MyMahjongScript : MonoBehaviour
 		else if (outDir == DirectionEnum.Top)
 		{
 			path = "Prefab/ThrowCard/TopAndBottomCard";
-			poisVector3 = new Vector3(289f - tableCardList[2].Count%14*37, -(int)(tableCardList[2].Count/14)*67f);
+			poisVector3 = new Vector3(39f - tableCardList[2].Count%13*36, (int)(tableCardList[2].Count/13)*54f - 59);
 		}
 		else if (outDir == DirectionEnum.Left)
 		{
@@ -2773,6 +2777,28 @@ public class MyMahjongScript : MonoBehaviour
 		CustomSocket.getInstance ().sendMsg (new GameReadyRequest ());
 	}
 
+    private void HeadDataResponse(ClientResponse response)
+    {
+        DateTime d2 = new DateTime(2018, 1, 1);
+        long d = (int)DateTime.Now.Subtract(d2).TotalMilliseconds;
+
+        long gap =d - long.Parse(response.message);
+
+        if(gap < 120){
+            wifiGroup[2].SetActive(true);
+            wifiGroup[0].SetActive(false);
+            wifiGroup[1].SetActive(false);
+        }else if(gap < 250){
+            wifiGroup[2].SetActive(false);
+            wifiGroup[0].SetActive(false);
+            wifiGroup[1].SetActive(true);
+        }else{
+            wifiGroup[2].SetActive(false);
+            wifiGroup[0].SetActive(true);
+            wifiGroup[1].SetActive(false);
+        }
+    }
+
 	public void micInputNotice(ClientResponse response){
 		int sendUUid = int.Parse(response.message);
 		if (sendUUid > 0) {
@@ -2879,14 +2905,11 @@ public class MyMahjongScript : MonoBehaviour
 		}
 
 
-
-
-
 		//光标指向打牌人
 		int dirindex = getIndexByDir (getDirection(curAvatarIndexTemp) );
-		cardOnTable = tableCardList [dirindex] [tableCardList [dirindex].Count - 1];
+		
 		if (tableCardList [dirindex] == null || tableCardList [dirindex].Count == 0) {//刚启动
-
+            cardOnTable = null;
 
 			/**
 			if (pickAvatarIndexTemp == getMyIndexFromList ()) {
@@ -2912,6 +2935,7 @@ public class MyMahjongScript : MonoBehaviour
 			}
 			*/
 		} else {
+            cardOnTable = tableCardList[dirindex][tableCardList[dirindex].Count - 1];
 			//otherPickCardItem = handerCardList[dirindex][0];
 		//	gameTool.setOtherCardObjPosition(handerCardList[dirindex],getDirection(curAvatarIndexTemp) , 1);
 			GameObject temp = tableCardList[dirindex][tableCardList[dirindex].Count-1]; 

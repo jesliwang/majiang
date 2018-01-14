@@ -7,6 +7,8 @@ namespace AssemblyCSharp
 {
 	public class finalOverItem :MonoBehaviour
 	{
+        public GameObject selfBg;
+        public GameObject otherBg;
 		public Text nickName;//昵称
 		public Text ID;//id
 		public Image icon;//头像
@@ -28,9 +30,13 @@ namespace AssemblyCSharp
 		public void setUI(FinalGameEndItemVo itemData){
 			string owerFlag = (itemData.getIsMain ()) ? "(房主)" : "";
 			if (itemData.getIsMain ()) {
-				mainImgFlag.SetActive (true);
+				//mainImgFlag.SetActive (true);
+                selfBg.SetActive(true);
+                otherBg.SetActive(false);
 			} else {
-				mainImgFlag.SetActive (false);
+                selfBg.SetActive(false);
+                otherBg.SetActive(true);
+				//mainImgFlag.SetActive (false);
 			}
 			nickName.text =itemData.getNickname ();
 			ID.text ="ID:" +itemData.uuid + "";

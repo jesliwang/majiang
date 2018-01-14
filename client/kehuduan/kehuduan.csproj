@@ -264,6 +264,7 @@
     <Compile Include="Assets\Animations\UI_MicPhoneScript.cs" />
     <Compile Include="Assets\MY.cs" />
     <Compile Include="Assets\Script\Exit_App\ExitAppScript.cs" />
+    <Compile Include="Assets\Script\Game_Scenes\BatteryState.cs" />
     <Compile Include="Assets\Script\Game_Scenes\ButtonActionScript.cs" />
     <Compile Include="Assets\Script\Game_Scenes\FinalOverGame.cs" />
     <Compile Include="Assets\Script\Game_Scenes\GameToolScript.cs" />
@@ -288,6 +289,7 @@
     <Compile Include="Assets\Script\Home_Panel_Event\CrateRoomSettingScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\EnterRoomScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\HomePanelScript.cs" />
+    <Compile Include="Assets\Script\Home_Panel_Event\InviteHistoryItem.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\LotteryItemScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\LotteryPanelScript.cs" />
     <Compile Include="Assets\Script\Home_Panel_Event\MessagePanelScript.cs" />
@@ -327,6 +329,9 @@
     <Compile Include="Assets\Script\netManager\request\GetGiftRequest.cs" />
     <Compile Include="Assets\Script\netManager\request\HeadRequest.cs" />
     <Compile Include="Assets\Script\netManager\request\HupaiRequest.cs" />
+    <Compile Include="Assets\Script\netManager\request\InviteGetRewardRequest.cs" />
+    <Compile Include="Assets\Script\netManager\request\InviteHistoryRequest.cs" />
+    <Compile Include="Assets\Script\netManager\request\InviteRequest.cs" />
     <Compile Include="Assets\Script\netManager\request\JoinRoomRequest.cs" />
     <Compile Include="Assets\Script\netManager\request\LoginRequest.cs" />
     <Compile Include="Assets\Script\netManager\request\MessageBoxRequest.cs" />
@@ -335,6 +340,7 @@
     <Compile Include="Assets\Script\netManager\request\PutOutCardRequest.cs" />
     <Compile Include="Assets\Script\netManager\request\SoundMicInput\LoginChatRequest.cs" />
     <Compile Include="Assets\Script\netManager\request\SoundMicInput\MicInputRequest.cs" />
+    <Compile Include="Assets\Script\netManager\request\StartPrepareGameRequest.cs" />
     <Compile Include="Assets\Script\netManager\request\ZhanjiRequest.cs" />
     <Compile Include="Assets\Script\netManager\vo\Account.cs" />
     <Compile Include="Assets\Script\netManager\vo\AvatarVO.cs" />
@@ -358,6 +364,9 @@
     <Compile Include="Assets\Script\netManager\vo\HupaiRequestVo.cs" />
     <Compile Include="Assets\Script\netManager\vo\HupaiResponseItem.cs" />
     <Compile Include="Assets\Script\netManager\vo\HupaiResponseVo.cs" />
+    <Compile Include="Assets\Script\netManager\vo\InviteItemList.cs" />
+    <Compile Include="Assets\Script\netManager\vo\InviteItemVO.cs" />
+    <Compile Include="Assets\Script\netManager\vo\InviteUUID.cs" />
     <Compile Include="Assets\Script\netManager\vo\LastOperationVo.cs" />
     <Compile Include="Assets\Script\netManager\vo\LoginVo.cs" />
     <Compile Include="Assets\Script\netManager\vo\LotteryData.cs" />
@@ -406,14 +415,6 @@
     <Compile Include="Assets\Script\utilTool\UpdateScript.cs" />
     <Compile Include="Assets\Script\utilTool\WechatOperateScript.cs" />
     <Compile Include="Assets\UpdateFrame.cs" />
-    <Compile Include="Assets\Script\netManager\request\StartPrepareGameRequest.cs" />
-    <Compile Include="Assets\Script\netManager\request\InviteRequest.cs" />
-    <Compile Include="Assets\Script\netManager\vo\InviteUUID.cs" />
-    <Compile Include="Assets\Script\netManager\request\InviteGetRewardRequest.cs" />
-    <Compile Include="Assets\Script\netManager\request\InviteHistoryRequest.cs" />
-    <Compile Include="Assets\Script\netManager\vo\InviteItemVO.cs" />
-    <Compile Include="Assets\Script\Home_Panel_Event\InviteHistoryItem.cs" />
-    <Compile Include="Assets\Script\netManager\vo\InviteItemList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DOTween113\DOTween.XML" />
@@ -434,6 +435,7 @@
     <None Include="Assets\Plugins\Android\ShareSDK\res\values\ssdk_oks_color_drawables.xml" />
     <None Include="Assets\Plugins\Android\ShareSDK\res\values\ssdk_oks_strings.xml" />
     <None Include="Assets\Plugins\Android\ShareSDK\res\values\ssdk_strings.xml" />
+    <None Include="Assets\Resources\Fonts\fnt.fnt" />
     <None Include="Assets\Resources\shaders\DefaultGrey.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

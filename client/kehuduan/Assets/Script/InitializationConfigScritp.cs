@@ -213,7 +213,7 @@ public class InitializationConfigScritp : MonoBehaviour {
 
 	private static void sendHeartbeat(){
 		CustomSocket.getInstance ().sendHeadData ();
-		Thread.Sleep (20000);
+		Thread.Sleep (5000);
 		sendHeartbeat ();
 	}
 

@@ -339,6 +339,7 @@
     <None Include="Assets\Plugins\Android\ShareSDK\res\values\ssdk_oks_color_drawables.xml" />
     <None Include="Assets\Plugins\Android\ShareSDK\res\values\ssdk_oks_strings.xml" />
     <None Include="Assets\Plugins\Android\ShareSDK\res\values\ssdk_strings.xml" />
+    <None Include="Assets\Resources\Fonts\fnt.fnt" />
     <None Include="Assets\Resources\shaders\DefaultGrey.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
