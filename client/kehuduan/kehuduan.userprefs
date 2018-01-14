@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{01278091-48EA-3A10-0751-D230C4907E84}|">
   <MonoDevelop.Ide.ItemProperties.kehuduan PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Home_Panel_Event/EnterRoomScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/netManager/Events/APIS.cs">
     <Files>
       <File FileName="Assets/Script/Home_Panel_Event/EnterRoomScript.cs" Line="102" Column="41" />
+      <File FileName="Assets/Script/netManager/Events/APIS.cs" Line="13" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -1722,3 +1722,275 @@ Jan 10, 2018 12:38:08 AM org.apache.coyote.AbstractProtocol destroy
 INFO: Destroying ProtocolHandler ["http-bio-8080"]
 Jan 10, 2018 12:38:08 AM org.apache.coyote.AbstractProtocol destroy
 INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
+Jan 15, 2018 1:13:55 AM org.apache.catalina.core.StandardContext setPath
+WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [GameServer] does not meet these criteria and has been changed to [/GameServer]
+Jan 15, 2018 1:13:55 AM org.apache.catalina.core.StandardContext setPath
+WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [ChatServer] does not meet these criteria and has been changed to [/ChatServer]
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.82
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 29 2017 12:23:15 UTC
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.82.0
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Mac OS X
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            10.11.6
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          x86_64
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_101-b13
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/conf/logging.properties
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/endorsed
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/temp
+Jan 15, 2018 1:13:55 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/Jesli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+Jan 15, 2018 1:13:55 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Jan 15, 2018 1:13:55 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Jan 15, 2018 1:13:55 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 674 ms
+Jan 15, 2018 1:13:56 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jan 15, 2018 1:13:56 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.82
+Jan 15, 2018 1:13:56 AM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFO: validateJarFile(/Users/Jesli/Development/self_project/majiang/server/GameServer-MJ/WebRoot/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Jan 15, 2018 1:13:56 AM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+aaaaaa
+log4j: reset attribute= "false".
+log4j: Threshold ="null".
+log4j: Level value for root is  [info].
+log4j: root level set to INFO
+log4j: Class name: [org.apache.log4j.ConsoleAppender]
+log4j: Parsing layout of class: "org.apache.log4j.PatternLayout"
+log4j: Setting property [conversionPattern] to [%d (%F:%L) %-5p %c - %m%n].
+log4j: Adding appender named [stdout] to category [root].
+2018-01-15 01:13:57,087 (MsgDispatcher.java:28) INFO  com.dyz.gameserver.commons.message.MsgDispatcher - 初始化 消息处理器成功。。。
+2018-01-15 01:13:57,094 (GameServer.java:46) INFO  com.dyz.gameserver.bootstrap.GameServer - 开始启动服务器 ...
+2018-01-15 01:13:57,100 (GameServer.java:48) INFO  com.dyz.gameserver.bootstrap.GameServer - 初始化服务器线程池完成
+Mon Jan 15 00:00:01 HKT 2018
+2018-01-15 01:13:57,693 (GameServer.java:51) INFO  com.dyz.gameserver.bootstrap.GameServer - 数据库连接初始化完成
+2018-01-15 01:13:57,789 (GameServer.java:54) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器监听端口:10122完成
+2018-01-15 01:13:57,790 (GameServer.java:55) INFO  com.dyz.gameserver.bootstrap.GameServer - game server started...
+2018-01-15 01:13:58,093 (GameServer.java:57) INFO  com.dyz.gameserver.bootstrap.GameServer - 初始化奖品概率
+Jan 15, 2018 1:13:58 AM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFO: validateJarFile(/Users/Jesli/Development/self_project/majiang/server/SoundChatServer/WebRoot/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Jan 15, 2018 1:13:58 AM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+log4j:WARN No appenders could be found for logger (com.dyz.gameserver.commons.message.MsgDispatcher).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Jan 15, 2018 1:13:58 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/docs
+Jan 15, 2018 1:13:58 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/docs has finished in 39 ms
+Jan 15, 2018 1:13:58 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/examples
+Jan 15, 2018 1:13:59 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/examples has finished in 257 ms
+Jan 15, 2018 1:13:59 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/host-manager
+Jan 15, 2018 1:13:59 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/host-manager has finished in 111 ms
+Jan 15, 2018 1:13:59 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/manager
+Jan 15, 2018 1:13:59 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/manager has finished in 41 ms
+Jan 15, 2018 1:13:59 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/ROOT
+Jan 15, 2018 1:13:59 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/ROOT has finished in 31 ms
+Jan 15, 2018 1:13:59 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Jan 15, 2018 1:13:59 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Jan 15, 2018 1:13:59 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 3321 ms
+Jan 15, 2018 2:18:02 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Jan 15, 2018 2:18:02 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Jan 15, 2018 2:18:02 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+bbbb
+2018-01-15 02:18:02,270 (GameServer.java:71) INFO  com.dyz.gameserver.bootstrap.GameServer - 准备关闭服务器...
+2018-01-15 02:18:02,280 (GameServer.java:73) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器停止网络监听
+2018-01-15 02:18:02,280 (GameServer.java:75) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器线程池关闭完成
+2018-01-15 02:18:02,280 (GameServer.java:76) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器关闭完成
+Jan 15, 2018 2:18:02 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+SEVERE: The web application [/GameServer] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Jan 15, 2018 2:18:02 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+SEVERE: The web application [/GameServer] registered the JDBC driver [org.apache.ibatis.datasource.unpooled.UnpooledDataSource.DriverProxy] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Jan 15, 2018 2:18:02 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [Timer-0] but has failed to stop it. This is very likely to create a memory leak.
+Jan 15, 2018 2:18:02 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [NioSocketAcceptor-1] but has failed to stop it. This is very likely to create a memory leak.
+Jan 15, 2018 2:18:02 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak.
+Jan 15, 2018 2:18:02 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Jan 15, 2018 2:18:02 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Jan 15, 2018 2:18:02 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+Jan 15, 2018 2:18:02 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
+Jan 15, 2018 2:19:09 AM org.apache.catalina.core.StandardContext setPath
+WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [GameServer] does not meet these criteria and has been changed to [/GameServer]
+Jan 15, 2018 2:19:09 AM org.apache.catalina.core.StandardContext setPath
+WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [ChatServer] does not meet these criteria and has been changed to [/ChatServer]
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.82
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 29 2017 12:23:15 UTC
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.82.0
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Mac OS X
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            10.11.6
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          x86_64
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_101-b13
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/conf/logging.properties
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/endorsed
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/temp
+Jan 15, 2018 2:19:09 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/Jesli/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+Jan 15, 2018 2:19:09 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Jan 15, 2018 2:19:09 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Jan 15, 2018 2:19:09 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 588 ms
+Jan 15, 2018 2:19:09 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Jan 15, 2018 2:19:09 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.82
+Jan 15, 2018 2:19:09 AM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFO: validateJarFile(/Users/Jesli/Development/self_project/majiang/server/GameServer-MJ/WebRoot/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Jan 15, 2018 2:19:10 AM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+aaaaaa
+log4j: reset attribute= "false".
+log4j: Threshold ="null".
+log4j: Level value for root is  [info].
+log4j: root level set to INFO
+log4j: Class name: [org.apache.log4j.ConsoleAppender]
+log4j: Parsing layout of class: "org.apache.log4j.PatternLayout"
+log4j: Setting property [conversionPattern] to [%d (%F:%L) %-5p %c - %m%n].
+log4j: Adding appender named [stdout] to category [root].
+2018-01-15 02:19:10,531 (MsgDispatcher.java:28) INFO  com.dyz.gameserver.commons.message.MsgDispatcher - 初始化 消息处理器成功。。。
+2018-01-15 02:19:10,533 (GameServer.java:46) INFO  com.dyz.gameserver.bootstrap.GameServer - 开始启动服务器 ...
+2018-01-15 02:19:10,534 (GameServer.java:48) INFO  com.dyz.gameserver.bootstrap.GameServer - 初始化服务器线程池完成
+Mon Jan 15 00:00:01 HKT 2018
+2018-01-15 02:19:10,921 (GameServer.java:51) INFO  com.dyz.gameserver.bootstrap.GameServer - 数据库连接初始化完成
+2018-01-15 02:19:11,018 (GameServer.java:54) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器监听端口:10122完成
+2018-01-15 02:19:11,019 (GameServer.java:55) INFO  com.dyz.gameserver.bootstrap.GameServer - game server started...
+2018-01-15 02:19:11,327 (GameServer.java:57) INFO  com.dyz.gameserver.bootstrap.GameServer - 初始化奖品概率
+Jan 15, 2018 2:19:11 AM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFO: validateJarFile(/Users/Jesli/Development/self_project/majiang/server/SoundChatServer/WebRoot/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Jan 15, 2018 2:19:11 AM org.apache.catalina.startup.TldConfig execute
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+log4j:WARN No appenders could be found for logger (com.dyz.gameserver.commons.message.MsgDispatcher).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Jan 15, 2018 2:19:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/docs
+Jan 15, 2018 2:19:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/docs has finished in 33 ms
+Jan 15, 2018 2:19:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/examples
+Jan 15, 2018 2:19:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/examples has finished in 187 ms
+Jan 15, 2018 2:19:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/host-manager
+Jan 15, 2018 2:19:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/host-manager has finished in 93 ms
+Jan 15, 2018 2:19:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/manager
+Jan 15, 2018 2:19:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/manager has finished in 32 ms
+Jan 15, 2018 2:19:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/ROOT
+Jan 15, 2018 2:19:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /Users/Jesli/Development/self_project/majiang/server/apache-tomcat-7.0.82/webapps/ROOT has finished in 25 ms
+Jan 15, 2018 2:19:12 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Jan 15, 2018 2:19:12 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Jan 15, 2018 2:19:12 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2470 ms
+Jan 15, 2018 2:20:18 AM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Jan 15, 2018 2:20:18 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Jan 15, 2018 2:20:18 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Jan 15, 2018 2:20:18 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+bbbb
+2018-01-15 02:20:18,253 (GameServer.java:71) INFO  com.dyz.gameserver.bootstrap.GameServer - 准备关闭服务器...
+2018-01-15 02:20:18,261 (GameServer.java:73) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器停止网络监听
+2018-01-15 02:20:18,261 (GameServer.java:75) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器线程池关闭完成
+2018-01-15 02:20:18,261 (GameServer.java:76) INFO  com.dyz.gameserver.bootstrap.GameServer - 服务器关闭完成
+Jan 15, 2018 2:20:18 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+SEVERE: The web application [/GameServer] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Jan 15, 2018 2:20:18 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesJdbc
+SEVERE: The web application [/GameServer] registered the JDBC driver [org.apache.ibatis.datasource.unpooled.UnpooledDataSource.DriverProxy] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Jan 15, 2018 2:20:18 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [Timer-0] but has failed to stop it. This is very likely to create a memory leak.
+Jan 15, 2018 2:20:18 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [NioSocketAcceptor-1] but has failed to stop it. This is very likely to create a memory leak.
+Jan 15, 2018 2:20:18 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SEVERE: The web application [/GameServer] appears to have started a thread named [MySQL Statement Cancellation Timer] but has failed to stop it. This is very likely to create a memory leak.
+Jan 15, 2018 2:20:18 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Jan 15, 2018 2:20:18 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Jan 15, 2018 2:20:18 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+Jan 15, 2018 2:20:18 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
