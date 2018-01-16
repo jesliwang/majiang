@@ -308,20 +308,13 @@ public class MyMahjongScript : MonoBehaviour
         //MoshiText
         string moshiText = "";
         if(GlobalDataScript.roomVo.shengyu20){
-            moshiText += "剩余20张流局";
+            moshiText += string.Format("{0,12}", "剩余20张流局");
         }
         if(GlobalDataScript.roomVo.threefornext){
-            if(moshiText.Length > 0){
-                moshiText += "\t";
-            }
-            moshiText += "流2局赔庄";
+            moshiText += string.Format("{0,12}", "流2局赔庄");
         }
         if(GlobalDataScript.roomVo.showTingPai){
-            if (moshiText.Length > 0)
-            {
-                moshiText += "\t";
-            }
-            moshiText += "听牌显示";
+            moshiText += string.Format("{0,12}", "听牌显示");
         }
         MoshiText.text = moshiText;
 
@@ -1816,7 +1809,7 @@ public class MyMahjongScript : MonoBehaviour
 	}
 
 	public void setRoomRemark(){
-        //Debug.LogError("eee");
+        Debug.LogError("eee=" + GlobalDataScript.roomVo.shengyu20 + "," + GlobalDataScript.roomVo.threefornext + "," +GlobalDataScript.roomVo.showTingPai);
 		RoomCreateVo roomvo = GlobalDataScript.roomVo;
 		GlobalDataScript.totalTimes = roomvo.roundNumber;
 		GlobalDataScript.surplusTimes = roomvo.roundNumber;
@@ -1867,23 +1860,15 @@ public class MyMahjongScript : MonoBehaviour
         string moshiText = "";
         if (GlobalDataScript.roomVo.shengyu20)
         {
-            moshiText += "剩余20张流局";
+            moshiText += string.Format("{0,12}","剩余20张流局");
         }
         if (GlobalDataScript.roomVo.threefornext)
         {
-            if (moshiText.Length > 0)
-            {
-                moshiText += "\t";
-            }
-            moshiText += "流2局赔庄";
+            moshiText += string.Format("{0,12}", "流2局赔庄");
         }
         if (GlobalDataScript.roomVo.showTingPai)
         {
-            if (moshiText.Length > 0)
-            {
-                moshiText += "\t";
-            }
-            moshiText += "听牌显示";
+            moshiText += string.Format("{0,12}", "听牌显示");
         }
         MoshiText.text = moshiText;
 	}
@@ -2406,6 +2391,8 @@ public class MyMahjongScript : MonoBehaviour
 			GlobalDataScript.roomVo.magnification = GlobalDataScript.reEnterRoomData.magnification;
 			GlobalDataScript.roomVo.ma = GlobalDataScript.reEnterRoomData.ma;
             GlobalDataScript.roomVo.shengyu20 = GlobalDataScript.reEnterRoomData.shengyu20;
+            GlobalDataScript.roomVo.showTingPai = GlobalDataScript.reEnterRoomData.showTingPai;
+            GlobalDataScript.roomVo.threefornext = GlobalDataScript.reEnterRoomData.threefornext;
 			setRoomRemark();
 			//设置座位
 
