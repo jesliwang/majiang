@@ -1816,6 +1816,7 @@ public class MyMahjongScript : MonoBehaviour
 	}
 
 	public void setRoomRemark(){
+        //Debug.LogError("eee");
 		RoomCreateVo roomvo = GlobalDataScript.roomVo;
 		GlobalDataScript.totalTimes = roomvo.roundNumber;
 		GlobalDataScript.surplusTimes = roomvo.roundNumber;
@@ -2404,6 +2405,7 @@ public class MyMahjongScript : MonoBehaviour
 			GlobalDataScript.roomVo.ziMo = GlobalDataScript.reEnterRoomData.ziMo;
 			GlobalDataScript.roomVo.magnification = GlobalDataScript.reEnterRoomData.magnification;
 			GlobalDataScript.roomVo.ma = GlobalDataScript.reEnterRoomData.ma;
+            GlobalDataScript.roomVo.shengyu20 = GlobalDataScript.reEnterRoomData.shengyu20;
 			setRoomRemark();
 			//设置座位
 

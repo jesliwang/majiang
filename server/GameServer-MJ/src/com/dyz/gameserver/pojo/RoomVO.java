@@ -255,6 +255,10 @@ public class RoomVO {
         result.playerList = playerList;
         result.endStatistics = endStatistics;
         result.id = id;
+        result.shengyu20 = shengyu20;
+        result.showTingPai = showTingPai;
+        result.threefornext = threefornext;
+        
         return result;
     }
 

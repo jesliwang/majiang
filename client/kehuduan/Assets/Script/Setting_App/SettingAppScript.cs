@@ -13,6 +13,9 @@ public class SettingAppScript : MonoBehaviour
     public GameObject yingyueOn;
     public GameObject yingyueOff;
 
+    public Toggle fangYang;
+    public Toggle puTongHua;
+
     void Start()
     {
         yinXiaoOn.SetActive(true);
@@ -22,6 +25,12 @@ public class SettingAppScript : MonoBehaviour
         yingyueOn.SetActive(true);
         yingyueOff.SetActive(false);
         yingyue.value = PlayerPrefs.GetFloat("audioEffect", 1);
+
+        if(PlayerPrefs.GetString("AudioType") == "_0"){
+            fangYang.isOn = true;
+        }else{
+            puTongHua.isOn = true;
+        }
 
     }
 
@@ -72,5 +81,18 @@ public class SettingAppScript : MonoBehaviour
         self = null;
         Destroy(self);
         Destroy(gameObject);
+    }
+
+    public void AudioChanged()
+    {
+        if(fangYang.isOn)
+        {
+            PlayerPrefs.SetString("AudioType", "_0");
+        }
+
+        if(puTongHua.isOn)
+        {
+            PlayerPrefs.SetString("AudioType", "");
+        }
     }
 }

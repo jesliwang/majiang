@@ -146,9 +146,12 @@ public class HomePanelScript : MonoBehaviour {
     {
         GlobalDataScript.roomJoinResponseData = JsonMapper.ToObject<RoomJoinResponseVo>(response.message);
 
-        GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
-        GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript> ().joinToRoom (GlobalDataScript.roomJoinResponseData.playerList);
-           
+        if (GlobalDataScript.gamePlayPanel == null)
+        {
+            GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab("Prefab/Panel_GamePlay");
+            GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript>().joinToRoom(GlobalDataScript.roomJoinResponseData.playerList);
+
+        }
     }
 
 

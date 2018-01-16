@@ -33,9 +33,9 @@ public class SoundCtrl  {
 		if (GlobalDataScript.soundToggle) {
 			string path = "Sounds/";
 			if (sex == 1) {
-				path += "boy/" + (cardPoint + 1);
+                path += "boy" + PlayerPrefs.GetString("AudioType", "") + "/" + (cardPoint + 1);
 			} else {
-				path += "girl/" + (cardPoint + 1);
+                path += "girl" + PlayerPrefs.GetString("AudioType", "") + "/" + (cardPoint + 1);
 			}
 			AudioClip temp = (AudioClip)soudHash [path];
 			if (temp == null) {
@@ -86,9 +86,9 @@ public class SoundCtrl  {
 	public void playSoundByAction(string str,int sex){
 		string path = "Sounds/";
 		if (sex == 1) {
-			path += "boy/" + str;
+            path += "boy" + PlayerPrefs.GetString("AudioType", "") + "/" + str;
 		} else {
-			path += "girl/" + str;
+            path += "girl" + PlayerPrefs.GetString("AudioType", "") + "/" + str;
 		}
 		AudioClip temp = (AudioClip)soudHash[path];
 		if(temp == null){

@@ -140,6 +140,7 @@ public class LoginSystemScript : MonoBehaviour {
 		if (GlobalDataScript.gamePlayPanel != null) {
 			GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript> ().exitOrDissoliveRoom ();
 		}
+        //Debug.LogError(response.message);
 		GlobalDataScript.reEnterRoomData = JsonMapper.ToObject<RoomJoinResponseVo> (response.message);
 
 		for (int i = 0; i < GlobalDataScript.reEnterRoomData.playerList.Count; i++) {

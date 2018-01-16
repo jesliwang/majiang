@@ -20,6 +20,9 @@ namespace AssemblyCSharp
 		public int magnification;
 		public List<AvatarVO> playerList;
 		//public LastOperationVo lastOperationVo;
+        public bool shengyu20;
+        public bool threefornext;
+        public bool showTingPai;
 		public RoomJoinResponseVo ()
 		{
 		}

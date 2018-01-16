@@ -122,7 +122,7 @@ public class EnterRoomScript : MonoBehaviour{
 			GlobalDataScript.roomVo.magnification = GlobalDataScript.roomJoinResponseData.magnification;
 			GlobalDataScript.surplusTimes = GlobalDataScript.roomJoinResponseData.roundNumber;
 			GlobalDataScript.loginResponseData.roomId = GlobalDataScript.roomJoinResponseData.roomId;
-			loadPerfab("Prefab/Panel_GamePlay");
+			//loadPerfab("Prefab/Panel_GamePlay");
 			GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
 			GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript> ().joinToRoom (GlobalDataScript.roomJoinResponseData.playerList);
 			closeDialog ();
@@ -131,8 +131,6 @@ public class EnterRoomScript : MonoBehaviour{
 		}
 
 	}
-
-
 
 	private void  loadPerfab(string perfabName){
 		GameObject panelCreateDialog = Instantiate (Resources.Load(perfabName)) as GameObject;

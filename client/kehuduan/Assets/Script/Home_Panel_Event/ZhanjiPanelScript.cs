@@ -95,6 +95,7 @@ public class ZhanjiPanelScript : MonoBehaviour {
 			RoomPanel.SetActive (true);
 			DetailPanel.SetActive (false);
 
+            roomcontaner.GetComponent<RectTransform>().sizeDelta = new Vector2(1213, Mathf.Max(448, 120*roomZhanjiData.roomDataList.Count));
 			for (int i = 0; i < roomZhanjiData.roomDataList.Count; i++) {
 				ZhanjiRoomDataItem itemData	=roomZhanjiData.roomDataList [i];
 				GameObject itemTemp = Instantiate (Resources.Load("Prefab/ZhanRoomItem")) as GameObject;
