@@ -131,7 +131,7 @@ public class CrateRoomSettingScript : MonoBehaviour {
             }
         }
 
-        isZimo = true;
+        //isZimo = true;
 		//if (zhuanzhuanGameRule [0].isOn) {
 		//	isZimo = true;
 		//}

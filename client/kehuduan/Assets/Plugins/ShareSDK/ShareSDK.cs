@@ -80,7 +80,7 @@ namespace cn.sharesdk.unity3d
 				return;
 			}
 			
-			Hashtable res = (Hashtable) MiniJSON.jsonDecode(data);
+            Hashtable res = (Hashtable) ShareSDKMiniJSON.jsonDecode(data);
 			if (res == null || res.Count <= 0) 
 			{
 				return;

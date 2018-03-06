@@ -20,12 +20,12 @@
 #import <MOBFoundation/MOBFDevice.h>
 
 #define __SHARESDK_WECHAT__
-#define __SHARESDK_QQ__
-#define __SHARESDK_SINA_WEIBO__
-#define __SHARESDK_RENREN__
+//#define __SHARESDK_QQ__
+//#define __SHARESDK_SINA_WEIBO__
+//#define __SHARESDK_RENREN__
 //#define __SHARESDK_KAKAO__
-#define __SHARESDK_YIXIN__
-#define __SHARESDK_FACEBOOK_MSG__
+//#define __SHARESDK_YIXIN__
+//#define __SHARESDK_FACEBOOK_MSG__
 //#define __SHARESDK_ALISOCIAL__
 //#define __SHARESDK_DINGTALK__
 //#define __SHARESDK_MEIPAI__
@@ -782,15 +782,6 @@ extern "C" {
 //                }
 //            }
             
-            //使用新浪微博 api进行分享
-            if ([[shareParamsDic objectForKey:@"apiShare"] isKindOfClass:[NSNumber class]])
-            {
-                NSInteger enable = [[shareParamsDic objectForKey:@"apiShare"] integerValue];
-                if (enable > 0)
-                {
-                    [params SSDKEnableSinaWeiboAPIShare];
-                }
-            }
             
             [params SSDKSetupShareParamsByText:text
                                         images:imageArray
@@ -867,16 +858,6 @@ extern "C" {
                     //                    [params SSDKEnableAdvancedInterfaceShare];
                     //                }
                     //            }
-                    
-                    //使用新浪微博 api进行分享
-                    if ([[shareParamsDic objectForKey:@"apiShare"] isKindOfClass:[NSNumber class]])
-                    {
-                        NSInteger enable = [[shareParamsDic objectForKey:@"apiShare"] integerValue];
-                        if (enable > 0)
-                        {
-                            [params SSDKEnableSinaWeiboAPIShare];
-                        }
-                    }
                     
                     [params SSDKSetupSinaWeiboShareParamsByText:text
                                                           title:title
@@ -1177,16 +1158,6 @@ extern "C" {
                     //                    [params SSDKEnableAdvancedInterfaceShare];
                     //                }
                     //            }
-                    
-                    //使用新浪微博 api进行分享
-                    if ([[shareParamsDic objectForKey:@"apiShare"] isKindOfClass:[NSNumber class]])
-                    {
-                        NSInteger enable = [[shareParamsDic objectForKey:@"apiShare"] integerValue];
-                        if (enable > 0)
-                        {
-                            [params SSDKEnableSinaWeiboAPIShare];
-                        }
-                    }
                     
                     [params SSDKSetupFacebookParamsByText:text
                                                     image:image
@@ -2480,125 +2451,6 @@ extern "C" {
                 }
                 
                 
-                //支付宝好友
-                value = [MOBFJson objectFromJSONString:[customizeShareParams objectForKey:[NSString stringWithFormat:@"%lu",(unsigned long)SSDKPlatformTypeAliSocial]]];
-                if ([value isKindOfClass:[NSDictionary class]])
-                {
-                    NSString *text = nil;
-                    NSString *image = nil;
-                    NSString *title = nil;
-                    NSString *url = nil;
-                    SSDKContentType type = SSDKContentTypeText;
-                    
-                    if ([[value objectForKey:@"text"] isKindOfClass:[NSString class]])
-                    {
-                        text = [value objectForKey:@"text"];
-                    }
-                    if ([[value objectForKey:@"imageUrl"] isKindOfClass:[NSString class]])
-                    {
-                        image = [value objectForKey:@"imageUrl"];
-                    }
-                    if ([[value objectForKey:@"title"] isKindOfClass:[NSString class]])
-                    {
-                        title = [value objectForKey:@"title"];
-                    }
-                    if ([[value objectForKey:@"url"] isKindOfClass:[NSString class]])
-                    {
-                        url = [value objectForKey:@"url"];
-                    }
-                    if ([[value objectForKey:@"shareType"] isKindOfClass:[NSNumber class]])
-                    {
-                        type = __convertContentType([[value objectForKey:@"shareType"] integerValue]);
-                    }
-                    
-                    [params SSDKSetupAliSocialParamsByText:text
-                                                     image:img
-                                                     title:title
-                                                       url:[NSURL URLWithString:url]
-                                                     type:type
-                                              platformType:SSDKPlatformTypeAliSocial];
-                    
-                }
-                
-                //支付宝朋友圈
-                value = [MOBFJson objectFromJSONString:[customizeShareParams objectForKey:[NSString stringWithFormat:@"%lu",(unsigned long)SSDKPlatformTypeAliSocialTimeline]]];
-                if ([value isKindOfClass:[NSDictionary class]])
-                {
-                    NSString *text = nil;
-                    NSString *image = nil;
-                    NSString *title = nil;
-                    NSString *url = nil;
-                    SSDKContentType type = SSDKContentTypeText;
-                    
-                    if ([[value objectForKey:@"text"] isKindOfClass:[NSString class]])
-                    {
-                        text = [value objectForKey:@"text"];
-                    }
-                    if ([[value objectForKey:@"imageUrl"] isKindOfClass:[NSString class]])
-                    {
-                        image = [value objectForKey:@"imageUrl"];
-                    }
-                    if ([[value objectForKey:@"title"] isKindOfClass:[NSString class]])
-                    {
-                        title = [value objectForKey:@"title"];
-                    }
-                    if ([[value objectForKey:@"url"] isKindOfClass:[NSString class]])
-                    {
-                        url = [value objectForKey:@"url"];
-                    }
-                    if ([[value objectForKey:@"shareType"] isKindOfClass:[NSNumber class]])
-                    {
-                        type = __convertContentType([[value objectForKey:@"shareType"] integerValue]);
-                    }
-                    
-                    [params SSDKSetupAliSocialParamsByText:text
-                                                     image:img
-                                                     title:title
-                                                       url:[NSURL URLWithString:url]
-                                                      type:type
-                                              platformType:SSDKPlatformTypeAliSocialTimeline];
-                    
-                }
-                
-                //钉钉
-                value = [MOBFJson objectFromJSONString:[customizeShareParams objectForKey:[NSString stringWithFormat:@"%lu",(unsigned long)SSDKPlatformTypeDingTalk]]];
-                if ([value isKindOfClass:[NSDictionary class]])
-                {
-                    NSString *text = nil;
-                    NSString *image = nil;
-                    NSString *title = nil;
-                    NSString *url = nil;
-                    SSDKContentType type = SSDKContentTypeText;
-                    
-                    if ([[value objectForKey:@"text"] isKindOfClass:[NSString class]])
-                    {
-                        text = [value objectForKey:@"text"];
-                    }
-                    if ([[value objectForKey:@"imageUrl"] isKindOfClass:[NSString class]])
-                    {
-                        image = [value objectForKey:@"imageUrl"];
-                    }
-                    if ([[value objectForKey:@"title"] isKindOfClass:[NSString class]])
-                    {
-                        title = [value objectForKey:@"title"];
-                    }
-                    if ([[value objectForKey:@"url"] isKindOfClass:[NSString class]])
-                    {
-                        url = [value objectForKey:@"url"];
-                    }
-                    if ([[value objectForKey:@"shareType"] isKindOfClass:[NSNumber class]])
-                    {
-                        type = __convertContentType([[value objectForKey:@"shareType"] integerValue]);
-                    }
-
-                    [params SSDKSetupDingTalkParamsByText:text
-                                                    image:image
-                                                    title:title
-                                                      url:[NSURL URLWithString:url]
-                                                     type:type];
-                    
-                }
-                
                 //Evernote
                 value = [MOBFJson objectFromJSONString:[customizeShareParams objectForKey:[NSString stringWithFormat:@"%lu",(unsigned long)SSDKPlatformTypeEvernote]]];
                 if ([value isKindOfClass:[NSDictionary class]])
@@ -2702,68 +2554,6 @@ extern "C" {
                                              platformType:SSDKPlatformTypeEvernote];
                 }
                 
-                //Youtube
-                value = [MOBFJson objectFromJSONString:[customizeShareParams objectForKey:[NSString stringWithFormat:@"%lu",(unsigned long)SSDKPlatformTypeYouTube]]];
-                if ([value isKindOfClass:[NSDictionary class]])
-                {
-                    NSString *desc = nil;
-                    NSString *title = nil;
-                    NSString *videoPath = nil;
-                    NSMutableArray *tags = [NSMutableArray array];
-                    SSDKPrivacyStatus privacyStatus = SSDKPrivacyStatusPrivate;
-                    
-                    if ([[value objectForKey:@"desc"] isKindOfClass:[NSString class]])
-                    {
-                        desc = [value objectForKey:@"desc"];
-                    }
-                    if ([[value objectForKey:@"title"] isKindOfClass:[NSString class]])
-                    {
-                        title = [value objectForKey:@"title"];
-                    }
-                    id tagValue = [value objectForKey:@"tags"];
-                    if ([tagValue isKindOfClass:[NSString class]])
-                    {
-                        NSArray *tagArr = [tagValue componentsSeparatedByString:@","];
-                        [tags addObjectsFromArray:tagArr];
-                    }
-                    else if ([tagValue isKindOfClass:[NSArray class]])
-                    {
-                        tags = [tagValue mutableCopy];
-                    }
-                    if ([[value objectForKey:@"videoPath"] isKindOfClass:[NSString class]])
-                    {
-                        videoPath = [value objectForKey:@"videoPath"];
-                    }
-                    if ([[value objectForKey:@"privateStatus"] integerValue] != 0) {
-                        privacyStatus = [[value objectForKey:@"privateStatus"] integerValue];
-                    }
-                    
-                    [params SSDKSetupYouTubeParamsByVideo:videoPath
-                                                    title:title
-                                              description:desc
-                                                     tags:tags
-                                            privacyStatus:privacyStatus];
-                   
-                }
-                
-                value = [MOBFJson objectFromJSONString:[customizeShareParams objectForKey:[NSString stringWithFormat:@"%lu",(unsigned long)SSDKPlatformTypeMeiPai]]];
-                if ([value isKindOfClass:[NSDictionary class]])
-                {
-                    
-                    NSString *videoPath = nil;
-                    SSDKContentType type = SSDKContentTypeVideo;
-                    if ([[value objectForKey:@"videoPath"] isKindOfClass:[NSString class]])
-                    {
-                        videoPath = [value objectForKey:@"videoPath"];
-                    }
-                    if ([[value objectForKey:@"shareType"] isKindOfClass:[NSNumber class]])
-                    {
-                        type = __convertContentType([[value objectForKey:@"shareType"] integerValue]);
-                    }
-                    
-                    [params SSDKSetupMeiPaiParamsByUrl:[NSURL URLWithString:videoPath]
-                                                  type:type];
-                }
                 
             }
         }
@@ -2772,6 +2562,8 @@ extern "C" {
     
     void __iosShareSDKRegisterAppAndSetPltformsConfig (void *appKey, void*configInfo)
     {
+        return;
+        /*
         NSMutableArray *activePlatforms = [NSMutableArray array];
         NSMutableDictionary *platformsDict = [NSMutableDictionary dictionary];
 //        NSString *appKeyStr = [NSString stringWithCString:appKey encoding:NSUTF8StringEncoding];
@@ -2835,21 +2627,7 @@ extern "C" {
                                  [ShareSDKConnector connectFacebookMessenger:[FBSDKMessengerSharer class]];
 #endif
                                  break;
-                             case SSDKPlatformTypeAliSocial:
-#ifdef __SHARESDK_ALISOCIAL__
-                                 [ShareSDKConnector connectAliSocial:[APOpenAPI class]];
-#endif
-                                 break;
-                             case SSDKPlatformTypeDingTalk:
-#ifdef __SHARESDK_DINGTALK__
-                                 [ShareSDKConnector connectDingTalk:[DTOpenAPI class]];
-#endif
-                                 break;
-                             case SSDKPlatformTypeMeiPai:
-#ifdef __SHARESDK_MEIPAI__
-                                 [ShareSDKConnector connectMeiPai:[MPShareSDK class]];
-#endif
-                                 break;
+                             
                              default:
                                  break;
                          }
@@ -2944,22 +2722,7 @@ extern "C" {
                                  }];
                                  break;
                              }
-                             case SSDKPlatformTypeAliSocial:
-                             {
-                                 NSDictionary *platformDict = nil;
-                                 NSDictionary *dictFromAliSocial = [platformsDict objectForKey:[NSString stringWithFormat:@"%lu",(unsigned long)SSDKPlatformTypeAliSocial]];
-                                 NSDictionary *dictFromAliSocialTimeline = [platformsDict objectForKey:[NSString stringWithFormat:@"%lu",(unsigned long)SSDKPlatformTypeAliSocialTimeline]];
-                                 if (dictFromAliSocial)
-                                 {
-                                     platformDict = dictFromAliSocial;
-                                 }
-                                 else
-                                 {
-                                     platformDict = dictFromAliSocialTimeline;
-                                 }
-                                 [appInfo addEntriesFromDictionary:platformDict];
-                                 break;
-                             }
+                             
                              default:
                              {
                                  NSDictionary *platformDict = [platformsDict objectForKey:[NSString stringWithFormat:@"%lu",(unsigned long)platformType]];
@@ -2969,7 +2732,7 @@ extern "C" {
                              }
                          }
                          
-                     }];
+                     }];*/
     }
     
     

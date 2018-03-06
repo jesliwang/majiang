@@ -48,9 +48,21 @@ public class SoundCtrl  {
 		}
 	}
 
-	public void playMessageBoxSound(int codeIndex){
+    public void playMessageBoxSound(int codeIndex, int sex = -1){
 		if(GlobalDataScript.soundToggle){
-			string path = "Sounds/other/"+codeIndex;
+			string path = "Sounds/other/";
+            if(sex == -1)
+            {
+                path += codeIndex;
+            }
+            else if (sex == 1)
+            {
+                path += "boy" + PlayerPrefs.GetString("AudioType", "") + "/" + codeIndex;
+            }
+            else
+            {
+                path += "women" + PlayerPrefs.GetString("AudioType", "") + "/" + codeIndex;
+            }
 			AudioClip temp = (AudioClip)soudHash[path];
 			if(temp == null){
 				temp = GameObject.Instantiate(Resources.Load (path)) as AudioClip;

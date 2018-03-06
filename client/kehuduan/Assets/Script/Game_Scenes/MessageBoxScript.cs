@@ -16,8 +16,8 @@ public class MessageBoxScript : MonoBehaviour {
 	}
 
 	public void btnClick(int index){
-		SoundCtrl.getInstance ().playMessageBoxSound (index);
-		CustomSocket.getInstance ().sendMsg (new MessageBoxRequest(index,GlobalDataScript.loginResponseData.account.uuid));
+        SoundCtrl.getInstance ().playMessageBoxSound (index, GlobalDataScript.loginResponseData.account.sex);
+        CustomSocket.getInstance ().sendMsg (new MessageBoxRequest(index,GlobalDataScript.loginResponseData.account.uuid, GlobalDataScript.loginResponseData.account.sex));
 		if (myMaj == null) {
 			myMaj = GameObject.Find ("Panel_GamePlay(Clone)").GetComponent<MyMahjongScript>();
 		}
@@ -28,17 +28,18 @@ public class MessageBoxScript : MonoBehaviour {
 	}
 
 	public void showPanel(){
-		gameObject.transform.DOLocalMove (new Vector3(472,113), 0.4f);
+		gameObject.transform.DOLocalMove (new Vector3(472,120), 0.4f);
 	}
 
 	public void hidePanel(){
-		gameObject.transform.DOLocalMove (new Vector3(472,567), 0.4f);
+		gameObject.transform.DOLocalMove (new Vector3(472,617), 0.4f);
 	}
 
 	public void messageBoxNotice(ClientResponse response){
 		string[] arr = response.message.Split (new char[1]{ '|' });
 		int code = int.Parse(arr[0]);
-		SoundCtrl.getInstance ().playMessageBoxSound (code);
+        int sex = int.Parse(arr[2]);
+		SoundCtrl.getInstance ().playMessageBoxSound (code, sex);
 	}
 
 	public void Destroy(){

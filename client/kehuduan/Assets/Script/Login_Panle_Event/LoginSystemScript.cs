@@ -26,7 +26,7 @@ public class LoginSystemScript : MonoBehaviour {
 	void Start () {
         
         DOTween.Init(false, true, LogBehaviour.Default);
-        PanelSafeGame.GetComponent<CanvasGroup>().DOFade(0, 1.0f).SetDelay(2.0f).OnComplete(FadeOutSafeGame);
+        PanelSafeGame.GetComponent<CanvasGroup>().DOFade(0, 1.0f).SetDelay(1.0f).OnComplete(FadeOutSafeGame);
 
 		//shareSdk.showUserHandler = getUserInforCallback;//注册获取用户信息回调
 		CustomSocket.hasStartTimer = false;
@@ -36,8 +36,8 @@ public class LoginSystemScript : MonoBehaviour {
 		SocketEventHandle.getInstance ().LoginCallBack += LoginCallBack;
 		SocketEventHandle.getInstance ().RoomBackResponse += RoomBackResponse;
 		versionText.text ="版本号：" +Application.version;
-		WxPayImpl test = new WxPayImpl(gameObject);
-		test.callTest ("dddddddddddddddddddddddddddd");
+		//WxPayImpl test = new WxPayImpl(gameObject);
+		//test.callTest ("dddddddddddddddddddddddddddd");
 		
 	}
 
@@ -46,6 +46,7 @@ public class LoginSystemScript : MonoBehaviour {
         PanelSafeGame.SetActive(false);
     }
 
+    private float waitTime;
 	
 	// Update is called once per frame
 	void Update () {
@@ -59,7 +60,19 @@ public class LoginSystemScript : MonoBehaviour {
 				panelCreateDialog.GetComponent<RectTransform>().offsetMin = new Vector2(0f, 0f);
 			}
 			
-		} 
+		}
+        else
+        {
+            if(watingPanel.activeSelf)
+            {
+                waitTime -= Time.deltaTime;
+                if(waitTime < 0)
+                {
+                    watingPanel.SetActive(false);
+                    TipsManagerScript.getInstance().setTips("登录失败，请重试");
+                }
+            }
+        }
 
 	}
 
@@ -76,6 +89,7 @@ public class LoginSystemScript : MonoBehaviour {
 		if (agreeProtocol.isOn) {
 			doLogin ();
 			watingPanel.SetActive(true);
+            waitTime = 10;
 		} else {
 			MyDebug.Log ("请先同意用户使用协议");
 			TipsManagerScript.getInstance ().setTips ("请先同意用户使用协议");

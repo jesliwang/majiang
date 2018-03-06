@@ -39,7 +39,7 @@ namespace cn.sharesdk.unity3d
 
 		public override void SetPlatformConfig (Hashtable configs) 
 		{
-			String json = MiniJSON.jsonEncode(configs);
+            String json = ShareSDKMiniJSON.jsonEncode(configs);
 			Debug.Log("AndroidImpl  ===>>>  SetPlatformConfig === " + json);
 			if (ssdk != null) 
 			{			
@@ -147,7 +147,7 @@ namespace cn.sharesdk.unity3d
 			if (ssdk != null) 
 			{
 				String result = ssdk.Call<String>("getAuthInfo", (int)platform);
-				return (Hashtable) MiniJSON.jsonDecode(result);
+                return (Hashtable) ShareSDKMiniJSON.jsonDecode(result);
 			}
 			return new Hashtable ();
 		}

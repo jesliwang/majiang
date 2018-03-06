@@ -1798,7 +1798,8 @@ public class PlayCardsLogic {
     		if(!flag){
     			if(roomVO.getHong()){
     				//有癞子
-    				flag =   Naizi.testHuiPai(paiList.clone());
+    				//flag =   Naizi.testHuiPai(paiList.clone());
+    				flag = normalHuPai.checkZZHu(paiList.clone());
     			}
     			else{
     				flag = normalHuPai.checkZZHu(paiList.clone());

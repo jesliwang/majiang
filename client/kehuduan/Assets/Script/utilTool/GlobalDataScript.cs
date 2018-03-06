@@ -100,6 +100,7 @@ public class GlobalDataScript
 	}
 
 	void initMessageBox(){
+        /*
 		messageBoxContents.Add ("不要吵了，专心玩游戏！");
 		messageBoxContents.Add ("不要走，决战到天亮");
 		messageBoxContents.Add ("大家好，很高兴见到各位");
@@ -108,6 +109,18 @@ public class GlobalDataScript
 		messageBoxContents.Add ("你的牌打得也太好了");
 		messageBoxContents.Add ("交个朋友吧");
 		messageBoxContents.Add ("下次再玩吧，我要走了");
+        */
+        messageBoxContents.Add("快点出牌");
+        messageBoxContents.Add("怎么有断网了");
+        messageBoxContents.Add("不要走，决战到天亮");
+        messageBoxContents.Add("你的牌打得太好了");
+        messageBoxContents.Add("你们家开银行的么");
+        messageBoxContents.Add("你太牛了");
+        messageBoxContents.Add("你是送财童子么");
+        messageBoxContents.Add("不好意思，我先走了");
+        messageBoxContents.Add("哈哈，手气真好");
+        messageBoxContents.Add("外你在不管");
+        messageBoxContents.Add("放心打你的牌，我不胡");
 	}
 
 	private static GlobalDataScript _instance;

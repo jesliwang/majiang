@@ -103,7 +103,7 @@ namespace cn.sharesdk.unity3d.sdkporter
 			path = System.IO.Path.GetDirectoryName( filename );
 			
 			string contents = projectFileInfo.OpenText().ReadToEnd();
-			_datastore = (Hashtable)MiniJSON.jsonDecode( contents );
+            _datastore = (Hashtable)ShareSDKMiniJSON.jsonDecode( contents );
 		}
 	}
 	

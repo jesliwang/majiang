@@ -19,7 +19,7 @@ using System.Collections.Generic;
 /// </summary>
 
 
-public class MiniJSON
+public class ShareSDKMiniJSON
 {
 	private const int TOKEN_NONE = 0;
 	private const int TOKEN_CURLY_OPEN = 1;
@@ -50,19 +50,19 @@ public class MiniJSON
 	public static object jsonDecode( string json )
 	{
 		// save the string for debug information
-		MiniJSON.lastDecode = json;
+        ShareSDKMiniJSON.lastDecode = json;
 
 		if( json != null )
 		{
 			char[] charArray = json.ToCharArray();
 			int index = 0;
 			bool success = true;
-			object value = MiniJSON.parseValue( charArray, ref index, ref success );
+            object value = ShareSDKMiniJSON.parseValue( charArray, ref index, ref success );
 
 			if( success )
-				MiniJSON.lastErrorIndex = -1;
+                ShareSDKMiniJSON.lastErrorIndex = -1;
 			else
-				MiniJSON.lastErrorIndex = index;
+                ShareSDKMiniJSON.lastErrorIndex = index;
 
 			return value;
 		}
@@ -81,7 +81,7 @@ public class MiniJSON
 	public static string jsonEncode( object json )
 	{
 		var builder = new StringBuilder( BUILDER_CAPACITY );
-		var success = MiniJSON.serializeValue( json, builder );
+        var success = ShareSDKMiniJSON.serializeValue( json, builder );
 		
 		return ( success ? builder.ToString() : null );
 	}
@@ -93,7 +93,7 @@ public class MiniJSON
 	/// <returns></returns>
 	public static bool lastDecodeSuccessful()
 	{
-		return ( MiniJSON.lastErrorIndex == -1 );
+        return ( ShareSDKMiniJSON.lastErrorIndex == -1 );
 	}
 
 
@@ -103,7 +103,7 @@ public class MiniJSON
 	/// <returns></returns>
 	public static int getLastErrorIndex()
 	{
-		return MiniJSON.lastErrorIndex;
+        return ShareSDKMiniJSON.lastErrorIndex;
 	}
 
 
@@ -114,21 +114,21 @@ public class MiniJSON
 	/// <returns></returns>
 	public static string getLastErrorSnippet()
 	{
-		if( MiniJSON.lastErrorIndex == -1 )
+        if( ShareSDKMiniJSON.lastErrorIndex == -1 )
 		{
 			return "";
 		}
 		else
 		{
-			int startIndex = MiniJSON.lastErrorIndex - 5;
-			int endIndex = MiniJSON.lastErrorIndex + 15;
+            int startIndex = ShareSDKMiniJSON.lastErrorIndex - 5;
+            int endIndex = ShareSDKMiniJSON.lastErrorIndex + 15;
 			if( startIndex < 0 )
 				startIndex = 0;
 
-			if( endIndex >= MiniJSON.lastDecode.Length )
-				endIndex = MiniJSON.lastDecode.Length - 1;
+            if( endIndex >= ShareSDKMiniJSON.lastDecode.Length )
+                endIndex = ShareSDKMiniJSON.lastDecode.Length - 1;
 
-			return MiniJSON.lastDecode.Substring( startIndex, endIndex - startIndex + 1 );
+            return ShareSDKMiniJSON.lastDecode.Substring( startIndex, endIndex - startIndex + 1 );
 		}
 	}
 
@@ -147,15 +147,15 @@ public class MiniJSON
 		while( !done )
 		{
 			token = lookAhead( json, index );
-			if( token == MiniJSON.TOKEN_NONE )
+            if( token == ShareSDKMiniJSON.TOKEN_NONE )
 			{
 				return null;
 			}
-			else if( token == MiniJSON.TOKEN_COMMA )
+            else if( token == ShareSDKMiniJSON.TOKEN_COMMA )
 			{
 				nextToken( json, ref index );
 			}
-			else if( token == MiniJSON.TOKEN_CURLY_CLOSE )
+            else if( token == ShareSDKMiniJSON.TOKEN_CURLY_CLOSE )
 			{
 				nextToken( json, ref index );
 				return table;
@@ -171,7 +171,7 @@ public class MiniJSON
 
 				// :
 				token = nextToken( json, ref index );
-				if( token != MiniJSON.TOKEN_COLON )
+                if( token != ShareSDKMiniJSON.TOKEN_COLON )
 					return null;
 
 				// value
@@ -199,15 +199,15 @@ public class MiniJSON
 		while( !done )
 		{
 			int token = lookAhead( json, index );
-			if( token == MiniJSON.TOKEN_NONE )
+            if( token == ShareSDKMiniJSON.TOKEN_NONE )
 			{
 				return null;
 			}
-			else if( token == MiniJSON.TOKEN_COMMA )
+            else if( token == ShareSDKMiniJSON.TOKEN_COMMA )
 			{
 				nextToken( json, ref index );
 			}
-			else if( token == MiniJSON.TOKEN_SQUARED_CLOSE )
+            else if( token == ShareSDKMiniJSON.TOKEN_SQUARED_CLOSE )
 			{
 				nextToken( json, ref index );
 				break;
@@ -231,24 +231,24 @@ public class MiniJSON
 	{
 		switch( lookAhead( json, index ) )
 		{
-			case MiniJSON.TOKEN_STRING:
+            case ShareSDKMiniJSON.TOKEN_STRING:
 				return parseString( json, ref index );
-			case MiniJSON.TOKEN_NUMBER:
+            case ShareSDKMiniJSON.TOKEN_NUMBER:
 				return parseNumber( json, ref index );
-			case MiniJSON.TOKEN_CURLY_OPEN:
+            case ShareSDKMiniJSON.TOKEN_CURLY_OPEN:
 				return parseObject( json, ref index );
-			case MiniJSON.TOKEN_SQUARED_OPEN:
+            case ShareSDKMiniJSON.TOKEN_SQUARED_OPEN:
 				return parseArray( json, ref index );
-			case MiniJSON.TOKEN_TRUE:
+            case ShareSDKMiniJSON.TOKEN_TRUE:
 				nextToken( json, ref index );
 				return Boolean.Parse( "TRUE" );
-			case MiniJSON.TOKEN_FALSE:
+            case ShareSDKMiniJSON.TOKEN_FALSE:
 				nextToken( json, ref index );
 				return Boolean.Parse( "FALSE" );
-			case MiniJSON.TOKEN_NULL:
+            case ShareSDKMiniJSON.TOKEN_NULL:
 				nextToken( json, ref index );
 				return null;
-			case MiniJSON.TOKEN_NONE:
+            case ShareSDKMiniJSON.TOKEN_NONE:
 				break;
 		}
 
@@ -402,7 +402,7 @@ public class MiniJSON
 
 		if( index == json.Length )
 		{
-			return MiniJSON.TOKEN_NONE;
+            return ShareSDKMiniJSON.TOKEN_NONE;
 		}
 		
 		char c = json[index];
@@ -410,17 +410,17 @@ public class MiniJSON
 		switch( c )
 		{
 			case '{':
-				return MiniJSON.TOKEN_CURLY_OPEN;
+                return ShareSDKMiniJSON.TOKEN_CURLY_OPEN;
 			case '}':
-				return MiniJSON.TOKEN_CURLY_CLOSE;
+                return ShareSDKMiniJSON.TOKEN_CURLY_CLOSE;
 			case '[':
-				return MiniJSON.TOKEN_SQUARED_OPEN;
+                return ShareSDKMiniJSON.TOKEN_SQUARED_OPEN;
 			case ']':
-				return MiniJSON.TOKEN_SQUARED_CLOSE;
+                return ShareSDKMiniJSON.TOKEN_SQUARED_CLOSE;
 			case ',':
-				return MiniJSON.TOKEN_COMMA;
+                return ShareSDKMiniJSON.TOKEN_COMMA;
 			case '"':
-				return MiniJSON.TOKEN_STRING;
+                return ShareSDKMiniJSON.TOKEN_STRING;
 			case '0':
 			case '1':
 			case '2':
@@ -432,9 +432,9 @@ public class MiniJSON
 			case '8':
 			case '9':
 			case '-': 
-				return MiniJSON.TOKEN_NUMBER;
+                return ShareSDKMiniJSON.TOKEN_NUMBER;
 			case ':':
-				return MiniJSON.TOKEN_COLON;
+                return ShareSDKMiniJSON.TOKEN_COLON;
 		}
 		index--;
 
@@ -450,7 +450,7 @@ public class MiniJSON
 				json[index + 4] == 'e' )
 			{
 				index += 5;
-				return MiniJSON.TOKEN_FALSE;
+                return ShareSDKMiniJSON.TOKEN_FALSE;
 			}
 		}
 
@@ -463,7 +463,7 @@ public class MiniJSON
 				json[index + 3] == 'e' )
 			{
 				index += 4;
-				return MiniJSON.TOKEN_TRUE;
+                return ShareSDKMiniJSON.TOKEN_TRUE;
 			}
 		}
 
@@ -476,11 +476,11 @@ public class MiniJSON
 				json[index + 3] == 'l' )
 			{
 				index += 4;
-				return MiniJSON.TOKEN_NULL;
+                return ShareSDKMiniJSON.TOKEN_NULL;
 			}
 		}
 
-		return MiniJSON.TOKEN_NONE;
+        return ShareSDKMiniJSON.TOKEN_NONE;
 	}
 
 	#endregion
@@ -714,25 +714,25 @@ public static class MiniJsonExtensions
 {
 	public static string toJson( this Hashtable obj )
 	{
-		return MiniJSON.jsonEncode( obj );
+        return ShareSDKMiniJSON.jsonEncode( obj );
 	}
 	
 	
 	public static string toJson( this Dictionary<string,string> obj )
 	{
-		return MiniJSON.jsonEncode( obj );
+        return ShareSDKMiniJSON.jsonEncode( obj );
 	}
 	
 	
 	public static ArrayList arrayListFromJson( this string json )
 	{
-		return MiniJSON.jsonDecode( json ) as ArrayList;
+        return ShareSDKMiniJSON.jsonDecode( json ) as ArrayList;
 	}
 
 
 	public static Hashtable hashtableFromJson( this string json )
 	{
-		return MiniJSON.jsonDecode( json ) as Hashtable;
+        return ShareSDKMiniJSON.jsonDecode( json ) as Hashtable;
 	}
 }
 
