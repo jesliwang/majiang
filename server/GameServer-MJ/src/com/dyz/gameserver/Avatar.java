@@ -214,10 +214,11 @@ public class Avatar implements GameObj {
      */
     public void CreatePaiArray(){
         if(roomVO.getRoomType() == 1){
-            card_col = 27;
+            /*card_col = 27;
             if(roomVO.getHong()){
                 card_col = 34;
-            }
+            }*/
+        	card_col = 33;
         }else if(roomVO.getRoomType() == 2){
             card_col = 34;
 

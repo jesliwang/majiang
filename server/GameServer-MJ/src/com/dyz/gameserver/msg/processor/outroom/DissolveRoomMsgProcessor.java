@@ -26,7 +26,7 @@ INotAuthProcessor  {
 			int roomId = Integer.parseInt(json.get("roomId").toString());
 			String type = json.get("type").toString();
 			Avatar avatar = gameSession.getRole(Avatar.class);
-			//system.out.println("申请解散房间");
+			System.out.println("申请解散房间 " + (avatar != null) + "," + roomId);
 			if (avatar != null && roomId != 0) {
 				RoomLogic roomLogic = RoomManager.getInstance().getRoom(roomId);
 				if(roomLogic != null){

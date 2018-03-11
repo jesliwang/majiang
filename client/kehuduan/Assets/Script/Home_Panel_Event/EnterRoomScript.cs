@@ -108,6 +108,8 @@ public class EnterRoomScript : MonoBehaviour{
 		MyDebug.Log (response);
 
 		if (response.status == 1) {
+            GlobalDataScript.reEnterRoomData = null;
+
 			GlobalDataScript.roomJoinResponseData = JsonMapper.ToObject<RoomJoinResponseVo> (response.message);
 			GlobalDataScript.roomVo.addWordCard = GlobalDataScript.roomJoinResponseData.addWordCard;
 			GlobalDataScript.roomVo.hong = GlobalDataScript.roomJoinResponseData.hong;

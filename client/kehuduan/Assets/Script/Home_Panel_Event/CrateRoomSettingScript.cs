@@ -173,7 +173,7 @@ public class CrateRoomSettingScript : MonoBehaviour {
 		sendVo.ma = maCount;
 		sendVo.roundNumber = roundNumber;
 		sendVo.ziMo = isZimo?1:0;
-        sendVo.hong = true;
+        sendVo.hong = false;
 		sendVo.sevenDouble = isSevenDoube;
 		sendVo.roomType = GameConfig.GAME_TYPE_ZHUANZHUAN;
         sendVo.shengyu20 = save20;
@@ -300,7 +300,7 @@ public class CrateRoomSettingScript : MonoBehaviour {
 	public void onCreateRoomCallback(ClientResponse response){
 		MyDebug.Log (response.message);
 		if (response.status == 1) {
-			
+            GlobalDataScript.reEnterRoomData = null;
 			RoomCreateResponseVo responseVO = JsonMapper.ToObject<RoomCreateResponseVo> (response.message);
 			int roomid = Int32.Parse(response.message);
 			sendVo.roomId = roomid;

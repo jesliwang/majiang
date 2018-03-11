@@ -284,6 +284,7 @@ public class RoomLogic {
     	JSONObject json;
     	//为0时表示是申请解散房间，1表示同意解散房间  2表示不同意解散房间  3表示解散房间(大部分人同意解散房间)
     	//dissolveCount  = playerList.size();
+    	System.out.println("eeee=" + type +","+ avatar.getUuId() +"," + roomId);
     	if(type.equals("0")){
     		dissolve = false;
     		dissolveCount = 1;
@@ -335,6 +336,8 @@ public class RoomLogic {
     		for (Avatar ava : playerList) {
     			ava.getSession().sendMsg(new DissolveRoomResponse(roomId, json.toString()));
     		}
+    		System.out.println("roomid=" + roomId + "," + avatar.getUuId());
+    		
     		//下面是判断是否所有人都同意解散房间
     		int onlineCount = 0;
     		for (Avatar avat : playerList) {
@@ -549,6 +552,7 @@ public class RoomLogic {
 	        	avatar.avatarVO.setHuReturnObjectVO(new HuReturnObjectVO());
 	            avatar.getSession().sendMsg(new StartGameResponse(1,avatar.avatarVO.getPaiArray(),playerList.indexOf(playCardsLogic.bankerAvatar)));
 	            //修改玩家是否玩一局游戏的状态
+	            System.out.println("下局开始:" + avatar.avatarVO.getAccount().getId());
 	            account = AccountService.getInstance().selectByPrimaryKey(avatar.avatarVO.getAccount().getId());
 	            if(account.getIsgame().equals("0")){
 	            	account.setIsgame("1");

@@ -223,10 +223,11 @@ public class PlayCardsLogic {
 		roomVO = value;
 		if(roomVO.getRoomType() == 1){
 			//转转麻将
-			paiCount = 27;
+			/*paiCount = 27;
 			if(roomVO.getHong()){
 				paiCount = 33;
-			}
+			}*/
+			paiCount = 33;
 		}else if(roomVO.getRoomType() == 2){
 			//划水麻将
 			if(roomVO.isAddWordCard()) {
@@ -1798,8 +1799,8 @@ public class PlayCardsLogic {
     		if(!flag){
     			if(roomVO.getHong()){
     				//有癞子
-    				//flag =   Naizi.testHuiPai(paiList.clone());
-    				flag = normalHuPai.checkZZHu(paiList.clone());
+    				flag =   Naizi.testHuiPai(paiList.clone());
+    				//flag = normalHuPai.checkZZHu(paiList.clone());
     			}
     			else{
     				flag = normalHuPai.checkZZHu(paiList.clone());

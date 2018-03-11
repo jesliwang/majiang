@@ -145,11 +145,11 @@ public class HomePanelScript : MonoBehaviour {
     private void StartPrepareGame(ClientResponse response)
     {
         GlobalDataScript.roomJoinResponseData = JsonMapper.ToObject<RoomJoinResponseVo>(response.message);
-
+        GlobalDataScript.reEnterRoomData = JsonMapper.ToObject<RoomJoinResponseVo>(response.message);
         if (GlobalDataScript.gamePlayPanel == null)
         {
             GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab("Prefab/Panel_GamePlay");
-            GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript>().joinToRoom(GlobalDataScript.roomJoinResponseData.playerList);
+            //GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript>().joinToRoom(GlobalDataScript.roomJoinResponseData.playerList);
 
         }
     }
@@ -239,7 +239,8 @@ public class HomePanelScript : MonoBehaviour {
             //GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
             enterMyRoom.gameObject.SetActive(true);
             myRoomVo.text = GlobalDataScript.loginResponseData.roomId.ToString();
-            //myRoomNumber.text = GlobalDataScript.roomVo.roundNumber.ToString();
+            myRoomNumber.text = GlobalDataScript.roomVo.roundNumber.ToString();
+            myRoomPlayers.text = GlobalDataScript.roomVo.totalPlayers.ToString();
         }
 
 	}
