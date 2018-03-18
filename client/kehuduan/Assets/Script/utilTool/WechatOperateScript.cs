@@ -205,9 +205,9 @@ public class WechatOperateScript : MonoBehaviour {
     {
         ShareContent customizeShareParams = new ShareContent();
         customizeShareParams.SetText("lock at me");
-        //customizeShareParams.SetUrl("");
+        customizeShareParams.SetUrl("");
         customizeShareParams.SetShareType(ContentType.Text);
-        //customizeShareParams.SetObjectID("");
+        customizeShareParams.SetObjectID("");
         customizeShareParams.SetShareContentCustomize(platformType, customizeShareParams);
         shareSdk.ShareContent(platformType, customizeShareParams);
     }

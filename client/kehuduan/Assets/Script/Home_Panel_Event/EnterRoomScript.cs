@@ -13,8 +13,9 @@ public class EnterRoomScript : MonoBehaviour{
 	public Button button_sure,button_delete;//确认删除按钮
 
 	private List<String> inputChars;//输入的字符
-    public List<Image> inputTexts;
+    //public List<Image> inputTexts;
     public List<Sprite> numberList;
+    public List<Text> inputsWithText;
 
 	public List<GameObject> btnList;
 
@@ -55,10 +56,10 @@ public class EnterRoomScript : MonoBehaviour{
 		inputChars.Add(number);
 
 		int index = inputChars.Count;
-        //inputTexts [index-1].text = number.ToString();
-        inputTexts[index - 1].enabled = true;
-        inputTexts[index - 1].sprite = numberList[int.Parse(number)];
-        inputTexts[index - 1].SetNativeSize();
+        inputsWithText [index-1].text = number.ToString();
+        //inputTexts[index - 1].enabled = true;
+        //inputTexts[index - 1].sprite = numberList[int.Parse(number)];
+        //inputTexts[index - 1].SetNativeSize();
 
 
         if(inputChars.Count == 6){
@@ -74,9 +75,9 @@ public class EnterRoomScript : MonoBehaviour{
 	public void deleteNumber(){
 		if (inputChars != null && inputChars.Count > 0) {
 			inputChars.RemoveAt (inputChars.Count -1);
-            //inputTexts [inputChars.Count].text = "";
-            inputTexts[inputChars.Count].sprite = null;
-            inputTexts[inputChars.Count].enabled = false;
+            inputsWithText [inputChars.Count].text = "";
+            //inputTexts[inputChars.Count].sprite = null;
+            //inputTexts[inputChars.Count].enabled = false;
 
 		}
 	}
@@ -98,9 +99,9 @@ public class EnterRoomScript : MonoBehaviour{
         inputChars.Clear();
         for (int i = 0; i < 6; i++)
         {
-            //inputTexts[i].text = "";
-            inputTexts[i].sprite = null;
-            inputTexts[i].enabled = false;
+            inputsWithText[i].text = "";
+            //inputTexts[i].sprite = null;
+            //inputTexts[i].enabled = false;
         }
 	}
 

@@ -13,6 +13,11 @@ using LitJson;
 
 public class MyMahjongScript : MonoBehaviour
 {
+    public GameObject imgTingPai;
+
+    private int RightListCardNumber = 8;
+    private int LeftListCardNumber = 9;
+
     public List<GameObject> wifiGroup;
 	public double lastTime;
 	public Text Number;
@@ -252,6 +257,7 @@ public class MyMahjongScript : MonoBehaviour
 		PengGangList_T = new List<List<GameObject>> ();
 		PengGangCardList=new List<List<GameObject>>();
 
+        SetTingStatus();
 
 	}
 
@@ -888,7 +894,7 @@ public class MyMahjongScript : MonoBehaviour
 		else if (outDir == DirectionEnum.Right)
 		{
 			path = "Prefab/ThrowCard/ThrowCard_R";
-			poisVector3 = new Vector3((int)(tableCardList[1].Count/9*54f), -180f + tableCardList[1].Count%9*28);
+            poisVector3 = new Vector3((int)(tableCardList[1].Count/RightListCardNumber*54f), -134f + tableCardList[1].Count%RightListCardNumber*28);
 		}
 		else if (outDir == DirectionEnum.Top)
 		{
@@ -898,7 +904,7 @@ public class MyMahjongScript : MonoBehaviour
 		else if (outDir == DirectionEnum.Left)
 		{
 			path = "Prefab/ThrowCard/ThrowCard_L";
-			poisVector3 = new Vector3(-tableCardList[3].Count/8*54f, 152f - tableCardList[3].Count%8*28);
+            poisVector3 = new Vector3(-tableCardList[3].Count/LeftListCardNumber*54f, 192f - tableCardList[3].Count%LeftListCardNumber*28);
 			//     parenTransform = leftOutParent;
 		}
 
@@ -1478,7 +1484,178 @@ public class MyMahjongScript : MonoBehaviour
 			//checkHuOrGangOrPengOrChi (Point,1);
 		}
 
+        SetTingStatus();
 	}
+
+    private int Jiang = 0;
+    private bool InverseTingPai(Dictionary<int, int> dicData)
+    {
+        int sumCount = 0;
+        for (int i = 0; i < 35; i++)
+        {
+            if (dicData.ContainsKey(i) && dicData[i] > 0)
+            {
+                sumCount += dicData[i];
+            }
+        }
+
+        if(sumCount == 1)
+        {
+            if(Jiang > 0)
+            {
+                return true;
+            }
+
+        }
+        if(sumCount == 2)
+        {
+            for (int i = 0; i < 35; i++)
+            {
+                if (i > 27)
+                {
+                    return false;               //   “东南西北中发白”没有顺牌组合，不胡
+                }
+
+                if (i%9 != 8 && dicData.ContainsKey(i) && dicData[i] > 0 && dicData.ContainsKey(i+1) && dicData[i+1] > 0)
+                {
+                    return true;
+                }
+            }
+        }
+
+        for (int i = 0; i < 35; i++)
+        {
+            if(dicData.ContainsKey(i) && dicData[i] > 0)
+            {
+                if(dicData[i] == 4)
+                {
+                    dicData.Remove(i);
+                    if(InverseTingPai(dicData))
+                    {
+                        return true;
+                    }
+                    dicData.Add(i, 4);
+                }
+
+                if(dicData[i] >= 3)
+                {
+                    int num = dicData[i];
+                    dicData.Remove(i);
+                    dicData.Add(i, num - 3);
+                    if (InverseTingPai(dicData))
+                    {
+                        return true;
+                    }
+                    dicData.Remove(i);
+                    dicData.Add(i, num);
+                }
+
+                if( Jiang == 0 && dicData[i] >=2 )
+                {
+                    Jiang = 1;
+
+                    int num = dicData[i];
+                    dicData.Remove(i);
+                    dicData.Add(i, num - 2);
+                    if (InverseTingPai(dicData))
+                    {
+                        return true;
+                    }
+                    dicData.Remove(i);
+                    dicData.Add(i, num);
+
+                    Jiang = 0;
+                }
+
+                if (i > 27)
+                {
+                    return false;               //   “东南西北中发白”没有顺牌组合，不胡
+                }
+
+                if(i%9 != 7 && i%9 !=8 && dicData.ContainsKey(i+1) && dicData[i+1] > 0 && dicData.ContainsKey(i + 2) && dicData[i + 2] > 0)
+                {
+                    int num1 = dicData[i];
+                    dicData.Remove(i);
+                    dicData.Add(i, num1 - 1);
+
+                    int num2 = dicData[i+1];
+                    dicData.Remove(i+1);
+                    dicData.Add(i+1, num2 - 1);
+
+                    int num3 = dicData[i+2];
+                    dicData.Remove(i+2);
+                    dicData.Add(i+2, num3 - 1);
+                    if (InverseTingPai(dicData))
+                    {
+                        return true;
+                    }
+                    dicData.Remove(i);
+                    dicData.Add(i, num1);
+
+                    dicData.Remove(i+1);
+                    dicData.Add(i+1, num2);
+
+                    dicData.Remove(i+2);
+                    dicData.Add(i+2, num3);
+                }
+            }
+        }
+
+        return false;
+    }
+
+
+    private bool GetTingPai(List<GameObject> hList)
+    {
+        Dictionary<int, int> pointDic = new Dictionary<int, int>();
+
+        for (int i = 0; i < hList.Count(); i++)
+        {
+            int num = 0;
+            if(pointDic.ContainsKey(hList[i].GetComponent<bottomScript>().getPoint()))
+            {
+                num = pointDic[hList[i].GetComponent<bottomScript>().getPoint()];
+                pointDic.Remove(hList[i].GetComponent<bottomScript>().getPoint());
+            }
+
+            pointDic.Add(hList[i].GetComponent<bottomScript>().getPoint(), num + 1);
+        }
+
+        int sumCount = 0;
+        for (int i = 0; i < 35; i++)
+        {
+            if (pointDic.ContainsKey(i) && pointDic[i] > 0)
+            {
+                sumCount += pointDic[i];
+            }
+        }
+
+        if (sumCount == 1)
+        {
+            return true;
+
+        }
+
+        return InverseTingPai(pointDic) ;
+    }
+
+    private void SetTingStatus()
+    {
+        int dirindex = getIndexByDir(outDir);
+        if (outDir == DirectionEnum.Bottom)
+        {
+            bool flag = GetTingPai(handerCardList[dirindex]);
+            if(flag)
+            {
+                imgTingPai.SetActive(true);
+            }
+            else
+            {
+                imgTingPai.SetActive(false);    
+            }
+        }
+
+    }
 
 	void Update()
 	{

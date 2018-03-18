@@ -2,19 +2,14 @@
   <MonoDevelop.Ide.ItemProperties.kehuduan PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/mahjongCard/bottomScript.cs">
     <Files>
-      <File FileName="Assets/Script/netManager/CustomSocket.cs" Line="65" Column="10" />
-      <File FileName="Assets/Script/netManager/Events/APIS.cs" Line="90" Column="20" />
-      <File FileName="Assets/Script/Game_Scenes/VoteScript.cs" Line="29" Column="3" />
-      <File FileName="Assets/Script/Game_Scenes/PlayerResult.cs" Line="18" Column="16" />
-      <File FileName="Assets/Script/Login_Panle_Event/LoginSystemScript.cs" Line="92" Column="26" />
-      <File FileName="Assets/Script/Home_Panel_Event/HomePanelScript.cs" Line="219" Column="7" />
-      <File FileName="Assets/Script/netManager/Events/SocketEventHandle.cs" Line="127" Column="22" />
-      <File FileName="Assets/Script/Game_Scenes/MyMahjongScript.cs" Line="172" Column="43" />
-      <File FileName="Assets/Script/utilTool/GlobalDataScript.cs" Line="44" Column="35" />
-      <File FileName="Assets/Script/Home_Panel_Event/BroadcastScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Home_Panel_Event/CrateRoomSettingScript.cs" Line="303" Column="53" />
-      <File FileName="Assets/Script/netManager/request/CurrentStatusRequest.cs" Line="7" Column="30" />
-      <File FileName="Assets/Script/Home_Panel_Event/EnterRoomScript.cs" Line="111" Column="53" />
+      <File FileName="Assets/Script/netManager/Events/APIS.cs" Line="21" Column="25" />
+      <File FileName="Assets/Script/Login_Panle_Event/LoginSystemScript.cs" Line="22" Column="20" />
+      <File FileName="Assets/Script/utilTool/WechatOperateScript.cs" Line="210" Column="9" />
+      <File FileName="Assets/Plugins/ShareSDK/ShareSDK.cs" Line="314" Column="27" />
+      <File FileName="Assets/Script/Game_Scenes/playBack/GamePlayBackScript.cs" Line="541" Column="70" />
+      <File FileName="Assets/Script/Game_Scenes/MyMahjongScript.cs" Line="1505" Column="86" />
+      <File FileName="Assets/Script/Home_Panel_Event/EnterRoomScript.cs" Line="60" Column="20" />
+      <File FileName="Assets/Script/Setting_App/SettingAppScript.cs" Line="13" Column="33" />
       <File FileName="Assets/Script/mahjongCard/bottomScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

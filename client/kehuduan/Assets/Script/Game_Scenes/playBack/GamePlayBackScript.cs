@@ -291,7 +291,7 @@ public class GamePlayBackScript : MonoBehaviour {
 				tempVector3 = new Vector3(-100, 0f);
 				break;
 			case 2: //上
-				tempVector3 = new Vector3(0, -180f);
+				tempVector3 = new Vector3(0, -134f);
 				break;
 			case 3: //左
 				tempVector3 = new Vector3(100, 0f);
@@ -538,7 +538,7 @@ public class GamePlayBackScript : MonoBehaviour {
 				break;
 			case 1:
 				path = "Prefab/ThrowCard/ThrowCard_R";
-				poisVector3 = new Vector3((int)(-tableCardList[1].Count/13*46f), -180f + tableCardList[1].Count%13*28);
+				poisVector3 = new Vector3((int)(-tableCardList[1].Count/13*46f), -134f + tableCardList[1].Count%13*28);
 				break;
 			case 2:
 				path = "Prefab/ThrowCard/TopAndBottomCard";
