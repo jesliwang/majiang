@@ -529,6 +529,12 @@ public class MyMahjongScript : MonoBehaviour
             {
                 string[] splitIds = strs[i].Split(new char[1] { ':' });
                 GlobalDataScript.isDrag = true;
+
+                if(!GlobalDataScript.roomVo.showTingPai)
+                {
+                    continue;
+                }
+
                 for (int u = 1; u < splitIds.Length; u++)
                 {
                     // 听牌显示
@@ -558,6 +564,12 @@ public class MyMahjongScript : MonoBehaviour
             {
                 string[] splitIds = strs[i].Split(new char[1] { ':' });
                 GlobalDataScript.isDrag = true;
+
+                if (!GlobalDataScript.roomVo.showTingPai)
+                {
+                    continue;
+                }
+
                 for (int u = 1; u < splitIds.Length; u++)
                 {
                     // 听牌显示
