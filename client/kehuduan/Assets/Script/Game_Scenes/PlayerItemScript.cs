@@ -5,6 +5,7 @@ using AssemblyCSharp;
 
 public class PlayerItemScript : MonoBehaviour {
 
+    public Image tingIcon;
 	public Image headerIcon;
 	public Image bankerImg;
 	public Text nameText;
@@ -150,5 +151,13 @@ public class PlayerItemScript : MonoBehaviour {
 	public void setHuFlagHidde(){
 		HuFlag.SetActive (false);
 	}
+
+    public void setTingDisplay(){
+        tingIcon.gameObject.SetActive(true);
+    }
+
+    public void setTingHide(){
+        tingIcon.gameObject.SetActive(false);
+    }
 
 }

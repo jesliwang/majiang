@@ -301,6 +301,8 @@ public class Avatar implements GameObj {
         }
         return flag;
     }
+
+    
     /**
      * 检测当前自己的牌是否可杠
      * @param  

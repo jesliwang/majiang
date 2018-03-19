@@ -694,6 +694,28 @@ public class PlayCardsLogic {
         }
         //如果没有吃，碰，杠，胡的情况，则下家自动摸牌
         chuPaiCallBack();
+        
+        // 显示tingpai
+        StringBuffer tingId = new StringBuffer();
+        tingId.append("ting");
+        StringBuffer untingId = new StringBuffer();
+        untingId.append("unting");
+        
+        if(checkTing(avatar))
+        {
+     	   // TODO:
+     	   tingId.append(":" + avatar.getUuId());
+        }
+        else
+        {
+        	untingId.append(":" + avatar.getUuId());
+        	
+        }
+        
+        for (int k = 0; k < playerList.size(); k++) {
+     	   playerList.get(k).getSession().sendMsg(new ReturnInfoResponse(1, tingId.toString()));
+     	   playerList.get(k).getSession().sendMsg(new ReturnInfoResponse(1, untingId.toString()));
+        }
     }
     
     /**
@@ -1511,6 +1533,29 @@ public class PlayCardsLogic {
     	  // bankerAvatar.huAvatarDetailInfo.add(bankerAvatar.gangIndex.get(0)+":"+2);
 		   //bankerAvatar.gangIndex.clear();
        }
+       
+       // 显示tingpai
+       StringBuffer tingId = new StringBuffer();
+       tingId.append("ting");
+       StringBuffer untingId = new StringBuffer();
+       untingId.append("unting");
+       for (int k = 0; k < playerList.size(); k++) {
+    	   if(bankerAvatar == playerList.get(k)) continue;
+           if(checkTing(playerList.get(k)))
+           {
+        	   // TODO:
+        	   tingId.append(":" + playerList.get(k).getUuId());
+           }
+           else
+           {
+        	   untingId.append(":" + playerList.get(k).getUuId());
+           }
+       }
+       for (int k = 0; k < playerList.size(); k++) {
+    	   playerList.get(k).getSession().sendMsg(new ReturnInfoResponse(1, tingId.toString()));
+    	   playerList.get(k).getSession().sendMsg(new ReturnInfoResponse(1, untingId.toString()));
+       }
+       
        //游戏回放
        PlayRecordInit();
     }
@@ -1710,6 +1755,81 @@ public class PlayCardsLogic {
         for(int i=0;i<playerList.size();i++){
             playerList.get(i).cleanPaiData();
         }
+    }
+    
+    /*
+     * avatar.getPaiArray(); 2行
+     * 
+     *  0:  花色的数量
+     *  1:  对应花色的状态 1:peng 2:gang
+     * 
+     */
+    private boolean checkTing(Avatar avatar)
+    {
+    	for(int i = 0; i < 34; i++)
+    	{
+    		int [][] rawList =  avatar.getPaiArray();
+    		int [][] paiList = new int[2][rawList[0].length];
+    		if(i>=rawList[0].length) continue;
+    		boolean jumpFlag = false;
+    		
+    		for(int u = 0; u < rawList[0].length; u++)
+    		{
+    			
+    			paiList[0][u] = rawList[0][u];
+    			paiList[1][u] = rawList[1][u];
+    			
+    			if(u == i){
+    				if(paiList[1][u] == 1){
+    					paiList[0][u] += 1;
+    					jumpFlag = true;
+    				}
+    				else if(paiList[1][u] == 0){
+    					paiList[0][u] += 1;
+    					jumpFlag = true;
+    				}
+    				else
+    				{
+    				}
+    			}
+    		}
+    		if(!jumpFlag) continue;
+    		
+    		
+        	boolean flag =  false;
+        	
+    		//可以抢杠胡（只有可抢杠胡的时候才判断其他人有没有胡牌）
+    		if(roomVO.getSevenDouble() && !flag){
+    			//可七小队
+    			int isSeven = checkSevenDouble(paiList.clone());
+                if(isSeven == 0){
+                    //System.out.println("没有七小对");
+                }else{
+                    if(isSeven == 1){
+                      //  System.out.println("七对");
+                    }else{
+                       // System.out.println("龙七对");
+                    }
+                    flag = true;
+                }
+    		}
+    		if(!flag){
+    			if(roomVO.getHong()){
+    				//有癞子
+    				flag =   Naizi.testHuiPai(paiList.clone());
+    				//flag = normalHuPai.checkZZHu(paiList.clone());
+    			}
+    			else{
+    				flag = normalHuPai.checkZZHu(paiList.clone());
+    			}
+    		}
+    		
+    		if(flag){
+    			System.out.println("aaaa="+avatar.getUuId());
+    			return true;
+    		}
+    	}
+    	return false;
     }
     /**
      * 检测胡牌算法，其中包含七小对，普通胡牌

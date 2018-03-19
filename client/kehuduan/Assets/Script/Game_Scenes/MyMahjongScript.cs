@@ -13,7 +13,6 @@ using LitJson;
 
 public class MyMahjongScript : MonoBehaviour
 {
-    public GameObject imgTingPai;
 
     private int RightListCardNumber = 8;
     private int LeftListCardNumber = 9;
@@ -256,8 +255,6 @@ public class MyMahjongScript : MonoBehaviour
 		PengGangList_R = new List<List<GameObject>> ();
 		PengGangList_T = new List<List<GameObject>> ();
 		PengGangCardList=new List<List<GameObject>>();
-
-        SetTingStatus();
 
 	}
 
@@ -506,7 +503,7 @@ public class MyMahjongScript : MonoBehaviour
 		} else {
 			passType = "otherPickCard";
 		}
-
+        Debug.LogError("actionBtn=" + response.message);
 		for (int i = 0; i < strs.Length; i++) {
 			if (strs [i].Equals ("hu")) {
 				btnActionScript.showBtn (1);
@@ -525,10 +522,69 @@ public class MyMahjongScript : MonoBehaviour
 				btnActionScript.showBtn (3);
 				putOutCardPoint =int.Parse(strs [i].Split (new char[1]{ ':' }) [2]);
 
-
 			}else if(strs[i].Equals("chi")){
 				//btnActionScript.showBtn (3);
-			}
+            }
+            else if (strs[i].Contains("unting"))
+            {
+                string[] splitIds = strs[i].Split(new char[1] { ':' });
+                GlobalDataScript.isDrag = true;
+                for (int u = 1; u < splitIds.Length; u++)
+                {
+                    // 听牌显示
+                    int uuid = int.Parse(splitIds[u]);
+                    int index = getIndex(uuid);
+                    string dirstr = getDirection(index);
+                    switch (dirstr)
+                    {
+                        case DirectionEnum.Bottom:
+                            playerItems[0].GetComponent<PlayerItemScript>().setTingHide();
+                            break;
+                        case DirectionEnum.Right:
+                            playerItems[1].GetComponent<PlayerItemScript>().setTingHide();
+                            break;
+                        case DirectionEnum.Top:
+                            playerItems[2].GetComponent<PlayerItemScript>().setTingHide();
+                            break;
+                        case DirectionEnum.Left:
+                            playerItems[3].GetComponent<PlayerItemScript>().setTingHide();
+                            break;
+
+                    }
+                }
+
+            }
+            else if (strs[i].Contains("ting"))
+            {
+                string[] splitIds = strs[i].Split(new char[1] { ':' });
+                GlobalDataScript.isDrag = true;
+                for (int u = 1; u < splitIds.Length; u++)
+                {
+                    // 听牌显示
+                    int uuid = int.Parse(splitIds[u]);
+                    int index = getIndex(uuid);
+                    string dirstr = getDirection(index);
+                    switch (dirstr)
+                    {
+                        case DirectionEnum.Bottom:
+                            playerItems[0].GetComponent<PlayerItemScript>().setTingDisplay();
+                            break;
+                        case DirectionEnum.Right:
+                            playerItems[1].GetComponent<PlayerItemScript>().setTingDisplay();
+                            break;
+                        case DirectionEnum.Top:
+                            playerItems[2].GetComponent<PlayerItemScript>().setTingDisplay();
+                            break;
+                        case DirectionEnum.Left:
+                            playerItems[3].GetComponent<PlayerItemScript>().setTingDisplay();
+                            break;
+
+                    }
+                }
+
+            }
+                
+
 			if(strs[i].Contains("gang")){
 				
 				btnActionScript.showBtn (2);
@@ -1483,8 +1539,6 @@ public class MyMahjongScript : MonoBehaviour
 			gangKind = 0;
 			//checkHuOrGangOrPengOrChi (Point,1);
 		}
-
-        SetTingStatus();
 	}
 
     private int Jiang = 0;
@@ -1503,9 +1557,11 @@ public class MyMahjongScript : MonoBehaviour
         {
             if(Jiang > 0)
             {
+                Jiang = 0;
                 return true;
             }
-
+            Jiang = 0;
+            return false;
         }
         if(sumCount == 2)
         {
@@ -1637,24 +1693,6 @@ public class MyMahjongScript : MonoBehaviour
         }
 
         return InverseTingPai(pointDic) ;
-    }
-
-    private void SetTingStatus()
-    {
-        int dirindex = getIndexByDir(outDir);
-        if (outDir == DirectionEnum.Bottom)
-        {
-            bool flag = GetTingPai(handerCardList[dirindex]);
-            if(flag)
-            {
-                imgTingPai.SetActive(true);
-            }
-            else
-            {
-                imgTingPai.SetActive(false);    
-            }
-        }
-
     }
 
 	void Update()

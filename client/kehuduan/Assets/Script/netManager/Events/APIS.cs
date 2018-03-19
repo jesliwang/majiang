@@ -13,8 +13,9 @@ namespace AssemblyCSharp
 		//public const string chatSocketUrl = "192.168.1.100";
         public const string chatSocketUrl = "39.108.136.192";
 		//public const string socketUrl = "118.178.20.36";
-        public const string socketUrl = "39.108.136.192";
-        //public const string socketUrl = "192.168.1.110";
+        //public const string socketUrl = "39.108.136.192";
+        //public const string socketUrl = "192.168.1.104";
+        public const string socketUrl = "39.104.112.20";
 
 		public const string PIC_PATH = "http://www.weipaigame.com:8080/";
 	//	public const string apkDownLoadurl="192.168.0.111/aaa/weipai.apk";
