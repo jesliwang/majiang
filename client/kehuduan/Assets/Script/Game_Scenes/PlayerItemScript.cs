@@ -18,6 +18,7 @@ public class PlayerItemScript : MonoBehaviour {
 	public Text chatMessage;
 	public GameObject chatPaoPao;
 	public GameObject HuFlag;
+    public Animator gifPaoPao;
 
 	private AvatarVO avatarvo;
 	private int showTime;
@@ -37,6 +38,7 @@ public class PlayerItemScript : MonoBehaviour {
 			showTime--;
 			if (showTime == 0) {
 				chatPaoPao.SetActive (false);
+                gifPaoPao.Play("none");
 			}
 		}
 
@@ -137,6 +139,11 @@ public class PlayerItemScript : MonoBehaviour {
 		chatPaoPao.SetActive (true);
 	}
 
+    public void showGifMessage(int index){
+        showTime = 200;
+        gifPaoPao.Play("face_" + index);
+       
+    }
 
 	public void displayAvatorIp(){
 		//userInfoPanel.SetActive (true);

@@ -2970,14 +2970,25 @@ public class MyMahjongScript : MonoBehaviour
 
 	public void messageBoxNotice(ClientResponse response){
 		string[] arr = response.message.Split (new char[1]{ '|' });
-		int uuid = int.Parse(arr[1]);
-		int myIndex = getMyIndexFromList ();
-		int curAvaIndex = getIndex (uuid);
-		int seatIndex = curAvaIndex - myIndex;
-		if (seatIndex < 0) {
-			seatIndex = 4 + seatIndex;
-		}
-		playerItems [seatIndex].showChatMessage (int.Parse(arr[0]));
+        int type = int.Parse(arr[0]);
+        int code = int.Parse(arr[1]);
+		int uuid = int.Parse(arr[2]);
+
+        int myIndex = getMyIndexFromList();
+        int curAvaIndex = getIndex(uuid);
+        int seatIndex = curAvaIndex - myIndex;
+        if (seatIndex < 0)
+        {
+            seatIndex = 4 + seatIndex;
+        }
+        if(type == 0)
+        {
+            playerItems[seatIndex].showChatMessage(code);
+        }
+        else
+        {
+            playerItems[seatIndex].showGifMessage(code);
+        }
 	}
 
 
