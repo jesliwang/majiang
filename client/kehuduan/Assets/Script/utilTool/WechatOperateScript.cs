@@ -51,7 +51,7 @@ public class WechatOperateScript : MonoBehaviour {
 	public void login(){
         //TipsManagerScript.getInstance().setTips("获取个人信息成功");
 
-        if(false)//Application.platform == RuntimePlatform.Android)
+        if(Application.platform == RuntimePlatform.Android)
         {
             shareSdk.Authorize(PlatformType.WeChat);
         }

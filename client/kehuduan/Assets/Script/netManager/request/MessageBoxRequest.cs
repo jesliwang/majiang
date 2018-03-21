@@ -7,7 +7,7 @@ namespace AssemblyCSharp
 		public MessageBoxRequest (int codeIndex,int uuid, int sex)
 		{
 			headCode = APIS.MessageBox_Request;
-			messageContent = codeIndex + "|"+uuid;
+			messageContent = codeIndex + "|"+uuid + "|" + sex;
 		}
 	}
 }

@@ -1,10 +1,15 @@
 ﻿<Properties StartupConfiguration="{01278091-48EA-3A10-0751-D230C4907E84}|">
   <MonoDevelop.Ide.ItemProperties.kehuduan PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/netManager/Events/APIS.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/netManager/request/MessageBoxRequest.cs">
     <Files>
-      <File FileName="Assets/Script/Game_Scenes/MyMahjongScript.cs" Line="570" Column="82" />
-      <File FileName="Assets/Script/Game_Scenes/PlayerItemScript.cs" Line="160" Column="46" />
-      <File FileName="Assets/Script/netManager/Events/APIS.cs" Line="17" Column="57" />
+      <File FileName="Assets/Plugins/Android/ShareSDK/AndroidManifest.xml" Line="2" Column="29" />
+      <File FileName="Assets/Script/Login_Panle_Event/LoginSystemScript.cs" Line="104" Column="51" />
+      <File FileName="Assets/Script/utilTool/WechatOperateScript.cs" Line="56" Column="53" />
+      <File FileName="Assets/Plugins/ShareSDK/ShareSDK.cs" Line="311" Column="19" />
+      <File FileName="Assets/Script/Game_Scenes/MessageBoxScript.cs" Line="20" Column="59" />
+      <File FileName="Assets/Script/netManager/Events/SocketEventHandle.cs" Line="229" Column="33" />
+      <File FileName="Assets/Script/netManager/Events/APIS.cs" Line="79" Column="20" />
+      <File FileName="Assets/Script/netManager/request/MessageBoxRequest.cs" Line="10" Column="53" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

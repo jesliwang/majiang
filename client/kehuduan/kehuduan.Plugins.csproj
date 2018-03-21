@@ -238,11 +238,11 @@
     <Reference Include="DOTween43">
       <HintPath>Assets/DOTween113/DOTween43.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween46">
-      <HintPath>Assets/DOTween113/DOTween46.dll</HintPath>
-    </Reference>
     <Reference Include="DOTween50">
       <HintPath>Assets/DOTween113/DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>Assets/DOTween113/DOTween46.dll</HintPath>
     </Reference>
     <Reference Include="LitJson">
       <HintPath>Assets/Resources/LitJson.dll</HintPath>
@@ -265,7 +265,6 @@
     <Compile Include="Assets\Plugins\ShareSDK\Android\WxPayImpl.cs" />
     <Compile Include="Assets\Plugins\ShareSDK\ContentType.cs" />
     <Compile Include="Assets\Plugins\ShareSDK\iOS\iOSImpl.cs" />
-    <Compile Include="Assets\Plugins\ShareSDK\MiniJSON.cs" />
     <Compile Include="Assets\Plugins\ShareSDK\PlatformType.cs" />
     <Compile Include="Assets\Plugins\ShareSDK\ResponseState.cs" />
     <Compile Include="Assets\Plugins\ShareSDK\ShareContent.cs" />
@@ -273,6 +272,7 @@
     <Compile Include="Assets\Plugins\ShareSDK\ShareSDKConfig.cs" />
     <Compile Include="Assets\Plugins\ShareSDK\ShareSDKDevInfo.cs" />
     <Compile Include="Assets\Plugins\ShareSDK\ShareSDKImpl.cs" />
+    <Compile Include="Assets\Plugins\ShareSDK\ShareSDKMiniJSON.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DOTween113\DOTween.XML" />
@@ -290,12 +290,17 @@
     <None Include="Assets\Plugins\Android\ShareSDK\res\drawable\ssdk_weibo_retry_btn_default.xml" />
     <None Include="Assets\Plugins\Android\ShareSDK\res\drawable\ssdk_weibo_retry_btn_press.xml" />
     <None Include="Assets\Plugins\Android\ShareSDK\res\drawable\ssdk_weibo_retry_btn_selector.xml" />
+    <None Include="Assets\Plugins\Android\ShareSDK\res\values-en\ssdk_country_arrays.xml" />
     <None Include="Assets\Plugins\Android\ShareSDK\res\values-en\ssdk_oks_strings.xml" />
     <None Include="Assets\Plugins\Android\ShareSDK\res\values-en\ssdk_strings.xml" />
+    <None Include="Assets\Plugins\Android\ShareSDK\res\values\ssdk_country_arrays.xml" />
     <None Include="Assets\Plugins\Android\ShareSDK\res\values\ssdk_instapaper_strings.xml" />
     <None Include="Assets\Plugins\Android\ShareSDK\res\values\ssdk_oks_color_drawables.xml" />
     <None Include="Assets\Plugins\Android\ShareSDK\res\values\ssdk_oks_strings.xml" />
     <None Include="Assets\Plugins\Android\ShareSDK\res\values\ssdk_strings.xml" />
+    <None Include="Assets\Plugins\iOS\ShareSDK\Editor\SDK\ShareSDK\Support\Optional\ShareSDKConfigFile.bundle\ShareContent.xml" />
+    <None Include="Assets\Plugins\iOS\ShareSDK\Editor\SDK\ShareSDK\Support\Optional\ShareSDKConfigFile.bundle\ShareSDK.xml" />
+    <None Include="Assets\Plugins\iOS\ShareSDK\Editor\SDK\ShareSDK\Support\PlatformSDK\WeChatSDK\README.txt" />
     <None Include="Assets\Resources\Fonts\fnt.fnt" />
     <None Include="Assets\Resources\shaders\DefaultGrey.shader" />
   </ItemGroup>

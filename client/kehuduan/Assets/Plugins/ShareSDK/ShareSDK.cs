@@ -20,8 +20,8 @@ namespace cn.sharesdk.unity3d
 		public string appKey = "moba6b6c6d6";
 		public string appSecret = "b89d2427a3bc7ad1aea1e1e8c1d36bf3";
 		 #elif UNITY_IPHONE
-		public string appKey = "iosv1101";
-		public string appSecret = "";
+		public string appKey = "moba6b6c6d6";
+		public string appSecret = "b89d2427a3bc7ad1aea1e1e8c1d36bf3";
 		 #endif
 
 		public DevInfoSet devInfo;
@@ -48,7 +48,7 @@ namespace cn.sharesdk.unity3d
 				{
 					if ("type".EndsWith(field.Name)) {
 						continue;
-					} else if ("Enable".EndsWith(field.Name) || "ShareByAppClient".EndsWith(field.Name) || "BypassApproval".EndsWith(field.Name)) {
+					} else if ("Enable".EndsWith(field.Name) || "ShareByAppClient".EndsWith(field.Name) || "BypassApproval".EndsWith(field.Name) || "WithShareTicket".EndsWith(field.Name)) {
 						table.Add(field.Name, Convert.ToString(field.GetValue(info)).ToLower());
 					} else {
 						table.Add(field.Name, Convert.ToString(field.GetValue(info)));
