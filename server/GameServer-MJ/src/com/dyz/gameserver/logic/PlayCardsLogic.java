@@ -221,36 +221,11 @@ public class PlayCardsLogic {
 	 */
 	public void initCard(RoomVO value) {
 		roomVO = value;
-		if(roomVO.getRoomType() == 1){
-			//转转麻将
-			/*paiCount = 27;
-			if(roomVO.getHong()){
-				paiCount = 33;
-			}*/
-			paiCount = 33;
-		}else if(roomVO.getRoomType() == 2){
-			//划水麻将
-			if(roomVO.isAddWordCard()) {
-				paiCount = 34;
-			}else{
-				paiCount = 27;
-			}
-		}else if(roomVO.getRoomType() == 3){
-			//长沙麻将
-			paiCount = 27;
-		}
+		paiCount = roomVO.getCardNumber();
+		
 		listCard = new ArrayList<Integer>();
 		for (int i = 0; i < paiCount; i++) {
 			for (int k = 0; k < 4; k++) {
-				/*
-				if(roomVO.getHong() && i == 27) {
-					listCard.add(31);
-				}else if(roomVO.getHong() && i >= 28){
-					break;
-				}else{
-					listCard.add(i);
-				}
-				*/
 				listCard.add(i);
 			}
 		}
@@ -262,6 +237,8 @@ public class PlayCardsLogic {
 		shuffleTheCards();
 		//发牌
 		dealingTheCards();
+		//属性显示剩余牌数目
+		this.UpdateLeavedCardNumber();
 	}
 
 	/**
@@ -318,6 +295,8 @@ public class PlayCardsLogic {
         int tempPoint = getNextCardPoint();
     	//System.out.println("摸牌："+tempPoint+"----上一家出牌"+putOffCardPoint+"--摸牌人索引:"+pickAvatarIndex);
         if(tempPoint != -1) {
+        	UpdateLeavedCardNumber();
+        	
         	//回放记录
         	PlayRecordOperation(pickAvatarIndex,tempPoint,2,-1,null,null);
         	
@@ -355,12 +334,6 @@ public class PlayCardsLogic {
             	sb.append("hu,");
             }
             if(sb.length()>2){
-            	//System.out.println(sb);
-               /* try {
-                	Thread.sleep(300);
-                }catch (InterruptedException e) {
-                	e.printStackTrace();
-                }*/
 				avatar.getSession().sendMsg(new ReturnInfoResponse(1, sb.toString()));
             }
             
@@ -386,6 +359,8 @@ public class PlayCardsLogic {
         currentCardPoint = tempPoint;
     	//System.out.println("摸牌!--"+tempPoint);
         if(tempPoint != -1) {
+        	UpdateLeavedCardNumber();
+        	
         	//int avatarIndex = playerList.indexOf(avatar); // 2016-8-2注释
         	pickAvatarIndex = playerList.indexOf(avatar);
         	// Avatar avatar = playerList.get(pickAvatarIndex);
@@ -638,21 +613,9 @@ public class PlayCardsLogic {
         				penAvatar.add(ava);
         				sb.append("peng:"+curAvatarIndex+":"+putOffCardPoint+",");
         			}
-//        			if ( roomVO.getRoomType() == 3  && ava.checkChi(putOffCardPoint) && getNextAvatarIndex() == i){
-//        				//(长沙麻将)只有下一家才能吃
-//        				chiAvatar.add(ava);
-//        				sb.append("chi");
-//        			}
+
         			if(sb.length()>1){
-        				/*try {
-        		 			Thread.sleep(300);
-        		 		} catch (InterruptedException e) {
-        		 			e.printStackTrace();
-        		 		}*/
-        				//system.out.println(sb);
         				ava.getSession().sendMsg(new ReturnInfoResponse(1, sb.toString()));
-//        				responseMsg = new ReturnInfoResponse(1, sb.toString());
-//        				lastAvtar = ava;
         			}
         		}
         	}
@@ -673,21 +636,10 @@ public class PlayCardsLogic {
 						penAvatar.add(ava);
 						sb.append("peng:"+curAvatarIndex+":"+putOffCardPoint+",");
 					}
-//					if ( roomVO.getRoomType() == 3  && ava.checkChi(putOffCardPoint) && getNextAvatarIndex() == i){
-//						//(长沙麻将)只有下一家才能吃
-//						chiAvatar.add(ava);
-//						sb.append("chi");
-//					}
+//					
 					if(sb.length()>1){
-						//system.out.println(sb);
-						/*try {
-        		 			Thread.sleep(300);
-        		 		} catch (InterruptedException e) {
-        		 			e.printStackTrace();
-        		 		}*/
 						ava.getSession().sendMsg(new ReturnInfoResponse(1, sb.toString()));
-//						responseMsg = new ReturnInfoResponse(1, sb.toString());
-//						lastAvtar = ava;
+
 					}
 	        	}
 	        }
@@ -1662,6 +1614,22 @@ public class PlayCardsLogic {
         }
         return -1;
     }
+    
+    public int getLeavedCardNumber(){
+    	return listCard.size() - nextCardindex;
+        
+    }
+    
+    public void UpdateLeavedCardNumber(){
+    	
+    	StringBuffer sb = new StringBuffer();
+        sb.append("leaved:" + getLeavedCardNumber());
+    	
+    	for(int i=0;i<playerList.size();i++){
+            playerList.get(i).getSession().sendMsg(new ReturnInfoResponse(1, sb.toString()));
+        }
+    }
+    
     private void checkQiShouFu(){
     	for(int i=0;i<playerList.size();i++){
     		//判断是否有起手胡，有则加入到集合里面
@@ -2192,10 +2160,15 @@ public class PlayCardsLogic {
     public void returnBackAction(Avatar avatar){
     		RoomVO room = roomVO.clone();
     		List<AvatarVO> lists = new ArrayList<AvatarVO>();
+    		boolean lostMyself = true;
     		for (int i = 0; i < playerList.size(); i++) {
     			if(playerList.get(i).getUuId() != avatar.getUuId()){
     				//给其他三个玩家返回重连用户信息
     				playerList.get(i).getSession().sendMsg(new OtherBackLoginResonse(1, avatar.getUuId()+""));
+    			}
+    			else
+    			{
+    				lostMyself = false;
     			}
     			lists.add(playerList.get(i).avatarVO);
     		}
@@ -2222,25 +2195,16 @@ public class PlayCardsLogic {
     				playerLists.add(avatarVo);
     			}
     		}
-    		if(playerList.size() == 3){
+    		
+    		if(lostMyself)
+    		{
     			playerList.add(avatar);
-    		}
-    		if(playerLists.size() == 3){
     			playerLists.add(avatar.avatarVO);
     		}
-    		/*else{
-    		for (int i = 0; i < playerLists.size(); i++) {
-				if(playerLists.get(i).getAccount().getUuid() == avatar.getUuId() ){
-					playerLists.remove(i);
-					playerLists.add(avatar.avatarVO);;
-				}
-			}
-    	}*/
+    		
     		room.setPlayerList(playerLists);
     		avatar.getSession().sendMsg(new BackLoginResponse(1, room));
     		//lastAvtar.getSession().sendMsg(responseMsg);
-    		
-    	
     }
     /**
      * 断线重连返回最后操作信息
@@ -2300,22 +2264,15 @@ public class PlayCardsLogic {
     			//system.out.println("点杠");
     		}
     	}
+    	//游戏轮数
+		int roundNum = RoomManager.getInstance().getRoom(avatar.getRoomVO().getRoomId()).getCount();
+		json.put("gameRound", roundNum);//游戏轮数
+		//桌面剩余牌数
+		json.put("surplusCards", getLeavedCardNumber());
+    	
     	if(sb.length()>1){
-			////system.out.println(sb);
 			//该自己杠/胡/碰
-			//游戏轮数
-			int roundNum = RoomManager.getInstance().getRoom(avatar.getRoomVO().getRoomId()).getCount();
-    		json.put("gameRound", roundNum);//游戏轮数
-    		//桌面剩余牌数
-    		json.put("surplusCards", listCard.size() - nextCardindex);
-    		//System.out.println(json.toString());
     		avatar.getSession().sendMsg(new ReturnOnLineResponse(1, json.toString()));
-			/*try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}*/
-			//System.out.println(sb);
 			avatar.getSession().sendMsg(new ReturnInfoResponse(1, sb.toString()));
 		}
     	else{
@@ -2332,12 +2289,6 @@ public class PlayCardsLogic {
         		json.put("pickAvatarIndex", pickAvatarIndex);//当前摸牌人的索引
         		json.put("putOffCardPoint", putOffCardPoint);//当前出的牌的点数
     		}
-    		//游戏局数
-    		int roundNum = RoomManager.getInstance().getRoom(avatar.getRoomVO().getRoomId()).getCount();
-    		json.put("gameRound", roundNum);
-    		//桌面剩余牌数
-    		json.put("surplusCards", listCard.size() - nextCardindex);
-    		//System.out.println(json.toString());
     		avatar.getSession().sendMsg(new ReturnOnLineResponse(1, json.toString()));
     	}
     	

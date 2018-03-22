@@ -75,6 +75,21 @@ public class RoomLogic {
         if(roomVO != null){
         	count = roomVO.getRoundNumber();
         }
+        
+        if(roomVO.getRoomType() == 1){
+			//清水麻将
+        	roomVO.setCardNumber(33);
+		}else if(roomVO.getRoomType() == 2){
+			//划水麻将
+			if(roomVO.isAddWordCard()) {
+				roomVO.setCardNumber(34);
+			}else{
+				roomVO.setCardNumber(27);
+			}
+		}else if(roomVO.getRoomType() == 3){
+			//长沙麻将
+			roomVO.setCardNumber(27);
+		}
     }
 
     /**
@@ -131,15 +146,8 @@ public class RoomLogic {
     			}
     			return false;
     		}else {
-    			/*//二期优化注释  for (int i = 0; i < playerList.size(); i++) {
-    				if(avatar.getUuId() == playerList.get(i).getUuId()){
-    					//如果用户在本房间中，则直接返回房间信息
-    					returnBackAction(avatar);
-    					return true;
-    				}
-				}*/
+    			
     			avatar.avatarVO.setMain(false);
-    			//avatar.avatarVO.setIsReady(false);
     			avatar.avatarVO.setRoomId(roomVO.getRoomId());//房间号也放入avatarvo中
     			avatar.setRoomVO(roomVO);
     			noticJoinMess(avatar);//通知房间里面的其他几个玩家
@@ -153,24 +161,7 @@ public class RoomLogic {
     				e.printStackTrace();
     			}
     			return true;
-    			/* if(playerList.size() == 4){
-            	//当人数4个时自动开始游戏
-                //checkCanBeStartGame();当最后一个人加入时，不需要检测其他玩家是否准备(一局结束后开始才需要检测玩家是否准备)
-                Timer timer = new Timer();
-                TimerTask tt=new TimerTask() {
-                    @Override
-                    public void run() {
-                    	createAvator.updateRoomCard(-1);//开始游戏，减去房主的房卡
-                    	try {
-							Thread.sleep(3000);
-							startGameRound();
-						} catch (InterruptedException e) {
-							e.printStackTrace();
-						}
-                    }
-                };
-                timer.schedule(tt, 1000);
-            }*/
+    			
     		}
     	}
     }
@@ -497,20 +488,7 @@ public class RoomLogic {
 	        	playCardsLogic.setPickAvatarIndex(playerList.indexOf(avatar));
 	        }
 	        else{
-	        	/*
-	        	 *修改为 第一局结束 才扣房卡
-	        	 * //第一局 减房卡
-	        	int currentCard = 0;
-	        	if(roomVO.getRoundNumber() == 4){
-	        		currentCard = -1;
-	        	}
-	        	else{
-	        		currentCard = 0 - roomVO.getRoundNumber()/8;
-	        	}
-	        	createAvator.updateRoomCard(currentCard);//开始游戏，减去房主的房卡,同时更新缓存里面对象的房卡(已经在此方法中修改)
 	        	
-	        	int roomCard = createAvator.avatarVO.getAccount().getRoomcard();
-	        	createAvator.getSession().sendMsg(new RoomCardChangerResponse(1,roomCard));*/
 	        	playCardsLogic = new PlayCardsLogic();
 	        	//第一局  摸牌玩家索引初始值为0
 	        	playCardsLogic.setPickAvatarIndex(0);
@@ -519,30 +497,6 @@ public class RoomLogic {
 			playCardsLogic.setCreateRoomRoleId(createAvator.getUuId());
 	        playCardsLogic.setPlayerList(playerList);
 	        playCardsLogic.initCard(roomVO);
-	        //system.out.println("下局开始时人数："+playerList.size());
-	        //创建房间信息，游戏记录信息
-			//RoomInfoService.getInstance().createRoomInfo(roomVO);
-					
-	        
-	       /* int count = 0;
-	        if(roomVO.getRoomType() ==1){
-	        	//划水麻将，发了牌之后剩余的牌数量
-	        	if(roomVO.getHong()){
-	        		count = 4*28-13*4-1;
-	        	}
-	        	else{
-	        		count = 4*27-13*4-1;
-	        	}
-	        }
-	        else if(roomVO.getRoomType() ==2){
-	        	//划水麻将
-	        	
-	        }
-	        else{
-	        	//长沙麻将
-	        	
-	        }*/
-	        //playCardsLogic.updateSurplusCardCount(count);
 	        Avatar avatar;
 	        Account account ;
 	        for(int i=0;i<playerList.size();i++){
@@ -560,6 +514,7 @@ public class RoomLogic {
 	            	avatar.avatarVO.getAccount().setIsgame("1");
 	            }
 	        }
+	        
         }
     }
     

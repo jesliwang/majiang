@@ -123,6 +123,13 @@ public class EnterRoomScript : MonoBehaviour{
 			GlobalDataScript.roomVo.xiaYu = GlobalDataScript.roomJoinResponseData.xiaYu;
 			GlobalDataScript.roomVo.ziMo = GlobalDataScript.roomJoinResponseData.ziMo;
 			GlobalDataScript.roomVo.magnification = GlobalDataScript.roomJoinResponseData.magnification;
+
+            GlobalDataScript.roomVo.ma = GlobalDataScript.roomJoinResponseData.ma;
+            GlobalDataScript.roomVo.shengyu20 = GlobalDataScript.roomJoinResponseData.shengyu20;
+            GlobalDataScript.roomVo.showTingPai = GlobalDataScript.roomJoinResponseData.showTingPai;
+            GlobalDataScript.roomVo.threefornext = GlobalDataScript.roomJoinResponseData.threefornext;
+            GlobalDataScript.roomVo.cardNumber = GlobalDataScript.roomJoinResponseData.cardNumber;
+
 			GlobalDataScript.surplusTimes = GlobalDataScript.roomJoinResponseData.roundNumber;
 			GlobalDataScript.loginResponseData.roomId = GlobalDataScript.roomJoinResponseData.roomId;
 			//loadPerfab("Prefab/Panel_GamePlay");

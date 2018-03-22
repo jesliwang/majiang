@@ -23,6 +23,7 @@ namespace AssemblyCSharp
         public bool shengyu20;
         public bool threefornext;
         public bool showTingPai;
+        public int cardNumber;
 		public RoomJoinResponseVo ()
 		{
 		}

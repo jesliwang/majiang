@@ -74,6 +74,11 @@ public class RoomVO {
     private boolean showTingPai;
     
     /**
+     * 房间牌的总个数
+     */
+    private int cardNumber;
+    
+    /**
      * 房间名
      */
     public String name;
@@ -294,5 +299,13 @@ public class RoomVO {
 
     public void setShowTingPai(boolean showTingPai) {
         this.showTingPai = showTingPai;
+    }
+    
+    public int getCardNumber(){
+    	return cardNumber;
+    }
+    
+    public void setCardNumber(int cardNumber){
+    	this.cardNumber = cardNumber;
     }
 }

@@ -310,16 +310,7 @@ public class CrateRoomSettingScript : MonoBehaviour {
 			GlobalDataScript.loginResponseData.main = true;
 			GlobalDataScript.loginResponseData.isOnLine = true;
 
-			//SceneManager.LoadSceneAsync(1);
-			/*
-			if (gameSence == null) {
-				gameSence = Instantiate (Resources.Load ("Prefab/Panel_GamePlay")) as GameObject;
-				gameSence.transform.parent = GlobalDataScript.getInstance ().canvsTransfrom;
-				gameSence.transform.localScale = Vector3.one;
-				gameSence.GetComponent<RectTransform> ().offsetMax = new Vector2 (0f, 0f);
-				gameSence.GetComponent<RectTransform> ().offsetMin = new Vector2 (0f, 0f);
-				gameSence.GetComponent<MyMahjongScript> ().createRoomAddAvatarVO (GlobalDataScript.loginResponseData);
-			}*/
+			
 			GlobalDataScript.gamePlayPanel = PrefabManage.loadPerfab ("Prefab/Panel_GamePlay");
 
 			GlobalDataScript.gamePlayPanel.GetComponent<MyMahjongScript> ().createRoomAddAvatarVO (GlobalDataScript.loginResponseData);

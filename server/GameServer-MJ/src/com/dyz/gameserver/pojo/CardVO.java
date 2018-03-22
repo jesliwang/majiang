@@ -11,8 +11,6 @@ public class CardVO {
     private int twoPoint;//两个吃牌之二
     
     private String type;//代表胡的类型（qiangHu）
-
-    
     
   public int getOnePoint() {
 		return onePoint;

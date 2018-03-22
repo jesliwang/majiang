@@ -57,7 +57,6 @@ public class MyMahjongScript : MonoBehaviour
 	//======================================
 	private int uuid;
 	private float timer = 0;
-	private int LeavedCardsNum;
 	private int MoPaiCardPoint;
 	private List<List<GameObject>> PengGangCardList; //碰杠牌组
 	private List<List<GameObject>> PengGangList_L;
@@ -345,8 +344,6 @@ public class MyMahjongScript : MonoBehaviour
 		setAllPlayerReadImgVisbleToFalse ();
 		initMyCardListAndOtherCard (13,13,13);
 
-		ShowLeavedCardsNumForInit();
-
 		if (curDirString == DirectionEnum.Bottom) {
 			//isSelfPickCard = true;
 			GlobalDataScript.isDrag = true;
@@ -367,53 +364,6 @@ public class MyMahjongScript : MonoBehaviour
 		liujuEffectGame.SetActive (false);
 	}
 
-
-	public void ShowLeavedCardsNumForInit()
-	{
-		RoomCreateVo roomCreateVo = GlobalDataScript.roomVo;
-
-		bool hong = (bool) roomCreateVo.hong  ;
-		int RoomType = (int) roomCreateVo.roomType;
-		if (RoomType == 1)//转转麻将
-		{
-			LeavedCardsNum = 108;
-            if (hong)
-			{
-				LeavedCardsNum = 132;
-			}
-		}
-		/*else if (RoomType == 2)//划水麻将
-		{
-			LeavedCardsNum = 108;
-			if (roomCreateVo.addWordCard) {
-				LeavedCardsNum = 136;
-			}
-		}
-		else if (RoomType == 3)
-		{
-			LeavedCardsNum = 108;
-		}*/
-        LeavedCardsNum = LeavedCardsNum - 13*roomCreateVo.totalPlayers - 1;
-        LeavedCastNumText.text = string.Format("剩{0,2}张", LeavedCardsNum);
-
-
-		/**
-		GlobalDataScript.roomVo.roundNumber--;
-		StartRoundNum = roomCreateVo.roundNumber;
-		LeavedRoundNumText.text = StartRoundNum + "";
-		*/
-	}
-
-	public void CardsNumChange()
-	{
-		LeavedCardsNum--;
-		if (LeavedCardsNum < 0)
-		{
-			LeavedCardsNum = 0;
-		}
-        LeavedCastNumText.text = string.Format("剩{0,2}张", LeavedCardsNum);
-	}
-
 	/// <summary>
 	/// 别人摸牌通知
 	/// </summary>
@@ -427,7 +377,6 @@ public class MyMahjongScript : MonoBehaviour
 		MyDebug.Log ("otherPickCard avatarIndex = "+avatarIndex);
 		otherPickCardAndCreate (avatarIndex);
 		SetDirGameObjectAction ();
-		CardsNumChange();
 	}
 
 	private void otherPickCardAndCreate(int avatarIndex){
@@ -475,7 +424,6 @@ public class MyMahjongScript : MonoBehaviour
 	/// <param name="response">Response.</param>
 	public void pickCard(ClientResponse response)
 	{
-
 		UpateTimeReStart ();
 		CardVO cardvo = JsonMapper.ToObject<CardVO>(response.message);
 		MoPaiCardPoint = cardvo.cardPoint;
@@ -486,11 +434,10 @@ public class MyMahjongScript : MonoBehaviour
 		moPai ();
 		curDirString = DirectionEnum.Bottom;
 		SetDirGameObjectAction ();
-		CardsNumChange();
-		//checkHuOrGangOrPengOrChi (MoPaiCardPoint,2);
 		GlobalDataScript.isDrag = true;
 	//	isSelfPickCard = true;
 	}
+
 	/// <summary>
 	/// 胡，杠，碰，吃，pass按钮显示.
 	/// </summary>
@@ -595,7 +542,13 @@ public class MyMahjongScript : MonoBehaviour
                 }
 
             }
-                
+
+            if(strs[i].Contains("leaved"))
+            {
+                string[] datas = strs[i].Split(new char[1] { ':' });
+                int leaved = int.Parse(datas[1]);
+                LeavedCastNumText.text = string.Format("剩{0,2}张", leaved);
+            }    
 
 			if(strs[i].Contains("gang")){
 				
@@ -967,7 +920,7 @@ public class MyMahjongScript : MonoBehaviour
 		else if (outDir == DirectionEnum.Top)
 		{
 			path = "Prefab/ThrowCard/TopAndBottomCard";
-			poisVector3 = new Vector3(39f - tableCardList[2].Count%13*36, (int)(tableCardList[2].Count/13)*54f - 59);
+			poisVector3 = new Vector3(39f - tableCardList[2].Count%13*36, (int)(tableCardList[2].Count/13)*54f - 3);
 		}
 		else if (outDir == DirectionEnum.Left)
 		{
@@ -2042,47 +1995,7 @@ public class MyMahjongScript : MonoBehaviour
 		GlobalDataScript.surplusTimes = roomvo.roundNumber;
 	//	LeavedRoundNumText.text = GlobalDataScript.surplusTimes + "";
         string str = "房间号：" + roomvo.roomId ;
-		/*string str = "房间号：\n"+roomvo.roomId+"\n";
-		str += "圈数："+roomvo.roundNumber+"\n";
-
-		if (roomvo.roomType == 3) {
-			str += "长沙麻将\n";
-		} else {
-			if (roomvo.hong) {
-				str += "红中麻将\n";
-			} else {
-				if (roomvo.roomType == 1) {
-					str += "转转麻将\n";
-				} else if (roomvo.roomType == 2){
-					str += "划水麻将\n";
-				}else if (roomvo.roomType == 3){
-					str += "长沙麻将\n";
-				}
-			}
-			if (roomvo.ziMo == 1) {
-				str += "只能自摸\n";
-			} else {
-				str += "可抢杠胡\n";
-			}
-			if(roomvo.sevenDouble && roomvo.roomType != GameConfig.GAME_TYPE_HUASHUI){
-				str += "可胡七对\n";
-			}
-
-			if (roomvo.addWordCard) {
-				str += "有风牌\n";
-			}
-			if (roomvo.xiaYu > 0) {
-				str += "下鱼数：" + roomvo.xiaYu+"";
-			}
-
-			if (roomvo.ma > 0) {
-				str += "抓码数：" + roomvo.ma+"";
-			}
-		}
-		if (roomvo.magnification > 0) {
-			str += "倍率：" + roomvo.magnification+"";
-		}
-		*/
+		
 		roomRemark.text = str;
         string moshiText = "";
         if (GlobalDataScript.roomVo.shengyu20)
@@ -2098,6 +2011,8 @@ public class MyMahjongScript : MonoBehaviour
             moshiText += string.Format("{0,12}", "听牌显示");
         }
         MoshiText.text = moshiText;
+
+        LeavedCastNumText.text = "";
 	}
 
 	private void addAvatarVOToList(AvatarVO avatar){
@@ -2620,6 +2535,7 @@ public class MyMahjongScript : MonoBehaviour
             GlobalDataScript.roomVo.shengyu20 = GlobalDataScript.reEnterRoomData.shengyu20;
             GlobalDataScript.roomVo.showTingPai = GlobalDataScript.reEnterRoomData.showTingPai;
             GlobalDataScript.roomVo.threefornext = GlobalDataScript.reEnterRoomData.threefornext;
+            GlobalDataScript.roomVo.cardNumber = GlobalDataScript.reEnterRoomData.cardNumber;
 			setRoomRemark();
 			//设置座位
 
@@ -2647,14 +2563,9 @@ public class MyMahjongScript : MonoBehaviour
 				CustomSocket.getInstance ().sendMsg (new CurrentStatusRequest ());
 			}
 
-
-
 		}
 
 	}
-
-
-
 
 	//恢复其他全局数据
 	private void recoverOtherGlobalData (){
@@ -2662,9 +2573,6 @@ public class MyMahjongScript : MonoBehaviour
 		GlobalDataScript.loginResponseData.account.roomcard = GlobalDataScript.reEnterRoomData.playerList [selfIndex].account.roomcard;//恢复房卡数据，此时主界面还没有load所以无需操作界面显示
 
 	}
-
-
-
 
 	private void dispalySelfhanderCard(){
 		mineList =ToList( GlobalDataScript.reEnterRoomData.playerList [getMyIndexFromList()].paiArray);
@@ -3039,23 +2947,18 @@ public class MyMahjongScript : MonoBehaviour
 		}
 	}
 
-
 	public void returnGameResponse(ClientResponse response){
 		string returnstr = response.message;
-		//JsonData returnJsonData = new JsonData (returnstr);
+
 		//1.显示剩余牌的张数和圈数
 		JsonData returnJsonData = JsonMapper.ToObject(response.message);
 		string surplusCards = returnJsonData["surplusCards"].ToString();
         LeavedCastNumText.text = string.Format("剩{0,2}张", surplusCards);
          
-		LeavedCardsNum = int.Parse(surplusCards);
 		int gameRound =int.Parse( returnJsonData ["gameRound"].ToString ());
 		//LeavedRoundNumText.text =gameRound+ "";
         GlobalDataScript.surplusTimes = gameRound;
         LeavedRoundNumText.text = string.Format("{0,2}/{1,2} 局", GlobalDataScript.surplusTimes, GlobalDataScript.roomVo.roundNumber);
-
-		
-
 
 		int curAvatarIndexTemp = -1;//当前出牌人的索引
 		int pickAvatarIndexTemp = -1; //当前摸牌人的索引
