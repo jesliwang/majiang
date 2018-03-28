@@ -56,6 +56,9 @@ namespace AssemblyCSharp
 		public const int HUPAIALL_RESPONSE = 0x100110;//全局结束通知
         public const int GAVEUP_REQUEST = 0x100015;//放弃（胡，杠，碰，吃）
 
+        public const int TINGPAI_REQUEST = 0x100017;//听牌请求
+        public const int TINGPAI_RESPONE = 0x100018;//听牌通知
+
 		public const int BACK_LOGIN_REQUEST = 0x001001;//掉线后重新登录查询当前牌桌情况请求
 		public const int BACK_LOGIN_RESPONSE= 0x001002;//掉线后重新登录查询当前牌桌情况返回
 

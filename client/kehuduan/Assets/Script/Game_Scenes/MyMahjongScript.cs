@@ -197,6 +197,7 @@ public class MyMahjongScript : MonoBehaviour
 		SocketEventHandle.getInstance().gangCardNotice += otherGang;
 		SocketEventHandle.getInstance ().btnActionShow += actionBtnShow;
 		SocketEventHandle.getInstance ().HupaiCallBack += hupaiCallBack;
+        SocketEventHandle.getInstance().TingpaiCallBack += tipaiCallback;
 		//	SocketEventHandle.getInstance ().FinalGameOverCallBack += finalGameOverCallBack;
 		SocketEventHandle.getInstance ().outRoomCallback += outRoomCallbak;
 		SocketEventHandle.getInstance ().dissoliveRoomResponse += dissoliveRoomResponse;
@@ -224,6 +225,7 @@ public class MyMahjongScript : MonoBehaviour
 		SocketEventHandle.getInstance().gangCardNotice -= otherGang;
 		SocketEventHandle.getInstance ().btnActionShow -= actionBtnShow;
 		SocketEventHandle.getInstance ().HupaiCallBack -= hupaiCallBack;
+        SocketEventHandle.getInstance().TingpaiCallBack -= tipaiCallback;
 		//SocketEventHandle.getInstance ().FinalGameOverCallBack -= finalGameOverCallBack;
 		SocketEventHandle.getInstance ().outRoomCallback -= outRoomCallbak;
 		SocketEventHandle.getInstance ().dissoliveRoomResponse -= dissoliveRoomResponse;
@@ -452,67 +454,45 @@ public class MyMahjongScript : MonoBehaviour
 		}
         Debug.LogError("actionBtn=" + response.message);
 		for (int i = 0; i < strs.Length; i++) {
-			if (strs [i].Equals ("hu")) {
-				btnActionScript.showBtn (1);
-
-			}else if(strs[i].Contains("qianghu")){
-				
-				try{
-					SelfAndOtherPutoutCard = int.Parse( strs[i].Split(new char[1]{':'})[1]);
-				}catch (Exception e){
-				
-				}
-
-				btnActionScript.showBtn (1);
-				isQiangHu = true;
-			}else if(strs[i].Contains("peng")){
-				btnActionScript.showBtn (3);
-				putOutCardPoint =int.Parse(strs [i].Split (new char[1]{ ':' }) [2]);
-
-			}else if(strs[i].Equals("chi")){
-				//btnActionScript.showBtn (3);
-            }
-            else if (strs[i].Contains("unting"))
+            if (strs[i].Equals("hu"))
             {
-                string[] splitIds = strs[i].Split(new char[1] { ':' });
-                GlobalDataScript.isDrag = true;
+                btnActionScript.showBtn(1);
 
-                if(!GlobalDataScript.roomVo.showTingPai)
+            }
+            else if (strs[i].Contains("qianghu"))
+            {
+
+                try
                 {
-                    continue;
+                    SelfAndOtherPutoutCard = int.Parse(strs[i].Split(new char[1] { ':' })[1]);
+                }
+                catch (Exception e)
+                {
+
                 }
 
-                for (int u = 1; u < splitIds.Length; u++)
-                {
-                    // 听牌显示
-                    int uuid = int.Parse(splitIds[u]);
-                    int index = getIndex(uuid);
-                    string dirstr = getDirection(index);
-                    switch (dirstr)
-                    {
-                        case DirectionEnum.Bottom:
-                            playerItems[0].GetComponent<PlayerItemScript>().setTingHide();
-                            break;
-                        case DirectionEnum.Right:
-                            playerItems[1].GetComponent<PlayerItemScript>().setTingHide();
-                            break;
-                        case DirectionEnum.Top:
-                            playerItems[2].GetComponent<PlayerItemScript>().setTingHide();
-                            break;
-                        case DirectionEnum.Left:
-                            playerItems[3].GetComponent<PlayerItemScript>().setTingHide();
-                            break;
+                btnActionScript.showBtn(1);
+                isQiangHu = true;
+            }
+            else if (strs[i].Contains("peng"))
+            {
+                btnActionScript.showBtn(3);
+                putOutCardPoint = int.Parse(strs[i].Split(new char[1] { ':' })[2]);
 
-                    }
-                }
-
+            }
+            else if (strs[i].Equals("chi"))
+            {
+                //btnActionScript.showBtn (3);
             }
             else if (strs[i].Contains("ting"))
             {
+                btnActionScript.showBtn(4);
+
                 string[] splitIds = strs[i].Split(new char[1] { ':' });
                 GlobalDataScript.isDrag = true;
 
-                if (!GlobalDataScript.roomVo.showTingPai)
+                int targetUUid = int.Parse(splitIds[1]);
+                if(!(targetUUid == GlobalDataScript.loginResponseData.account.uuid || GlobalDataScript.roomVo.showTingPai))
                 {
                     continue;
                 }
@@ -540,6 +520,7 @@ public class MyMahjongScript : MonoBehaviour
 
                     }
                 }
+
 
             }
 
@@ -2133,7 +2114,16 @@ public class MyMahjongScript : MonoBehaviour
 		//itemData.cardlist = new int[2][27]{{},{}}
 	}
 
+    public void tingpaiRequest(){
+        CustomSocket.getInstance().sendMsg(new TingpaiRequest(""));
+    }
 
+    private void tipaiCallback(ClientResponse response){
+        
+        btnActionScript.cleanBtnShow();
+       
+        GlobalDataScript.isDrag = true;
+    }
 
 	/**
 	 * 胡牌请求回调

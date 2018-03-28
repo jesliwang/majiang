@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class ButtonActionScript : MonoBehaviour {
+    public GameObject tingBtn;
 	public GameObject huBtn;
 	public GameObject gangBtn;
 	public GameObject pengBtn;
@@ -19,11 +20,9 @@ public class ButtonActionScript : MonoBehaviour {
 	/// <summary>
 	/// Shows the button.
 	/// </summary>
-	/// <param name="type">Type.</param> 1-胡，2-杠，3-碰
+	/// <param name="type">Type.</param> 1-胡，2-杠，3-碰, 4-听
 	public void showBtn(int type){
 		passBtn.SetActive (true);
-
-
 
 		if (type == 1) {
 			huBtn.SetActive (true);
@@ -64,6 +63,10 @@ public class ButtonActionScript : MonoBehaviour {
 				passBtn.SetActive (true);
 			}*/
 		}
+
+        if(type == 4) {
+            tingBtn.SetActive(true);
+        }
 	}
 
 	public void cleanBtnShow(){
@@ -72,6 +75,7 @@ public class ButtonActionScript : MonoBehaviour {
 		pengBtn.SetActive (false);
 		//chiBtn.SetActive (false);
 		passBtn.SetActive (false);
+        tingBtn.SetActive(false);
 
 	}
 }

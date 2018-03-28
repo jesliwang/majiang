@@ -31,6 +31,7 @@ namespace AssemblyCSharp
 		public ServerCallBackEvent FinalGameOverCallBack;//全局结束回调
 	    public ServerCallBackEvent gangCardNotice;//
 		public ServerCallBackEvent btnActionShow;//碰杠行为按钮显示
+        public ServerCallBackEvent TingpaiCallBack;//听牌回调
 
 		public ServerCallBackEvent outRoomCallback;//退出房间回调
 		public ServerCallBackEvent dissoliveRoomResponse;
@@ -191,6 +192,11 @@ namespace AssemblyCSharp
 					HupaiCallBack (response);
 				}
 				break;
+               case APIS.TINGPAI_RESPONE:
+                    if(TingpaiCallBack != null){
+                        TingpaiCallBack(response);
+                    }
+                    break;
 			case APIS.HUPAIALL_RESPONSE:
 				if (FinalGameOverCallBack != null) {
 					FinalGameOverCallBack(response);

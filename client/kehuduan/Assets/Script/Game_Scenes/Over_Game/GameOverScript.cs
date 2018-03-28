@@ -210,19 +210,7 @@ public class GameOverScript : MonoBehaviour {
 
         string headText = "清水麻将\t房主:" + GlobalDataScript.roomAvatarVoList[0].account.nickname + "\t房号:" + GlobalDataScript.roomVo.roomId;
         roomNoText.text = headText;
-		/*if (GlobalDataScript.roomVo.roomType == GameConfig.GAME_TYPE_ZHUANZHUAN) {//转转麻将
-			title.text = "转转麻将";
-		} else if (GlobalDataScript.roomVo.roomType == GameConfig.GAME_TYPE_HUASHUI) {//划水麻将
-			title.text = "划水麻将";
-		} else if (GlobalDataScript.roomVo.roomType == GameConfig.GAME_TYPE_CHANGSHA) {
-			title.text = "长沙麻将";
-		}*/
-
-		/**
-		if (mDispalyFlag == 1) {
-			TitleText.text = "棋牌结束";
-		}
-		*/
+		
         if(mDispalyFlag ==1){
             overHeadObj.SetActive(true);
             normalWinHeadObj.SetActive(false);
@@ -266,19 +254,6 @@ public class GameOverScript : MonoBehaviour {
 		}
 		return null;
 	}
-
-	/*
-	private AvatarVO getAvatar(int uuid){
-		if (mAvatarvoList != null && mAvatarvoList.Count > 0) {
-			for (int i = 0; i < mAvatarvoList.Count; i++) {
-				if (mAvatarvoList [i].account.uuid == uuid) {
-					return mAvatarvoList [i];
-				}
-			}
-		}
-		return null;
-	}
-*/
 
 	private void setFinalContent(){
 		GlobalDataScript.finalGameEndVo.totalInfo [0].setIsWiner (true);

@@ -376,6 +376,13 @@ public class RoomLogic {
         playCardsLogic.gaveUpAction(avatar);
     }
 
+    /**听牌放弃
+     * 
+     */
+    public void tingPaiAction(Avatar avatar){
+    	playCardsLogic.tingPaiAction(avatar);
+    }
+    
     /**
      * 出牌
      * @return
