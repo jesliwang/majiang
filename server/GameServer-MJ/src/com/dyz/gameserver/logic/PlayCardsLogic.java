@@ -648,29 +648,33 @@ public class PlayCardsLogic {
         			sb = new StringBuffer();
         			//判断吃，碰， 胡 杠的时候需要把以前吃，碰，杠胡的牌踢出再计算
         			if(ava.canHu  && checkAvatarIsHuPai(ava,putOffCardPoint,"chu")){
-        				//胡牌状态为可胡的状态时才行
-        				huAvatar.add(ava);
-        				sb.append("hu,");
         				
         				// TODO: 如果停牌中，直接胡
         				if(ava.inTing)
         				{
         					huPai(ava, putOffCardPoint, "");
         				}
+        				else
+        				{
+        					//胡牌状态为可胡的状态时才行
+            				huAvatar.add(ava);
+            				sb.append("hu,");
+        				}
         			}
-        			if (ava.checkGang(putOffCardPoint)) {
+        			if ((!ava.inTing) && ava.checkGang(putOffCardPoint)) {
         				gangAvatar.add(ava);
         				//同时传会杠的牌的点数
         				sb.append("gang:"+putOffCardPoint+",");
         			}
-        			if (ava.checkPeng(putOffCardPoint)) {
+        			if ((!ava.inTing) && ava.checkPeng(putOffCardPoint)) {
         				penAvatar.add(ava);
         				sb.append("peng:"+curAvatarIndex+":"+putOffCardPoint+",");
         			}
-
-        			if(sb.length()>1){
+        			
+    				if(sb.length()>1){
         				ava.getSession().sendMsg(new ReturnInfoResponse(1, sb.toString()));
         			}
+        			
         		}
         	}
         }
