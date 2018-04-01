@@ -109,7 +109,6 @@ public class CustomSocket{
             else
             {
 			//	showMessageTip("服务器断开连接，请重新运行程序或稍后再试");
-				MyDebug.Log("22222222222222222222222222222");
 				isConnected = false;
 				SocketEventHandle.getInstance ().noticeDisConect ();
 				//ReConnectScript.getInstance().ReConnectToServer(); 
@@ -119,7 +118,6 @@ public class CustomSocket{
         catch(Exception ex)
         {
 			MyDebug.Log(ex.ToString());
-			MyDebug.Log("33333333333333333333333333");
 		//	showMessageTip("服务器断开连接，请重新运行程序或稍后再试");
 			isConnected = false;
 			SocketEventHandle.getInstance ().noticeDisConect ();

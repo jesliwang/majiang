@@ -24,9 +24,11 @@ public class LoginSystemScript : MonoBehaviour {
     public GameObject PanelSafeGame;
 
 	void Start () {
+        (this.transform as RectTransform).sizeDelta = new Vector2(1136, 640);
         
         DOTween.Init(false, true, LogBehaviour.Default);
-        PanelSafeGame.GetComponent<CanvasGroup>().DOFade(0, 1.0f).SetDelay(1.0f).OnComplete(FadeOutSafeGame);
+        if(null != PanelSafeGame)
+            PanelSafeGame.GetComponent<CanvasGroup>().DOFade(0, 1.0f).SetDelay(1.0f).OnComplete(FadeOutSafeGame);
 
 		//shareSdk.showUserHandler = getUserInforCallback;//注册获取用户信息回调
 		CustomSocket.hasStartTimer = false;
