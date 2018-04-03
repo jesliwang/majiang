@@ -364,6 +364,9 @@ public class MyMahjongScript : MonoBehaviour
 		live2.transform.gameObject.SetActive (true);
 		centerImage.transform.gameObject.SetActive (true);
 		liujuEffectGame.SetActive (false);
+
+        for (int i = 0; i < 4; i++)
+            playerItems[i].GetComponent<PlayerItemScript>().setTingHide();
 	}
 
 	/// <summary>

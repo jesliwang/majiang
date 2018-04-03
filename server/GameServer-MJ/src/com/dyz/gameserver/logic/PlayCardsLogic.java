@@ -1238,6 +1238,25 @@ public class PlayCardsLogic {
    	 	}
     	if(huAvatar.size()==0 && numb == 1 ){
     		numb++;
+    		
+    		if(bankerAvatar != avatar)
+    		{
+    			int index = 0;
+    			for(;index < playerList.size(); index++)
+        		{
+        			if(playerList.get(index).avatarVO.isMain())
+        			{
+        				playerList.get(index).avatarVO.setMain(false);
+        				break;
+        			}
+        		}
+    			index = (index + 1) % playerList.size();
+    			bankerAvatar = playerList.get(index);
+    			playerList.get(index).avatarVO.setMain(true);
+    		}
+    		
+    		
+    		/*
     		//所有人胡完
     		if(huCount >= 2){
     			//重新分配庄家，下一局点炮的玩家坐庄
@@ -1264,6 +1283,7 @@ public class PlayCardsLogic {
     				}
     			}
     		}
+    		*/
     		//更新roomlogic的PlayerList信息
     		RoomManager.getInstance().getRoom(playerList.get(0).getRoomVO().getRoomId()).setPlayerList(playerList);
     		//一局牌胡了，返回这一局的所有数据吃，碰， 杠，胡等信息
@@ -1843,7 +1863,7 @@ public class PlayCardsLogic {
         //根据不同的游戏类型进行不用的判断
         if(roomVO.getRoomType() == 1){
         	//转转麻将
-        	return checkHuZZhuan(avatar);
+        	return checkHuZZhuan(avatar, cardIndex);
         }
         else if(roomVO.getRoomType() == 2){
         	//划水麻将
@@ -1898,7 +1918,14 @@ public class PlayCardsLogic {
 		4:是否抓码
        	5:是否可胡七小对  
      */
-    public boolean checkHuZZhuan(Avatar avatar){
+    public boolean checkHuZZhuan(Avatar avatar, Integer cardIndex){
+    	for(int i = 0 ; i < avatar.avatarVO.getChupais().size(); i++)
+    	{
+    		if(avatar.avatarVO.getChupais().get(i) == cardIndex) return false;
+    	}
+    		
+    	
+    	
     	int [][] paiList =  avatar.getPaiArray();
     	//不需要移除掉碰，杠了的牌组，在判断是否胡的时候就应判断了
     	//paiList  = cleanGangAndPeng(paiList,avatar);
