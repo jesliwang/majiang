@@ -75,6 +75,7 @@ public class HuReturnObjectVO {
 	 * @param score 分数（划水麻将则是番数）
 	 */
 	public synchronized void updateGangAndHuInfos(String type , int score) {
+		System.out.println("type=" + type + ",score=" + score);
 		ArrayList<Integer> listNew = new ArrayList<Integer>();
 		ArrayList<Integer> list = gangAndHuInfos.get(type);
 		if(list == null || list.size() <= 0){
@@ -127,6 +128,7 @@ public class HuReturnObjectVO {
 	//更新总分数
 	private void updateTotalScore(int score) {
 		totalScore = totalScore +score;
+		System.out.println("totalscore=" + totalScore);
 	}
 	
 	

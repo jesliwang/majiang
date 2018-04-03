@@ -652,6 +652,7 @@ public class PlayCardsLogic {
         				// TODO: 如果停牌中，直接胡
         				if(ava.inTing)
         				{
+        					huAvatar.add(ava);
         					huPai(ava, putOffCardPoint, "");
         				}
         				else
@@ -979,13 +980,13 @@ public class PlayCardsLogic {
     					 for (Avatar ava : playerList) {
     						 if(ava.getUuId() == avatar.getUuId()){
     							 //修改玩家整个游戏总分和杠的总分
-    							 avatar.avatarVO.getHuReturnObjectVO().updateGangAndHuInfos(recordType,score*3);
+    							 //avatar.avatarVO.getHuReturnObjectVO().updateGangAndHuInfos(recordType,score*3);
     							 //整个房间统计每一局游戏 杠，胡的总次数
     							 roomVO.updateEndStatistics(ava.getUuId()+"", endStatisticstype, 1);
     						 }
     						 else{
     							 //修改其他三家的分数
-    							 ava.avatarVO.getHuReturnObjectVO().updateGangAndHuInfos(recordType,-1*score);
+    							 //ava.avatarVO.getHuReturnObjectVO().updateGangAndHuInfos(recordType,-1*score);
     						 }
     					 }
     					 flag = true;
@@ -1032,9 +1033,9 @@ public class PlayCardsLogic {
     					 }
     					 
     					 //减点杠玩家的分数
-    					 playerList.get(curAvatarIndex).avatarVO.getHuReturnObjectVO().updateGangAndHuInfos(recordType, -1*score);
+    					 //playerList.get(curAvatarIndex).avatarVO.getHuReturnObjectVO().updateGangAndHuInfos(recordType, -1*score);
     					 //增加杠家的分数
-    					 avatar.avatarVO.getHuReturnObjectVO().updateGangAndHuInfos(recordType, score);
+    					 //avatar.avatarVO.getHuReturnObjectVO().updateGangAndHuInfos(recordType, score);
     					 //整个房间统计每一局游戏 杠，胡的总次数
     					 roomVO.updateEndStatistics(avatar.getUuId()+"", endStatisticstype, 1);
     				 }
@@ -1163,6 +1164,7 @@ public class PlayCardsLogic {
     			allMas = sb.toString();
     		}
         }
+    	System.out.println("huavatar.size=" + huAvatar.size());
      if(huAvatar.size() > 0) {	
    		 if(huAvatar.contains(avatar)){
     			//if(playerList.get(pickAvatarIndex).getUuId() != avatar.getUuId()){
