@@ -35,8 +35,6 @@ public class Avatar implements GameObj {
     
     //当前玩家能否吃
     public boolean canHu = true;
-    //听牌中
-    public boolean  inTing= false;
     
     public boolean qiangHu = true;
     /**

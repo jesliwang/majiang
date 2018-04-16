@@ -1,0 +1,39 @@
+LICENSE:      of this License, Derivative Works shall not include works that remain
+Binary file WebRoot/WEB-INF/classes/test/java/Test.class matches
+Binary file WebRoot/WEB-INF/classes/test/java/Client.class matches
+Binary file WebRoot/WEB-INF/classes/test/java/Client2.class matches
+Binary file WebRoot/WEB-INF/classes/com/dyz/gameserver/net/codec/GameMsgDecoder.class matches
+Binary file WebRoot/WEB-INF/classes/com/dyz/gameserver/bootstrap/GameServer.class matches
+Binary file WebRoot/WEB-INF/classes/com/dyz/gameserver/commons/initial/AppCf.class matches
+WebRoot/WEB-INF/classes/com/dyz/gameserver/logic/PlayCardsLogic.java.rej:         if (Remain(paiList) == 0) {
+Binary file WebRoot/WEB-INF/classes/com/dyz/gameserver/pojo/AvatarVO.class matches
+Binary file WebRoot/WEB-INF/classes/com/dyz/persist/util/DateUtil.class matches
+Binary file WebRoot/WEB-INF/classes/com/dyz/persist/util/Naizi.class matches
+Binary file WebRoot/WEB-INF/classes/com/dyz/persist/util/NormalHuPai.class matches
+Binary file WebRoot/WEB-INF/classes/com/dyz/persist/util/Tesxt.class matches
+Binary file WebRoot/WEB-INF/classes/com/dyz/persist/util/StringUtil.class matches
+Binary file WebRoot/WEB-INF/lib/mybatis-3.2.3.jar matches
+hs_err_pid8672.log:Event: 9161.451 Thread 0x000000000c20a800  273             java.nio.Buffer::remaining (10 bytes)
+hs_err_pid8672.log:Event: 9221.449 Thread 0x000000000c20e000  274             org.apache.mina.core.buffer.AbstractIoBuffer::remaining (15 bytes)
+src/test/java/Client.java:    public static void main(String[] args) {  
+src/test/java/Client2.java:    public static void main(String[] args) {  
+src/test/java/Test.java:	public static void main(String[] args) {
+src/com/dyz/gameserver/net/codec/GameMsgDecoder.java:	//	logger.info("iobuffer.remaining()   =   "+iobuffer.remaining());
+src/com/dyz/gameserver/net/codec/GameMsgDecoder.java:			if(iobuffer.remaining()<(MsgProtocol.flagSize+MsgProtocol.lengthSize+MsgProtocol.msgCodeSize)){//数据不完整
+src/com/dyz/gameserver/net/codec/GameMsgDecoder.java:				if(iobuffer.remaining()>=length){//
+src/com/dyz/gameserver/bootstrap/GameServer.java:	public static void main(String[] args) throws IOException {
+src/com/dyz/gameserver/commons/initial/AppCf.java:	public static void main(String[] args) throws IOException {
+src/com/dyz/gameserver/logic/PlayCardsLogic.java.rej:         if (Remain(paiList) == 0) {
+src/com/dyz/gameserver/pojo/AvatarVO.java:    public void setMain(boolean main) {
+src/com/dyz/gameserver/pojo/AvatarVO.java:        isMain = main;
+src/com/dyz/persist/util/NormalHuPai.java:    public static void main(String[] args){
+src/com/dyz/persist/util/NormalHuPai.java:        if (Remain(paiList) == 0) {
+src/com/dyz/persist/util/NormalHuPai.java:        if (Remain(paiList) == 0) {
+src/com/dyz/persist/util/NormalHuPai.java:    int Remain(int[] paiList) {
+src/com/dyz/persist/util/Tesxt.java:	public static void main(String[] args) {
+src/com/dyz/persist/util/StringUtil.java:	public static void  main(String[] args) throws Exception {
+src/com/dyz/persist/util/DateUtil.java:	public static void main(String[] args) throws ParseException {
+src/com/dyz/persist/util/Naizi.java:        int resultNum = Remain(temp_arr);
+src/com/dyz/persist/util/Naizi.java:        int resultNum = Remain(temp_arr);
+src/com/dyz/persist/util/Naizi.java:    static int Remain(int[] paiList) {
+src/com/dyz/persist/util/Naizi.java:    public static void main(String[] args){

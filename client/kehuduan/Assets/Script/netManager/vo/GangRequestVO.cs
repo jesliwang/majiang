@@ -2,7 +2,6 @@
 
 namespace AssemblyCSharp
 {
-    [SerializeField]
     public class GangRequestVO
     {
         public int cardPoint;

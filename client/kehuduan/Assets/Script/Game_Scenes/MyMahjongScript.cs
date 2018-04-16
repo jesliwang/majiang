@@ -87,6 +87,7 @@ public class MyMahjongScript : MonoBehaviour
 	private int otherMoCardPoint;
 	private GameObject Pointertemp;
 	private int putOutCardPoint = -1;//打出的牌
+	private List<int> tingCardPoints = new List<int>();
 	private int putOutCardPointAvarIndex=-1;//最后一个打出牌的人的index
 	private string outDir;
 	private int SelfAndOtherPutoutCard = -1;
@@ -197,7 +198,7 @@ public class MyMahjongScript : MonoBehaviour
 		SocketEventHandle.getInstance().gangCardNotice += otherGang;
 		SocketEventHandle.getInstance ().btnActionShow += actionBtnShow;
 		SocketEventHandle.getInstance ().HupaiCallBack += hupaiCallBack;
-        SocketEventHandle.getInstance().TingpaiCallBack += tipaiCallback;
+        SocketEventHandle.getInstance().TingpaiCallBack += tingpaiCallback;
 		//	SocketEventHandle.getInstance ().FinalGameOverCallBack += finalGameOverCallBack;
 		SocketEventHandle.getInstance ().outRoomCallback += outRoomCallbak;
 		SocketEventHandle.getInstance ().dissoliveRoomResponse += dissoliveRoomResponse;
@@ -225,7 +226,7 @@ public class MyMahjongScript : MonoBehaviour
 		SocketEventHandle.getInstance().gangCardNotice -= otherGang;
 		SocketEventHandle.getInstance ().btnActionShow -= actionBtnShow;
 		SocketEventHandle.getInstance ().HupaiCallBack -= hupaiCallBack;
-        SocketEventHandle.getInstance().TingpaiCallBack -= tipaiCallback;
+        SocketEventHandle.getInstance().TingpaiCallBack -= tingpaiCallback;
 		//SocketEventHandle.getInstance ().FinalGameOverCallBack -= finalGameOverCallBack;
 		SocketEventHandle.getInstance ().outRoomCallback -= outRoomCallbak;
 		SocketEventHandle.getInstance ().dissoliveRoomResponse -= dissoliveRoomResponse;
@@ -353,6 +354,49 @@ public class MyMahjongScript : MonoBehaviour
 			//isSelfPickCard = false;
 			GlobalDataScript.isDrag = false;
 		}
+
+		for (int i = 0; i < 4; i++)
+		{
+			playerItems[i].GetComponent<PlayerItemScript>().setTingHide();
+		}
+		for (int i = 0; i < avatarList.Count; i++)
+		{
+			if (!avatarList[i].ting)
+			{
+				
+			}
+			else
+			{
+				switch (getDirection(i)) {
+					case DirectionEnum.Bottom:
+						playerItems [0].GetComponent<PlayerItemScript> ().setTingDisplay();
+						break;
+					case DirectionEnum.Right:
+						if (GlobalDataScript.roomVo.showTingPai)
+						{
+							playerItems [1].GetComponent<PlayerItemScript> ().setTingDisplay ();
+						}
+			    
+						break;
+					case DirectionEnum.Top:
+						if (GlobalDataScript.roomVo.showTingPai)
+						{
+							playerItems[2].GetComponent<PlayerItemScript>().setTingDisplay();
+						}
+
+						break;
+					case DirectionEnum.Left:
+						if (GlobalDataScript.roomVo.showTingPai)
+						{
+							playerItems[3].GetComponent<PlayerItemScript>().setTingDisplay();
+						}
+
+						break;
+
+				}
+			}
+			
+		}
 	}
 
 	private void cleanGameplayUI(){
@@ -441,6 +485,34 @@ public class MyMahjongScript : MonoBehaviour
 		SetDirGameObjectAction ();
 		GlobalDataScript.isDrag = true;
 	//	isSelfPickCard = true;
+
+		for (int i = 0; i < avatarList.Count; i++)
+		{
+			Debug.LogError("dddsss=" + i + "," + avatarList[i].ting);
+		}
+		if (avatarList[getMyIndexFromList()].ting)
+		{
+			Debug.LogError("qqwerqwer");
+			GlobalDataScript.isDrag = false;
+			StartCoroutine(WaitToPutCard());
+		}
+	}
+	
+	private IEnumerator WaitToPutCard()  
+	{   
+		yield return new WaitForSeconds(3);  
+		GlobalDataScript.isDrag = true;
+
+
+		for (int i = 0; i < handerCardList[0].Count; i++)
+		{
+
+			if (handerCardList[0][i].GetComponent<bottomScript>().getPoint() == MoPaiCardPoint)
+			{
+				cardChange(handerCardList[0][i]);
+			}
+		}
+		
 	}
 
 	/// <summary>
@@ -492,39 +564,14 @@ public class MyMahjongScript : MonoBehaviour
                 btnActionScript.showBtn(4);
 
                 string[] splitIds = strs[i].Split(new char[1] { ':' });
-                GlobalDataScript.isDrag = true;
 
-                int targetUUid = int.Parse(splitIds[1]);
-                if(!(targetUUid == GlobalDataScript.loginResponseData.account.uuid || GlobalDataScript.roomVo.showTingPai))
-                {
-                    continue;
-                }
-
-                for (int u = 1; u < splitIds.Length; u++)
-                {
-                    // 听牌显示
-                    int uuid = int.Parse(splitIds[u]);
-                    int index = getIndex(uuid);
-                    string dirstr = getDirection(index);
-                    switch (dirstr)
-                    {
-                        case DirectionEnum.Bottom:
-                            playerItems[0].GetComponent<PlayerItemScript>().setTingDisplay();
-                            break;
-                        case DirectionEnum.Right:
-                            playerItems[1].GetComponent<PlayerItemScript>().setTingDisplay();
-                            break;
-                        case DirectionEnum.Top:
-                            playerItems[2].GetComponent<PlayerItemScript>().setTingDisplay();
-                            break;
-                        case DirectionEnum.Left:
-                            playerItems[3].GetComponent<PlayerItemScript>().setTingDisplay();
-                            break;
-
-                    }
-                }
-
-
+	            
+	            tingCardPoints.Clear();
+	            for (int j = 1; j < splitIds.Length; j++)
+	            {
+		            Debug.LogError("ting=" + splitIds[i]);
+		            tingCardPoints.Add(int.Parse(splitIds[j]));
+	            }
             }
 
             if(strs[i].Contains("leaved"))
@@ -2121,11 +2168,58 @@ public class MyMahjongScript : MonoBehaviour
         CustomSocket.getInstance().sendMsg(new TingpaiRequest(""));
     }
 
-    private void tipaiCallback(ClientResponse response){
+    private void tingpaiCallback(ClientResponse response){
         
         btnActionScript.cleanBtnShow();
        
         GlobalDataScript.isDrag = true;
+
+	    int id = (int) JsonMapper.ToObject(response.message)["avatarId"];
+	    Debug.LogError("eeee" + id);
+
+	    for (int i = 0; i < avatarList.Count; i++)
+	    {
+		    if (avatarList[i].account.uuid == id)
+		    {
+			    avatarList[i].ting = true;
+		    }
+	    }
+	    
+	    int avarIndex = getIndex (id);
+	    
+	    switch (getDirection(avarIndex)) {
+		    case DirectionEnum.Bottom:
+			    playerItems [0].GetComponent<PlayerItemScript> ().setTingDisplay();
+			    break;
+		    case DirectionEnum.Right:
+			    if (GlobalDataScript.roomVo.showTingPai)
+			    {
+				    playerItems [1].GetComponent<PlayerItemScript> ().setTingDisplay ();
+			    }
+			    
+			    break;
+		    case DirectionEnum.Top:
+			    if (GlobalDataScript.roomVo.showTingPai)
+			    {
+				    playerItems[2].GetComponent<PlayerItemScript>().setTingDisplay();
+			    }
+
+			    break;
+		    case DirectionEnum.Left:
+			    if (GlobalDataScript.roomVo.showTingPai)
+			    {
+				    playerItems[3].GetComponent<PlayerItemScript>().setTingDisplay();
+			    }
+
+			    break;
+
+	    }
+	    
+	    if (getDirection(avarIndex) == DirectionEnum.Bottom)
+	    {
+		    Debug.LogError("myself");
+	    }
+
     }
 
 	/**

@@ -143,9 +143,9 @@ public class HuPaiType {
 			
 		}
 		else{
-			System.out.println("ting=" + avatarShu.inTing + "," + avatar.avatarVO.isMain());
+			System.out.println("ting=" + avatarShu.avatarVO.isTing() + "," + avatar.avatarVO.isMain());
 			//点炮   单响
-			if(avatarShu.inTing && avatar.avatarVO.isMain())
+			if(avatarShu.avatarVO.isTing() && avatar.avatarVO.isMain())
 			{
 				// 庄家平胡
 				score = 2;
@@ -162,7 +162,7 @@ public class HuPaiType {
 					}
 				}
 			}
-			else if(avatarShu.inTing)
+			else if(avatarShu.avatarVO.isTing())
 			{
 				// 闲家平胡
 				for (int i = 0; i < playerList.size(); i++) {
@@ -337,9 +337,9 @@ public class HuPaiType {
 		}
 		else{
 			//点炮   单响  
-			System.out.println("ting=" + avatarShu.inTing + "," + avatar.avatarVO.isMain());
+			System.out.println("ting=" + avatarShu.avatarVO.isTing() + "," + avatar.avatarVO.isMain());
 			//点炮   单响
-			if(avatarShu.inTing && avatar.avatarVO.isMain())
+			if(avatarShu.avatarVO.isTing() && avatar.avatarVO.isMain())
 			{
 				// 庄家平胡
 				score = 2;
@@ -356,7 +356,7 @@ public class HuPaiType {
 					}
 				}
 			}
-			else if(avatarShu.inTing)
+			else if(avatarShu.avatarVO.isTing())
 			{
 				// 闲家平胡
 				for (int i = 0; i < playerList.size(); i++) {

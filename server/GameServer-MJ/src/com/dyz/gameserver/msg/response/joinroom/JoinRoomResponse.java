@@ -18,6 +18,9 @@ public class JoinRoomResponse extends ServerResponse {
 			else{
 				output.writeUTF(roomVO.toString());
 			}
+			System.out.println(JsonUtilTool.toJson(roomVO.getPlayerList().get(0)));
+			
+			System.out.println(JsonUtilTool.toJson(roomVO));
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {

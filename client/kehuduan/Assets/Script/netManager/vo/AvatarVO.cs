@@ -9,6 +9,7 @@ namespace AssemblyCSharp
 	{
 		public Account account;
 
+		public bool ting;
 		//public int cardIndex; 
 		public bool isOnLine;
 		public bool isReady;

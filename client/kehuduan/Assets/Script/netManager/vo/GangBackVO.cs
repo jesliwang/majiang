@@ -2,10 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 
-[SerializeField]
-public class GangBackVO
+namespace AssemblyCSharp
 {
-    public List<int> cardList;
-	public int type;
-    
+
+	public class GangBackVO
+	{
+		public List<int> cardList;
+		public int type;
+
+	}
+
 }

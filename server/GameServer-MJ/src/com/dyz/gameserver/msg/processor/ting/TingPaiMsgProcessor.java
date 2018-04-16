@@ -14,7 +14,6 @@ public class TingPaiMsgProcessor extends MsgProcessor implements
 	@Override
 	public void process(GameSession gameSession, ClientRequest request)
 			throws Exception {
-		System.out.println("11111111");
 		RoomLogic roomLogic = RoomManager.getInstance().getRoom(gameSession.getRole(Avatar.class).getRoomVO().getRoomId());
         if(roomLogic != null){
             roomLogic.tingPaiAction(gameSession.getRole(Avatar.class));

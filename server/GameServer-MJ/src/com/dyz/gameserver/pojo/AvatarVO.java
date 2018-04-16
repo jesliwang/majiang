@@ -32,6 +32,11 @@ public class AvatarVO {
      */
     private boolean isOnLine = false;
     /**
+     * 是否听牌
+     */
+    private boolean isTing = false;
+    
+    /**
      * 当前分数，起始分1000
      */
     private int scores = 1000;
@@ -106,6 +111,14 @@ public class AvatarVO {
         isMain = main;
     }
 
+    public boolean isTing() {
+    	return isTing;
+    }
+    
+    public void setTing(boolean ting) {
+    	isTing = ting;
+    }
+    
     public boolean getIsOnLine() {
         return isOnLine;
     }
