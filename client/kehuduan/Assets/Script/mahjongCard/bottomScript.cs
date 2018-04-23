@@ -26,6 +26,8 @@ public class bottomScript : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 	public event EventHandler reSetPoisiton;
 	public bool selected = false;
 
+	private bool clickAble = true;
+	
     // Use this for initialization
     void Start()
     {
@@ -38,6 +40,8 @@ public class bottomScript : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     }
     public void OnDrag(PointerEventData eventData)
     {
+	    if (!clickAble) return;
+	    
         if (GlobalDataScript.isDrag)
         {
 			dragFlag = true;
@@ -49,6 +53,8 @@ public class bottomScript : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void OnPointerDown(PointerEventData eventData)
     {
+	    if (!clickAble) return;
+	    
 		if (GlobalDataScript.isDrag) {
 			if (selected == false) {
 				selected = true;
@@ -62,6 +68,8 @@ public class bottomScript : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void OnPointerUp(PointerEventData eventData)
     {
+	    if (!clickAble) return;
+	    
 		if (GlobalDataScript.isDrag) {
 			if (transform.localPosition.y > -122f) {
 				sendObjectToCallBack ();
@@ -105,5 +113,19 @@ public class bottomScript : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     {
        // Destroy(this.gameObject);
     }
+
+	public void setClickable(bool flag)
+	{
+		clickAble = flag;
+		if (!clickAble)
+		{
+			float r = 188.0f / 255.0f;
+			GetComponent<Image>().color = new Color(r,r,r);
+		}
+		else
+		{
+			GetComponent<Image>().color = Color.white;
+		}
+	}
 
 }

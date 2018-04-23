@@ -44,7 +44,7 @@ public class SoundToggleScript : MonoBehaviour {
 	}
 
 	private void showSettingframe(){
-		gameObject.transform.DOLocalMove (new Vector3(65,-5), 0.4f);
+		gameObject.transform.DOLocalMove (new Vector3(65,-40), 0.4f);
 
 	}
 

@@ -39,7 +39,7 @@ public class AvatarVO {
     /**
      * 当前分数，起始分1000
      */
-    private int scores = 1000;
+    private int scores = 0;
     /**
      * 打了的牌的字符串  1,2,3,4,5,6,1,3,5 格式
      */

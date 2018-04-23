@@ -316,7 +316,7 @@ public class MyMahjongScript : MonoBehaviour
             moshiText += string.Format("{0,12}", "剩余20张流局");
         }
         if(GlobalDataScript.roomVo.threefornext){
-            moshiText += string.Format("{0,12}", "流2局赔庄");
+            moshiText += string.Format("{0,12}", "流3局赔庄");
         }
         if(GlobalDataScript.roomVo.showTingPai){
             moshiText += string.Format("{0,12}", "听牌显示");
@@ -480,22 +480,34 @@ public class MyMahjongScript : MonoBehaviour
 		SelfAndOtherPutoutCard = MoPaiCardPoint; 
 		useForGangOrPengOrChi = cardvo.cardPoint;
 		putCardIntoMineList (MoPaiCardPoint);
+		
+	//	isSelfPickCard = true;
+
+		if (avatarList[getMyIndexFromList()].ting)
+		{
+
+			for (int i = 0; i < handerCardList[0].Count; i++)
+			{
+				handerCardList[0][i].GetComponent<bottomScript>().setClickable(false);
+			}
+			
+		}
+		
 		moPai ();
 		curDirString = DirectionEnum.Bottom;
 		SetDirGameObjectAction ();
 		GlobalDataScript.isDrag = true;
-	//	isSelfPickCard = true;
-
-		for (int i = 0; i < avatarList.Count; i++)
-		{
-			Debug.LogError("dddsss=" + i + "," + avatarList[i].ting);
-		}
 		if (avatarList[getMyIndexFromList()].ting)
 		{
-			Debug.LogError("qqwerqwer");
 			GlobalDataScript.isDrag = false;
+			
 			StartCoroutine(WaitToPutCard());
 		}
+		else
+		{
+			GlobalDataScript.isDrag = true;
+		}
+		
 	}
 	
 	private IEnumerator WaitToPutCard()  
@@ -2035,7 +2047,7 @@ public class MyMahjongScript : MonoBehaviour
         }
         if (GlobalDataScript.roomVo.threefornext)
         {
-            moshiText += string.Format("{0,12}", "流2局赔庄");
+            moshiText += string.Format("{0,12}", "流3局赔庄");
         }
         if (GlobalDataScript.roomVo.showTingPai)
         {
@@ -2056,7 +2068,7 @@ public class MyMahjongScript : MonoBehaviour
 	}
 
 	public void createRoomAddAvatarVO(AvatarVO avatar){
-		avatar.scores = 1000;
+		avatar.scores = 0;
 		addAvatarVOToList (avatar);
 		setRoomRemark ();
 		readyGame();
@@ -2138,7 +2150,6 @@ public class MyMahjongScript : MonoBehaviour
 		addAvatarVOToList (avatar);
 	}
 
-
 	/**
 	 * 胡牌请求
 	 */ 
@@ -2218,7 +2229,32 @@ public class MyMahjongScript : MonoBehaviour
 	    if (getDirection(avarIndex) == DirectionEnum.Bottom)
 	    {
 		    Debug.LogError("myself");
+
+		    int start = 0;
+		    for (int i = 0; i < handerCardList[0].Count; i++)
+		    {
+			    if (start < tingCardPoints.Count)
+			    {
+				    if (handerCardList[0][i].GetComponent<bottomScript>().getPoint() == tingCardPoints[start])
+				    {
+					    handerCardList[0][i].GetComponent<bottomScript>().setClickable(true);
+					    Debug.LogError("pp=" + tingCardPoints[start]);
+					    start += 1;
+				    }
+				    else
+				    {
+					    handerCardList[0][i].GetComponent<bottomScript>().setClickable(false);
+				    }
+			    }
+			    else
+			    {
+				    handerCardList[0][i].GetComponent<bottomScript>().setClickable(false);
+			    }
+		    }
+		    
 	    }
+	    
+	    
 
     }
 
@@ -2257,6 +2293,10 @@ public class MyMahjongScript : MonoBehaviour
 			}
 		}
 */
+		for (int i = 0; i < avatarList.Count; i++)
+		{
+			avatarList[i].ting = false;
+		}
 
 
 		if (GlobalDataScript.hupaiResponseVo.type == "0") {
@@ -2362,7 +2402,7 @@ public class MyMahjongScript : MonoBehaviour
 			for (int i = 0; i < scoreList.Length-1; i++) {
 				string itemstr = scoreList [i];
 				int uuid =int.Parse( itemstr.Split (new char[1]{ ':' })[0]);
-				int score = int.Parse( itemstr.Split (new char[1]{ ':' })[1]) +1000;
+				int score = int.Parse( itemstr.Split (new char[1]{ ':' })[1]);
 				playerItems [getIndexByDir (getDirection (getIndex (uuid)))].scoreText.text = score + "";
 				avatarList [getIndex (uuid)].scores = score;
 			}
