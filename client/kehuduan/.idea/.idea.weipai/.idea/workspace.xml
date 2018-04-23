@@ -524,8 +524,8 @@
       <file leaf-file-name="PlayerItemScript.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Script/Game_Scenes/PlayerItemScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="62" column="16" lean-forward="true" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+            <state relative-caret-position="324">
+              <caret line="64" column="37" lean-forward="true" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
               <folding>
                 <marker date="1524505192651" expanded="false" signature="6:88" ph="..." />
                 <marker date="1524505192651" expanded="true" signature="136:3885" ph="{...}" />
@@ -937,12 +937,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523764484558</updated>
-      <workItem from="1523764489157" duration="13838000" />
+      <workItem from="1523764489157" duration="14185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13838000" />
+    <option name="totallyTimeSpent" value="14185000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2011,8 +2011,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Script/Game_Scenes/PlayerItemScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="62" column="16" lean-forward="true" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+        <state relative-caret-position="324">
+          <caret line="64" column="37" lean-forward="true" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
           <folding>
             <marker date="1524505192651" expanded="false" signature="6:88" ph="..." />
             <marker date="1524505192651" expanded="true" signature="136:3885" ph="{...}" />

@@ -314,78 +314,15 @@ public class Avatar implements GameObj {
     	gangIndex.clear();//先清除缓存里面的可以杠的牌下标
     	//剔除掉当前以前吃，碰，杠的牌组 再进行比较
     	boolean flag = false;
-    	if(!roomVO.isAddWordCard()){
-    		//划水麻将没有风牌  就27
-    		for (int i= 0 ; i < 27 ; i++) {
-    			if (avatarVO.getPaiArray()[0][i] == 4 && avatarVO.getPaiArray()[1][i] != 2) {
-    				//先判断所有4个的牌组中是否有未杠过的
-    				gangIndex.add(i);
-    				flag = true;
-    				break;//多个杠的情况下默认杠下标最小的个牌
-    				/*if(resultRelation.get(2) == null ){
-    					gangIndex.add(i);
-    					flag =  true;
-    					i = 100;
-    				}
-    				else if(resultRelation.get(2) != null ){
-    					String strs [] = resultRelation.get(2).split(",");
-    					for (int j = 0; j < strs.length; j++) {
-    						if(strs[j].equals(i+"")){
-    							flag =  false;
-    							gangIndex.clear();
-    							j = 100;
-    							i = 100;
-    						}
-    						else{
-    							gangIndex.add(i);
-    							flag =  true;
-    						}
-    					}
-    					for (int j = 0; j < strs.length; j++) {
-    						if(!strs[j].equals(i+"")){
-    							gangIndex.add(i);
-    						}
-    					}
-    				}*/
-    			}
-    		}
-    	}
-    	else{
-    		//划水麻将有风牌  就 34
-    		for (int i= 0 ; i < 34 ; i++) {
-    			if (avatarVO.getPaiArray()[0][i] == 4 && avatarVO.getPaiArray()[1][i] != 2) {
-    				//先判断所有4个的牌组中是否有未杠过的
-    				gangIndex.add(i);
-    				flag = true;
-    				break;//多个杠的情况下默认杠下标最小的个牌
-    				/*if(resultRelation.get(2) == null ){
-    					gangIndex.add(i);
-    					flag =  true;
-    					i = 100;//多个杠的情况下默认杠下标最小的个牌
-    				}
-    				else if(resultRelation.get(2) != null ){
-    					String strs [] = resultRelation.get(2).split(",");
-    					for (int j = 0; j < strs.length; j++) {
-    						if(strs[j].equals(i+"")){
-    							flag =  false;
-    							gangIndex.clear();
-    							j = 100;
-    							i = 100;
-    						}
-    						else{
-    							gangIndex.add(i);
-    							flag =  true;
-    						}
-    					}
-    					for (int j = 0; j < strs.length; j++) {
-    						if(!strs[j].equals(i+"")){
-    							gangIndex.add(i);
-    						}
-    					}
-    				}*/
-    			}
-    		}
-    	}
+
+		for (int i= 0 ; i < 34 ; i++) {
+			if (avatarVO.getPaiArray()[0][i] == 4 && avatarVO.getPaiArray()[1][i] != 2) {
+				//先判断所有4个的牌组中是否有未杠过的
+				gangIndex.add(i);
+				flag = true;
+				break;//多个杠的情况下默认杠下标最小的个牌	
+			}
+		}
         return flag;
     }
     /**
