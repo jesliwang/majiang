@@ -330,9 +330,16 @@ public class PlayCardsLogic {
             boolean isHu = false;
             if(checkAvatarIsHuPai(avatar,100,"mo")){
             	huAvatar.add(avatar);
-            	sb.append("hu,");
-            	
             	isHu = true;
+            	if(!avatar.avatarVO.isTing())
+            	{
+            		sb.append("hu,");
+            	}
+            	else
+            	{
+            		huPai(avatar, tempPoint, "");
+            	}
+
             }
             
             if(!avatar.avatarVO.isTing())
@@ -1252,35 +1259,6 @@ public class PlayCardsLogic {
     			playerList.get(index).avatarVO.setMain(true);
     		}
     		
-    		
-    		/*
-    		//所有人胡完
-    		if(huCount >= 2){
-    			//重新分配庄家，下一局点炮的玩家坐庄
-    			for (Avatar itemAva : playerList) {
-    				if(playerList.get(pickAvatarIndex).getUuId() == itemAva.getUuId() ){
-    					// itemAva.avatarVO.setMain(true);
-    					bankerAvatar = itemAva;
-    					itemAva.avatarVO.setMain(true);
-    				}
-    				else{
-    					itemAva.avatarVO.setMain(false); 
-    				}
-    			}
-    		}
-    		else{
-    			//重新分配庄家，下一局胡家坐庄
-    			for (Avatar itemAva : playerList) {
-    				if(avatar.getUuId() == itemAva.getUuId()){
-    					bankerAvatar = itemAva;
-    					itemAva.avatarVO.setMain(true);
-    				}
-    				else{
-    					itemAva.avatarVO.setMain(false);
-    				}
-    			}
-    		}
-    		*/
     		//更新roomlogic的PlayerList信息
     		RoomManager.getInstance().getRoom(playerList.get(0).getRoomVO().getRoomId()).setPlayerList(playerList);
     		//一局牌胡了，返回这一局的所有数据吃，碰， 杠，胡等信息

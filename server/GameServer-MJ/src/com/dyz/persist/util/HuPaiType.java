@@ -242,7 +242,7 @@ public class HuPaiType {
 		}
 	}
 	/**
-	 *  转转麻将 算分
+	 *  清水麻将 算分
 	 * @param avatarShu 输家 自摸时也表示赢家
 	 * @param avatar 赢家   
 	 * @param cardIndex
