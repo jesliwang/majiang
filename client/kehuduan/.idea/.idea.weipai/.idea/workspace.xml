@@ -14,8 +14,8 @@
       <file leaf-file-name="MyMahjongScript.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Script/Game_Scenes/MyMahjongScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="765" column="68" lean-forward="false" selection-start-line="765" selection-start-column="68" selection-end-line="765" selection-end-column="68" />
+            <state relative-caret-position="234">
+              <caret line="1776" column="53" lean-forward="false" selection-start-line="1776" selection-start-column="53" selection-end-line="1776" selection-end-column="53" />
               <folding>
                 <marker date="1524505171043" expanded="false" signature="6:206" ph="..." />
                 <marker date="1524505171043" expanded="true" signature="254:97145" ph="{...}" />
@@ -505,6 +505,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="GaveUpRequest.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Script/netManager/request/GaveUpRequest.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="42" />
+              <folding>
+                <marker date="1477020702000" expanded="true" signature="39:192" ph="{...}" />
+                <marker date="1477020702000" expanded="true" signature="85:190" ph="{...}" />
+                <marker date="1477020702000" expanded="true" signature="114:187" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AvatarVO.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Script/netManager/vo/AvatarVO.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -521,11 +535,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerItemScript.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlayerItemScript.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Script/Game_Scenes/PlayerItemScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="64" column="37" lean-forward="true" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+            <state relative-caret-position="84">
+              <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
               <folding>
                 <marker date="1524505192651" expanded="false" signature="6:88" ph="..." />
                 <marker date="1524505192651" expanded="true" signature="136:3885" ph="{...}" />
@@ -750,7 +764,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>avatarlist =</find>
       <find>init</find>
       <find>显示</find>
       <find>avatarList.Count</find>
@@ -780,6 +793,7 @@
       <find>disso</find>
       <find>dissol</find>
       <find>111</find>
+      <find>mypass</find>
     </findStrings>
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -811,6 +825,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/netManager/vo/HupaiResponseItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/netManager/vo/GameBehaviourVO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Home_Panel_Event/CrateRoomSettingScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/netManager/request/GaveUpRequest.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -937,12 +952,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523764484558</updated>
-      <workItem from="1523764489157" duration="14185000" />
+      <workItem from="1523764489157" duration="14201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14185000" />
+    <option name="totallyTimeSpent" value="14201000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1517,10 +1532,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Script/Game_Scenes/PlayerItemScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+          <folding>
+            <marker date="1524505192651" expanded="false" signature="6:88" ph="..." />
+            <marker date="1524505192651" expanded="true" signature="136:3885" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="646:746" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="650:743" ph="/* bankerImg.enabled = false; ... */" />
+            <marker date="1524505192651" expanded="true" signature="801:1060" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="820:943" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="859:939" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="966:1057" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="1013:1053" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="1102:1879" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="1125:1415" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="1558:1785" ph="/* SpriteRenderer spr = gameObject.GetComponent&lt;SpriteRenderer&gt; (); ... */" />
+            <marker date="1524505192651" expanded="true" signature="1881:1955" ph="/// 加载头像 ... " />
+            <marker date="1524505192651" expanded="true" signature="1987:2413" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="2113:2371" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="2457:2490" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="2521:2578" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="2601:2706" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="2646:2686" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="2728:2866" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="2915:2974" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="3022:3081" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="3122:3264" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="3307:3387" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="3419:3585" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="3618:3649" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="3680:3712" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="3746:3798" ph="{...}" />
+            <marker date="1524505192651" expanded="true" signature="3829:3882" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Script/Game_Scenes/MyMahjongScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="765" column="68" lean-forward="false" selection-start-line="765" selection-start-column="68" selection-end-line="765" selection-end-column="68" />
+        <state relative-caret-position="234">
+          <caret line="1776" column="53" lean-forward="false" selection-start-line="1776" selection-start-column="53" selection-end-line="1776" selection-end-column="53" />
           <folding>
             <marker date="1524505171043" expanded="false" signature="6:206" ph="..." />
             <marker date="1524505171043" expanded="true" signature="254:97145" ph="{...}" />
@@ -2009,40 +2062,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Script/Game_Scenes/PlayerItemScript.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Script/netManager/request/GaveUpRequest.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="64" column="37" lean-forward="true" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+        <state relative-caret-position="120">
+          <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="42" />
           <folding>
-            <marker date="1524505192651" expanded="false" signature="6:88" ph="..." />
-            <marker date="1524505192651" expanded="true" signature="136:3885" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="646:746" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="650:743" ph="/* bankerImg.enabled = false; ... */" />
-            <marker date="1524505192651" expanded="true" signature="801:1060" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="820:943" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="859:939" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="966:1057" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="1013:1053" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="1102:1879" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="1125:1415" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="1558:1785" ph="/* SpriteRenderer spr = gameObject.GetComponent&lt;SpriteRenderer&gt; (); ... */" />
-            <marker date="1524505192651" expanded="true" signature="1881:1955" ph="/// 加载头像 ... " />
-            <marker date="1524505192651" expanded="true" signature="1987:2413" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="2113:2371" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="2457:2490" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="2521:2578" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="2601:2706" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="2646:2686" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="2728:2866" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="2915:2974" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="3022:3081" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="3122:3264" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="3307:3387" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="3419:3585" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="3618:3649" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="3680:3712" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="3746:3798" ph="{...}" />
-            <marker date="1524505192651" expanded="true" signature="3829:3882" ph="{...}" />
+            <marker date="1477020702000" expanded="true" signature="39:192" ph="{...}" />
+            <marker date="1477020702000" expanded="true" signature="85:190" ph="{...}" />
+            <marker date="1477020702000" expanded="true" signature="114:187" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -476,29 +476,17 @@ public class PlayCardsLogic {
      * @param
      *
      */
-    public void gaveUpAction(Avatar avatar){
+    public void giveUpAction(Avatar avatar){
     	//放弃的时候，至少一个数组不为空才行
     	if(validateStatus()){
     		System.out.println("giveup");
     		avatar.huAvatarDetailInfo.clear();
     		//System.out.println(JsonUtilTool.toJson(avatar.getRoomVO()));
     		avatar.avatarVO.setHuType(0);//重置划水麻将胡牌格式
-    		if(pickAvatarIndex == playerList.indexOf(avatar) && tingAvatar.size() == 0){
+    		if(pickAvatarIndex == playerList.indexOf(avatar)){
     			//如果是自己摸的过，则 canHu = true；
     			avatar.canHu = true;
     			//system.out.println("自己摸的过");
-    			/*if(huAvatar.contains(avatar)){
-    				huAvatar.remove(avatar);
-    			}
-    			if(gangAvatar.contains(avatar)){
-    				gangAvatar.remove(avatar);
-    			}
-    			if(penAvatar.contains(avatar)){
-    				penAvatar.remove(avatar);
-    			}
-    			if(chiAvatar.contains(avatar)){
-    				chiAvatar.remove(avatar);
-    			}*/
     			clearAvatar();
     		}
     		else{

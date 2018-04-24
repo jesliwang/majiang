@@ -315,7 +315,7 @@ public class Avatar implements GameObj {
     	//剔除掉当前以前吃，碰，杠的牌组 再进行比较
     	boolean flag = false;
 
-		for (int i= 0 ; i < 34 ; i++) {
+		for (int i= 0 ; i < avatarVO.getPaiArray()[0].length; i++) {
 			if (avatarVO.getPaiArray()[0][i] == 4 && avatarVO.getPaiArray()[1][i] != 2) {
 				//先判断所有4个的牌组中是否有未杠过的
 				gangIndex.add(i);

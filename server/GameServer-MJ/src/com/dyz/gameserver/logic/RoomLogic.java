@@ -373,7 +373,7 @@ public class RoomLogic {
      * @param  //1-胡，2-杠，3-碰，4-吃
      */
     public void gaveUpAction(Avatar avatar){
-        playCardsLogic.gaveUpAction(avatar);
+        playCardsLogic.giveUpAction(avatar);
     }
 
     /**听牌放弃
