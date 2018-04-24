@@ -952,23 +952,23 @@ public class MyMahjongScript : MonoBehaviour
 		if (outDir == DirectionEnum.Bottom)
 		{
 			path = "Prefab/ThrowCard/TopAndBottomCard";
-			poisVector3 = new Vector3(-261 + tableCardList[0].Count%13*34, -(int)(tableCardList[0].Count/13)*54f);
+			poisVector3 = new Vector3(-261 + tableCardList[0].Count%13*34, -(int)(tableCardList[0].Count/13)*43f);
 			GlobalDataScript.isDrag = false;
 		}
 		else if (outDir == DirectionEnum.Right)
 		{
 			path = "Prefab/ThrowCard/ThrowCard_R";
-            poisVector3 = new Vector3((int)(tableCardList[1].Count/RightListCardNumber*54f), -134f + tableCardList[1].Count%RightListCardNumber*28);
+            poisVector3 = new Vector3((int)(tableCardList[1].Count/RightListCardNumber*54f), -134f + tableCardList[1].Count%RightListCardNumber*26);
 		}
 		else if (outDir == DirectionEnum.Top)
 		{
 			path = "Prefab/ThrowCard/TopAndBottomCard";
-			poisVector3 = new Vector3(39f - tableCardList[2].Count%13*36, (int)(tableCardList[2].Count/13)*54f - 3);
+			poisVector3 = new Vector3(39f - tableCardList[2].Count%13*36, (int)(tableCardList[2].Count/13)*43f - 3);
 		}
 		else if (outDir == DirectionEnum.Left)
 		{
 			path = "Prefab/ThrowCard/ThrowCard_L";
-            poisVector3 = new Vector3(-tableCardList[3].Count/LeftListCardNumber*54f, 192f - tableCardList[3].Count%LeftListCardNumber*28);
+            poisVector3 = new Vector3(-tableCardList[3].Count/LeftListCardNumber*54f, 192f - tableCardList[3].Count%LeftListCardNumber*26);
 			//     parenTransform = leftOutParent;
 		}
 

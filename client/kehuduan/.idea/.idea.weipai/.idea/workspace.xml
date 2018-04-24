@@ -11,501 +11,501 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyMahjongScript.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyMahjongScript.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Script/Game_Scenes/MyMahjongScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="1776" column="53" lean-forward="false" selection-start-line="1776" selection-start-column="53" selection-end-line="1776" selection-end-column="53" />
+            <state relative-caret-position="240">
+              <caret line="968" column="9" lean-forward="true" selection-start-line="968" selection-start-column="9" selection-end-line="968" selection-end-column="9" />
               <folding>
-                <marker date="1524505171043" expanded="false" signature="6:206" ph="..." />
-                <marker date="1524505171043" expanded="true" signature="254:97145" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="1965:2000" ph="///  ... " />
-                <marker date="1524505171043" expanded="true" signature="2070:2110" ph="/// 庄家的索引 ... " />
-                <marker date="1524505171043" expanded="true" signature="2190:2230" ph="/// 打出来的牌 ... " />
-                <marker date="1524505171043" expanded="true" signature="2549:2589" ph="/// 当前摸的牌 ... " />
-                <marker date="1524505171043" expanded="true" signature="2664:2707" ph="/// 当前的方向字符串 ... " />
-                <marker date="1524505171043" expanded="true" signature="2745:2786" ph="/// 普通胡牌算法 ... " />
-                <marker date="1524505171043" expanded="true" signature="2819:2860" ph="/// 赖子胡牌算法 ... " />
-                <marker date="1524505171043" expanded="true" signature="3026:3104" ph="/* private GameObject singalEndPanel; ... */" />
-                <marker date="1524505171043" expanded="true" signature="3208:3266" ph="/// 手牌数组，0自己，1-右边。2-上边。3-左边 ... " />
-                <marker date="1524505171043" expanded="true" signature="3315:3357" ph="/// 打在桌子上的牌 ... " />
-                <marker date="1524505171043" expanded="true" signature="3739:4623" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="4408:4520" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="4531:4572" ph="/* readyGame(); ... */" />
-                <marker date="1524505171043" expanded="true" signature="4645:4713" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="4732:4818" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="4846:6575" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="6607:8329" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="8361:8832" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="8528:8628" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="8835:9048" ph="/* private void initPerson(){ ... */" />
-                <marker date="1524505171043" expanded="true" signature="9050:9141" ph="/// Cards the select. ... " />
-                <marker date="1524505171043" expanded="true" signature="9181:9740" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="9236:9563" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="9279:9330" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="9582:9737" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="9743:9828" ph="/// 开始游戏 ... " />
-                <marker date="1524505171043" expanded="true" signature="9876:12606" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="10355:10384" ph="/* 游戏模式显示 ... */" />
-                <marker date="1524505171043" expanded="true" signature="10461:10533" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="10582:10652" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="10700:10769" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="10881:11031" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="11529:11597" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="11704:11778" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="11823:12603" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="11855:11870" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="11878:12595" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="11913:12590" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="12111:12203" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="12300:12389" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="12480:12569" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="12639:13137" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="13140:13227" ph="/// 别人摸牌通知 ... " />
-                <marker date="1524505171043" expanded="true" signature="13279:13555" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="13610:13905" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="13745:13780" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="13958:14669" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="14049:14416" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="14672:14757" ph="/// 自己摸牌 ... " />
-                <marker date="1524505171043" expanded="true" signature="14804:15628" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="15175:15326" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="15233:15318" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="15488:15572" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="15579:15622" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="15669:15953" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="15803:15947" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="15895:15943" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="15956:16054" ph="/// 胡，杠，碰，吃，pass按钮显示. ... " />
-                <marker date="1524505171043" expanded="true" signature="16106:18225" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="16246:16281" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="16421:18222" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="16460:16533" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="16583:16915" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="16618:16749" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="16785:16822" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="16962:17119" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="17163:17238" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="17285:17678" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="17523:17664" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="17722:17944" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="17981:18218" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="18310:19446" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="18365:19086" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="18396:19082" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="18446:19076" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="18601:19002" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="19012:19070" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="19286:19370" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="19452:19491" ph="/* 检测胡牌 ... */" />
-                <marker date="1524505171043" expanded="true" signature="19452:20424" ph="/// 检测胡牌 ... " />
-                <marker date="1524505171043" expanded="true" signature="19493:20227" ph="/* private bool checkHuPai(){ ... */" />
-                <marker date="1524505171043" expanded="true" signature="20230:20424" ph="/* private bool addPointAndCheckHu(int cardPoint){ ... */" />
-                <marker date="1524505171043" expanded="true" signature="20474:20573" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="20522:20570" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="20620:20714" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="20668:20711" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="20717:20852" ph="/// Gets the index by dir. ... " />
-                <marker date="1524505171043" expanded="true" signature="20891:21181" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="20925:21161" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="21183:21260" ph="///  ... " />
-                <marker date="1524505171043" expanded="true" signature="21329:22311" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="21366:22308" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="21511:22303" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="21674:22298" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="22314:22349" ph="///  ... " />
-                <marker date="1524505171043" expanded="true" signature="22375:23144" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="22555:23067" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="23193:23271" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="23230:23268" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="23320:23398" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="23358:23395" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="23401:23493" ph="/// 接收到其它人的出牌通知 ... " />
-                <marker date="1524505171043" expanded="true" signature="23547:24298" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="23914:24046" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="24300:24466" ph="/// 创建打来的的牌对象，并且开始播放动画 ... " />
-                <marker date="1524505171043" expanded="true" signature="24545:25634" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="24829:25158" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="25595:25631" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="25638:25818" ph="/// 根据一个人在数组里的索引，得到这个人所在的方位，L-左，T-上,R-右，B-下（自己的方位永远都是在下方） ... " />
-                <marker date="1524505171043" expanded="true" signature="25864:26697" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="25983:26067" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="26116:26607" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="26163:26194" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="26229:26603" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="26250:26357" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="26378:26483" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="26492:26598" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="26699:26745" ph="/// 设置红色箭头的显示方向 ... " />
-                <marker date="1524505171043" expanded="true" signature="26790:26970" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="26864:26907" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="27009:28641" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="27134:27331" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="27373:27572" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="27612:27775" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="27816:28048" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="28244:28326" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="28551:28594" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="28597:28610" ph="/* 丢牌上 ... */" />
-                <marker date="1524505171043" expanded="true" signature="28697:32292" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="29156:29233" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="29280:29851" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="29490:29803" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="29652:29798" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="29771:29792" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="30087:30551" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="30199:30303" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="30681:32233" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="30744:31239" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="31310:31722" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="31794:32217" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="32320:32820" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="32408:32749" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="32858:33398" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="32889:33004" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="33037:33152" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="33183:33294" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="33324:33366" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="33439:33480" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="33515:33839" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="33521:33731" ph="/* pengEffectGameList[getIndexByDir(curDirString)].SetActive(false); ... */" />
-                <marker date="1524505171043" expanded="true" signature="33897:40287" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="34455:34968" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="35077:38905" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="35145:35243" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="35297:35376" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="35433:37157" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="35467:35553" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="35596:37152" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="35703:37026" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="35849:36003" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="36349:36439" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="36754:36842" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="37189:38817" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="37259:38807" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="37305:37377" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="37484:38680" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="37606:37779" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="37995:38163" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="38389:38568" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="38962:40281" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="39127:39166" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="39265:40179" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="40369:40616" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="40391:40613" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="40619:40737" ph="/* 判断碰牌的牌组里面是否包含某个牌，用于判断是否实例化一张牌还是三张牌 ... */" />
-                <marker date="1524505171043" expanded="true" signature="40795:41482" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="40884:41165" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="41212:41232" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="41291:41465" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="41300:41420" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="41393:41415" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="41439:41460" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="41536:41917" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="41562:41914" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="41590:41675" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="41925:42006" ph="/// 自己打出来的牌 ... " />
-                <marker date="1524505171043" expanded="true" signature="42048:43196" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="42219:43192" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="43235:44458" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="43325:43534" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="43356:43530" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="43575:43851" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="43605:43847" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="43891:44098" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="43922:44094" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="44139:44418" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="44170:44414" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="44516:44968" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="44538:44950" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="44682:44901" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="44828:44896" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="45011:45639" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="45190:45459" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="45229:45351" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="45502:45632" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="45641:45691" ph="/// 销毁出的牌，并且检测是否可以碰 ... " />
-                <marker date="1524505171043" expanded="true" signature="45738:45875" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="45806:45872" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="45965:49272" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="46034:46180" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="46102:46170" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="46207:46386" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="46243:46327" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="46412:46829" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="46463:46819" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="46505:46613" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="46736:46805" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="46867:49243" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="46934:49233" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="46984:47227" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="47089:47170" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="47264:47636" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="47457:47538" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="47688:48124" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="47913:47994" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="48153:48261" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="48402:49219" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="48867:48948" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="49326:50196" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="49449:49860" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="49571:49764" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="49924:50073" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="49994:50063" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="50101:50147" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="50212:50498" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="50259:50306" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="50364:50495" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="50414:50491" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="50532:51121" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="50658:51118" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="51144:51338" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="51229:51259" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="51340:51381" ph="/// 重新开始计时 ... " />
-                <marker date="1524505171043" expanded="true" signature="51406:51426" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="51428:51469" ph="/// 点击放弃按钮 ... " />
-                <marker date="1524505171043" expanded="true" signature="51499:51843" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="51593:51689" ph="/* if(isSelfPickCard ){ ... */" />
-                <marker date="1524505171043" expanded="true" signature="51724:51764" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="51874:52109" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="52163:56727" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="52340:52422" ph="/* checkHuOrGangOrPengOrChi (MoPaiCardPoint,2); ... */" />
-                <marker date="1524505171043" expanded="true" signature="52462:56578" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="52484:52753" ph="/* SelfAndOtherPutoutCard = gangBackVo.cardList[0]; ... */" />
-                <marker date="1524505171043" expanded="true" signature="52778:55269" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="52965:54304" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="52966:53003" ph="/* 杠牌不在碰牌数组以内，一定为别人打得牌 ... */" />
-                <marker date="1524505171043" expanded="true" signature="53029:53065" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="53096:53183" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="53284:53640" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="53472:53633" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="53600:53625" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="53752:54237" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="54095:54200" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="54387:54629" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="54486:54621" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="55166:55262" ph="/* MoPaiCardPoint = gangBackVo.cardList [0]; ... */" />
-                <marker date="1524505171043" expanded="true" signature="55294:56574" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="55508:55852" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="55693:55846" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="55816:55839" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="55946:56527" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="55965:56192" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="56210:56520" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="56621:56630" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="56655:56724" ph="/* moPai(); ... */" />
-                <marker date="1524505171043" expanded="true" signature="56730:56895" ph="///  ... " />
-                <marker date="1524505171043" expanded="true" signature="56988:57233" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="57265:57975" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="57391:57499" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="57978:58017" ph="/// 清理桌面 ... " />
-                <marker date="1524505171043" expanded="true" signature="58038:58552" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="58276:58303" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="58328:58355" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="58384:58414" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="58444:58476" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="58511:58548" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="58611:58765" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="58633:58762" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="58661:58758" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="58817:58982" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="58843:58979" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="58875:58975" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="59012:59955" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="59542:59622" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="59672:59751" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="59800:59878" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="60005:60128" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="60033:60077" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="60181:60299" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="60349:60509" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="60417:60447" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="60511:60597" ph="/// 设置当前角色的座位 ... " />
-                <marker date="1524505171043" expanded="true" signature="60636:61119" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="60640:60737" ph="/* 游戏结束后用的数据，勿删！！！ ... */" />
-                <marker date="1524505171043" expanded="true" signature="60817:60863" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="61025:61062" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="61121:61228" ph="/// Gets my index from list. ... " />
-                <marker date="1524505171043" expanded="true" signature="61262:61709" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="61290:61666" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="61337:61662" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="61514:61656" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="61742:61957" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="61770:61942" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="61818:61938" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="61857:61933" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="61903:61927" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="62015:62119" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="62122:62139" ph="/* 胡牌请求 ... */" />
-                <marker date="1524505171043" expanded="true" signature="62168:62752" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="62207:62580" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="62362:62423" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="62585:62749" ph="/* 模拟胡牌操作 ... */" />
-                <marker date="1524505171043" expanded="true" signature="62786:62861" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="62920:64853" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="63173:63281" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="63224:63274" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="63368:64067" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="63571:63666" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="63766:63858" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="63952:64044" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="64131:64834" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="64248:64820" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="64297:64703" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="64405:64581" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="64594:64694" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="64715:64812" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="64856:64875" ph="/* 胡牌请求回调 ... */" />
-                <marker date="1524505171043" expanded="true" signature="64929:67821" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="65199:65886" ph="/* for (int i = 0; i &lt; GlobalDataScript.hupaiResponseVo.avatarList.Count; i++) ... */" />
-                <marker date="1524505171043" expanded="true" signature="65931:65970" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="66025:67500" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="66258:66843" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="66339:66506" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="66587:66753" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="67044:67439" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="67136:67376" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="67556:67762" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="67824:67845" ph="/* 检测某人是否胡牌 ... */" />
-                <marker date="1524505171043" expanded="true" signature="67901:68818" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="68028:68803" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="68284:68315" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="68354:68375" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="68412:68432" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="68469:68489" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="68530:68550" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="68589:68609" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="68653:68673" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="68715:68735" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="68777:68797" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="68823:69214" ph="/* public void huPaiCoinChanges(HupaiResponseItem hupaiResponseItem,int index,int avarIndex) ... */" />
-                <marker date="1524505171043" expanded="true" signature="69260:69744" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="69369:69740" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="69419:69736" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="69786:70952" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="69895:69980" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="70351:70588" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="70406:70584" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="70955:71724" ph="/* 全局结束请求回调 ... */" />
-                <marker date="1524505171043" expanded="true" signature="71785:71972" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="72039:72359" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="72160:72355" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="72267:72351" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="72362:72382" ph="/* 退出房间请求 ... */" />
-                <marker date="1524505171043" expanded="true" signature="72408:72618" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="72672:73458" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="72805:73367" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="72839:73322" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="72940:73274" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="73060:73110" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="73141:73268" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="73192:73233" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="73537:73785" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="73565:73704" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="73788:73810" ph="/* 申请解散房间回调 ... */" />
-                <marker date="1524505171043" expanded="true" signature="73898:74915" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="74177:74407" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="74454:74910" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="74537:74625" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="74708:74903" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="74919:74948" ph="/* 申请或同意解散房间请求 ... */" />
-                <marker date="1524505171043" expanded="true" signature="74988:75389" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="75413:75418" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="75443:75503" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="75539:76479" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="75904:76109" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="76289:76434" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="76534:76944" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="76812:76847" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="77008:77074" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="77104:77139" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="77234:79383" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="77287:79379" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="78778:78814" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="79007:79029" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="79436:79643" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="79682:80553" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="79829:80528" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="79860:80524" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="79909:80518" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="80060:80512" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="80602:80869" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="80693:80845" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="80779:80815" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="80907:80948" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="81001:81447" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="81130:81444" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="81351:81439" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="81397:81434" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="81503:81843" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="81577:81840" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="81794:81835" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="81891:83068" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="81971:83065" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="82205:83060" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="82340:83055" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="82453:83049" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="82886:82961" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="83101:83721" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="83181:83718" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="83415:83714" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="83467:83709" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="83572:83703" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="83725:83788" ph="/* 显示杠碰牌 ... */" />
-                <marker date="1524505171043" expanded="true" signature="83874:88925" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="83928:88922" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="84041:85041" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="84078:84652" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="84099:84407" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="85201:86325" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="85238:85928" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="85260:85584" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="86484:87576" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="86521:87176" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="86543:86878" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="87736:88870" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="87773:88470" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="87795:88130" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="88954:89023" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="89092:90055" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="89225:89680" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="89759:90052" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="89789:89940" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="90122:90706" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="90255:90703" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="90763:91347" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="91095:91154" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="91176:91254" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="91267:91344" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="91395:91465" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="91468:91485" ph="/* 准备游戏 ... */" />
-                <marker date="1524505171043" expanded="true" signature="91511:91580" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="91640:92282" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="91837:91976" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="91994:92133" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="92336:92614" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="92404:92611" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="92453:92607" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="92496:92602" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="92547:92596" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="92672:97142" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="93433:94213" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="93744:93837" ph="/* useForGangOrPengOrChi = putOutCardPoint;//杠 ... */" />
-                <marker date="1524505171043" expanded="true" signature="94233:94239" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="94293:95610" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="94336:94895" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="94948:95599" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="95179:95397" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="95274:95390" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="95925:96774" ph="{...}" />
-                <marker date="1524505171043" expanded="true" signature="95968:96770" ph="/* if (pickAvatarIndexTemp == getMyIndexFromList ()) { ... */" />
-                <marker date="1524505171043" expanded="true" signature="96871:97023" ph="/* otherPickCardItem = handerCardList[dirindex][0]; ... */" />
+                <marker date="1524588633131" expanded="false" signature="6:206" ph="..." />
+                <marker date="1524588633131" expanded="true" signature="254:97145" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="1965:2000" ph="///  ... " />
+                <marker date="1524588633131" expanded="true" signature="2070:2110" ph="/// 庄家的索引 ... " />
+                <marker date="1524588633131" expanded="true" signature="2190:2230" ph="/// 打出来的牌 ... " />
+                <marker date="1524588633131" expanded="true" signature="2549:2589" ph="/// 当前摸的牌 ... " />
+                <marker date="1524588633131" expanded="true" signature="2664:2707" ph="/// 当前的方向字符串 ... " />
+                <marker date="1524588633131" expanded="true" signature="2745:2786" ph="/// 普通胡牌算法 ... " />
+                <marker date="1524588633131" expanded="true" signature="2819:2860" ph="/// 赖子胡牌算法 ... " />
+                <marker date="1524588633131" expanded="true" signature="3026:3104" ph="/* private GameObject singalEndPanel; ... */" />
+                <marker date="1524588633131" expanded="true" signature="3208:3266" ph="/// 手牌数组，0自己，1-右边。2-上边。3-左边 ... " />
+                <marker date="1524588633131" expanded="true" signature="3315:3357" ph="/// 打在桌子上的牌 ... " />
+                <marker date="1524588633131" expanded="true" signature="3739:4623" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="4408:4520" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="4531:4572" ph="/* readyGame(); ... */" />
+                <marker date="1524588633131" expanded="true" signature="4645:4713" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="4732:4818" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="4846:6575" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="6607:8329" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="8361:8832" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="8528:8628" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="8835:9048" ph="/* private void initPerson(){ ... */" />
+                <marker date="1524588633131" expanded="true" signature="9050:9141" ph="/// Cards the select. ... " />
+                <marker date="1524588633131" expanded="true" signature="9181:9740" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="9236:9563" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="9279:9330" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="9582:9737" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="9743:9828" ph="/// 开始游戏 ... " />
+                <marker date="1524588633131" expanded="true" signature="9876:12606" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="10355:10384" ph="/* 游戏模式显示 ... */" />
+                <marker date="1524588633131" expanded="true" signature="10461:10533" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="10582:10652" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="10700:10769" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="10881:11031" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="11529:11597" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="11704:11778" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="11823:12603" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="11855:11870" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="11878:12595" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="11913:12590" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="12111:12203" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="12300:12389" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="12480:12569" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="12639:13137" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="13140:13227" ph="/// 别人摸牌通知 ... " />
+                <marker date="1524588633131" expanded="true" signature="13279:13555" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="13610:13905" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="13745:13780" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="13958:14669" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="14049:14416" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="14672:14757" ph="/// 自己摸牌 ... " />
+                <marker date="1524588633131" expanded="true" signature="14804:15628" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="15175:15326" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="15233:15318" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="15488:15572" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="15579:15622" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="15669:15953" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="15803:15947" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="15895:15943" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="15956:16054" ph="/// 胡，杠，碰，吃，pass按钮显示. ... " />
+                <marker date="1524588633131" expanded="true" signature="16106:18225" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="16246:16281" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="16421:18222" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="16460:16533" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="16583:16915" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="16618:16749" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="16785:16822" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="16962:17119" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="17163:17238" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="17285:17678" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="17523:17664" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="17722:17944" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="17981:18218" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="18310:19446" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="18365:19086" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="18396:19082" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="18446:19076" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="18601:19002" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="19012:19070" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="19286:19370" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="19452:19491" ph="/* 检测胡牌 ... */" />
+                <marker date="1524588633131" expanded="true" signature="19452:20424" ph="/// 检测胡牌 ... " />
+                <marker date="1524588633131" expanded="true" signature="19493:20227" ph="/* private bool checkHuPai(){ ... */" />
+                <marker date="1524588633131" expanded="true" signature="20230:20424" ph="/* private bool addPointAndCheckHu(int cardPoint){ ... */" />
+                <marker date="1524588633131" expanded="true" signature="20474:20573" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="20522:20570" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="20620:20714" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="20668:20711" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="20717:20852" ph="/// Gets the index by dir. ... " />
+                <marker date="1524588633131" expanded="true" signature="20891:21181" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="20925:21161" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="21183:21260" ph="///  ... " />
+                <marker date="1524588633131" expanded="true" signature="21329:22311" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="21366:22308" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="21511:22303" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="21674:22298" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="22314:22349" ph="///  ... " />
+                <marker date="1524588633131" expanded="true" signature="22375:23144" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="22555:23067" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="23193:23271" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="23230:23268" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="23320:23398" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="23358:23395" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="23401:23493" ph="/// 接收到其它人的出牌通知 ... " />
+                <marker date="1524588633131" expanded="true" signature="23547:24298" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="23914:24046" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="24300:24466" ph="/// 创建打来的的牌对象，并且开始播放动画 ... " />
+                <marker date="1524588633131" expanded="true" signature="24545:25634" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="24829:25158" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="25595:25631" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="25638:25818" ph="/// 根据一个人在数组里的索引，得到这个人所在的方位，L-左，T-上,R-右，B-下（自己的方位永远都是在下方） ... " />
+                <marker date="1524588633131" expanded="true" signature="25864:26697" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="25983:26067" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="26116:26607" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="26163:26194" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="26229:26603" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="26250:26357" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="26378:26483" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="26492:26598" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="26699:26745" ph="/// 设置红色箭头的显示方向 ... " />
+                <marker date="1524588633131" expanded="true" signature="26790:26970" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="26864:26907" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="27009:28641" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="27134:27331" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="27373:27572" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="27612:27775" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="27816:28048" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="28244:28326" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="28551:28594" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="28597:28610" ph="/* 丢牌上 ... */" />
+                <marker date="1524588633131" expanded="true" signature="28697:32292" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="29156:29233" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="29280:29851" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="29490:29803" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="29652:29798" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="29771:29792" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="30087:30551" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="30199:30303" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="30681:32233" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="30744:31239" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="31310:31722" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="31794:32217" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="32320:32820" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="32408:32749" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="32858:33398" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="32889:33004" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="33037:33152" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="33183:33294" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="33324:33366" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="33439:33480" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="33515:33839" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="33521:33731" ph="/* pengEffectGameList[getIndexByDir(curDirString)].SetActive(false); ... */" />
+                <marker date="1524588633131" expanded="true" signature="33897:40287" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="34455:34968" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="35077:38905" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="35145:35243" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="35297:35376" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="35433:37157" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="35467:35553" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="35596:37152" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="35703:37026" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="35849:36003" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="36349:36439" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="36754:36842" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="37189:38817" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="37259:38807" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="37305:37377" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="37484:38680" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="37606:37779" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="37995:38163" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="38389:38568" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="38962:40281" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="39127:39166" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="39265:40179" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="40369:40616" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="40391:40613" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="40619:40737" ph="/* 判断碰牌的牌组里面是否包含某个牌，用于判断是否实例化一张牌还是三张牌 ... */" />
+                <marker date="1524588633131" expanded="true" signature="40795:41482" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="40884:41165" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="41212:41232" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="41291:41465" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="41300:41420" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="41393:41415" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="41439:41460" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="41536:41917" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="41562:41914" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="41590:41675" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="41925:42006" ph="/// 自己打出来的牌 ... " />
+                <marker date="1524588633131" expanded="true" signature="42048:43196" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="42219:43192" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="43235:44458" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="43325:43534" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="43356:43530" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="43575:43851" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="43605:43847" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="43891:44098" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="43922:44094" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="44139:44418" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="44170:44414" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="44516:44968" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="44538:44950" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="44682:44901" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="44828:44896" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="45011:45639" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="45190:45459" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="45229:45351" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="45502:45632" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="45641:45691" ph="/// 销毁出的牌，并且检测是否可以碰 ... " />
+                <marker date="1524588633131" expanded="true" signature="45738:45875" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="45806:45872" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="45965:49272" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="46034:46180" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="46102:46170" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="46207:46386" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="46243:46327" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="46412:46829" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="46463:46819" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="46505:46613" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="46736:46805" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="46867:49243" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="46934:49233" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="46984:47227" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="47089:47170" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="47264:47636" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="47457:47538" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="47688:48124" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="47913:47994" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="48153:48261" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="48402:49219" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="48867:48948" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="49326:50196" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="49449:49860" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="49571:49764" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="49924:50073" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="49994:50063" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="50101:50147" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="50212:50498" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="50259:50306" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="50364:50495" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="50414:50491" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="50532:51121" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="50658:51118" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="51144:51338" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="51229:51259" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="51340:51381" ph="/// 重新开始计时 ... " />
+                <marker date="1524588633131" expanded="true" signature="51406:51426" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="51428:51469" ph="/// 点击放弃按钮 ... " />
+                <marker date="1524588633131" expanded="true" signature="51499:51843" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="51593:51689" ph="/* if(isSelfPickCard ){ ... */" />
+                <marker date="1524588633131" expanded="true" signature="51724:51764" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="51874:52109" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="52163:56727" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="52340:52422" ph="/* checkHuOrGangOrPengOrChi (MoPaiCardPoint,2); ... */" />
+                <marker date="1524588633131" expanded="true" signature="52462:56578" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="52484:52753" ph="/* SelfAndOtherPutoutCard = gangBackVo.cardList[0]; ... */" />
+                <marker date="1524588633131" expanded="true" signature="52778:55269" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="52965:54304" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="52966:53003" ph="/* 杠牌不在碰牌数组以内，一定为别人打得牌 ... */" />
+                <marker date="1524588633131" expanded="true" signature="53029:53065" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="53096:53183" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="53284:53640" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="53472:53633" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="53600:53625" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="53752:54237" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="54095:54200" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="54387:54629" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="54486:54621" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="55166:55262" ph="/* MoPaiCardPoint = gangBackVo.cardList [0]; ... */" />
+                <marker date="1524588633131" expanded="true" signature="55294:56574" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="55508:55852" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="55693:55846" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="55816:55839" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="55946:56527" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="55965:56192" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="56210:56520" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="56621:56630" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="56655:56724" ph="/* moPai(); ... */" />
+                <marker date="1524588633131" expanded="true" signature="56730:56895" ph="///  ... " />
+                <marker date="1524588633131" expanded="true" signature="56988:57233" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="57265:57975" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="57391:57499" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="57978:58017" ph="/// 清理桌面 ... " />
+                <marker date="1524588633131" expanded="true" signature="58038:58552" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="58276:58303" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="58328:58355" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="58384:58414" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="58444:58476" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="58511:58548" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="58611:58765" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="58633:58762" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="58661:58758" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="58817:58982" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="58843:58979" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="58875:58975" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="59012:59955" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="59542:59622" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="59672:59751" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="59800:59878" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="60005:60128" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="60033:60077" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="60181:60299" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="60349:60509" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="60417:60447" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="60511:60597" ph="/// 设置当前角色的座位 ... " />
+                <marker date="1524588633131" expanded="true" signature="60636:61119" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="60640:60737" ph="/* 游戏结束后用的数据，勿删！！！ ... */" />
+                <marker date="1524588633131" expanded="true" signature="60817:60863" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="61025:61062" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="61121:61228" ph="/// Gets my index from list. ... " />
+                <marker date="1524588633131" expanded="true" signature="61262:61709" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="61290:61666" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="61337:61662" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="61514:61656" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="61742:61957" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="61770:61942" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="61818:61938" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="61857:61933" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="61903:61927" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="62015:62119" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="62122:62139" ph="/* 胡牌请求 ... */" />
+                <marker date="1524588633131" expanded="true" signature="62168:62752" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="62207:62580" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="62362:62423" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="62585:62749" ph="/* 模拟胡牌操作 ... */" />
+                <marker date="1524588633131" expanded="true" signature="62786:62861" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="62920:64853" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="63173:63281" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="63224:63274" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="63368:64067" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="63571:63666" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="63766:63858" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="63952:64044" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="64131:64834" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="64248:64820" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="64297:64703" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="64405:64581" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="64594:64694" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="64715:64812" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="64856:64875" ph="/* 胡牌请求回调 ... */" />
+                <marker date="1524588633131" expanded="true" signature="64929:67821" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="65199:65886" ph="/* for (int i = 0; i &lt; GlobalDataScript.hupaiResponseVo.avatarList.Count; i++) ... */" />
+                <marker date="1524588633131" expanded="true" signature="65931:65970" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="66025:67500" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="66258:66843" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="66339:66506" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="66587:66753" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="67044:67439" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="67136:67376" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="67556:67762" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="67824:67845" ph="/* 检测某人是否胡牌 ... */" />
+                <marker date="1524588633131" expanded="true" signature="67901:68818" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="68028:68803" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="68284:68315" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="68354:68375" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="68412:68432" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="68469:68489" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="68530:68550" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="68589:68609" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="68653:68673" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="68715:68735" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="68777:68797" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="68823:69214" ph="/* public void huPaiCoinChanges(HupaiResponseItem hupaiResponseItem,int index,int avarIndex) ... */" />
+                <marker date="1524588633131" expanded="true" signature="69260:69744" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="69369:69740" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="69419:69736" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="69786:70952" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="69895:69980" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="70351:70588" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="70406:70584" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="70955:71724" ph="/* 全局结束请求回调 ... */" />
+                <marker date="1524588633131" expanded="true" signature="71785:71972" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="72039:72359" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="72160:72355" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="72267:72351" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="72362:72382" ph="/* 退出房间请求 ... */" />
+                <marker date="1524588633131" expanded="true" signature="72408:72618" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="72672:73458" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="72805:73367" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="72839:73322" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="72940:73274" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="73060:73110" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="73141:73268" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="73192:73233" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="73537:73785" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="73565:73704" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="73788:73810" ph="/* 申请解散房间回调 ... */" />
+                <marker date="1524588633131" expanded="true" signature="73898:74915" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="74177:74407" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="74454:74910" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="74537:74625" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="74708:74903" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="74919:74948" ph="/* 申请或同意解散房间请求 ... */" />
+                <marker date="1524588633131" expanded="true" signature="74988:75389" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="75413:75418" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="75443:75503" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="75539:76479" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="75904:76109" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="76289:76434" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="76534:76944" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="76812:76847" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="77008:77074" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="77104:77139" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="77234:79383" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="77287:79379" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="78778:78814" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="79007:79029" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="79436:79643" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="79682:80553" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="79829:80528" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="79860:80524" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="79909:80518" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="80060:80512" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="80602:80869" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="80693:80845" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="80779:80815" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="80907:80948" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="81001:81447" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="81130:81444" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="81351:81439" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="81397:81434" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="81503:81843" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="81577:81840" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="81794:81835" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="81891:83068" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="81971:83065" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="82205:83060" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="82340:83055" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="82453:83049" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="82886:82961" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="83101:83721" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="83181:83718" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="83415:83714" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="83467:83709" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="83572:83703" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="83725:83788" ph="/* 显示杠碰牌 ... */" />
+                <marker date="1524588633131" expanded="true" signature="83874:88925" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="83928:88922" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="84041:85041" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="84078:84652" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="84099:84407" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="85201:86325" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="85238:85928" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="85260:85584" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="86484:87576" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="86521:87176" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="86543:86878" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="87736:88870" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="87773:88470" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="87795:88130" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="88954:89023" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="89092:90055" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="89225:89680" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="89759:90052" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="89789:89940" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="90122:90706" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="90255:90703" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="90763:91347" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="91095:91154" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="91176:91254" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="91267:91344" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="91395:91465" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="91468:91485" ph="/* 准备游戏 ... */" />
+                <marker date="1524588633131" expanded="true" signature="91511:91580" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="91640:92282" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="91837:91976" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="91994:92133" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="92336:92614" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="92404:92611" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="92453:92607" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="92496:92602" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="92547:92596" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="92672:97142" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="93433:94213" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="93744:93837" ph="/* useForGangOrPengOrChi = putOutCardPoint;//杠 ... */" />
+                <marker date="1524588633131" expanded="true" signature="94233:94239" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="94293:95610" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="94336:94895" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="94948:95599" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="95179:95397" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="95274:95390" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="95925:96774" ph="{...}" />
+                <marker date="1524588633131" expanded="true" signature="95968:96770" ph="/* if (pickAvatarIndexTemp == getMyIndexFromList ()) { ... */" />
+                <marker date="1524588633131" expanded="true" signature="96871:97023" ph="/* otherPickCardItem = handerCardList[dirindex][0]; ... */" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GaveUpRequest.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GaveUpRequest.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Script/netManager/request/GaveUpRequest.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -764,7 +764,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>init</find>
       <find>显示</find>
       <find>avatarList.Count</find>
       <find>.main</find>
@@ -794,6 +793,7 @@
       <find>dissol</find>
       <find>111</find>
       <find>mypass</find>
+      <find>134</find>
     </findStrings>
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -837,8 +837,8 @@
         <option value="$PROJECT_DIR$/Assets/Script/netManager/Events/APIS.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/soundsCtrl/SoundToggleScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/netManager/Events/SocketEventHandle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/Game_Scenes/MyMahjongScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Game_Scenes/PlayerItemScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/Game_Scenes/MyMahjongScript.cs" />
       </list>
     </option>
   </component>
@@ -952,12 +952,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523764484558</updated>
-      <workItem from="1523764489157" duration="14201000" />
+      <workItem from="1523764489157" duration="14691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14201000" />
+    <option name="totallyTimeSpent" value="14691000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1570,498 +1570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Script/Game_Scenes/MyMahjongScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="1776" column="53" lean-forward="false" selection-start-line="1776" selection-start-column="53" selection-end-line="1776" selection-end-column="53" />
-          <folding>
-            <marker date="1524505171043" expanded="false" signature="6:206" ph="..." />
-            <marker date="1524505171043" expanded="true" signature="254:97145" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="1965:2000" ph="///  ... " />
-            <marker date="1524505171043" expanded="true" signature="2070:2110" ph="/// 庄家的索引 ... " />
-            <marker date="1524505171043" expanded="true" signature="2190:2230" ph="/// 打出来的牌 ... " />
-            <marker date="1524505171043" expanded="true" signature="2549:2589" ph="/// 当前摸的牌 ... " />
-            <marker date="1524505171043" expanded="true" signature="2664:2707" ph="/// 当前的方向字符串 ... " />
-            <marker date="1524505171043" expanded="true" signature="2745:2786" ph="/// 普通胡牌算法 ... " />
-            <marker date="1524505171043" expanded="true" signature="2819:2860" ph="/// 赖子胡牌算法 ... " />
-            <marker date="1524505171043" expanded="true" signature="3026:3104" ph="/* private GameObject singalEndPanel; ... */" />
-            <marker date="1524505171043" expanded="true" signature="3208:3266" ph="/// 手牌数组，0自己，1-右边。2-上边。3-左边 ... " />
-            <marker date="1524505171043" expanded="true" signature="3315:3357" ph="/// 打在桌子上的牌 ... " />
-            <marker date="1524505171043" expanded="true" signature="3739:4623" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="4408:4520" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="4531:4572" ph="/* readyGame(); ... */" />
-            <marker date="1524505171043" expanded="true" signature="4645:4713" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="4732:4818" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="4846:6575" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="6607:8329" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="8361:8832" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="8528:8628" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="8835:9048" ph="/* private void initPerson(){ ... */" />
-            <marker date="1524505171043" expanded="true" signature="9050:9141" ph="/// Cards the select. ... " />
-            <marker date="1524505171043" expanded="true" signature="9181:9740" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="9236:9563" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="9279:9330" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="9582:9737" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="9743:9828" ph="/// 开始游戏 ... " />
-            <marker date="1524505171043" expanded="true" signature="9876:12606" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="10355:10384" ph="/* 游戏模式显示 ... */" />
-            <marker date="1524505171043" expanded="true" signature="10461:10533" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="10582:10652" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="10700:10769" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="10881:11031" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="11529:11597" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="11704:11778" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="11823:12603" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="11855:11870" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="11878:12595" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="11913:12590" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="12111:12203" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="12300:12389" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="12480:12569" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="12639:13137" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="13140:13227" ph="/// 别人摸牌通知 ... " />
-            <marker date="1524505171043" expanded="true" signature="13279:13555" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="13610:13905" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="13745:13780" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="13958:14669" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="14049:14416" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="14672:14757" ph="/// 自己摸牌 ... " />
-            <marker date="1524505171043" expanded="true" signature="14804:15628" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="15175:15326" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="15233:15318" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="15488:15572" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="15579:15622" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="15669:15953" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="15803:15947" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="15895:15943" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="15956:16054" ph="/// 胡，杠，碰，吃，pass按钮显示. ... " />
-            <marker date="1524505171043" expanded="true" signature="16106:18225" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="16246:16281" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="16421:18222" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="16460:16533" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="16583:16915" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="16618:16749" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="16785:16822" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="16962:17119" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="17163:17238" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="17285:17678" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="17523:17664" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="17722:17944" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="17981:18218" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="18310:19446" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="18365:19086" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="18396:19082" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="18446:19076" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="18601:19002" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="19012:19070" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="19286:19370" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="19452:19491" ph="/* 检测胡牌 ... */" />
-            <marker date="1524505171043" expanded="true" signature="19452:20424" ph="/// 检测胡牌 ... " />
-            <marker date="1524505171043" expanded="true" signature="19493:20227" ph="/* private bool checkHuPai(){ ... */" />
-            <marker date="1524505171043" expanded="true" signature="20230:20424" ph="/* private bool addPointAndCheckHu(int cardPoint){ ... */" />
-            <marker date="1524505171043" expanded="true" signature="20474:20573" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="20522:20570" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="20620:20714" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="20668:20711" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="20717:20852" ph="/// Gets the index by dir. ... " />
-            <marker date="1524505171043" expanded="true" signature="20891:21181" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="20925:21161" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="21183:21260" ph="///  ... " />
-            <marker date="1524505171043" expanded="true" signature="21329:22311" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="21366:22308" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="21511:22303" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="21674:22298" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="22314:22349" ph="///  ... " />
-            <marker date="1524505171043" expanded="true" signature="22375:23144" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="22555:23067" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="23193:23271" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="23230:23268" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="23320:23398" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="23358:23395" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="23401:23493" ph="/// 接收到其它人的出牌通知 ... " />
-            <marker date="1524505171043" expanded="true" signature="23547:24298" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="23914:24046" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="24300:24466" ph="/// 创建打来的的牌对象，并且开始播放动画 ... " />
-            <marker date="1524505171043" expanded="true" signature="24545:25634" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="24829:25158" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="25595:25631" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="25638:25818" ph="/// 根据一个人在数组里的索引，得到这个人所在的方位，L-左，T-上,R-右，B-下（自己的方位永远都是在下方） ... " />
-            <marker date="1524505171043" expanded="true" signature="25864:26697" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="25983:26067" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="26116:26607" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="26163:26194" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="26229:26603" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="26250:26357" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="26378:26483" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="26492:26598" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="26699:26745" ph="/// 设置红色箭头的显示方向 ... " />
-            <marker date="1524505171043" expanded="true" signature="26790:26970" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="26864:26907" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="27009:28641" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="27134:27331" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="27373:27572" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="27612:27775" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="27816:28048" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="28244:28326" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="28551:28594" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="28597:28610" ph="/* 丢牌上 ... */" />
-            <marker date="1524505171043" expanded="true" signature="28697:32292" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="29156:29233" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="29280:29851" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="29490:29803" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="29652:29798" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="29771:29792" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="30087:30551" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="30199:30303" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="30681:32233" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="30744:31239" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="31310:31722" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="31794:32217" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="32320:32820" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="32408:32749" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="32858:33398" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="32889:33004" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="33037:33152" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="33183:33294" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="33324:33366" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="33439:33480" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="33515:33839" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="33521:33731" ph="/* pengEffectGameList[getIndexByDir(curDirString)].SetActive(false); ... */" />
-            <marker date="1524505171043" expanded="true" signature="33897:40287" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="34455:34968" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="35077:38905" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="35145:35243" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="35297:35376" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="35433:37157" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="35467:35553" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="35596:37152" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="35703:37026" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="35849:36003" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="36349:36439" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="36754:36842" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="37189:38817" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="37259:38807" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="37305:37377" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="37484:38680" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="37606:37779" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="37995:38163" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="38389:38568" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="38962:40281" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="39127:39166" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="39265:40179" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="40369:40616" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="40391:40613" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="40619:40737" ph="/* 判断碰牌的牌组里面是否包含某个牌，用于判断是否实例化一张牌还是三张牌 ... */" />
-            <marker date="1524505171043" expanded="true" signature="40795:41482" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="40884:41165" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="41212:41232" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="41291:41465" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="41300:41420" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="41393:41415" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="41439:41460" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="41536:41917" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="41562:41914" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="41590:41675" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="41925:42006" ph="/// 自己打出来的牌 ... " />
-            <marker date="1524505171043" expanded="true" signature="42048:43196" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="42219:43192" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="43235:44458" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="43325:43534" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="43356:43530" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="43575:43851" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="43605:43847" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="43891:44098" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="43922:44094" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="44139:44418" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="44170:44414" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="44516:44968" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="44538:44950" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="44682:44901" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="44828:44896" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="45011:45639" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="45190:45459" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="45229:45351" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="45502:45632" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="45641:45691" ph="/// 销毁出的牌，并且检测是否可以碰 ... " />
-            <marker date="1524505171043" expanded="true" signature="45738:45875" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="45806:45872" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="45965:49272" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="46034:46180" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="46102:46170" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="46207:46386" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="46243:46327" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="46412:46829" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="46463:46819" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="46505:46613" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="46736:46805" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="46867:49243" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="46934:49233" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="46984:47227" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="47089:47170" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="47264:47636" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="47457:47538" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="47688:48124" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="47913:47994" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="48153:48261" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="48402:49219" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="48867:48948" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="49326:50196" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="49449:49860" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="49571:49764" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="49924:50073" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="49994:50063" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="50101:50147" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="50212:50498" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="50259:50306" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="50364:50495" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="50414:50491" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="50532:51121" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="50658:51118" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="51144:51338" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="51229:51259" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="51340:51381" ph="/// 重新开始计时 ... " />
-            <marker date="1524505171043" expanded="true" signature="51406:51426" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="51428:51469" ph="/// 点击放弃按钮 ... " />
-            <marker date="1524505171043" expanded="true" signature="51499:51843" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="51593:51689" ph="/* if(isSelfPickCard ){ ... */" />
-            <marker date="1524505171043" expanded="true" signature="51724:51764" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="51874:52109" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="52163:56727" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="52340:52422" ph="/* checkHuOrGangOrPengOrChi (MoPaiCardPoint,2); ... */" />
-            <marker date="1524505171043" expanded="true" signature="52462:56578" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="52484:52753" ph="/* SelfAndOtherPutoutCard = gangBackVo.cardList[0]; ... */" />
-            <marker date="1524505171043" expanded="true" signature="52778:55269" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="52965:54304" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="52966:53003" ph="/* 杠牌不在碰牌数组以内，一定为别人打得牌 ... */" />
-            <marker date="1524505171043" expanded="true" signature="53029:53065" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="53096:53183" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="53284:53640" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="53472:53633" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="53600:53625" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="53752:54237" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="54095:54200" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="54387:54629" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="54486:54621" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="55166:55262" ph="/* MoPaiCardPoint = gangBackVo.cardList [0]; ... */" />
-            <marker date="1524505171043" expanded="true" signature="55294:56574" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="55508:55852" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="55693:55846" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="55816:55839" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="55946:56527" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="55965:56192" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="56210:56520" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="56621:56630" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="56655:56724" ph="/* moPai(); ... */" />
-            <marker date="1524505171043" expanded="true" signature="56730:56895" ph="///  ... " />
-            <marker date="1524505171043" expanded="true" signature="56988:57233" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="57265:57975" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="57391:57499" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="57978:58017" ph="/// 清理桌面 ... " />
-            <marker date="1524505171043" expanded="true" signature="58038:58552" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="58276:58303" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="58328:58355" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="58384:58414" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="58444:58476" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="58511:58548" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="58611:58765" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="58633:58762" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="58661:58758" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="58817:58982" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="58843:58979" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="58875:58975" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="59012:59955" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="59542:59622" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="59672:59751" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="59800:59878" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="60005:60128" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="60033:60077" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="60181:60299" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="60349:60509" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="60417:60447" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="60511:60597" ph="/// 设置当前角色的座位 ... " />
-            <marker date="1524505171043" expanded="true" signature="60636:61119" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="60640:60737" ph="/* 游戏结束后用的数据，勿删！！！ ... */" />
-            <marker date="1524505171043" expanded="true" signature="60817:60863" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="61025:61062" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="61121:61228" ph="/// Gets my index from list. ... " />
-            <marker date="1524505171043" expanded="true" signature="61262:61709" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="61290:61666" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="61337:61662" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="61514:61656" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="61742:61957" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="61770:61942" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="61818:61938" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="61857:61933" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="61903:61927" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="62015:62119" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="62122:62139" ph="/* 胡牌请求 ... */" />
-            <marker date="1524505171043" expanded="true" signature="62168:62752" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="62207:62580" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="62362:62423" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="62585:62749" ph="/* 模拟胡牌操作 ... */" />
-            <marker date="1524505171043" expanded="true" signature="62786:62861" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="62920:64853" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="63173:63281" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="63224:63274" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="63368:64067" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="63571:63666" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="63766:63858" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="63952:64044" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="64131:64834" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="64248:64820" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="64297:64703" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="64405:64581" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="64594:64694" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="64715:64812" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="64856:64875" ph="/* 胡牌请求回调 ... */" />
-            <marker date="1524505171043" expanded="true" signature="64929:67821" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="65199:65886" ph="/* for (int i = 0; i &lt; GlobalDataScript.hupaiResponseVo.avatarList.Count; i++) ... */" />
-            <marker date="1524505171043" expanded="true" signature="65931:65970" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="66025:67500" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="66258:66843" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="66339:66506" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="66587:66753" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="67044:67439" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="67136:67376" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="67556:67762" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="67824:67845" ph="/* 检测某人是否胡牌 ... */" />
-            <marker date="1524505171043" expanded="true" signature="67901:68818" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="68028:68803" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="68284:68315" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="68354:68375" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="68412:68432" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="68469:68489" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="68530:68550" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="68589:68609" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="68653:68673" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="68715:68735" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="68777:68797" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="68823:69214" ph="/* public void huPaiCoinChanges(HupaiResponseItem hupaiResponseItem,int index,int avarIndex) ... */" />
-            <marker date="1524505171043" expanded="true" signature="69260:69744" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="69369:69740" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="69419:69736" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="69786:70952" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="69895:69980" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="70351:70588" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="70406:70584" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="70955:71724" ph="/* 全局结束请求回调 ... */" />
-            <marker date="1524505171043" expanded="true" signature="71785:71972" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="72039:72359" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="72160:72355" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="72267:72351" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="72362:72382" ph="/* 退出房间请求 ... */" />
-            <marker date="1524505171043" expanded="true" signature="72408:72618" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="72672:73458" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="72805:73367" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="72839:73322" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="72940:73274" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="73060:73110" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="73141:73268" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="73192:73233" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="73537:73785" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="73565:73704" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="73788:73810" ph="/* 申请解散房间回调 ... */" />
-            <marker date="1524505171043" expanded="true" signature="73898:74915" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="74177:74407" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="74454:74910" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="74537:74625" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="74708:74903" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="74919:74948" ph="/* 申请或同意解散房间请求 ... */" />
-            <marker date="1524505171043" expanded="true" signature="74988:75389" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="75413:75418" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="75443:75503" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="75539:76479" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="75904:76109" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="76289:76434" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="76534:76944" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="76812:76847" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="77008:77074" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="77104:77139" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="77234:79383" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="77287:79379" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="78778:78814" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="79007:79029" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="79436:79643" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="79682:80553" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="79829:80528" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="79860:80524" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="79909:80518" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="80060:80512" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="80602:80869" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="80693:80845" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="80779:80815" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="80907:80948" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="81001:81447" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="81130:81444" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="81351:81439" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="81397:81434" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="81503:81843" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="81577:81840" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="81794:81835" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="81891:83068" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="81971:83065" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="82205:83060" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="82340:83055" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="82453:83049" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="82886:82961" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="83101:83721" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="83181:83718" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="83415:83714" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="83467:83709" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="83572:83703" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="83725:83788" ph="/* 显示杠碰牌 ... */" />
-            <marker date="1524505171043" expanded="true" signature="83874:88925" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="83928:88922" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="84041:85041" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="84078:84652" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="84099:84407" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="85201:86325" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="85238:85928" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="85260:85584" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="86484:87576" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="86521:87176" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="86543:86878" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="87736:88870" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="87773:88470" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="87795:88130" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="88954:89023" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="89092:90055" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="89225:89680" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="89759:90052" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="89789:89940" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="90122:90706" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="90255:90703" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="90763:91347" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="91095:91154" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="91176:91254" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="91267:91344" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="91395:91465" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="91468:91485" ph="/* 准备游戏 ... */" />
-            <marker date="1524505171043" expanded="true" signature="91511:91580" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="91640:92282" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="91837:91976" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="91994:92133" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="92336:92614" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="92404:92611" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="92453:92607" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="92496:92602" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="92547:92596" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="92672:97142" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="93433:94213" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="93744:93837" ph="/* useForGangOrPengOrChi = putOutCardPoint;//杠 ... */" />
-            <marker date="1524505171043" expanded="true" signature="94233:94239" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="94293:95610" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="94336:94895" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="94948:95599" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="95179:95397" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="95274:95390" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="95925:96774" ph="{...}" />
-            <marker date="1524505171043" expanded="true" signature="95968:96770" ph="/* if (pickAvatarIndexTemp == getMyIndexFromList ()) { ... */" />
-            <marker date="1524505171043" expanded="true" signature="96871:97023" ph="/* otherPickCardItem = handerCardList[dirindex][0]; ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Script/netManager/request/GaveUpRequest.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -2070,6 +1578,498 @@
             <marker date="1477020702000" expanded="true" signature="39:192" ph="{...}" />
             <marker date="1477020702000" expanded="true" signature="85:190" ph="{...}" />
             <marker date="1477020702000" expanded="true" signature="114:187" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Script/Game_Scenes/MyMahjongScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="968" column="9" lean-forward="true" selection-start-line="968" selection-start-column="9" selection-end-line="968" selection-end-column="9" />
+          <folding>
+            <marker date="1524588633131" expanded="false" signature="6:206" ph="..." />
+            <marker date="1524588633131" expanded="true" signature="254:97145" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="1965:2000" ph="///  ... " />
+            <marker date="1524588633131" expanded="true" signature="2070:2110" ph="/// 庄家的索引 ... " />
+            <marker date="1524588633131" expanded="true" signature="2190:2230" ph="/// 打出来的牌 ... " />
+            <marker date="1524588633131" expanded="true" signature="2549:2589" ph="/// 当前摸的牌 ... " />
+            <marker date="1524588633131" expanded="true" signature="2664:2707" ph="/// 当前的方向字符串 ... " />
+            <marker date="1524588633131" expanded="true" signature="2745:2786" ph="/// 普通胡牌算法 ... " />
+            <marker date="1524588633131" expanded="true" signature="2819:2860" ph="/// 赖子胡牌算法 ... " />
+            <marker date="1524588633131" expanded="true" signature="3026:3104" ph="/* private GameObject singalEndPanel; ... */" />
+            <marker date="1524588633131" expanded="true" signature="3208:3266" ph="/// 手牌数组，0自己，1-右边。2-上边。3-左边 ... " />
+            <marker date="1524588633131" expanded="true" signature="3315:3357" ph="/// 打在桌子上的牌 ... " />
+            <marker date="1524588633131" expanded="true" signature="3739:4623" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="4408:4520" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="4531:4572" ph="/* readyGame(); ... */" />
+            <marker date="1524588633131" expanded="true" signature="4645:4713" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="4732:4818" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="4846:6575" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="6607:8329" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="8361:8832" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="8528:8628" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="8835:9048" ph="/* private void initPerson(){ ... */" />
+            <marker date="1524588633131" expanded="true" signature="9050:9141" ph="/// Cards the select. ... " />
+            <marker date="1524588633131" expanded="true" signature="9181:9740" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="9236:9563" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="9279:9330" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="9582:9737" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="9743:9828" ph="/// 开始游戏 ... " />
+            <marker date="1524588633131" expanded="true" signature="9876:12606" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="10355:10384" ph="/* 游戏模式显示 ... */" />
+            <marker date="1524588633131" expanded="true" signature="10461:10533" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="10582:10652" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="10700:10769" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="10881:11031" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="11529:11597" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="11704:11778" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="11823:12603" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="11855:11870" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="11878:12595" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="11913:12590" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="12111:12203" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="12300:12389" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="12480:12569" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="12639:13137" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="13140:13227" ph="/// 别人摸牌通知 ... " />
+            <marker date="1524588633131" expanded="true" signature="13279:13555" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="13610:13905" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="13745:13780" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="13958:14669" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="14049:14416" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="14672:14757" ph="/// 自己摸牌 ... " />
+            <marker date="1524588633131" expanded="true" signature="14804:15628" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="15175:15326" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="15233:15318" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="15488:15572" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="15579:15622" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="15669:15953" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="15803:15947" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="15895:15943" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="15956:16054" ph="/// 胡，杠，碰，吃，pass按钮显示. ... " />
+            <marker date="1524588633131" expanded="true" signature="16106:18225" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="16246:16281" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="16421:18222" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="16460:16533" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="16583:16915" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="16618:16749" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="16785:16822" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="16962:17119" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="17163:17238" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="17285:17678" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="17523:17664" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="17722:17944" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="17981:18218" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="18310:19446" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="18365:19086" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="18396:19082" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="18446:19076" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="18601:19002" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="19012:19070" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="19286:19370" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="19452:19491" ph="/* 检测胡牌 ... */" />
+            <marker date="1524588633131" expanded="true" signature="19452:20424" ph="/// 检测胡牌 ... " />
+            <marker date="1524588633131" expanded="true" signature="19493:20227" ph="/* private bool checkHuPai(){ ... */" />
+            <marker date="1524588633131" expanded="true" signature="20230:20424" ph="/* private bool addPointAndCheckHu(int cardPoint){ ... */" />
+            <marker date="1524588633131" expanded="true" signature="20474:20573" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="20522:20570" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="20620:20714" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="20668:20711" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="20717:20852" ph="/// Gets the index by dir. ... " />
+            <marker date="1524588633131" expanded="true" signature="20891:21181" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="20925:21161" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="21183:21260" ph="///  ... " />
+            <marker date="1524588633131" expanded="true" signature="21329:22311" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="21366:22308" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="21511:22303" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="21674:22298" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="22314:22349" ph="///  ... " />
+            <marker date="1524588633131" expanded="true" signature="22375:23144" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="22555:23067" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="23193:23271" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="23230:23268" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="23320:23398" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="23358:23395" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="23401:23493" ph="/// 接收到其它人的出牌通知 ... " />
+            <marker date="1524588633131" expanded="true" signature="23547:24298" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="23914:24046" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="24300:24466" ph="/// 创建打来的的牌对象，并且开始播放动画 ... " />
+            <marker date="1524588633131" expanded="true" signature="24545:25634" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="24829:25158" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="25595:25631" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="25638:25818" ph="/// 根据一个人在数组里的索引，得到这个人所在的方位，L-左，T-上,R-右，B-下（自己的方位永远都是在下方） ... " />
+            <marker date="1524588633131" expanded="true" signature="25864:26697" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="25983:26067" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="26116:26607" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="26163:26194" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="26229:26603" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="26250:26357" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="26378:26483" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="26492:26598" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="26699:26745" ph="/// 设置红色箭头的显示方向 ... " />
+            <marker date="1524588633131" expanded="true" signature="26790:26970" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="26864:26907" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="27009:28641" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="27134:27331" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="27373:27572" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="27612:27775" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="27816:28048" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="28244:28326" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="28551:28594" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="28597:28610" ph="/* 丢牌上 ... */" />
+            <marker date="1524588633131" expanded="true" signature="28697:32292" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="29156:29233" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="29280:29851" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="29490:29803" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="29652:29798" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="29771:29792" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="30087:30551" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="30199:30303" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="30681:32233" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="30744:31239" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="31310:31722" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="31794:32217" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="32320:32820" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="32408:32749" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="32858:33398" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="32889:33004" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="33037:33152" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="33183:33294" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="33324:33366" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="33439:33480" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="33515:33839" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="33521:33731" ph="/* pengEffectGameList[getIndexByDir(curDirString)].SetActive(false); ... */" />
+            <marker date="1524588633131" expanded="true" signature="33897:40287" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="34455:34968" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="35077:38905" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="35145:35243" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="35297:35376" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="35433:37157" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="35467:35553" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="35596:37152" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="35703:37026" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="35849:36003" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="36349:36439" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="36754:36842" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="37189:38817" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="37259:38807" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="37305:37377" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="37484:38680" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="37606:37779" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="37995:38163" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="38389:38568" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="38962:40281" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="39127:39166" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="39265:40179" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="40369:40616" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="40391:40613" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="40619:40737" ph="/* 判断碰牌的牌组里面是否包含某个牌，用于判断是否实例化一张牌还是三张牌 ... */" />
+            <marker date="1524588633131" expanded="true" signature="40795:41482" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="40884:41165" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="41212:41232" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="41291:41465" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="41300:41420" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="41393:41415" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="41439:41460" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="41536:41917" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="41562:41914" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="41590:41675" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="41925:42006" ph="/// 自己打出来的牌 ... " />
+            <marker date="1524588633131" expanded="true" signature="42048:43196" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="42219:43192" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="43235:44458" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="43325:43534" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="43356:43530" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="43575:43851" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="43605:43847" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="43891:44098" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="43922:44094" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="44139:44418" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="44170:44414" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="44516:44968" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="44538:44950" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="44682:44901" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="44828:44896" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="45011:45639" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="45190:45459" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="45229:45351" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="45502:45632" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="45641:45691" ph="/// 销毁出的牌，并且检测是否可以碰 ... " />
+            <marker date="1524588633131" expanded="true" signature="45738:45875" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="45806:45872" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="45965:49272" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="46034:46180" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="46102:46170" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="46207:46386" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="46243:46327" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="46412:46829" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="46463:46819" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="46505:46613" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="46736:46805" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="46867:49243" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="46934:49233" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="46984:47227" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="47089:47170" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="47264:47636" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="47457:47538" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="47688:48124" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="47913:47994" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="48153:48261" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="48402:49219" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="48867:48948" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="49326:50196" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="49449:49860" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="49571:49764" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="49924:50073" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="49994:50063" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="50101:50147" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="50212:50498" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="50259:50306" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="50364:50495" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="50414:50491" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="50532:51121" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="50658:51118" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="51144:51338" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="51229:51259" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="51340:51381" ph="/// 重新开始计时 ... " />
+            <marker date="1524588633131" expanded="true" signature="51406:51426" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="51428:51469" ph="/// 点击放弃按钮 ... " />
+            <marker date="1524588633131" expanded="true" signature="51499:51843" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="51593:51689" ph="/* if(isSelfPickCard ){ ... */" />
+            <marker date="1524588633131" expanded="true" signature="51724:51764" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="51874:52109" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="52163:56727" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="52340:52422" ph="/* checkHuOrGangOrPengOrChi (MoPaiCardPoint,2); ... */" />
+            <marker date="1524588633131" expanded="true" signature="52462:56578" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="52484:52753" ph="/* SelfAndOtherPutoutCard = gangBackVo.cardList[0]; ... */" />
+            <marker date="1524588633131" expanded="true" signature="52778:55269" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="52965:54304" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="52966:53003" ph="/* 杠牌不在碰牌数组以内，一定为别人打得牌 ... */" />
+            <marker date="1524588633131" expanded="true" signature="53029:53065" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="53096:53183" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="53284:53640" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="53472:53633" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="53600:53625" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="53752:54237" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="54095:54200" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="54387:54629" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="54486:54621" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="55166:55262" ph="/* MoPaiCardPoint = gangBackVo.cardList [0]; ... */" />
+            <marker date="1524588633131" expanded="true" signature="55294:56574" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="55508:55852" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="55693:55846" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="55816:55839" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="55946:56527" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="55965:56192" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="56210:56520" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="56621:56630" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="56655:56724" ph="/* moPai(); ... */" />
+            <marker date="1524588633131" expanded="true" signature="56730:56895" ph="///  ... " />
+            <marker date="1524588633131" expanded="true" signature="56988:57233" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="57265:57975" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="57391:57499" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="57978:58017" ph="/// 清理桌面 ... " />
+            <marker date="1524588633131" expanded="true" signature="58038:58552" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="58276:58303" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="58328:58355" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="58384:58414" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="58444:58476" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="58511:58548" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="58611:58765" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="58633:58762" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="58661:58758" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="58817:58982" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="58843:58979" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="58875:58975" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="59012:59955" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="59542:59622" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="59672:59751" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="59800:59878" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="60005:60128" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="60033:60077" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="60181:60299" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="60349:60509" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="60417:60447" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="60511:60597" ph="/// 设置当前角色的座位 ... " />
+            <marker date="1524588633131" expanded="true" signature="60636:61119" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="60640:60737" ph="/* 游戏结束后用的数据，勿删！！！ ... */" />
+            <marker date="1524588633131" expanded="true" signature="60817:60863" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="61025:61062" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="61121:61228" ph="/// Gets my index from list. ... " />
+            <marker date="1524588633131" expanded="true" signature="61262:61709" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="61290:61666" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="61337:61662" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="61514:61656" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="61742:61957" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="61770:61942" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="61818:61938" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="61857:61933" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="61903:61927" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="62015:62119" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="62122:62139" ph="/* 胡牌请求 ... */" />
+            <marker date="1524588633131" expanded="true" signature="62168:62752" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="62207:62580" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="62362:62423" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="62585:62749" ph="/* 模拟胡牌操作 ... */" />
+            <marker date="1524588633131" expanded="true" signature="62786:62861" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="62920:64853" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="63173:63281" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="63224:63274" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="63368:64067" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="63571:63666" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="63766:63858" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="63952:64044" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="64131:64834" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="64248:64820" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="64297:64703" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="64405:64581" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="64594:64694" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="64715:64812" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="64856:64875" ph="/* 胡牌请求回调 ... */" />
+            <marker date="1524588633131" expanded="true" signature="64929:67821" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="65199:65886" ph="/* for (int i = 0; i &lt; GlobalDataScript.hupaiResponseVo.avatarList.Count; i++) ... */" />
+            <marker date="1524588633131" expanded="true" signature="65931:65970" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="66025:67500" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="66258:66843" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="66339:66506" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="66587:66753" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="67044:67439" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="67136:67376" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="67556:67762" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="67824:67845" ph="/* 检测某人是否胡牌 ... */" />
+            <marker date="1524588633131" expanded="true" signature="67901:68818" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="68028:68803" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="68284:68315" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="68354:68375" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="68412:68432" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="68469:68489" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="68530:68550" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="68589:68609" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="68653:68673" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="68715:68735" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="68777:68797" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="68823:69214" ph="/* public void huPaiCoinChanges(HupaiResponseItem hupaiResponseItem,int index,int avarIndex) ... */" />
+            <marker date="1524588633131" expanded="true" signature="69260:69744" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="69369:69740" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="69419:69736" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="69786:70952" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="69895:69980" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="70351:70588" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="70406:70584" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="70955:71724" ph="/* 全局结束请求回调 ... */" />
+            <marker date="1524588633131" expanded="true" signature="71785:71972" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="72039:72359" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="72160:72355" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="72267:72351" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="72362:72382" ph="/* 退出房间请求 ... */" />
+            <marker date="1524588633131" expanded="true" signature="72408:72618" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="72672:73458" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="72805:73367" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="72839:73322" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="72940:73274" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="73060:73110" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="73141:73268" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="73192:73233" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="73537:73785" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="73565:73704" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="73788:73810" ph="/* 申请解散房间回调 ... */" />
+            <marker date="1524588633131" expanded="true" signature="73898:74915" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="74177:74407" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="74454:74910" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="74537:74625" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="74708:74903" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="74919:74948" ph="/* 申请或同意解散房间请求 ... */" />
+            <marker date="1524588633131" expanded="true" signature="74988:75389" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="75413:75418" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="75443:75503" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="75539:76479" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="75904:76109" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="76289:76434" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="76534:76944" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="76812:76847" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="77008:77074" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="77104:77139" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="77234:79383" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="77287:79379" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="78778:78814" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="79007:79029" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="79436:79643" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="79682:80553" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="79829:80528" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="79860:80524" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="79909:80518" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="80060:80512" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="80602:80869" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="80693:80845" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="80779:80815" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="80907:80948" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="81001:81447" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="81130:81444" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="81351:81439" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="81397:81434" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="81503:81843" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="81577:81840" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="81794:81835" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="81891:83068" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="81971:83065" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="82205:83060" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="82340:83055" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="82453:83049" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="82886:82961" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="83101:83721" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="83181:83718" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="83415:83714" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="83467:83709" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="83572:83703" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="83725:83788" ph="/* 显示杠碰牌 ... */" />
+            <marker date="1524588633131" expanded="true" signature="83874:88925" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="83928:88922" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="84041:85041" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="84078:84652" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="84099:84407" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="85201:86325" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="85238:85928" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="85260:85584" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="86484:87576" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="86521:87176" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="86543:86878" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="87736:88870" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="87773:88470" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="87795:88130" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="88954:89023" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="89092:90055" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="89225:89680" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="89759:90052" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="89789:89940" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="90122:90706" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="90255:90703" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="90763:91347" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="91095:91154" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="91176:91254" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="91267:91344" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="91395:91465" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="91468:91485" ph="/* 准备游戏 ... */" />
+            <marker date="1524588633131" expanded="true" signature="91511:91580" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="91640:92282" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="91837:91976" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="91994:92133" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="92336:92614" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="92404:92611" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="92453:92607" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="92496:92602" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="92547:92596" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="92672:97142" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="93433:94213" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="93744:93837" ph="/* useForGangOrPengOrChi = putOutCardPoint;//杠 ... */" />
+            <marker date="1524588633131" expanded="true" signature="94233:94239" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="94293:95610" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="94336:94895" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="94948:95599" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="95179:95397" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="95274:95390" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="95925:96774" ph="{...}" />
+            <marker date="1524588633131" expanded="true" signature="95968:96770" ph="/* if (pickAvatarIndexTemp == getMyIndexFromList ()) { ... */" />
+            <marker date="1524588633131" expanded="true" signature="96871:97023" ph="/* otherPickCardItem = handerCardList[dirindex][0]; ... */" />
           </folding>
         </state>
       </provider>
