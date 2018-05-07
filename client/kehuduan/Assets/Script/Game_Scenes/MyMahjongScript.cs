@@ -1776,11 +1776,22 @@ public class MyMahjongScript : MonoBehaviour
 			isSelfPickCard = false;
 		}
 		*/
+		
 		if (passType == "selfPickCard") {
 			GlobalDataScript.isDrag = true;
 		}
 		passType = "";
+		
 		CustomSocket.getInstance().sendMsg(new GaveUpRequest());
+		
+		if ( curDirString == DirectionEnum.Bottom && avatarList[getMyIndexFromList()].ting)
+		{
+			GlobalDataScript.isDrag = false;
+			
+			StartCoroutine(WaitToPutCard());
+			return;
+		}
+
 	}
 
 	public void myPengBtnClick()
