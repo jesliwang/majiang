@@ -600,6 +600,12 @@ public class MyMahjongScript : MonoBehaviour
 				List<string> gangPaiListTemp = gangPaiList.ToList ();
 				gangPaiListTemp.RemoveAt (0);
 				gangPaiList = gangPaiListTemp.ToArray ();
+				
+				
+				if (avatarList[getMyIndexFromList()].ting)
+				{
+					StopAllCoroutines();
+				}
 			}
 		}
 	}

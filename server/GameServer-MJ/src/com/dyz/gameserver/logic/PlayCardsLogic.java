@@ -266,7 +266,12 @@ public class PlayCardsLogic {
 			//System.out.println("检测胡牌的时候------添加别人打的牌："+cardIndex);
 			avatar.putCardInList(cardIndex);
 		}
-		if(checkHu(avatar,cardIndex)){
+		// TODO: 检查是否天胡
+		boolean flag = true;
+		flag = avatar.avatarVO.isTing();
+		// 如果100 不需要判断是否在听牌中
+		// 否则必须先听牌，再虎牌
+		if(flag && checkHu(avatar,cardIndex)){
 			//System.out.println("确实胡牌了");
 			//System.out.println(avatar.printPaiString() +"  avatar = "+avatar.avatarVO.getAccount().getNickname());
 			if(type.equals("chu")){
@@ -427,11 +432,31 @@ public class PlayCardsLogic {
             	sb.append(",");
             	//avatar.gangIndex.clear();
             }
+            
+            boolean isHu = false;
             if(checkAvatarIsHuPai(avatar,100,"ganghu")){
+            	isHu = true;
             	//检测完之后不需要移除
             	huAvatar.add(avatar);
             	sb.append("hu,");
             }
+            
+            if(!avatar.avatarVO.isTing())
+            {
+            	List<Integer> tingPais = new ArrayList<>();
+            	if((!isHu) && checkTing(avatar, tingPais))
+            	{
+            		//TODO:
+            		tingAvatar.add(avatar);
+            		sb.append("ting");
+            		for(int i = 0; i < tingPais.size(); i++)
+            		{
+            			sb.append(":" + tingPais.get(i));
+            		}
+            		sb.append(",");
+            	}
+            }
+            
             if(sb.length()>2){
             	//System.out.println(sb);
 				avatar.getSession().sendMsg(new ReturnInfoResponse(1, sb.toString()));
@@ -1760,7 +1785,7 @@ public class PlayCardsLogic {
      * 
      *  0:  花色的数量
      *  1:  对应花色的状态 1:peng 2:gang
-     * 
+     *  碰 1  杠2  胡3  吃4
      */
     private boolean checkTing(Avatar avatar, List<Integer> tingList)
     {
@@ -1775,7 +1800,7 @@ public class PlayCardsLogic {
     		if(rawPai[0][i] != 0)
     		{
     			rawPai[0][i] -= 1;
-    			for(int j = 0; j < 33; j++)
+    			for(int j = 0; j < rawPai[0].length; j++)
     			{
     				if(rawPai[0][j] < 4) {
     					rawPai[0][j] += 1;
@@ -1878,8 +1903,6 @@ public class PlayCardsLogic {
     	{
     		if(avatar.avatarVO.getChupais().get(i) == cardIndex) return false;
     	}
-    		
-    	
     	
     	int [][] paiList =  avatar.getPaiArray();
     	//不需要移除掉碰，杠了的牌组，在判断是否胡的时候就应判断了

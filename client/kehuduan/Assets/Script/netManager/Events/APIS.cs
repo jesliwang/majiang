@@ -15,12 +15,12 @@ namespace AssemblyCSharp
         public const string chatSocketUrl = "39.104.112.20";
 		//public const string socketUrl = "118.178.20.36";
         //public const string socketUrl = "39.108.136.192";
-        public const string socketUrl = "192.168.1.100";
-        //public const string socketUrl = "39.104.112.20";
+        //public const string socketUrl = "192.168.1.100";
+        public const string socketUrl = "39.104.112.20";
 
-		public const string PIC_PATH = "http://www.weipaigame.com:8080/";
+		public const string PIC_PATH = "http://www.weipagame.com:8080/";
 	//	public const string apkDownLoadurl="192.168.0.111/aaa/weipai.apk";
-		public const string ImgUrl = "http://118.178.20.3:9096/weiPaiImage/";
+		public const string ImgUrl = "http://118.178.20.13:9096/weiPaiImage/";
 		public const int head = 0x000030;
 		public const int headRESPONSE = 0x000031;
 

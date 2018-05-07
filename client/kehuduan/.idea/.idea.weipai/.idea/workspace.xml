@@ -24,16 +24,26 @@
       <file leaf-file-name="APIS.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Script/netManager/Events/APIS.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
               <folding>
-                <marker date="1524501605925" expanded="true" signature="39:5209" ph="{...}" />
-                <marker date="1524501605925" expanded="true" signature="60:5204" ph="{...}" />
-                <marker date="1524501605925" expanded="true" signature="80:88" ph="{...}" />
-                <marker date="1524501605925" expanded="true" signature="91:338" ph="/* public const string UPDATE_INFO_JSON_URL = &quot;http://192.168.0.110:8080/MaJiangManage/images/update.xml&quot;;//服务器上最 ... */" />
-                <marker date="1524501605925" expanded="true" signature="437:555" ph="/* public const string chatSocketUrl = &quot;192.168.1.100&quot;; ... */" />
-                <marker date="1524501605925" expanded="true" signature="619:729" ph="/* public const string socketUrl = &quot;118.178.20.36&quot;; ... */" />
+                <marker date="1524618430720" expanded="true" signature="39:5209" ph="{...}" />
+                <marker date="1524618430720" expanded="true" signature="60:5204" ph="{...}" />
+                <marker date="1524618430720" expanded="true" signature="80:88" ph="{...}" />
+                <marker date="1524618430720" expanded="true" signature="91:338" ph="/* public const string UPDATE_INFO_JSON_URL = &quot;http://192.168.0.110:8080/MaJiangManage/images/update.xml&quot;;//服务器上最 ... */" />
+                <marker date="1524618430720" expanded="true" signature="437:555" ph="/* public const string chatSocketUrl = &quot;192.168.1.100&quot;; ... */" />
+                <marker date="1524618430720" expanded="true" signature="619:729" ph="/* public const string socketUrl = &quot;118.178.20.36&quot;; ... */" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Unity3DRider.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="488" column="0" lean-forward="false" selection-start-line="488" selection-start-column="0" selection-end-line="488" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -332,6 +342,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/netManager/vo/BackLoginResponseVo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/netManager/vo/BackLoginResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/netManager/vo/Account.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Game_Scenes/PlayerItemScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/netManager/vo/RoomJoinResponseVo.cs" root0="FORCE_HIGHLIGHTING" />
@@ -367,11 +378,11 @@
         <option value="$PROJECT_DIR$/Assets/Script/netManager/vo/GangRequestVO.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/netManager/vo/AvatarVO.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/mahjongCard/bottomScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Script/netManager/Events/APIS.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/soundsCtrl/SoundToggleScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/netManager/Events/SocketEventHandle.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Game_Scenes/PlayerItemScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/Game_Scenes/MyMahjongScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/netManager/Events/APIS.cs" />
       </list>
     </option>
   </component>
@@ -485,12 +496,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523764484558</updated>
-      <workItem from="1523764489157" duration="15134000" />
+      <workItem from="1523764489157" duration="15526000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15134000" />
+    <option name="totallyTimeSpent" value="15526000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -503,7 +514,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="23" width="1260" height="696" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -513,7 +523,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31089744" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1108,17 +1118,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="488" column="0" lean-forward="false" selection-start-line="488" selection-start-column="0" selection-end-line="488" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Script/netManager/Events/APIS.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding>
-            <marker date="1524501605925" expanded="true" signature="39:5209" ph="{...}" />
-            <marker date="1524501605925" expanded="true" signature="60:5204" ph="{...}" />
-            <marker date="1524501605925" expanded="true" signature="80:88" ph="{...}" />
-            <marker date="1524501605925" expanded="true" signature="91:338" ph="/* public const string UPDATE_INFO_JSON_URL = &quot;http://192.168.0.110:8080/MaJiangManage/images/update.xml&quot;;//服务器上最 ... */" />
-            <marker date="1524501605925" expanded="true" signature="437:555" ph="/* public const string chatSocketUrl = &quot;192.168.1.100&quot;; ... */" />
-            <marker date="1524501605925" expanded="true" signature="619:729" ph="/* public const string socketUrl = &quot;118.178.20.36&quot;; ... */" />
+            <marker date="1524618430720" expanded="true" signature="39:5209" ph="{...}" />
+            <marker date="1524618430720" expanded="true" signature="60:5204" ph="{...}" />
+            <marker date="1524618430720" expanded="true" signature="80:88" ph="{...}" />
+            <marker date="1524618430720" expanded="true" signature="91:338" ph="/* public const string UPDATE_INFO_JSON_URL = &quot;http://192.168.0.110:8080/MaJiangManage/images/update.xml&quot;;//服务器上最 ... */" />
+            <marker date="1524618430720" expanded="true" signature="437:555" ph="/* public const string chatSocketUrl = &quot;192.168.1.100&quot;; ... */" />
+            <marker date="1524618430720" expanded="true" signature="619:729" ph="/* public const string socketUrl = &quot;118.178.20.36&quot;; ... */" />
           </folding>
         </state>
       </provider>
