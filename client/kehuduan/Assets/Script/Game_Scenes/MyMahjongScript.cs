@@ -10,7 +10,6 @@ using UnityEngine.UI;
 using LitJson;
 
 
-
 public class MyMahjongScript : MonoBehaviour
 {
 
@@ -147,7 +146,6 @@ public class MyMahjongScript : MonoBehaviour
 	//private bool isSelfPickCard = false;
 
 
-
 	void Start()
 	{
 		randShowTime ();
@@ -163,7 +161,6 @@ public class MyMahjongScript : MonoBehaviour
 		addListener ();
 		initPanel ();
 		initArrayList ();
-		//initPerson ();//初始化每个成员1000分
 
 		GlobalDataScript.isonLoginPage = false;
 		if (GlobalDataScript.reEnterRoomData != null) {
@@ -260,15 +257,6 @@ public class MyMahjongScript : MonoBehaviour
 
 	}
 
-	/**
-	private void initPerson(){
-		GameOverPlayerCoins = new List<int> (4);
-		GameOverPlayerCoins.Add(1000);
-		GameOverPlayerCoins.Add(1000);
-		GameOverPlayerCoins.Add(1000);
-		GameOverPlayerCoins.Add(1000);
-	}
-	*/
 	/// <summary>
 	/// Cards the select.
 	/// </summary>
@@ -293,6 +281,29 @@ public class MyMahjongScript : MonoBehaviour
 	}
 
 	/// <summary>
+	/// 填充牌局信息
+	/// </summary>
+	private void FillRoundInfo()
+	{
+		LeavedRoundNumText.text = string.Format("{0,2}/{1,2} 局", GlobalDataScript.surplusTimes, GlobalDataScript.roomVo.roundNumber);
+
+		// 游戏模式显示
+		//MoshiText
+		string moshiText = "";
+		if(GlobalDataScript.roomVo.shengyu20){
+			moshiText += string.Format("{0,12}", "剩余20张流局");
+		}
+		if(GlobalDataScript.roomVo.threefornext){
+			moshiText += string.Format("{0,12}", "流3局赔庄");
+		}
+		if(GlobalDataScript.roomVo.showTingPai){
+			moshiText += string.Format("{0,12}", "听牌显示");
+		}
+		MoshiText.text = moshiText;
+	}
+	
+	
+	/// <summary>
 	/// 开始游戏
 	/// </summary>
 	/// <param name="response">Response.</param>
@@ -307,22 +318,9 @@ public class MyMahjongScript : MonoBehaviour
 		MyDebug.Log("startGame");
 		GlobalDataScript.surplusTimes --;
 		curDirString = getDirection (bankerId);
-        LeavedRoundNumText.text = string.Format("{0,2}/{1,2} 局", GlobalDataScript.surplusTimes, GlobalDataScript.roomVo.roundNumber);
 
-        // 游戏模式显示
-        //MoshiText
-        string moshiText = "";
-        if(GlobalDataScript.roomVo.shengyu20){
-            moshiText += string.Format("{0,12}", "剩余20张流局");
-        }
-        if(GlobalDataScript.roomVo.threefornext){
-            moshiText += string.Format("{0,12}", "流3局赔庄");
-        }
-        if(GlobalDataScript.roomVo.showTingPai){
-            moshiText += string.Format("{0,12}", "听牌显示");
-        }
-        MoshiText.text = moshiText;
-
+		FillRoundInfo();
+		
         //  GlobalDataScript.surplusTimes+"";//刷新剩余圈数
 		if (!isFirstOpen) {
 			btnActionScript = gameObject.GetComponent<ButtonActionScript> ();
@@ -334,8 +332,9 @@ public class MyMahjongScript : MonoBehaviour
 		GlobalDataScript.finalGameEndVo = null;
 		GlobalDataScript.mainUuid = avatarList [bankerId].account.uuid;
 		initArrayList ();
-		curDirString = getDirection (bankerId);
+		
 		playerItems [curDirIndex].setbankImgEnable (true);
+		
 		SetDirGameObjectAction();
 		isFirstOpen = false;
 		GlobalDataScript.isOverByPlayer = false;
@@ -481,8 +480,6 @@ public class MyMahjongScript : MonoBehaviour
 		useForGangOrPengOrChi = cardvo.cardPoint;
 		putCardIntoMineList (MoPaiCardPoint);
 		
-	//	isSelfPickCard = true;
-
 		if (avatarList[getMyIndexFromList()].ting)
 		{
 
@@ -637,7 +634,7 @@ public class MyMahjongScript : MonoBehaviour
 
 			}
 		}
-
+		
 		initOtherCardList (DirectionEnum.Left,leftCount);
 		initOtherCardList (DirectionEnum.Right,rightCount);
 		initOtherCardList (DirectionEnum.Top,topCount);
@@ -645,7 +642,7 @@ public class MyMahjongScript : MonoBehaviour
 		if (bankerId == getMyIndexFromList ()) {
 			SetPosition (true);//设置位置
 			MyDebug.Log ("初始化数据自己为庄家");
-		//	checkHuPai();
+
 		} else {
 			SetPosition (false);
 			otherPickCardAndCreate (bankerId);
