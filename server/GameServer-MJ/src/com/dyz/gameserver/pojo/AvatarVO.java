@@ -37,6 +37,11 @@ public class AvatarVO {
     private boolean isTing = false;
     
     /**
+     * 牌眼
+     */
+    private int yanPoint = -2;
+    
+    /**
      * 当前分数，起始分1000
      */
     private int scores = 0;
@@ -115,8 +120,9 @@ public class AvatarVO {
     	return isTing;
     }
     
-    public void setTing(boolean ting) {
+    public void setTing(boolean ting, int paiYan) {
     	isTing = ting;
+    	yanPoint = paiYan;
     }
     
     public boolean getIsOnLine() {

@@ -12,17 +12,15 @@ public class GameAccountIndexDaoImp implements GameAccountIndexMapper {
 	    }
 		@Override
 		public int deleteByPrimaryKey(Integer id) {
-			// TODO Auto-generated method stub
 			return 0;
 		}
 		@Override
 		public int insert(GameAccountIndex record) {
-			// TODO Auto-generated method stub
 			return 0;
 		}
 		@Override
 		public int insertSelective(GameAccountIndex record) {
-			// TODO Auto-generated method stub
+			
 			return 0;
 		}
 		@Override

@@ -236,7 +236,7 @@ public class PlayCardsLogic {
 		}
 		//System.out.println("listcard=" + listCard.size());
 		for(int i=0;i<playerList.size();i++){
-			playerList.get(i).avatarVO.setTing(false);
+			playerList.get(i).avatarVO.setTing(false, -1);
 			playerList.get(i).avatarVO.setPaiArray(new int[2][paiCount]);
 		}
 		//洗牌
@@ -488,11 +488,11 @@ public class PlayCardsLogic {
      * @param avatar
      */
     public void tingPaiAction(Avatar avatar){
-    	avatar.avatarVO.setTing(true);
+    	avatar.avatarVO.setTing(true, this.currentCardPoint);
     	
     	for(int i=0;i<playerList.size();i++){
 			//被跟庄  需要处理分数*********
-			playerList.get(i).getSession().sendMsg(new TingResponse(1, avatar.getUuId()));	
+			playerList.get(i).getSession().sendMsg(new TingResponse(1, avatar.getUuId(), this.currentCardPoint));	
 		}
     	
     	if(tingAvatar.contains(avatar)){
@@ -541,6 +541,8 @@ public class PlayCardsLogic {
     				chiAvatar.remove(avatar);
     			}
     			if(tingAvatar.contains(avatar)){
+    				// XXX: 此时记录当前听牌牌型，不能再听牌
+    				avatar.LogPassedPaiArray();
     				tingAvatar.remove(avatar);
     			}
     			if(huAvatar.size() == 0) {
@@ -1791,6 +1793,8 @@ public class PlayCardsLogic {
     {
     	int[][] rawPai = avatar.getPaiArray();
     	tingList.clear();
+    	
+    	if(avatar.MathedPassedArray()) return false;
     	
     	for(int i = 0; i < rawPai[0].length; i++)
     	{

@@ -9,10 +9,12 @@ import com.dyz.gameserver.sprite.base.GameObj;
 import com.dyz.gameserver.sprite.tool.AsyncTaskQueue;
 import com.dyz.myBatis.services.AccountService;
 import com.dyz.persist.util.GlobalUtil;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -463,6 +465,47 @@ public class Avatar implements GameObj {
      */
     public int[][] getPaiArray(){
             return avatarVO.getPaiArray();
+    }
+    
+    private List<List<Integer>> Passed;
+    public void LogPassedPaiArray()
+    {
+    	if(Passed == null)
+    	{
+    		Passed = new ArrayList();
+    	}
+    	
+    	List<Integer> intList = new ArrayList<Integer>();
+    	int[] ints = getSinglePaiArray();
+    	for(int i:ints)
+    	{
+    		intList.add(i);
+    	}
+    	Passed.add(intList);
+    }
+    
+    public boolean MathedPassedArray()
+    {
+    	if(null == Passed) return false;
+    	
+    	int[] ints = getSinglePaiArray();
+    	for(int i = 0; i < Passed.size(); i ++)
+    	{
+    		if(ints.length == Passed.get(i).size())
+    		{
+    			boolean flag = true;
+    			for(int subindex = 0; subindex < ints.length; subindex++)
+    			{
+    				if(ints[subindex] != Passed.get(i).get(subindex))
+    				{
+    					flag = false;
+    					break;
+    				}
+    			}
+    			if(flag) return true;
+    		}
+    	}
+    	return false;
     }
 
     public int[] getSinglePaiArray() {

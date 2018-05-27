@@ -2203,7 +2203,6 @@ public class MyMahjongScript : MonoBehaviour
         GlobalDataScript.isDrag = true;
 
 	    int id = (int) JsonMapper.ToObject(response.message)["avatarId"];
-	    Debug.LogError("eeee" + id);
 
 	    for (int i = 0; i < avatarList.Count; i++)
 	    {
@@ -2245,7 +2244,6 @@ public class MyMahjongScript : MonoBehaviour
 	    
 	    if (getDirection(avarIndex) == DirectionEnum.Bottom)
 	    {
-		    Debug.LogError("myself");
 
 		    int start = 0;
 		    for (int i = 0; i < handerCardList[0].Count; i++)
@@ -2255,7 +2253,6 @@ public class MyMahjongScript : MonoBehaviour
 				    if (handerCardList[0][i].GetComponent<bottomScript>().getPoint() == tingCardPoints[start])
 				    {
 					    handerCardList[0][i].GetComponent<bottomScript>().setClickable(true);
-					    Debug.LogError("pp=" + tingCardPoints[start]);
 					    start += 1;
 				    }
 				    else

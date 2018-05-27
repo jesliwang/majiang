@@ -57,7 +57,6 @@ public class GameSessionManager {
 				Thread.sleep(1000);
                 sessionMap.get("uuid_"+useId).close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (InterruptedException e) {
 				e.printStackTrace();

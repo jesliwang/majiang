@@ -36,7 +36,7 @@ public class ContactWayDaoImp implements ContactWayMapper {
 
 	@Override
 	public int insertSelective(ContactWay record) {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 

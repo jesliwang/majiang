@@ -201,13 +201,15 @@ public class WechatOperateScript : MonoBehaviour {
 		shareAchievement(platformType);
 	}
 
+	// 分享接口
     public void ShareGames(PlatformType platformType)
     {
         ShareContent customizeShareParams = new ShareContent();
-        customizeShareParams.SetText("lock at me");
-        customizeShareParams.SetUrl("");
-        customizeShareParams.SetShareType(ContentType.Text);
+        customizeShareParams.SetText("给你发了一个29元大红包，快来领取你的红包!");
+        customizeShareParams.SetUrl("http://www.baidu.com");
+        customizeShareParams.SetShareType(ContentType.Webpage);
         customizeShareParams.SetObjectID("");
+	    customizeShareParams.SetImageUrl("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527429848373&di=33c254c11436d40b23a2390ffe249845&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fzhidao%2Fwh%253D680%252C800%2Fsign%3D4cf11667fb1f3a295a9dddc8a1159009%2F8644ebf81a4c510f195c55a36b59252dd52aa5eb.jpg");
         customizeShareParams.SetShareContentCustomize(platformType, customizeShareParams);
         shareSdk.ShareContent(platformType, customizeShareParams);
     }
